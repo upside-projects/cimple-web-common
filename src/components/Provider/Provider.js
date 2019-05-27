@@ -5,7 +5,7 @@ import "./defaultStyles";
 import theme from "./theme";
 
 const Provider = ({ children }) => {
-  return <ThemeProvider>{children}</ThemeProvider>;
+  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
 export default Provider;

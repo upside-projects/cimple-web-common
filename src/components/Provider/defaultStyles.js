@@ -1,8 +1,8 @@
-import { injectGlobal } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 import reset from "./reset";
 
-const defaultStyles = () => injectGlobal`
+const defaultStyles = () => createGlobalStyle`
   ${reset}
   html {
     font-size: 16px;
