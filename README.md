@@ -1,26 +1,22 @@
-# cimple-web-common
+<p align="center">
+  <a href="https://significa.co">
+    <img alt="Significa" src="https://s3-eu-west-1.amazonaws.com/drops.significa.co/logo.png" width="200" />
+  </a>
+</p>
+<h1 align="center">
+  Cimple UI Kit
+</h1>
 
-UI Component Library to be used in all Cimple platforms.
+Everything you need to know to get up and running with Cimple's components.
 
-## Available Scripts
+### Run storybook
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-In the project directory, you can run:
+Start up the project on `port 6006`
 
-### `npm start`
+```sh
+npm run storybook
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and Storybook.
