@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://significa.co">
-    <img alt="Significa" src="https://s3-eu-west-1.amazonaws.com/drops.significa.co/logo.png" width="200" />
+  <a href="https://staging.cimple.uk/">
+    <img alt="Cimple" src="https://s3-eu-west-1.amazonaws.com/drops.significa.co/logo.png" width="200" />
   </a>
 </p>
 <h1 align="center">
