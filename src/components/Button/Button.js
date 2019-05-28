@@ -2,8 +2,8 @@ import React from "react";
 
 import * as S from "./styled";
 
-const Button = () => {
-  return <S.Button>Test button</S.Button>;
+const Button = ({ children }) => {
+  return <S.Button>{children}</S.Button>;
 };
 
 export default Button;

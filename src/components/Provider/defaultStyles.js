@@ -1,9 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 import reset from "./reset";
+const fontface = require("../Typography/fonts/index.css");
 
-const defaultStyles = () => createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   ${reset}
+  ${fontface}
+
   html {
     font-size: 16px;
     box-sizing: border-box;
@@ -15,6 +18,10 @@ const defaultStyles = () => createGlobalStyle`
   body {
     font-size: inherit;
   }
+
+  body, input, button, select {
+   font-family: 'HKGrotesk', sans-serif;
+ }
 `;
 
-export default defaultStyles();
+export default GlobalStyle;
