@@ -6,6 +6,7 @@ import Radio from "./Radio";
 
 storiesOf("Radio", module).add("Default", () => (
   <div style={{ display: "flex", flexDirection: "row" }}>
+    <Radio checked label="Buyer" />
     <Radio label="Buyer" />
   </div>
 ));
