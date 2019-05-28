@@ -26,3 +26,7 @@ storiesOf("Input", module).add("With Link", () => (
     href="https://google.com"
   />
 ));
+
+storiesOf("Input", module).add("Disabled", () => (
+  <Input label="City" name="City" placeholder="Edinburgh" disabled />
+));

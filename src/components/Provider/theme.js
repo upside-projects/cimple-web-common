@@ -1,8 +1,10 @@
 export default {
   colors: {
     brand: "#7E6EE6",
+    darkbrand: "#6d5ae4",
     black: "#151E29",
     red: "#F87E7E",
+    darkred: "#D25656",
     greyscale: {
       white: "#FFFFFF",
       medium: "#9E9DA3",

@@ -23,13 +23,25 @@ export const base = css`
   }
 
   &:focus {
-    outline: 1px solid ${({ theme }) => theme.colors.greyscale.medium};
+    outline: none;
+    border: 1px solid ${({ theme }) => theme.colors.greyscale.medium};
   }
 
   ${p =>
     p.error &&
     css`
       border: 1px solid ${({ theme }) => theme.colors.red};
+
+      &:focus {
+        outline: none;
+        border: 1px solid ${({ theme }) => theme.colors.darkred};
+      }
+    `}
+
+  ${p =>
+    p.disabled &&
+    css`
+      cursor: not-allowed;
     `}
 `;
 

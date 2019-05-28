@@ -8,6 +8,7 @@ import { Uppercase } from "../../Typography/";
 import * as S from "./styled";
 
 const Input = ({
+  disabled,
   error,
   helper,
   href,
@@ -36,6 +37,7 @@ const Input = ({
           placeholder={placeholder}
           value={value}
           error={error}
+          disabled={disabled}
         />
       </Label>
       <ErrorMessage error={error}>{error}</ErrorMessage>

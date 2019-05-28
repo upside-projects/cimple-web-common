@@ -7,6 +7,22 @@ export const base = css`
   color: ${({ theme }) => theme.colors.greyscale.white};
 
   padding: 0.5rem 0.75rem;
+
+  transition: ${({ theme }) => theme.transition.ease};
+
+  &:hover {
+    background-color: ${({ theme }) => theme.colors.darkbrand};
+  }
+
+  &:active {
+    outline: none;
+    background-color: ${({ theme }) => theme.colors.darkbrand};
+  }
+
+  &:focus {
+    outline: none;
+    background-color: ${({ theme }) => theme.colors.darkbrand};
+  }
 `;
 
 export const Button = styled.button`
