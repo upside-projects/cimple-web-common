@@ -4,4 +4,6 @@ import { storiesOf } from "@storybook/react";
 
 import Checkbox from "./Checkbox";
 
-storiesOf("Checkbox", module).add("Default", () => <Checkbox />);
+storiesOf("Checkbox", module).add("Default", () => (
+  <Checkbox label="Transportation" />
+));

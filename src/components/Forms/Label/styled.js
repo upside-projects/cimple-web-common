@@ -4,5 +4,5 @@ export const Label = styled.label`
   display: flex;
   flex-direction: column;
 
-  color: ${({ theme }) => theme.colors.greyscale.light};
+  color: ${({ theme }) => theme.colors.greyscale.medium};
 `;

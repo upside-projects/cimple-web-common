@@ -10,9 +10,19 @@ export const base = css`
   padding: 0.5rem 0.75rem;
   margin-top: 0.5rem;
 
-  &:focus {
-    color: ${({ theme }) => theme.colors.greyscale.black};
+  ::placeholder {
+    color: ${({ theme }) => theme.colors.greyscale.medium};
+  }
 
+  :-ms-input-placeholder {
+    color: red;
+  }
+
+  ::-ms-input-placeholder {
+    color: red;
+  }
+
+  &:focus {
     outline: 1px solid ${({ theme }) => theme.colors.greyscale.medium};
   }
 
@@ -25,4 +35,16 @@ export const base = css`
 
 export const Input = styled.input`
   ${base}
+`;
+
+export const Holder = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const Flex = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 `;

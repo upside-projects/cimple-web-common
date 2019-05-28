@@ -12,7 +12,17 @@ storiesOf("Input", module).add("Error", () => (
   <Input
     label="Your email"
     name="Email"
-    placeholder="user@email.org.uk"
+    value="user@email.org.uk"
     error="Invalid credentials."
+  />
+));
+
+storiesOf("Input", module).add("With Link", () => (
+  <Input
+    label="Your password"
+    name="Password"
+    value="••••••••"
+    link="Forgot password?"
+    href="https://google.com"
   />
 ));

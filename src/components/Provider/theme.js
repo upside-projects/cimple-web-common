@@ -5,7 +5,7 @@ export default {
     red: "#F87E7E",
     greyscale: {
       white: "#FFFFFF",
-      medium: "#C7C7C8",
+      medium: "#9E9DA3",
       light: "#D9D7E0"
     }
   },
