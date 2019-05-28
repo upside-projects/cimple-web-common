@@ -2,11 +2,14 @@ export default {
   colors: {
     brand: "#7E6EE6",
     black: "#151E29",
-    grayscale: {
-      white: "FFFFFF"
+    greyscale: {
+      white: "#FFFFFF",
+      medium: "#C7C7C8",
+      light: "#D9D7E0"
     }
   },
   radius: {
+    xsmall: "2px",
     small: "4px",
     big: "8px"
   },

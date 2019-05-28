@@ -4,6 +4,16 @@ import { withA11y } from "@storybook/addon-a11y";
 
 import Provider from "../src/components/Provider/Provider";
 
+const styles = {
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+  height: "100vh"
+};
+
+const CenterDecorator = storyFn => <div style={styles}>{storyFn()}</div>;
+
 addParameters({
   options: {
     name: "Cimple UI Kit",
@@ -20,6 +30,7 @@ addParameters({
 });
 
 addDecorator(story => <Provider>{story()}</Provider>);
+addDecorator(CenterDecorator);
 addDecorator(withA11y);
 
 const loadStories = () => {

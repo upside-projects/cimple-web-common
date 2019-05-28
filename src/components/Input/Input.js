@@ -1,15 +1,19 @@
 import React from "react";
 
+import Label from "../Label";
 import * as S from "./styled";
 
-const Input = ({ name, onChange, placeholder, value }) => {
+const Input = ({ label, name, onChange, placeholder, value }) => {
   return (
-    <S.Input
-      name={name}
-      onChange={onChange}
-      placeholder={placeholder}
-      value={value}
-    />
+    <Label>
+      {label}
+      <S.Input
+        name={name}
+        onChange={onChange}
+        placeholder={placeholder}
+        value={value}
+      />
+    </Label>
   );
 };
 
