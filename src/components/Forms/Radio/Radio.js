@@ -15,15 +15,17 @@ const Radio = ({
 }) => {
   return (
     <S.Holder>
-      <S.Radio
-        type="radio"
-        checked={checked}
-        disabled={disabled}
-        name={name}
-        onChange={onChange}
-        value={value}
-      />
-      <Label>{label}</Label>
+      <Label inline>
+        <S.Radio
+          type="radio"
+          checked={checked}
+          disabled={disabled}
+          name={name}
+          onChange={onChange}
+          value={value}
+        />
+        {label}
+      </Label>
     </S.Holder>
   );
 };

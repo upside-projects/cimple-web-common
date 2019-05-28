@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
 
-import GlobalStyle from "./defaultStyles";
+import GlobalStyle from "./globalStyle";
 import theme from "./theme";
 
 const Provider = ({ children }) => {

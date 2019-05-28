@@ -21,6 +21,7 @@ const GlobalStyle = createGlobalStyle`
 
   body, input, button, select {
    font-family: 'HKGrotesk', sans-serif;
+   font-size: 16px;
  }
 `;
 

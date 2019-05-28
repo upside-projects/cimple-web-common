@@ -6,8 +6,10 @@ import * as S from "./styled";
 const Checkbox = ({ label }) => {
   return (
     <S.Holder>
-      <S.Checkbox type="checkbox" />
-      <Label>{label}</Label>
+      <Label inline>
+        <S.Checkbox type="checkbox" />
+        {label}
+      </Label>
     </S.Holder>
   );
 };

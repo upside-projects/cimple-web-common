@@ -1,9 +1,13 @@
 import styled, { css } from "styled-components";
 
-export const Helper = styled.p`
+import { Uppercase } from "../../Typography";
+
+export const ErrorMessage = styled(Uppercase)`
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.colors.greyscale.light};
+
+  margin-top: 0.5rem;
 
   ${p =>
     p.error &&
