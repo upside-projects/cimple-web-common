@@ -36,14 +36,10 @@ jobs:
           key: v1-dependencies-{{ checksum "package-lock.json" }}
 
       - run:
-          name: Make credentials
-          command: ./.make_credentials.sh
-
-      - run:
           name: Build and Deploy to S3
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              REACT_APP_ENV=production  npm run build && aws s3 sync ./build s3://cimple-web-common/ --delete --region us-east-1 --profile production && aws cloudfront create-invalidation --distribution-id ${CLOUDFRONT_DISTRIBUTION_ID} --paths '/*' --profile production
+              REACT_APP_ENV=production  npm run build && aws s3 sync ./build s3://cimple-web-common/ --delete --region us-east-1 --profile production
             else
               echo "Not master branch so not deploying"
             fi
