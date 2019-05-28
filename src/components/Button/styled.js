@@ -5,6 +5,7 @@ export const base = css`
   border: none;
   border-radius: ${({ theme }) => theme.radius.xsmall};
   color: ${({ theme }) => theme.colors.greyscale.white};
+  cursor: pointer;
 
   padding: 0.5rem 0.75rem;
 
@@ -23,6 +24,12 @@ export const base = css`
     outline: none;
     background-color: ${({ theme }) => theme.colors.darkbrand};
   }
+
+  ${p =>
+    p.disabled &&
+    css`
+      cursor: not-allowed;
+    `}
 `;
 
 export const Button = styled.button`
