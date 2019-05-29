@@ -16,7 +16,20 @@ export const Radio = styled.span`
   ${p =>
     p.checked &&
     css`
-      border: 5px solid ${({ theme }) => theme.colors.brand};
+      background-color: ${({ theme }) => theme.colors.white};
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        background-color: ${({ theme }) => theme.colors.brand};
+        border-radius: ${({ theme }) => theme.radius.round};
+
+        z-index: 2;
+        top: 3px;
+        left: 3px;
+      }
     `}
 `;
 
