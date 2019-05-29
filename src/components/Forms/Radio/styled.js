@@ -1,18 +1,45 @@
 import styled, { css } from "styled-components";
 
-export const Radio = styled.input`
-  display: inline-block;
-  margin-right: 0.5rem;
-  background-color: red;
+export const Radio = styled.span`
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
 
-  ${({ checked }) =>
-    checked &&
+  background-color: ${({ theme }) => theme.colors.greyscale.white};
+  border: 1px solid ${({ theme }) => theme.colors.greyscale.medium};
+  border-radius: ${({ theme }) => theme.radius.round};
+
+  transition: all ${({ theme }) => theme.transition.ease()};
+
+  ${p =>
+    p.checked &&
     css`
-      border: 1px solid red;
-    `};
+      border: 5px solid ${({ theme }) => theme.colors.brand};
+    `}
+`;
+
+export const RadioInput = styled.input`
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+`;
+
+export const Label = styled.span`
+  margin-left: 1.5rem;
+  display: inline-block;
+  vertical-align: bottom;
+  line-height: 1;
 `;
 
 export const Holder = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
 `;

@@ -16,7 +16,8 @@ const Radio = ({
   return (
     <S.Holder>
       <Label inline>
-        <S.Radio
+        <S.Radio checked={checked} />
+        <S.RadioInput
           type="radio"
           checked={checked}
           disabled={disabled}
@@ -24,7 +25,7 @@ const Radio = ({
           onChange={onChange}
           value={value}
         />
-        {label}
+        <S.Label>{label}</S.Label>
       </Label>
     </S.Holder>
   );

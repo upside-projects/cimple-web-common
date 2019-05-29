@@ -15,7 +15,8 @@ export default {
   radius: {
     xsmall: "2px",
     small: "4px",
-    big: "8px"
+    big: "8px",
+    round: "50%"
   },
   shadow: {
     subtle: "0 2px 4px 0 rgba(75,84,94,0.06)"
