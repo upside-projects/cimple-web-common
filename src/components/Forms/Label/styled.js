@@ -12,4 +12,9 @@ export const Label = styled.label`
     `}
 
   color: ${({ theme }) => theme.colors.greyscale.medium};
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 `;

@@ -1,5 +1,6 @@
 export default {
   colors: {
+    lightbrand: "#B1A7F0",
     brand: "#7E6EE6",
     darkbrand: "#6d5ae4",
     black: "#151E29",
@@ -21,6 +22,6 @@ export default {
   },
   transition: {
     cubic: (ms = 750) => `cubic-bezier(.19, 1, .22, 1) ${ms}ms`,
-    ease: (ms = 300) => `${ms}ms ease-in-out`
+    ease: (ms = 200) => `${ms}ms ease-in-out`
   }
 };

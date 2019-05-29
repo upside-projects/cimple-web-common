@@ -9,7 +9,7 @@ export const base = css`
 
   padding: 0.5rem 0.75rem;
 
-  transition: ${({ theme }) => theme.transition.ease};
+  transition: ${({ theme }) => theme.transition.ease()};
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.darkbrand};

@@ -5,6 +5,6 @@ export const Anchor = styled.a`
 
   &:hover {
     color: ${({ theme }) => theme.colors.brand};
-    transition: ${({ theme }) => theme.transition.ease};
+    transition: ${({ theme }) => theme.transition.ease()};
   }
 `;
