@@ -16,9 +16,9 @@ jobs:
   build:
     executor: default
     steps:
-      - checkout
-            - attach_workspace:
+      - attach_workspace:
           at: .
+      - checkout
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
