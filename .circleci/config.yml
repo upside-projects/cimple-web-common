@@ -1,45 +1,69 @@
-version: 2
-jobs:
-  build:
+# CircleCI Version
+version: 2.1
+
+# Executors
+executors:
+  default:
     docker:
       - image: circleci/node:8.11
 
-    working_directory: ~/repo
+# Orbs
+orbs:
+  aws-s3: circleci/aws-s3@1.0.9
 
+# Jobs
+jobs:
+  build:
+    executor: default
     steps:
       - checkout
-
       - restore_cache:
           keys:
-            - v1-dependencies-{{ checksum "package-lock.json" }}
-            - v1-dependencies-
-
-      - run:
-          name: Install python pip
-          command: sudo apt-get install python-pip python-dev -y
-
-      - run:
-          name: Install awscli
-          command: sudo pip install awscli
-
-      - run:
-          name: Configure awscli
-          command: aws configure set preview.cloudfront true
-
+            - v1-dependencies-{{ checksum "package.json" }}
       - run:
           name: Install npm dependencies
           command: npm install
-
       - save_cache:
           paths:
             - node_modules
-          key: v1-dependencies-{{ checksum "package-lock.json" }}
-
+          key: v1-dependencies-{{ checksum "package.json" }}
       - run:
-          name: Build and Deploy to S3
-          command: |
-            if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              REACT_APP_ENV=production  npm run build && aws s3 sync ./build s3://cimple-web-common/ --delete --region us-east-1 --profile production
-            else
-              echo "Not master branch so not deploying"
-            fi
+          name: Build React App
+          command: REACT_APP_ENV=production npm run build
+
+  release:
+    executor: default
+    steps:
+      - checkout
+      - run:
+          name: Install npm dependencies
+          command: npm install
+      - run:
+          name: Install semantic
+          command: npx semantic-release
+
+  deploy-prod:
+    executor: default
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Install python pip
+          command: sudo apt-get install python-pip python-dev -y
+      - aws-s3/sync:
+          from: ./dist
+          to: "s3://cimple-web-common/"
+
+# Workflows
+workflows:
+  build_deploy:
+    jobs:
+      - build
+      - release
+      - deploy-prod:
+          filters:
+            branches:
+              only:
+                - master
+          requires:
+            - build
