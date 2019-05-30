@@ -51,7 +51,7 @@ jobs:
           name: Install python pip
           command: sudo apt-get install python-pip python-dev -y
       - aws-s3/sync:
-          from: ./dist
+          from: ./storybook-static
           to: "s3://cimple-web-common/"
 
 # Workflows
