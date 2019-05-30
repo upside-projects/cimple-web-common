@@ -59,7 +59,7 @@ workflows:
   build_deploy:
     jobs:
       - build
-      - release
+      - install_semver
       - deploy-prod:
           filters:
             branches:
