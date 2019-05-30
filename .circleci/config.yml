@@ -31,6 +31,13 @@ jobs:
           name: Build React App
           command: REACT_APP_ENV=production npm run build
 
+  release:
+  executor: default
+  steps:
+    - checkout
+    - run: npm install
+    - run: npx semantic-release
+
   deploy-prod:
     executor: default
     steps:
@@ -48,6 +55,7 @@ workflows:
   build_deploy:
     jobs:
       - build
+      - release
       - deploy-prod:
           filters:
             branches:
