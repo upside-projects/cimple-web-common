@@ -9,7 +9,7 @@ export { default as Button } from "../components/Button/Button";
 export { default as Checkbox } from "../components/Forms/Checkbox/Checkbox";
 export {
   default as ErrorMessage
-} from "./components/Forms/ErrorMessage/ErrorMessage";
+} from "../components/Forms/ErrorMessage/ErrorMessage";
 export { default as Input } from "../components/Forms/Input/Input";
 export { default as Label } from "../components/Forms/Label/Label";
 export { default as Link } from "../components/Forms/Link/Link";
