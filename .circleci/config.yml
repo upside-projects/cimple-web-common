@@ -17,6 +17,8 @@ jobs:
     executor: default
     steps:
       - checkout
+            - attach_workspace:
+          at: .
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "package.json" }}
@@ -30,6 +32,10 @@ jobs:
       - run:
           name: Build React App
           command: REACT_APP_ENV=production npm run build && npm run build-storybook
+      - persist_to_workspace:
+          root: .
+          paths:
+            - storybook-static
 
   release:
     executor: default
@@ -67,4 +73,3 @@ workflows:
                 - master
           requires:
             - build
-            - release
