@@ -1,11 +1,12 @@
 import { createGlobalStyle } from "styled-components";
 
 import reset from "./reset";
-const fontface = require("../Typography/fonts/index.css");
+import typography from "./typography";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
-  ${fontface}
+
+  ${typography}
 
   html {
     font-size: 16px;
