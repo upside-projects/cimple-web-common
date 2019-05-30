@@ -30,10 +30,7 @@ jobs:
       - run:
           name: Build React App
           command: REACT_APP_ENV=production npm run build
-      - persist_to_workspace:
-          root: .
-          paths:
-            - build
+
   deploy-prod:
     executor: default
     steps:
@@ -43,7 +40,7 @@ jobs:
           name: Install python pip
           command: sudo apt-get install python-pip python-dev -y
       - aws-s3/sync:
-          from: ./build
+          from: ./dist
           to: "s3://cimple-web-common/"
 
 # Workflows
