@@ -16,8 +16,6 @@ jobs:
   build:
     executor: default
     steps:
-      - attach_workspace:
-          at: .
       - checkout
       - restore_cache:
           keys:
@@ -41,6 +39,8 @@ jobs:
     executor: default
     steps:
       - checkout
+      - attach_workspace:
+          at: .
       - run:
           name: Install npm dependencies
           command: npm install
