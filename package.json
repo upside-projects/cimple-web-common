@@ -11,7 +11,7 @@
   },
   "scripts": {
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build": "rm -rf dist && rollup -c",
+    "build": "rm -rf dist && rollup -c && npm run build-storybook",
     "build-storybook": "build-storybook",
     "release": "semantic-release"
   },
