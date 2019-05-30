@@ -6,10 +6,10 @@ import theme from "./theme";
 
 const Provider = ({ children }) => {
   return (
-    <>
+    <React.Fragment>
       <GlobalStyle />
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
-    </>
+    </React.Fragment>
   );
 };
 
