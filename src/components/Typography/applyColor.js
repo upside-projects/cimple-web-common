@@ -17,7 +17,7 @@ function applyColor(props) {
   };
 
   if (props.color !== undefined) {
-    return map[props.color];
+    return map[props.color] || map.default;
   }
 
   return map.default;
