@@ -34,15 +34,18 @@ jobs:
           root: .
           paths:
             - build
-
-  release: 
-      executor: default
-      steps:
-        - checkout
-        - run: npm install
-        - run: npx semantic-release
-
-
+  deploy-dev:
+    executor: default
+    steps:
+      - attach_workspace:
+          at: .
+      - run:
+          name: Install python pip
+          command: sudo apt-get install python-pip python-dev -y
+      - aws-s3/sync:
+          from: ./build
+          to: "s3://cimple-web-common/"
+          overwrite: true
   deploy-prod:
     executor: default
     steps:
@@ -53,18 +56,24 @@ jobs:
           command: sudo apt-get install python-pip python-dev -y
       - aws-s3/sync:
           from: ./build
-          to: 's3://cimple-web-common/'
+          to: "s3://cimple-web-common/"
 
 # Workflows
 workflows:
   build_deploy:
     jobs:
       - build
-      - release
+      - deploy-dev:
+          filters:
+            branches:
+              only:
+                - develop
+          requires:
+            - build
       - deploy-prod:
           filters:
             branches:
               only:
                 - master
           requires:
-- build
+            - build
