@@ -30,13 +30,18 @@ jobs:
       - run:
           name: Build React App
           command: REACT_APP_ENV=production npm run build
-      - run:
-          name: Release
-          command: npm run release
       - persist_to_workspace:
           root: .
           paths:
             - build
+
+  release: 
+      executor: default
+      steps:
+        - checkout
+        - run: npm install
+        - run: npx semantic-release
+
 
   deploy-prod:
     executor: default
@@ -55,6 +60,7 @@ workflows:
   build_deploy:
     jobs:
       - build
+      - release
       - deploy-prod:
           filters:
             branches:
