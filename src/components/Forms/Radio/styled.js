@@ -23,7 +23,7 @@ export const Radio = styled.span`
         position: absolute;
         height: 8px;
         width: 8px;
-        background-color: ${({ theme }) => theme.colors.brand};
+        background-color: ${({ theme }) => theme.colors.brand.default};
         border-radius: ${({ theme }) => theme.radius.round};
 
         z-index: 2;

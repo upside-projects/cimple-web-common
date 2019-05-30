@@ -1,15 +1,17 @@
 export default {
   colors: {
-    lightbrand: "#B1A7F0",
-    brand: "#7E6EE6",
-    darkbrand: "#6d5ae4",
-    black: "#151E29",
     red: "#F87E7E",
     darkred: "#D25656",
+    brand: {
+      light: "#B1A7F0",
+      default: "#7E6EE6",
+      dark: "#6d5ae4"
+    },
     greyscale: {
-      white: "#FFFFFF",
+      dark: "#151E29",
       medium: "#9E9DA3",
-      light: "#D9D7E0"
+      light: "#D9D7E0",
+      white: "#FFFFFF"
     }
   },
   radius: {

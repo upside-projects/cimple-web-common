@@ -4,7 +4,7 @@ export const Anchor = styled.a`
   color: inherit;
 
   &:hover {
-    color: ${({ theme }) => theme.colors.brand};
+    color: ${({ theme }) => theme.colors.brand.default};
     transition: ${({ theme }) => theme.transition.ease()};
   }
 `;

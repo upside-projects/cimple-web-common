@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { Uppercase } from "../../Typography";
+import { Uppercase } from "../../Typography/Typography";
 
 export const ErrorMessage = styled(Uppercase)`
   display: flex;

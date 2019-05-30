@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const base = css`
-  background-color: ${({ theme }) => theme.colors.brand};
+  background-color: ${({ theme }) => theme.colors.brand.default};
   border: none;
   border-radius: ${({ theme }) => theme.radius.xsmall};
   color: ${({ theme }) => theme.colors.greyscale.white};
@@ -12,17 +12,17 @@ export const base = css`
   transition: ${({ theme }) => theme.transition.ease()};
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.darkbrand};
+    background-color: ${({ theme }) => theme.colors.brand.dark};
   }
 
   &:active {
     outline: none;
-    background-color: ${({ theme }) => theme.colors.darkbrand};
+    background-color: ${({ theme }) => theme.colors.brand.dark};
   }
 
   &:focus {
     outline: none;
-    background-color: ${({ theme }) => theme.colors.darkbrand};
+    background-color: ${({ theme }) => theme.colors.brand.dark};
   }
 
   ${p =>
