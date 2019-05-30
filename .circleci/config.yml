@@ -34,18 +34,6 @@ jobs:
           root: .
           paths:
             - build
-  deploy-dev:
-    executor: default
-    steps:
-      - attach_workspace:
-          at: .
-      - run:
-          name: Install python pip
-          command: sudo apt-get install python-pip python-dev -y
-      - aws-s3/sync:
-          from: ./build
-          to: "s3://cimple-web-common/"
-          overwrite: true
   deploy-prod:
     executor: default
     steps:
@@ -63,13 +51,6 @@ workflows:
   build_deploy:
     jobs:
       - build
-      - deploy-dev:
-          filters:
-            branches:
-              only:
-                - develop
-          requires:
-            - build
       - deploy-prod:
           filters:
             branches:
