@@ -1,7 +1,7 @@
 function applyColor(props) {
   const { colors } = props.theme;
 
-  const map: any = {
+  const map = {
     black: colors.greyscale.dark,
     purple: colors.brand.default,
     purpleDark: colors.brand.light,
