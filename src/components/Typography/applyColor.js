@@ -11,6 +11,8 @@ function applyColor(props) {
     greyDark: colors.greyscale.dark,
     greyLight: colors.greyscale.light,
     greyMedium: colors.greyscale.medium,
+    red: colors.error.default,
+    redDark: colors.error.dark,
     white: colors.greyscale.white
   };
 

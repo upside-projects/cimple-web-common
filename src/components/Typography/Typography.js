@@ -38,6 +38,23 @@ export const HeadingS = styled.h3`
   letter-spacing: 0.24px;
 `;
 
+export const Text = styled.p`
+  ${base}
+
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.24px;
+`;
+
+export const UppercaseL = styled.p`
+  ${base}
+
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+`;
+
 export const Uppercase = styled.p`
   ${base}
 

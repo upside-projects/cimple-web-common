@@ -1,7 +1,5 @@
 export default {
   colors: {
-    red: "#F87E7E",
-    darkred: "#D25656",
     brand: {
       light: "#B1A7F0",
       default: "#7E6EE6",
@@ -12,6 +10,10 @@ export default {
       medium: "#9E9DA3",
       light: "#D9D7E0",
       white: "#FFFFFF"
+    },
+    error: {
+      default: "#F87E7E",
+      dark: "#D25656"
     }
   },
   radius: {
