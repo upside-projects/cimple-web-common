@@ -32,11 +32,15 @@ jobs:
           command: REACT_APP_ENV=production npm run build
 
   release:
-  executor: default
-  steps:
-    - checkout
-    - run: npm install
-    - run: npx semantic-release
+    executor: default
+    steps:
+      - checkout
+      - run:
+          name: Install npm dependencies
+          command: npm install
+      - install_semver:
+          name: Install semantic
+          command: npx semantic-release
 
   deploy-prod:
     executor: default
