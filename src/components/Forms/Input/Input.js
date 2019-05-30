@@ -3,7 +3,7 @@ import React from "react";
 import Label from "../Label/Label";
 import ErrorMessage from "../ErrorMessage/ErrorMessage";
 import Link from "../Link/Link";
-import { Uppercase } from "../../Typography/";
+import { Uppercase } from "../../Typography/Typography";
 
 import * as S from "./styled";
 
@@ -19,7 +19,6 @@ const Input = ({
   placeholder,
   value
 }) => {
-  console.log(link);
   return (
     <S.Holder>
       <Label>

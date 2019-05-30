@@ -14,19 +14,19 @@ export const Check = styled.span`
   transition: all ${({ theme }) => theme.transition.cubic()};
 
   &:hover {
-    background-color: ${({ theme }) => theme.colors.lightbrand};
-    border: 1px solid ${({ theme }) => theme.colors.lightbrand};
+    background-color: ${({ theme }) => theme.colors.brand.light};
+    border: 1px solid ${({ theme }) => theme.colors.brand.light};
   }
 
   ${p =>
     p.checked &&
     css`
-      background-color: ${({ theme }) => theme.colors.brand};
-      border: 1px solid ${({ theme }) => theme.colors.brand};
+      background-color: ${({ theme }) => theme.colors.brand.default};
+      border: 1px solid ${({ theme }) => theme.colors.brand.default};
 
       &:hover {
-        background-color: ${({ theme }) => theme.colors.brand};
-        border: 1px solid ${({ theme }) => theme.colors.brand};
+        background-color: ${({ theme }) => theme.colors.brand.default};
+        border: 1px solid ${({ theme }) => theme.colors.brand.default};
       }
     `}
 

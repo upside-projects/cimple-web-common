@@ -30,11 +30,11 @@ export const base = css`
   ${p =>
     p.error &&
     css`
-      border: 1px solid ${({ theme }) => theme.colors.red};
+      border: 1px solid ${({ theme }) => theme.colors.error.default};
 
       &:focus {
         outline: none;
-        border: 1px solid ${({ theme }) => theme.colors.darkred};
+        border: 1px solid ${({ theme }) => theme.colors.error.dark};
       }
     `}
 
