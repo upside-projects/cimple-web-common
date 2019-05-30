@@ -38,7 +38,7 @@ jobs:
       - run:
           name: Install npm dependencies
           command: npm install
-      - install_semver:
+      - run:
           name: Install semantic
           command: npx semantic-release
 
@@ -59,7 +59,7 @@ workflows:
   build_deploy:
     jobs:
       - build
-      - install_semver
+      - release
       - deploy-prod:
           filters:
             branches:
