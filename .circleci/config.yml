@@ -40,10 +40,11 @@ jobs:
   release:
     executor: default
     steps:
+      - checkout
       - attach_workspace:
           at: .
       - run:
-          name: Install semantic
+          name: Semantic release
           command: npx semantic-release
       - run:
           name: Install python pip
@@ -55,7 +56,7 @@ jobs:
 
 # Workflows
 workflows:
-  build_deploy:
+  all:
     jobs:
       - build
       - release:
