@@ -37,7 +37,6 @@ jobs:
             - dist
             - storybook-static
 
-
   release:
     executor: default
     steps:
@@ -59,7 +58,7 @@ workflows:
   build_deploy:
     jobs:
       - build
-      - release
+      - release:
           filters:
             branches:
               only:
