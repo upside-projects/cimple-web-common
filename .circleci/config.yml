@@ -33,35 +33,25 @@ jobs:
       - persist_to_workspace:
           root: .
           paths:
+            - node_modules
+            - dist
             - storybook-static
+
 
   release:
     executor: default
     steps:
-      - checkout
       - attach_workspace:
           at: .
-      - run:
-          name: Install npm dependencies
-          command: npm install
       - run:
           name: Install semantic
           command: npx semantic-release
-
-  deploy-prod:
-    executor: default
-    steps:
-      - attach_workspace:
-          at: .
       - run:
           name: Install python pip
           command: sudo apt-get install python-pip python-dev -y
       - aws-s3/sync:
           from: ./storybook-static
           to: "s3://cimple-web-common/"
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          aws-region: AWS_REGION
           overwrite: true
 
 # Workflows
@@ -70,7 +60,6 @@ workflows:
     jobs:
       - build
       - release
-      - deploy-prod:
           filters:
             branches:
               only:
