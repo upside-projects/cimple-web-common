@@ -2,8 +2,8 @@ import React from "react";
 
 import * as S from "./styled";
 
-const Button = ({ children }) => {
-  return <S.Button>{children}</S.Button>;
+const Button = ({ children, full }) => {
+  return <S.Button full={full}>{children}</S.Button>;
 };
 
 export default Button;

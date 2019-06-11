@@ -17,7 +17,8 @@ const Input = ({
   name,
   onChange,
   placeholder,
-  value
+  value,
+  ...props
 }) => {
   return (
     <S.Holder>
@@ -37,6 +38,7 @@ const Input = ({
           value={value}
           error={error}
           disabled={disabled}
+          {...props}
         />
       </Label>
       <ErrorMessage error={error}>{error}</ErrorMessage>

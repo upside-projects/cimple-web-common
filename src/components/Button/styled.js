@@ -30,6 +30,12 @@ export const base = css`
     css`
       cursor: not-allowed;
     `}
+
+  ${p =>
+    p.full &&
+    css`
+      width: 100%;
+    `}
 `;
 
 export const Button = styled.button`
