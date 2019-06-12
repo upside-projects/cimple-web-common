@@ -17,7 +17,8 @@ const Input = ({
   name,
   onChange,
   placeholder,
-  value
+  value,
+  ...props
 }) => {
   return (
     <S.Holder>
@@ -26,7 +27,7 @@ const Input = ({
           <Uppercase>{label}</Uppercase>
           {link && (
             <Link href={href}>
-              <Uppercase>{link}</Uppercase>
+              <S.Uppercase>{link}</S.Uppercase>
             </Link>
           )}
         </S.Flex>
@@ -37,6 +38,7 @@ const Input = ({
           value={value}
           error={error}
           disabled={disabled}
+          {...props}
         />
       </Label>
       <ErrorMessage error={error}>{error}</ErrorMessage>

@@ -2,8 +2,12 @@ import React from "react";
 
 import * as S from "./styled";
 
-const Button = ({ children }) => {
-  return <S.Button>{children}</S.Button>;
+const Button = ({ children, loading, full }) => {
+  return (
+    <S.Button full={full} loading={loading}>
+      {children}
+    </S.Button>
+  );
 };
 
 export default Button;
