@@ -33,7 +33,12 @@ export const base = css`
   ${p =>
     p.disabled &&
     css`
+      background-color: ${({ theme }) => theme.colors.brand.light};
       cursor: not-allowed;
+
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.brand.light};
+      }
     `}
 
   ${p =>
