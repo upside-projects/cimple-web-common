@@ -8,6 +8,7 @@ import { Uppercase } from "../../Typography/Typography";
 import * as S from "./styled";
 
 const Input = ({
+  className,
   disabled,
   error,
   helper,
@@ -21,7 +22,7 @@ const Input = ({
   ...props
 }) => {
   return (
-    <S.Holder>
+    <S.Holder className={className} {...props}>
       <Label>
         <S.Flex>
           <Uppercase>{label}</Uppercase>
