@@ -22,15 +22,25 @@ export const base = css`
     color: red;
   }
 
-  &:focus {
+  &:hover {
     outline: none;
     border: 1px solid ${({ theme }) => theme.colors.greyscale.medium};
+  }
+
+  &:focus {
+    outline: none;
+    border: 1px solid ${({ theme }) => theme.colors.brand.default};
   }
 
   ${p =>
     p.error &&
     css`
       border: 1px solid ${({ theme }) => theme.colors.error.default};
+
+      &:hover {
+        outline: none;
+        border: 1px solid ${({ theme }) => theme.colors.error.dark};
+      }
 
       &:focus {
         outline: none;

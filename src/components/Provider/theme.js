@@ -14,7 +14,11 @@ export default {
     error: {
       default: "#F87E7E",
       dark: "#D25656"
-    }
+    },
+    yellow: "#FCB747",
+    green: "#46CF68",
+    blue: "#588CF5"
+   
   },
   radius: {
     xsmall: "2px",
