@@ -897,7 +897,7 @@ var Topbar = function Topbar() {
 };
 
 function _templateObject$d() {
-  var data = _taggedTemplateLiteral(["\n  border-bottom: 1px solid ", ";\n\n  padding: 1.5rem 2rem;\n  width: 100vw;\n"]);
+  var data = _taggedTemplateLiteral(["\n  border-top: 1px solid ", ";\n\n  padding: 1.5rem 2rem;\n  width: 100vw;\n"]);
 
   _templateObject$d = function _templateObject() {
     return data;
@@ -914,11 +914,35 @@ var Footer = function Footer() {
   return React.createElement(Holder$4, null, "\xAE 2019 Cimple. All rights reserved");
 };
 
+function _templateObject2$7() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
+
+  _templateObject2$7 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$e() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n"]);
+
+  _templateObject$e = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var Flex$1 = styled__default.div(_templateObject$e());
+var Column = styled__default.div(_templateObject2$7());
+
 /* Provider */
 
 exports.Button = Button$1;
 exports.Checkbox = Checkbox$1;
+exports.Column = Column;
 exports.ErrorMessage = ErrorMessage;
+exports.Flex = Flex$1;
 exports.Footer = Footer;
 exports.HeadingL = HeadingL;
 exports.HeadingM = HeadingM;
