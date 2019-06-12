@@ -299,12 +299,14 @@ var base = styled.css(_templateObject$4(), function (_ref) {
 var Button = styled__default.button(_templateObject5(), base);
 
 var Button$1 = function Button$1(_ref) {
-  var children = _ref.children,
+  var className = _ref.className,
+      children = _ref.children,
       loading = _ref.loading,
       full = _ref.full;
   return React.createElement(Button, {
     full: full,
-    loading: loading
+    loading: loading,
+    className: className
   }, children);
 };
 
@@ -733,7 +735,8 @@ var Uppercase$1 = styled__default(Uppercase)(_templateObject7$1(), function (_re
 });
 
 var Input$1 = function Input$1(_ref) {
-  var disabled = _ref.disabled,
+  var className = _ref.className,
+      disabled = _ref.disabled,
       error = _ref.error,
       helper = _ref.helper,
       href = _ref.href,
@@ -743,9 +746,11 @@ var Input$1 = function Input$1(_ref) {
       onChange = _ref.onChange,
       placeholder = _ref.placeholder,
       value = _ref.value,
-      props = _objectWithoutProperties(_ref, ["disabled", "error", "helper", "href", "label", "link", "name", "onChange", "placeholder", "value"]);
+      props = _objectWithoutProperties(_ref, ["className", "disabled", "error", "helper", "href", "label", "link", "name", "onChange", "placeholder", "value"]);
 
-  return React.createElement(Holder$1, null, React.createElement(Label, null, React.createElement(Flex, null, React.createElement(Uppercase, null, label), link && React.createElement(Link, {
+  return React.createElement(Holder$1, _extends({
+    className: className
+  }, props), React.createElement(Label, null, React.createElement(Flex, null, React.createElement(Uppercase, null, label), link && React.createElement(Link, {
     href: href
   }, React.createElement(Uppercase$1, null, link))), React.createElement(Input, _extends({
     name: name,
