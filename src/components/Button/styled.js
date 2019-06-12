@@ -45,6 +45,7 @@ export const base = css`
     ${p =>
       p.loading &&
       css`
+        background-color: ${({ theme }) => theme.colors.brand.dark};
         padding-right: 40px;
 
         &:after {

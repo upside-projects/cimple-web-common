@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { Uppercase as StyledUppercase } from "../../Typography/Typography";
 
 export const base = css`
   font-size: 1rem;
@@ -9,6 +10,8 @@ export const base = css`
 
   padding: 0.5rem 0.75rem;
   margin-top: 0.5rem;
+
+  transition: ${({ theme }) => theme.transition.ease()};
 
   ::placeholder {
     color: ${({ theme }) => theme.colors.greyscale.medium};
@@ -70,4 +73,13 @@ export const Flex = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+`;
+
+export const Uppercase = styled(StyledUppercase)`
+  &:hover {
+    color: ${({ theme }) => theme.colors.brand.default};
+    transition: ${({ theme }) => theme.transition.ease()};
+
+    cursor: pointer;
+  }
 `;

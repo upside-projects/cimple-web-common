@@ -27,7 +27,7 @@ const Input = ({
           <Uppercase>{label}</Uppercase>
           {link && (
             <Link href={href}>
-              <Uppercase>{link}</Uppercase>
+              <S.Uppercase>{link}</S.Uppercase>
             </Link>
           )}
         </S.Flex>
