@@ -640,7 +640,7 @@ function _templateObject6$1() {
 }
 
 function _templateObject5$3() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  min-width: 320px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  min-width: 320px;\n\n  @media only screen and (max-width: 375px) {\n    min-width: 86%;\n  }\n"]);
 
   _templateObject5$3 = function _templateObject5() {
     return data;
