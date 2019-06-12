@@ -28,3 +28,6 @@ export {
   UppercaseL,
   Uppercase
 } from "../components/Typography/Typography";
+
+/* Layout */
+export { Flex, Column } from "../components/Layout/Layout";
