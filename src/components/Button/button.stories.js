@@ -15,6 +15,12 @@ storiesOf("Button", module).add("Primary with Loading", () => (
   </Button>
 ));
 
+storiesOf("Button", module).add("Primary Disabled", () => (
+  <Button onClick={action("clicked")} disabled>
+    Hello Button
+  </Button>
+));
+
 storiesOf("Button", module).add("Primary Full", () => (
   <Button onClick={action("clicked")} full loading>
     Hello Button

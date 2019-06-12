@@ -16,6 +16,7 @@ const Input = ({
   label,
   link,
   name,
+  onBlur,
   onChange,
   placeholder,
   value,
@@ -34,6 +35,7 @@ const Input = ({
         </S.Flex>
         <S.Input
           name={name}
+          onBlur={onBlur}
           onChange={onChange}
           placeholder={placeholder}
           value={value}
