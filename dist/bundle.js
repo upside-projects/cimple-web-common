@@ -306,16 +306,20 @@ var Button = styled__default.button(_templateObject5(), base);
 
 var Button$1 = function Button$1(_ref) {
   var className = _ref.className,
-      disabled = _ref.disabled,
       children = _ref.children,
+      disabled = _ref.disabled,
       loading = _ref.loading,
-      full = _ref.full;
-  return React.createElement(Button, {
+      full = _ref.full,
+      onClick = _ref.onClick,
+      props = _objectWithoutProperties(_ref, ["className", "children", "disabled", "loading", "full", "onClick"]);
+
+  return React.createElement(Button, _extends({
     full: full,
     loading: loading,
     className: className,
-    disabled: disabled
-  }, children);
+    disabled: disabled,
+    onClick: onClick
+  }, props), children);
 };
 
 function _templateObject2$1() {
