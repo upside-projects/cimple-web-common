@@ -26,3 +26,9 @@ storiesOf("Button", module).add("Primary Full", () => (
     Hello Button
   </Button>
 ));
+
+storiesOf("Button", module).add("Danger", () => (
+  <Button danger onClick={action("clicked")}>
+    Delete account
+  </Button>
+));

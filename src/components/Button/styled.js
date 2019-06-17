@@ -41,6 +41,17 @@ export const base = css`
       }
     `}
 
+
+  ${p =>
+    p.danger &&
+    css`
+      background-color: ${({ theme }) => theme.colors.red.default};
+
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.red.dark};
+      }
+    `}
+
   ${p =>
     p.full &&
     css`
@@ -50,7 +61,7 @@ export const base = css`
     ${p =>
       p.loading &&
       css`
-        background-color: ${({ theme }) => theme.colors.brand.dark};
+        background-color: ${({ theme }) => theme.colors.brand.light};
         padding-right: 40px;
 
         &:after {
