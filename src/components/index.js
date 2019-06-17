@@ -19,6 +19,12 @@ export { default as Radio } from "../components/Forms/Radio/Radio";
 export { default as Topbar } from "../components/Navigation/Topbar/Topbar";
 export { default as Footer } from "../components/Navigation/Footer/Footer";
 
+/* Links */
+export { default as NavLink } from "../components/Links/NavLink/NavLink";
+
+/* Logo */
+export { default as Logo } from "../components/Logo/Logo";
+
 /* Typography */
 export {
   HeadingL,

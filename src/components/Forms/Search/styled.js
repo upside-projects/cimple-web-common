@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import { Uppercase as StyledUppercase } from "../../Typography/Typography";
 
 export const base = css`
   font-size: 1rem;
@@ -9,7 +8,6 @@ export const base = css`
   color: ${({ theme }) => theme.colors.greyscale.black};
 
   padding: 0.5rem 0.75rem;
-  margin-top: 0.5rem;
 
   transition: ${({ theme }) => theme.transition.ease()};
 
@@ -65,25 +63,17 @@ export const Input = styled.input`
 export const Holder = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 320px;
+  min-width: 480px;
+
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+  }
 
   @media only screen and (max-width: 375px) {
     min-width: 288px;
-  }
-`;
-
-export const Flex = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-`;
-
-export const Uppercase = styled(StyledUppercase)`
-  &:hover {
-    color: ${({ theme }) => theme.colors.brand.default};
-    transition: ${({ theme }) => theme.transition.ease()};
-
-    cursor: pointer;
   }
 `;

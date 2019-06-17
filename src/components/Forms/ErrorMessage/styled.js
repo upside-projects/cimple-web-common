@@ -12,7 +12,7 @@ const ErrorMessage = styled(Uppercase)`
   ${p =>
     p.error &&
     css`
-      color: ${({ theme }) => theme.colors.error.default};
+      color: ${({ theme }) => theme.colors.red.default};
     `}
 `;
 
