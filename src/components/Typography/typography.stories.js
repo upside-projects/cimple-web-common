@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-import { storiesOf } from "@storybook/react";
+import { storiesOf } from "@storybook/react"
 
 import {
   HeadingL,
@@ -9,7 +9,7 @@ import {
   Text,
   Uppercase,
   UppercaseL
-} from "./Typography";
+} from "./Typography"
 
 storiesOf("Typography", module)
   .add("Heading", () => (
@@ -75,4 +75,4 @@ storiesOf("Typography", module)
       <Uppercase color="purple">Show more</Uppercase>
       <Uppercase color="red">Unexpected error</Uppercase>
     </div>
-  ));
+  ))

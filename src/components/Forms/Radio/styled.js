@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from "styled-components"
 
 export const Radio = styled.span`
   position: absolute;
@@ -31,7 +31,7 @@ export const Radio = styled.span`
         left: 3px;
       }
     `}
-`;
+`
 
 export const RadioInput = styled.input`
   position: absolute;
@@ -39,14 +39,14 @@ export const RadioInput = styled.input`
   cursor: pointer;
   height: 0;
   width: 0;
-`;
+`
 
 export const Label = styled.span`
   margin-left: 1.5rem;
   display: inline-block;
   vertical-align: bottom;
   line-height: 1;
-`;
+`
 
 export const Holder = styled.div`
   display: flex;
@@ -55,4 +55,4 @@ export const Holder = styled.div`
   justify-content: center;
 
   position: relative;
-`;
+`

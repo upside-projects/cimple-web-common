@@ -1,19 +1,19 @@
-import { css } from "styled-components";
+import { css } from "styled-components"
 
-import HKGroteskRegularWoff from "./fonts/HKGrotesk-Regular.woff";
-import HKGroteskRegularWoff2 from "./fonts/HKGrotesk-Regular.woff2";
-import HKGroteskItalicWoff from "./fonts/HKGrotesk-Italic.woff";
-import HKGroteskItalicWoff2 from "./fonts/HKGrotesk-Italic.woff2";
+import HKGroteskRegularWoff from "./fonts/HKGrotesk-Regular.woff"
+import HKGroteskRegularWoff2 from "./fonts/HKGrotesk-Regular.woff2"
+import HKGroteskItalicWoff from "./fonts/HKGrotesk-Italic.woff"
+import HKGroteskItalicWoff2 from "./fonts/HKGrotesk-Italic.woff2"
 
-import HKGroteskMediumWoff from "./fonts/HKGrotesk-Medium.woff";
-import HKGroteskMediumWoff2 from "./fonts/HKGrotesk-Medium.woff2";
-import HKGroteskMediumItalicWoff from "./fonts/HKGrotesk-MediumItalic.woff";
-import HKGroteskMediumItalicWoff2 from "./fonts/HKGrotesk-MediumItalic.woff2";
+import HKGroteskMediumWoff from "./fonts/HKGrotesk-Medium.woff"
+import HKGroteskMediumWoff2 from "./fonts/HKGrotesk-Medium.woff2"
+import HKGroteskMediumItalicWoff from "./fonts/HKGrotesk-MediumItalic.woff"
+import HKGroteskMediumItalicWoff2 from "./fonts/HKGrotesk-MediumItalic.woff2"
 
-import HKGroteskSemiBoldWoff from "./fonts/HKGrotesk-SemiBold.woff";
-import HKGroteskSemiBoldWoff2 from "./fonts/HKGrotesk-SemiBold.woff2";
-import HKGroteskSemiBoldItalicWoff from "./fonts/HKGrotesk-SemiBoldItalic.woff";
-import HKGroteskSemiBoldItalicWoff2 from "./fonts/HKGrotesk-SemiBoldItalic.woff2";
+import HKGroteskSemiBoldWoff from "./fonts/HKGrotesk-SemiBold.woff"
+import HKGroteskSemiBoldWoff2 from "./fonts/HKGrotesk-SemiBold.woff2"
+import HKGroteskSemiBoldItalicWoff from "./fonts/HKGrotesk-SemiBoldItalic.woff"
+import HKGroteskSemiBoldItalicWoff2 from "./fonts/HKGrotesk-SemiBoldItalic.woff2"
 
 export default css`
   /* REGULAR */
@@ -72,4 +72,4 @@ export default css`
     src: url(${HKGroteskSemiBoldItalicWoff2}) format("woff2"),
       url(${HKGroteskSemiBoldItalicWoff}) format("woff");
   }
-`;
+`

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from "styled-components"
 
 export const Check = styled.span`
   position: absolute;
@@ -42,7 +42,7 @@ export const Check = styled.span`
     transform: rotate(-45deg) translate(-1px, 4px)
       scale(${({ checked }) => (checked ? 1 : 0.8)});
   }
-`;
+`
 
 export const Checkbox = styled.input`
   position: absolute;
@@ -50,14 +50,14 @@ export const Checkbox = styled.input`
   cursor: pointer;
   height: 0;
   width: 0;
-`;
+`
 
 export const Label = styled.span`
   margin-left: 1.5rem;
   display: inline-block;
   vertical-align: bottom;
   line-height: 1;
-`;
+`
 
 export const Holder = styled.div`
   display: flex;
@@ -66,4 +66,4 @@ export const Holder = styled.div`
   justify-content: center;
 
   position: relative;
-`;
+`

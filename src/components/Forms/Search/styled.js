@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from "styled-components"
 
 export const base = css`
   font-size: 1rem;
@@ -54,11 +54,11 @@ export const base = css`
     css`
       cursor: not-allowed;
     `}
-`;
+`
 
 export const Input = styled.input`
   ${base}
-`;
+`
 
 export const Holder = styled.div`
   display: flex;
@@ -76,4 +76,4 @@ export const Holder = styled.div`
   @media only screen and (max-width: 375px) {
     min-width: 288px;
   }
-`;
+`

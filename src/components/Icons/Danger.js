@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Danger = () => {
   return (
@@ -12,7 +12,7 @@ const Danger = () => {
         <rect width="24" height="24" fill="#D8D8D8" opacity="0" />
         <polygon
           stroke="#151E29"
-          stroke-width="1.5"
+          strokeWidth="1.5"
           points="11.944 2 21.389 19 2.5 19"
         />
         <polygon
@@ -23,7 +23,7 @@ const Danger = () => {
         <rect width="2" height="2" x="11" y="14" fill="#151E29" />
       </g>
     </svg>
-  );
-};
+  )
+}
 
-export default Danger;
+export default Danger

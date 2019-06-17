@@ -1,9 +1,10 @@
-import React from "react";
+import React from "react"
+import PropTypes from "prop-types"
 
-import Search from "../../../Forms/Search/Search";
-import ExternalLink from "../../../Links/ExternalLink/ExternalLink";
-import Logo from "../../../Logo/Logo";
-import * as S from "./styled";
+import Search from "../../../Forms/Search/Search"
+import ExternalLink from "../../../Links/ExternalLink/ExternalLink"
+import Logo from "../../../Logo/Logo"
+import * as S from "./styled"
 
 const TopbarSign = ({ noSearch }) => {
   return (
@@ -12,7 +13,11 @@ const TopbarSign = ({ noSearch }) => {
       {!noSearch && <Search placeholder="Search for goods" />}
       <ExternalLink to="https://cimple.uk">Cimple Marketplace</ExternalLink>
     </S.Holder>
-  );
-};
+  )
+}
 
-export default TopbarSign;
+export default TopbarSign
+
+TopbarSign.propTypes = {
+  noSearch: PropTypes.bool.isRequired
+}

@@ -1,11 +1,12 @@
-import React from "react";
+import React from "react"
+import PropTypes from "prop-types"
 
-import Link from "../Link";
-import * as S from "./styled";
+import Link from "../Link"
+import * as S from "./styled"
 
-import External from "../../Icons/External";
+import External from "../../Icons/External"
 
-const ExternalLink = ({ to, children, withIcon }) => {
+const ExternalLink = ({ children, to }) => {
   return (
     <Link to={to}>
       <S.Wrapper>
@@ -13,7 +14,12 @@ const ExternalLink = ({ to, children, withIcon }) => {
         <External />
       </S.Wrapper>
     </Link>
-  );
-};
+  )
+}
 
-export default ExternalLink;
+export default ExternalLink
+
+ExternalLink.propTypes = {
+  children: PropTypes.node.isRequired,
+  to: PropTypes.string.isRequired
+}

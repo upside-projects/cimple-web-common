@@ -1,4 +1,4 @@
-import { css } from "styled-components";
+import { css } from "styled-components"
 
 export default css`
   html,
@@ -128,4 +128,4 @@ export default css`
   a {
     text-decoration: none;
   }
-`;
+`

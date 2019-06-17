@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Sort = () => {
   return (
@@ -8,7 +8,7 @@ const Sort = () => {
       height="9"
       viewBox="0 0 8 9"
     >
-      <g fill="none" fill-rule="evenodd" transform="translate(-4 -3.324)">
+      <g fill="none" fillRule="evenodd" transform="translate(-4 -3.324)">
         <rect width="16" height="16" fill="#D8D8D8" opacity="0" />
         <polyline
           stroke="#979797"
@@ -22,7 +22,7 @@ const Sort = () => {
         />
       </g>
     </svg>
-  );
-};
+  )
+}
 
-export default Sort;
+export default Sort

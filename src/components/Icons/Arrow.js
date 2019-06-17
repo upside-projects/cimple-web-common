@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 
-const Arrow = ({ currentColor, ...props }) => {
+const Arrow = ({ currentColor }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -8,13 +8,13 @@ const Arrow = ({ currentColor, ...props }) => {
       height="8"
       viewBox="0 0 9 8"
     >
-      <g fill="none" fill-rule="evenodd" transform="translate(-8 -8)">
+      <g fill="none" fillRule="evenodd" transform="translate(-8 -8)">
         <rect width="24" height="24" fill="none" opacity="0" />
         <path stroke={currentColor} d="M8,12 L16,12" />
         <polyline stroke={currentColor} points="12 16 16 12 12 8" />
       </g>
     </svg>
-  );
-};
+  )
+}
 
-export default Arrow;
+export default Arrow

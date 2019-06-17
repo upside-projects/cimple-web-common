@@ -1,24 +1,24 @@
-import React from "react";
+import React from "react"
 
-import TopbarSimple from "./Simple/Simple";
-import TopbarMarket from "./Market/Market";
-import TopbarSign from "./Sign/Sign";
+import TopbarSimple from "./Simple/Simple"
+import TopbarMarket from "./Market/Market"
+import TopbarSign from "./Sign/Sign"
 
 const renderTopbar = type => {
   switch (type) {
     case "simple":
-      return <TopbarSimple />;
+      return <TopbarSimple />
     case "market":
-      return <TopbarMarket />;
+      return <TopbarMarket />
     case "sign":
-      return <TopbarSign />;
+      return <TopbarSign />
     default:
-      return <TopbarSimple />;
+      return <TopbarSimple />
   }
-};
+}
 
 const Topbar = ({ type }) => {
-  return renderTopbar(type);
-};
+  return renderTopbar(type)
+}
 
-export default Topbar;
+export default Topbar

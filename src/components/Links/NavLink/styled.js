@@ -1,9 +1,9 @@
-import styled, { css } from "styled-components";
+import styled, { css } from "styled-components"
 
 export const NavLink = styled.a`
   color: ${({ theme }) => theme.colors.greyscale.dark};
   transition: ${({ theme }) => theme.transition.cubic()};
-`;
+`
 
 export const Wrapper = styled.div`
   display: flex;
@@ -42,4 +42,4 @@ export const Wrapper = styled.div`
       width: 100%;
     }
   }
-`;
+`

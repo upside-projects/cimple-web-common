@@ -1,3 +1,3 @@
-import { Label } from "./styled";
+import { Label } from "./styled"
 
-export default Label;
+export default Label

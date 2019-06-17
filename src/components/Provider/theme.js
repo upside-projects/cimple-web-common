@@ -40,4 +40,4 @@ export default {
     cubic: (ms = 750) => `cubic-bezier(.19, 1, .22, 1) ${ms}ms`,
     ease: (ms = 200) => `${ms}ms ease-in-out`
   }
-};
+}

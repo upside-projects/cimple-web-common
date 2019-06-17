@@ -1,9 +1,10 @@
-import React from "react";
+import React from "react"
+import PropTypes from "prop-types"
 
-import DoubleChevron from "../Icons/DoubleChevron";
-import { Uppercase } from "../Typography/Typography";
+import DoubleChevron from "../Icons/DoubleChevron"
+import { Uppercase } from "../Typography/Typography"
 
-import * as S from "./styled";
+import * as S from "./styled"
 
 const Sort = ({ children }) => {
   return (
@@ -11,7 +12,11 @@ const Sort = ({ children }) => {
       <Uppercase color="grey">{children}</Uppercase>
       <DoubleChevron />
     </S.Holder>
-  );
-};
+  )
+}
 
-export default Sort;
+export default Sort
+
+Sort.propTypes = {
+  children: PropTypes.node.isRequired
+}

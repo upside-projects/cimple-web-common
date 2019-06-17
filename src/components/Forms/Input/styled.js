@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { Uppercase as StyledUppercase } from "../../Typography/Typography";
+import styled, { css } from "styled-components"
+import { Uppercase as StyledUppercase } from "../../Typography/Typography"
 
 export const base = css`
   font-size: 1rem;
@@ -56,11 +56,11 @@ export const base = css`
     css`
       cursor: not-allowed;
     `}
-`;
+`
 
 export const Input = styled.input`
   ${base}
-`;
+`
 
 export const Holder = styled.div`
   display: flex;
@@ -70,14 +70,14 @@ export const Holder = styled.div`
   @media only screen and (max-width: 375px) {
     min-width: 288px;
   }
-`;
+`
 
 export const Flex = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-`;
+`
 
 export const Uppercase = styled(StyledUppercase)`
   &:hover {
@@ -86,4 +86,4 @@ export const Uppercase = styled(StyledUppercase)`
 
     cursor: pointer;
   }
-`;
+`

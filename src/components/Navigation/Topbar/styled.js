@@ -1,4 +1,5 @@
-import styled from "styled-components";
+/* eslint-disable import/prefer-default-export */
+import styled from "styled-components"
 
 export const Holder = styled.div`
   display: flex;
@@ -9,4 +10,4 @@ export const Holder = styled.div`
   width: 100vw;
 
   border-bottom: 1px solid ${({ theme }) => theme.colors.greyscale.lighter};
-`;
+`

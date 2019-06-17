@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Search = () => {
   return (
@@ -8,7 +8,7 @@ const Search = () => {
       height="13"
       viewBox="0 0 14 13"
     >
-      <g fill="none" fill-rule="evenodd" transform="translate(-5 -5)">
+      <g fill="none" fillRule="evenodd" transform="translate(-5 -5)">
         <rect width="24" height="24" fill="#D8D8D8" opacity="0" />
         <g stroke="#9E9DA3" transform="translate(6 6)">
           <circle cx="4" cy="4" r="4" />
@@ -16,7 +16,7 @@ const Search = () => {
         </g>
       </g>
     </svg>
-  );
-};
+  )
+}
 
-export default Search;
+export default Search

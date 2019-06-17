@@ -1,11 +1,12 @@
-import React from "react";
+import React from "react"
+import PropTypes from "prop-types"
 
-import Link from "../Link";
-import * as S from "./styled";
+import Link from "../Link"
+import * as S from "./styled"
 
-import Arrow from "../../Icons/Arrow";
+import Arrow from "../../Icons/Arrow"
 
-const ArrowLink = ({ to, children, withIcon }) => {
+const ArrowLink = ({ to, children }) => {
   return (
     <Link to={to}>
       <S.Wrapper>
@@ -13,7 +14,12 @@ const ArrowLink = ({ to, children, withIcon }) => {
         <Arrow />
       </S.Wrapper>
     </Link>
-  );
-};
+  )
+}
 
-export default ArrowLink;
+export default ArrowLink
+
+ArrowLink.propTypes = {
+  to: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired
+}

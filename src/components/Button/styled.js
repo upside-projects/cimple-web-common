@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled, { css } from "styled-components"
 
-import { rotate } from "../../utils/rotate";
+import { rotate } from "../../utils/rotate"
 
 export const base = css`
   position: relative;
@@ -87,8 +87,8 @@ export const base = css`
 
           animation: ${rotate} 2s linear infinite;
       `};
-`;
+`
 
 export const Button = styled.button`
   ${base}
-`;
+`

@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Cart = () => {
   return (
@@ -8,7 +8,7 @@ const Cart = () => {
       height="16"
       viewBox="0 0 14 16"
     >
-      <g fill="none" fill-rule="evenodd" transform="translate(-5 -3.985)">
+      <g fill="none" fillRule="evenodd" transform="translate(-5 -3.985)">
         <rect width="24" height="24" fill="#D8D8D8" opacity="0" />
         <path
           stroke="#151E29"
@@ -25,7 +25,7 @@ const Cart = () => {
         />
       </g>
     </svg>
-  );
-};
+  )
+}
 
-export default Cart;
+export default Cart

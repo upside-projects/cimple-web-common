@@ -1,7 +1,8 @@
-import React from "react";
+import React from "react"
+import PropTypes from "prop-types"
 
-import Label from "../Label/Label";
-import * as S from "./styled";
+import Label from "../Label/Label"
+import * as S from "./styled"
 
 const Checkbox = ({ label, name, checked, onChange }) => {
   return (
@@ -18,7 +19,14 @@ const Checkbox = ({ label, name, checked, onChange }) => {
         <S.Label>{label}</S.Label>
       </Label>
     </S.Holder>
-  );
-};
+  )
+}
 
-export default Checkbox;
+export default Checkbox
+
+Checkbox.propTypes = {
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  checked: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired
+}

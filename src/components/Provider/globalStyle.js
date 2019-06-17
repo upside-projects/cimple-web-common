@@ -1,7 +1,7 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"
 
-import reset from "./reset";
-import typography from "./typography";
+import reset from "./reset"
+import typography from "./typography"
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -25,6 +25,6 @@ const GlobalStyle = createGlobalStyle`
    font-size: 16px;
    font-weight: 400;
  }
-`;
+`
 
-export default GlobalStyle;
+export default GlobalStyle
