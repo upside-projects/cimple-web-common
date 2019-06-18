@@ -27,6 +27,10 @@ const GlobalStyle = createGlobalStyle`
    font-size: 16px;
    font-weight: 400;
  }
+
+ #__next{
+    height: 100%;
+ }
 `
 
 export default GlobalStyle
