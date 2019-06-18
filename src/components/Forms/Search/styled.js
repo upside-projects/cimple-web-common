@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import base from "../Input/styled"
+import { base } from "../Input/styled"
 
 export const Input = styled.input`
   ${base}
