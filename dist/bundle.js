@@ -622,13 +622,14 @@ var ErrorMessage = styled__default(Uppercase)(_templateObject$8(), function (_re
 });
 
 var Link = function Link(_ref) {
-  var to = _ref.to,
+  var navigateWith = _ref.navigateWith,
+      to = _ref.to,
       children = _ref.children;
   var internal = /^\/(?!\/)/.test(to);
   var external = /^http/.test(to);
 
   if (internal) {
-    return 0; // REPLACE WITH ROUTER;
+    return navigateWith(to);
   }
 
   if (external) {
@@ -641,9 +642,13 @@ var Link = function Link(_ref) {
     href: to
   }, children);
 };
+Link.defaultProps = {
+  navigateWith: function navigateWith() {}
+};
 Link.propTypes = {
   children: PropTypes.node.isRequired,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
+  navigateWith: PropTypes.func
 };
 
 function _templateObject7$1() {
