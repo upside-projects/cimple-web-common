@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled, { css } from "styled-components"
 
-import { Uppercase } from "../../Typography/Typography";
+import { Uppercase } from "../../Typography/Typography"
 
 const ErrorMessage = styled(Uppercase)`
   display: flex;
@@ -12,8 +12,8 @@ const ErrorMessage = styled(Uppercase)`
   ${p =>
     p.error &&
     css`
-      color: ${({ theme }) => theme.colors.error.default};
+      color: ${({ theme }) => theme.colors.danger.default};
     `}
-`;
+`
 
-export default ErrorMessage;
+export default ErrorMessage

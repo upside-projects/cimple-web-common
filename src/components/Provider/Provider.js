@@ -1,8 +1,10 @@
-import React from "react";
-import { ThemeProvider } from "styled-components";
+import React from "react"
+import PropTypes from "prop-types"
 
-import GlobalStyle from "./globalStyle";
-import theme from "./theme";
+import { ThemeProvider } from "styled-components"
+
+import GlobalStyle from "./globalStyle"
+import theme from "./theme"
 
 const Provider = ({ children }) => {
   return (
@@ -10,7 +12,11 @@ const Provider = ({ children }) => {
       <GlobalStyle />
       <ThemeProvider theme={theme}>{children}</ThemeProvider>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default Provider;
+export default Provider
+
+Provider.propTypes = {
+  children: PropTypes.node.isRequired
+}

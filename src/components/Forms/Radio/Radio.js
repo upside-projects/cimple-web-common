@@ -1,18 +1,11 @@
-import React from "react";
+import React from "react"
+import PropTypes from "prop-types"
 
-import Label from "../Label/Label";
+import Label from "../Label/Label"
 
-import * as S from "./styled";
+import * as S from "./styled"
 
-const Radio = ({
-  checked,
-  disabled,
-  label,
-  name,
-  onChange,
-  value,
-  children
-}) => {
+const Radio = ({ checked, disabled, label, name, onChange, value }) => {
   return (
     <S.Holder>
       <Label inline>
@@ -28,7 +21,16 @@ const Radio = ({
         <S.Label>{label}</S.Label>
       </Label>
     </S.Holder>
-  );
-};
+  )
+}
 
-export default Radio;
+export default Radio
+
+Radio.propTypes = {
+  disabled: PropTypes.bool.isRequired,
+  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  checked: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired
+}

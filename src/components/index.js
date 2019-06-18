@@ -1,23 +1,27 @@
 /* Provider */
-export { default as Provider } from "../components/Provider/Provider";
-export { default as theme } from "../components/Provider/theme";
+export { default as Provider } from "./Provider/Provider"
+export { default as theme } from "./Provider/theme"
 
 /* Buttons */
-export { default as Button } from "../components/Button/Button";
+export { default as Button } from "./Button/Button"
 
 /* Forms */
-export { default as Checkbox } from "../components/Forms/Checkbox/Checkbox";
-export {
-  default as ErrorMessage
-} from "../components/Forms/ErrorMessage/ErrorMessage";
-export { default as Input } from "../components/Forms/Input/Input";
-export { default as Label } from "../components/Forms/Label/Label";
-export { default as Link } from "../components/Forms/Link/Link";
-export { default as Radio } from "../components/Forms/Radio/Radio";
+export { default as Checkbox } from "./Forms/Checkbox/Checkbox"
+export { default as ErrorMessage } from "./Forms/ErrorMessage/ErrorMessage"
+export { default as Input } from "./Forms/Input/Input"
+export { default as Label } from "./Forms/Label/Label"
+
+export { default as Radio } from "./Forms/Radio/Radio"
 
 /* Navigation */
-export { default as Topbar } from "../components/Navigation/Topbar/Topbar";
-export { default as Footer } from "../components/Navigation/Footer/Footer";
+export { default as Topbar } from "./Navigation/Topbar/Topbar"
+export { default as Footer } from "./Navigation/Footer/Footer"
+
+/* Links */
+export { default as NavLink } from "./Links/NavLink/NavLink"
+
+/* Logo */
+export { default as Logo } from "./Logo/Logo"
 
 /* Typography */
 export {
@@ -27,7 +31,7 @@ export {
   Text,
   UppercaseL,
   Uppercase
-} from "../components/Typography/Typography";
+} from "./Typography/Typography"
 
 /* Layout */
-export { Flex, Column } from "../components/Layout/Layout";
+export { Flex, Column } from "./Layout/Layout"

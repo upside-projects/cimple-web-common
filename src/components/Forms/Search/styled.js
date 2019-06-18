@@ -1,0 +1,24 @@
+import styled from "styled-components"
+import { base } from "../Input/styled"
+
+export const Input = styled.input`
+  ${base}
+`
+
+export const Holder = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-width: 480px;
+
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 14px;
+    right: 20px;
+  }
+
+  @media only screen and (max-width: 375px) {
+    min-width: 288px;
+  }
+`

@@ -1,13 +1,13 @@
-import React from "react";
+import React from "react"
 
-import { storiesOf } from "@storybook/react";
-import { State, Store } from "@sambego/storybook-state";
+import { storiesOf } from "@storybook/react"
+import { State, Store } from "@sambego/storybook-state"
 
-import Checkbox from "./Checkbox";
+import Checkbox from "./Checkbox"
 
 const store = new Store({
   checked: false
-});
+})
 
 storiesOf("Checkbox", module).add("Default", () => (
   <State store={store}>
@@ -19,4 +19,4 @@ storiesOf("Checkbox", module).add("Default", () => (
       />
     )}
   </State>
-));
+))

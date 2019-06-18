@@ -1,5 +1,5 @@
 function applyColor(props) {
-  const { colors } = props.theme;
+  const { colors } = props.theme
 
   const map = {
     black: colors.greyscale.dark,
@@ -11,16 +11,16 @@ function applyColor(props) {
     greyDark: colors.greyscale.dark,
     greyLight: colors.greyscale.light,
     greyMedium: colors.greyscale.medium,
-    red: colors.error.default,
-    redDark: colors.error.dark,
+    red: colors.danger.default,
+    redDark: colors.danger.dark,
     white: colors.greyscale.white
-  };
-
-  if (props.color !== undefined) {
-    return map[props.color] || map.default;
   }
 
-  return map.default;
+  if (props.color !== undefined) {
+    return map[props.color] || map.default
+  }
+
+  return map.default
 }
 
-export default applyColor;
+export default applyColor

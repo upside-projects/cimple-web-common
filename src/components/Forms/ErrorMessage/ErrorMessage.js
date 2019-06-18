@@ -1,3 +1,3 @@
-import ErrorMessage from "./styled";
+import ErrorMessage from "./styled"
 
-export default ErrorMessage;
+export default ErrorMessage

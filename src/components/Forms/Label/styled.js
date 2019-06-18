@@ -1,4 +1,5 @@
-import styled, { css } from "styled-components";
+/* eslint-disable import/prefer-default-export */
+import styled, { css } from "styled-components"
 
 export const Label = styled.label`
   display: flex;
@@ -17,4 +18,4 @@ export const Label = styled.label`
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-`;
+`

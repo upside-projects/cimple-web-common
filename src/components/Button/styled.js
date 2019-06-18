@@ -1,6 +1,6 @@
-import styled, { css } from "styled-components";
+import styled, { css } from "styled-components"
 
-import { rotate } from "../../utils/rotate";
+import { rotate } from "../../utils/rotate"
 
 export const base = css`
   position: relative;
@@ -41,6 +41,17 @@ export const base = css`
       }
     `}
 
+
+  ${p =>
+    p.danger &&
+    css`
+      background-color: ${({ theme }) => theme.colors.danger.default};
+
+      &:hover {
+        background-color: ${({ theme }) => theme.colors.danger.dark};
+      }
+    `}
+
   ${p =>
     p.full &&
     css`
@@ -50,7 +61,7 @@ export const base = css`
     ${p =>
       p.loading &&
       css`
-        background-color: ${({ theme }) => theme.colors.brand.dark};
+        background-color: ${({ theme }) => theme.colors.brand.light};
         padding-right: 40px;
 
         &:after {
@@ -76,8 +87,8 @@ export const base = css`
 
           animation: ${rotate} 2s linear infinite;
       `};
-`;
+`
 
 export const Button = styled.button`
   ${base}
-`;
+`
