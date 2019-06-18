@@ -18,8 +18,10 @@ const Link = ({ navigateWith, to, children }) => {
 
 export default Link
 
+Link.defaultProps = { navigateWith: () => {} }
+
 Link.propTypes = {
   children: PropTypes.node.isRequired,
   to: PropTypes.string.isRequired,
-  navigateWith: PropTypes.func.isRequired
+  navigateWith: PropTypes.func
 }
