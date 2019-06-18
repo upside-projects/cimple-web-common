@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
     font-size: 16px;
     box-sizing: border-box;
     font-weight: 400;
+    height: 100%;
   }
   *, *:before, *:after {
     box-sizing: inherit;
@@ -18,6 +19,7 @@ const GlobalStyle = createGlobalStyle`
   
   body {
     font-size: inherit;
+    height: 100%;
   }
 
   body, input, button, select {
