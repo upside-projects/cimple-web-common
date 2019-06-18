@@ -110,7 +110,7 @@ function _templateObject$1() {
 var typography = styled.css(_templateObject$1(), HKGroteskRegularWoff2, HKGroteskRegularWoff, HKGroteskMediumWoff2, HKGroteskMediumWoff, HKGroteskSemiBoldWoff2, HKGroteskSemiBoldWoff);
 
 function _templateObject$2() {
-  var data = _taggedTemplateLiteral(["\n  ", "\n  ", "\n\n  html {\n    font-size: 16px;\n    box-sizing: border-box;\n    font-weight: 400;\n  }\n  *, *:before, *:after {\n    box-sizing: inherit;\n  }\n  \n  body {\n    font-size: inherit;\n  }\n\n  body, input, button, select {\n   font-family: 'HKGrotesk', sans-serif;\n   font-size: 16px;\n   font-weight: 400;\n }\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", "\n  ", "\n\n  html {\n    font-size: 16px;\n    box-sizing: border-box;\n    font-weight: 400;\n    height: 100%;\n  }\n  *, *:before, *:after {\n    box-sizing: inherit;\n  }\n  \n  body {\n    font-size: inherit;\n    height: 100%;\n  }\n\n  body, input, button, select {\n   font-family: 'HKGrotesk', sans-serif;\n   font-size: 16px;\n   font-weight: 400;\n }\n"]);
 
   _templateObject$2 = function _templateObject() {
     return data;
