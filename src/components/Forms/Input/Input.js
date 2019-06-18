@@ -10,6 +10,7 @@ import * as S from "./styled"
 
 const Input = ({
   className,
+  containerProps,
   disabled,
   error,
   helper,
@@ -24,7 +25,7 @@ const Input = ({
   ...props
 }) => {
   return (
-    <S.Holder className={className} {...props}>
+    <S.Holder className={className} {...containerProps}>
       <Label>
         <S.Flex>
           <Uppercase>{label}</Uppercase>
@@ -52,8 +53,13 @@ const Input = ({
 
 export default Input
 
+Input.defaultProps = {
+  containerProps: {}
+}
+
 Input.propTypes = {
   className: PropTypes.string.isRequired,
+  containerProps: PropTypes.shape({}),
   children: PropTypes.node.isRequired,
   error: PropTypes.string.isRequired,
   disabled: PropTypes.bool.isRequired,

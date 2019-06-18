@@ -7,6 +7,7 @@ import Search from "../../Icons/Search"
 
 const Searchbar = ({
   className,
+  containerProps,
   disabled,
   error,
   helper,
@@ -21,7 +22,7 @@ const Searchbar = ({
   ...props
 }) => {
   return (
-    <S.Holder className={className} {...props}>
+    <S.Holder className={className} {...containerProps}>
       <S.Input
         name={name}
         onBlur={onBlur}
@@ -39,8 +40,13 @@ const Searchbar = ({
 
 export default Searchbar
 
+Searchbar.defaultProps = {
+  containerProps: {}
+}
+
 Searchbar.propTypes = {
   className: PropTypes.string.isRequired,
+  containerProps: PropTypes.shape({}),
   children: PropTypes.node.isRequired,
   error: PropTypes.string.isRequired,
   disabled: PropTypes.bool.isRequired,
