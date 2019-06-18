@@ -1,8 +1,9 @@
 import React from "react"
 
-const Danger = () => {
+const Danger = ({ ...props }) => {
   return (
     <svg
+      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="22"
       height="20"
