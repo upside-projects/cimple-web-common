@@ -1,12 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Link = ({ to, children }) => {
+const Link = ({ navigateWith, to, children }) => {
   const internal = /^\/(?!\/)/.test(to)
   const external = /^http/.test(to)
 
   if (internal) {
-    return 0 // REPLACE WITH ROUTER;
+    return navigateWith(to)
   }
 
   if (external) {
@@ -18,7 +18,10 @@ const Link = ({ to, children }) => {
 
 export default Link
 
+Link.defaultProps = { navigateWith: () => {} }
+
 Link.propTypes = {
   children: PropTypes.node.isRequired,
-  to: PropTypes.string.isRequired
+  to: PropTypes.string.isRequired,
+  navigateWith: PropTypes.func
 }
