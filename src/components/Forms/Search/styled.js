@@ -36,16 +36,16 @@ export const base = css`
   ${p =>
     p.error &&
     css`
-      border: 1px solid ${({ theme }) => theme.colors.red.default};
+      border: 1px solid ${({ theme }) => theme.colors.danger.default};
 
       &:hover {
         outline: none;
-        border: 1px solid ${({ theme }) => theme.colors.red.dark};
+        border: 1px solid ${({ theme }) => theme.colors.danger.dark};
       }
 
       &:focus {
         outline: none;
-        border: 1px solid ${({ theme }) => theme.colors.red.dark};
+        border: 1px solid ${({ theme }) => theme.colors.danger.dark};
       }
     `}
 

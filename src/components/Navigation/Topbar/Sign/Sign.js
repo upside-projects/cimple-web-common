@@ -6,12 +6,12 @@ import ExternalLink from "../../../Links/ExternalLink/ExternalLink"
 import Logo from "../../../Logo/Logo"
 import * as S from "./styled"
 
-const TopbarSign = ({ noSearch }) => {
+const TopbarSign = ({ noSearch, placeholder, linkTo, linkName }) => {
   return (
     <S.Holder>
       <Logo />
-      {!noSearch && <Search placeholder="Search for goods" />}
-      <ExternalLink to="https://cimple.uk">Cimple Marketplace</ExternalLink>
+      {!noSearch && <Search placeholder={placeholder} />}
+      <ExternalLink to={linkTo}>{linkName}</ExternalLink>
     </S.Holder>
   )
 }
@@ -19,5 +19,8 @@ const TopbarSign = ({ noSearch }) => {
 export default TopbarSign
 
 TopbarSign.propTypes = {
-  noSearch: PropTypes.bool.isRequired
+  linkTo: PropTypes.string.isRequired,
+  linkName: PropTypes.string.isRequired,
+  noSearch: PropTypes.bool.isRequired,
+  placeholder: PropTypes.string.isRequired
 }

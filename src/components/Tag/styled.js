@@ -3,7 +3,7 @@ import styled from "styled-components"
 
 const getBgColor = props => {
   const types = {
-    canceled: props.theme.colors.red.light,
+    canceled: props.theme.colors.danger.light,
     completed: props.theme.colors.green.light,
     refunded: props.theme.colors.yellow.light
   }
@@ -13,7 +13,7 @@ const getBgColor = props => {
 
 const getColor = props => {
   const types = {
-    canceled: props.theme.colors.red.default,
+    canceled: props.theme.colors.danger.default,
     completed: props.theme.colors.green.default,
     refunded: props.theme.colors.yellow.default
   }

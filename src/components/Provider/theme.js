@@ -12,7 +12,7 @@ export default {
       lighter: "#F3F2F5",
       white: "#FFFFFF"
     },
-    red: {
+    danger: {
       default: "#F87E7E",
       dark: "#D25656",
       light: "#FEE9E9"

@@ -45,10 +45,10 @@ export const base = css`
   ${p =>
     p.danger &&
     css`
-      background-color: ${({ theme }) => theme.colors.red.default};
+      background-color: ${({ theme }) => theme.colors.danger.default};
 
       &:hover {
-        background-color: ${({ theme }) => theme.colors.red.dark};
+        background-color: ${({ theme }) => theme.colors.danger.dark};
       }
     `}
 
