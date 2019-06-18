@@ -622,33 +622,33 @@ var ErrorMessage = styled__default(Uppercase)(_templateObject$8(), function (_re
 });
 
 var Link = function Link(_ref) {
-  var navigateWith = _ref.navigateWith,
-      to = _ref.to,
-      children = _ref.children;
-  var internal = /^\/(?!\/)/.test(to);
-  var external = /^http/.test(to);
+  var renderInternalLink = _ref.renderInternalLink,
+      props = _objectWithoutProperties(_ref, ["renderInternalLink"]);
+
+  var internal = /^\/(?!\/)/.test(props.to);
+  var external = /^http/.test(props.to);
 
   if (internal) {
-    return navigateWith(to);
+    return renderInternalLink(props);
   }
 
   if (external) {
     return React.createElement("a", {
-      href: to
-    }, children);
+      href: props.to
+    }, props.children);
   }
 
   return React.createElement("a", {
-    href: to
-  }, children);
+    href: props.to
+  }, props.children);
 };
 Link.defaultProps = {
-  navigateWith: function navigateWith() {}
+  renderInternalLink: function renderInternalLink() {}
 };
 Link.propTypes = {
-  children: PropTypes.node.isRequired,
   to: PropTypes.string.isRequired,
-  navigateWith: PropTypes.func
+  children: PropTypes.node.isRequired,
+  renderInternalLink: PropTypes.func
 };
 
 function _templateObject7$1() {
