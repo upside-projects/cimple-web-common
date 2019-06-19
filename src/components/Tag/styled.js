@@ -22,6 +22,7 @@ const getColor = props => {
 }
 
 export const Tag = styled.span`
+  display: block;
   border-radius: ${({ theme }) => theme.radius.xsmall};
   color: ${getColor};
   background-color: ${getBgColor};
