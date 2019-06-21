@@ -4,9 +4,9 @@ import PropTypes from "prop-types"
 import Link from "../Link"
 import * as S from "./styled"
 
-const NavLink = ({ to, children, withIcon }) => {
+const NavLink = ({ to, children, withIcon, ...rest }) => {
   return (
-    <Link to={to}>
+    <Link to={to} {...rest}>
       <S.Wrapper withIcon={withIcon}>
         <S.NavLink>{children}</S.NavLink>
         {withIcon && withIcon}

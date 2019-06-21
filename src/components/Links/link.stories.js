@@ -9,7 +9,9 @@ import ExternalLink from "./ExternalLink/ExternalLink"
 import BackLink from "./BackLink/BackLink"
 
 storiesOf("Link", module).add("Navigation", () => (
-  <NavLink to="https://google.com">Orders</NavLink>
+  <NavLink to="/orders" internalType="gatsby">
+    Orders
+  </NavLink>
 ))
 
 storiesOf("Link", module).add("Navigation with Icon", () => (
