@@ -1,12 +1,13 @@
-import babel from "rollup-plugin-babel";
-import commonjs from "rollup-plugin-commonjs";
-import json from "rollup-plugin-json";
-import resolve from "rollup-plugin-node-resolve";
-import postcss from "rollup-plugin-postcss";
-import copy from "rollup-plugin-copy-glob";
-import url from "rollup-plugin-url";
+import babel from "rollup-plugin-babel"
+import commonjs from "rollup-plugin-commonjs"
+import image from "rollup-plugin-image"
+import json from "rollup-plugin-json"
+import resolve from "rollup-plugin-node-resolve"
+import postcss from "rollup-plugin-postcss"
+import copy from "rollup-plugin-copy-glob"
+import url from "rollup-plugin-url"
 
-import pkg from "./package.json";
+import pkg from "./package.json"
 
 export default {
   input: "src/components/index.js",
@@ -31,6 +32,7 @@ export default {
       include: ["**/*.woff", "**/*.woff2"],
       limit: Infinity
     }),
+    image(),
     json(),
     resolve(),
     postcss(),
@@ -55,4 +57,4 @@ export default {
       }
     })
   ]
-};
+}

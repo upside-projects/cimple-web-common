@@ -333,6 +333,24 @@ Button$1.propTypes = {
   onClick: PropTypes.func.isRequired
 };
 
+function _templateObject$5() {
+  var data = _taggedTemplateLiteral(["\n  border: 0;\n  height: 1px;\n  background: ", "\n  width: 100%;\n"]);
+
+  _templateObject$5 = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var Divider = styled__default.hr(_templateObject$5(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.colors.greyscale.light;
+});
+
+var Divider$1 = function Divider$1() {
+  return React.createElement(Divider, null);
+};
+
 function _templateObject2$1() {
   var data = _taggedTemplateLiteral(["\n      flex-direction: row;\n      align-items: center;\n    "]);
 
@@ -343,16 +361,16 @@ function _templateObject2$1() {
   return data;
 }
 
-function _templateObject$5() {
+function _templateObject$6() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n\n  ", "\n\n  color: ", ";\n\n  -webkit-user-select: none;\n  -moz-user-select: none;\n  -ms-user-select: none;\n  user-select: none;\n"]);
 
-  _templateObject$5 = function _templateObject() {
+  _templateObject$6 = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Label = styled__default.label(_templateObject$5(), function (p) {
+var Label = styled__default.label(_templateObject$6(), function (p) {
   return p.inline && styled.css(_templateObject2$1());
 }, function (_ref) {
   var theme = _ref.theme;
@@ -399,16 +417,16 @@ function _templateObject2$2() {
   return data;
 }
 
-function _templateObject$6() {
+function _templateObject$7() {
   var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 16px;\n  width: 16px;\n\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: ", ";\n\n  transition: all ", ";\n\n  &:hover {\n    background-color: ", ";\n    border: 1px solid ", ";\n  }\n\n  ", "\n\n  &:after {\n    content: \"\";\n    width: 10px;\n    height: 5px;\n    display: block;\n    border-bottom: 2px solid ", ";\n    border-left: 2px solid ", ";\n\n    transition: transform ", ";\n    transform: rotate(-45deg) translate(-1px, 4px)\n      scale(", ");\n  }\n"]);
 
-  _templateObject$6 = function _templateObject() {
+  _templateObject$7 = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Check = styled__default.span(_templateObject$6(), function (_ref) {
+var Check = styled__default.span(_templateObject$7(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.white;
 }, function (_ref2) {
@@ -575,16 +593,16 @@ function _templateObject2$3() {
   return data;
 }
 
-function _templateObject$7() {
+function _templateObject$8() {
   var data = _taggedTemplateLiteral(["\n  color: ", ";\n  font-weight: 400;\n"]);
 
-  _templateObject$7 = function _templateObject() {
+  _templateObject$8 = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var base$1 = styled.css(_templateObject$7(), applyColor);
+var base$1 = styled.css(_templateObject$8(), applyColor);
 var title = styled.css(_templateObject2$3());
 var HeadingL = styled__default.h1(_templateObject3$2(), base$1, title);
 var HeadingM = styled__default.h2(_templateObject4$2(), base$1, title);
@@ -603,16 +621,16 @@ function _templateObject2$4() {
   return data;
 }
 
-function _templateObject$8() {
+function _templateObject$9() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  color: ", ";\n\n  margin-top: 0.5rem;\n\n  ", "\n"]);
 
-  _templateObject$8 = function _templateObject() {
+  _templateObject$9 = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var ErrorMessage = styled__default(Uppercase)(_templateObject$8(), function (_ref) {
+var ErrorMessage = styled__default(Uppercase)(_templateObject$9(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.light;
 }, function (p) {
@@ -3883,8 +3901,18 @@ Link.propTypes = {
 
 };
 
-function _templateObject7$1() {
+function _templateObject8$1() {
   var data = _taggedTemplateLiteral(["\n  &:hover {\n    color: ", ";\n    transition: ", ";\n\n    cursor: pointer;\n  }\n"]);
+
+  _templateObject8$1 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7$1() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n"]);
 
   _templateObject7$1 = function _templateObject7() {
     return data;
@@ -3894,7 +3922,7 @@ function _templateObject7$1() {
 }
 
 function _templateObject6$2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  align-items: center;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  min-width: 320px;\n\n  @media only screen and (max-width: 375px) {\n    min-width: 288px;\n  }\n"]);
 
   _templateObject6$2 = function _templateObject6() {
     return data;
@@ -3904,7 +3932,7 @@ function _templateObject6$2() {
 }
 
 function _templateObject5$3() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  min-width: 320px;\n\n  @media only screen and (max-width: 375px) {\n    min-width: 288px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", "\n"]);
 
   _templateObject5$3 = function _templateObject5() {
     return data;
@@ -3914,7 +3942,7 @@ function _templateObject5$3() {
 }
 
 function _templateObject4$3() {
-  var data = _taggedTemplateLiteral(["\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n      cursor: not-allowed;\n    "]);
 
   _templateObject4$3 = function _templateObject4() {
     return data;
@@ -3924,7 +3952,7 @@ function _templateObject4$3() {
 }
 
 function _templateObject3$3() {
-  var data = _taggedTemplateLiteral(["\n      cursor: not-allowed;\n    "]);
+  var data = _taggedTemplateLiteral(["\n      border: 1px solid ", ";\n\n      &:hover {\n        outline: none;\n        border: 1px solid ", ";\n      }\n\n      &:focus {\n        outline: none;\n        border: 1px solid ", ";\n      }\n    "]);
 
   _templateObject3$3 = function _templateObject3() {
     return data;
@@ -3934,7 +3962,7 @@ function _templateObject3$3() {
 }
 
 function _templateObject2$5() {
-  var data = _taggedTemplateLiteral(["\n      border: 1px solid ", ";\n\n      &:hover {\n        outline: none;\n        border: 1px solid ", ";\n      }\n\n      &:focus {\n        outline: none;\n        border: 1px solid ", ";\n      }\n    "]);
+  var data = _taggedTemplateLiteral(["\n    margin-top: 0.5rem;\n  "]);
 
   _templateObject2$5 = function _templateObject2() {
     return data;
@@ -3943,16 +3971,16 @@ function _templateObject2$5() {
   return data;
 }
 
-function _templateObject$9() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 1rem;\n  line-height: 1.5rem;\n  border: 1px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n\n  padding: 0.5rem 0.75rem;\n  margin-top: 0.5rem;\n\n  transition: ", ";\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  :-ms-input-placeholder {\n    color: red;\n  }\n\n  ::-ms-input-placeholder {\n    color: red;\n  }\n\n  &:hover {\n    outline: none;\n    border: 1px solid ", ";\n  }\n\n  &:focus {\n    outline: none;\n    border: 1px solid ", ";\n  }\n\n  ", "\n\n  ", "\n"]);
+function _templateObject$a() {
+  var data = _taggedTemplateLiteral(["\n  font-size: 1rem;\n  line-height: 1.5rem;\n  border: 1px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n\n  padding: 0.5rem 0.75rem;\n\n  transition: ", ";\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  :-ms-input-placeholder {\n    color: red;\n  }\n\n  ::-ms-input-placeholder {\n    color: red;\n  }\n\n  &:hover {\n    outline: none;\n    border: 1px solid ", ";\n  }\n\n  &:focus {\n    outline: none;\n    border: 1px solid ", ";\n  }\n", "\n\n  ", "\n\n  ", "\n"]);
 
-  _templateObject$9 = function _templateObject() {
+  _templateObject$a = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var base$2 = styled.css(_templateObject$9(), function (_ref) {
+var base$2 = styled.css(_templateObject$a(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.light;
 }, function (_ref2) {
@@ -3974,7 +4002,9 @@ var base$2 = styled.css(_templateObject$9(), function (_ref) {
   var theme = _ref7.theme;
   return theme.colors.brand["default"];
 }, function (p) {
-  return p.error && styled.css(_templateObject2$5(), function (_ref8) {
+  return p.label && styled.css(_templateObject2$5());
+}, function (p) {
+  return p.error && styled.css(_templateObject3$3(), function (_ref8) {
     var theme = _ref8.theme;
     return theme.colors.danger["default"];
   }, function (_ref9) {
@@ -3985,12 +4015,12 @@ var base$2 = styled.css(_templateObject$9(), function (_ref) {
     return theme.colors.danger.dark;
   });
 }, function (p) {
-  return p.disabled && styled.css(_templateObject3$3());
+  return p.disabled && styled.css(_templateObject4$3());
 });
-var Input = styled__default.input(_templateObject4$3(), base$2);
-var Holder$1 = styled__default.div(_templateObject5$3());
-var Flex = styled__default.div(_templateObject6$2());
-var Uppercase$1 = styled__default(Uppercase)(_templateObject7$1(), function (_ref11) {
+var Input = styled__default.input(_templateObject5$3(), base$2);
+var Holder$1 = styled__default.div(_templateObject6$2());
+var Flex = styled__default.div(_templateObject7$1());
+var Uppercase$1 = styled__default(Uppercase)(_templateObject8$1(), function (_ref11) {
   var theme = _ref11.theme;
   return theme.colors.brand["default"];
 }, function (_ref12) {
@@ -4063,16 +4093,16 @@ function _templateObject2$6() {
   return data;
 }
 
-function _templateObject$a() {
+function _templateObject$b() {
   var data = _taggedTemplateLiteral(["\n  ", "\n"]);
 
-  _templateObject$a = function _templateObject() {
+  _templateObject$b = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Input$2 = styled__default.input(_templateObject$a(), base$2);
+var Input$2 = styled__default.input(_templateObject$b(), base$2);
 var Holder$2 = styled__default.div(_templateObject2$6());
 
 var Search = function Search(_ref) {
@@ -4195,16 +4225,16 @@ function _templateObject2$7() {
   return data;
 }
 
-function _templateObject$b() {
+function _templateObject$c() {
   var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 16px;\n  width: 16px;\n\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: ", ";\n\n  transition: all ", ";\n\n  ", "\n"]);
 
-  _templateObject$b = function _templateObject() {
+  _templateObject$c = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Radio = styled__default.span(_templateObject$b(), function (_ref) {
+var Radio = styled__default.span(_templateObject$c(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.white;
 }, function (_ref2) {
@@ -4281,16 +4311,16 @@ var Logo = function Logo() {
   })));
 };
 
-function _templateObject$c() {
+function _templateObject$d() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n\n  padding: 1.25rem 2rem;\n  width: 100vw;\n\n  border-bottom: 1px solid ", ";\n"]);
 
-  _templateObject$c = function _templateObject() {
+  _templateObject$d = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Holder$4 = styled__default.div(_templateObject$c(), function (_ref) {
+var Holder$4 = styled__default.div(_templateObject$d(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.lighter;
 });
@@ -4319,16 +4349,16 @@ function _templateObject2$8() {
   return data;
 }
 
-function _templateObject$d() {
+function _templateObject$e() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n\n  input {\n    margin-left: 100px;\n  }\n"]);
 
-  _templateObject$d = function _templateObject() {
+  _templateObject$e = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Wrapper = styled__default.div(_templateObject$d());
+var Wrapper = styled__default.div(_templateObject$e());
 var Holder$5 = styled__default.div(_templateObject2$8(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.lighter;
@@ -4398,16 +4428,16 @@ function _templateObject2$9() {
   return data;
 }
 
-function _templateObject$e() {
+function _templateObject$f() {
   var data = _taggedTemplateLiteral(["\n  color: ", ";\n  transition: ", ";\n"]);
 
-  _templateObject$e = function _templateObject() {
+  _templateObject$f = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var NavLink = styled__default.a(_templateObject$e(), function (_ref) {
+var NavLink = styled__default.a(_templateObject$f(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.dark;
 }, function (_ref2) {
@@ -4473,16 +4503,16 @@ function _templateObject2$a() {
   return data;
 }
 
-function _templateObject$f() {
+function _templateObject$g() {
   var data = _taggedTemplateLiteral(["\n  color: ", ";\n  transition: ", ";\n\n  &:hover {\n    color: ", ";\n  }\n"]);
 
-  _templateObject$f = function _templateObject() {
+  _templateObject$g = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var ArrowLink = styled__default.a(_templateObject$f(), function (_ref) {
+var ArrowLink = styled__default.a(_templateObject$g(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.dark;
 }, function (_ref2) {
@@ -4540,16 +4570,16 @@ function _templateObject2$b() {
   return data;
 }
 
-function _templateObject$g() {
+function _templateObject$h() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n\n  padding: 1.25rem 2rem;\n  width: 100vw;\n\n  border-bottom: 1px solid ", ";\n"]);
 
-  _templateObject$g = function _templateObject() {
+  _templateObject$h = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Holder$6 = styled__default.div(_templateObject$g(), function (_ref) {
+var Holder$6 = styled__default.div(_templateObject$h(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.lighter;
 });
@@ -4594,36 +4624,8 @@ var Topbar = function Topbar(_ref) {
   return renderTopbar(type);
 };
 
-function _templateObject$h() {
-  var data = _taggedTemplateLiteral(["\n  border-top: 1px solid ", ";\n\n  padding: 1.5rem 2rem;\n  width: 100vw;\n"]);
-
-  _templateObject$h = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-var Holder$7 = styled__default.div(_templateObject$h(), function (_ref) {
-  var theme = _ref.theme;
-  return theme.colors.greyscale.lighter;
-});
-
-var Footer = function Footer() {
-  return React.createElement(Holder$7, null, "\xAE 2019 Cimple. All rights reserved");
-};
-
-function _templateObject2$c() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n\n  &:hover {\n    svg {\n      position: absolute;\n      top: 6px;\n      right: -20px;\n    }\n  }\n\n  svg {\n    stroke: currentColor;\n    margin-left: 8px;\n  }\n"]);
-
-  _templateObject2$c = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject$i() {
-  var data = _taggedTemplateLiteral(["\n  color: ", ";\n  transition: ", ";\n\n  &:hover {\n    color: ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  border-top: 1px solid ", ";\n\n  padding: 1.5rem 2rem;\n  width: 100vw;\n"]);
 
   _templateObject$i = function _templateObject() {
     return data;
@@ -4631,17 +4633,14 @@ function _templateObject$i() {
 
   return data;
 }
-var ArrowLink$1 = styled__default.a(_templateObject$i(), function (_ref) {
+var Holder$7 = styled__default.div(_templateObject$i(), function (_ref) {
   var theme = _ref.theme;
-  return theme.colors.greyscale.dark;
-}, function (_ref2) {
-  var theme = _ref2.theme;
-  return theme.transition.cubic();
-}, function (_ref3) {
-  var theme = _ref3.theme;
-  return theme.colors.brand["default"];
+  return theme.colors.greyscale.lighter;
 });
-var Wrapper$3 = styled__default.div(_templateObject2$c());
+
+var Footer = function Footer() {
+  return React.createElement(Holder$7, null, "\xAE 2019 Cimple. All rights reserved");
+};
 
 var Arrow = function Arrow(_ref) {
   var props = _extends({}, _ref);
@@ -4669,12 +4668,54 @@ var Arrow = function Arrow(_ref) {
   })));
 };
 
+function _templateObject3$7() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject3$7 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$c() {
+  var data = _taggedTemplateLiteral(["\n  display: inline-flex;\n  align-items: center;\n  position: relative;\n\n  color: ", ";\n  transition: ", ";\n\n  &:hover {\n    color: ", ";\n  }\n"]);
+
+  _templateObject2$c = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$j() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject$j = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var ArrowIcon = styled__default(Arrow)(_templateObject$j());
+var ArrowLink$1 = styled__default.a(_templateObject2$c(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.colors.greyscale.dark;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.transition.cubic();
+}, function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.colors.brand["default"];
+});
+var Wrapper$3 = styled__default.div(_templateObject3$7());
+
 var ArrowLink$2 = function ArrowLink(_ref) {
   var to = _ref.to,
       children = _ref.children;
   return React.createElement(Link, {
     to: to
-  }, React.createElement(Wrapper$3, null, React.createElement(ArrowLink$1, null, children), React.createElement(Arrow, null)));
+  }, React.createElement(ArrowLink$1, null, children), React.createElement(ArrowIcon, null));
 };
 ArrowLink$2.propTypes = {
   to: PropTypes.string.isRequired,
@@ -4691,16 +4732,16 @@ function _templateObject2$d() {
   return data;
 }
 
-function _templateObject$j() {
+function _templateObject$k() {
   var data = _taggedTemplateLiteral(["\n  color: ", ";\n  transition: ", ";\n\n  &:hover {\n    color: ", ";\n  }\n"]);
 
-  _templateObject$j = function _templateObject() {
+  _templateObject$k = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var ArrowLink$3 = styled__default.a(_templateObject$j(), function (_ref) {
+var ArrowLink$3 = styled__default.a(_templateObject$k(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.dark;
 }, function (_ref2) {
@@ -4750,31 +4791,31 @@ var Sort = function Sort() {
   })));
 };
 
-function _templateObject$k() {
+function _templateObject$l() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n\n  svg {\n    margin-left: 4px;\n  }\n"]);
 
-  _templateObject$k = function _templateObject() {
+  _templateObject$l = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Holder$8 = styled__default.div(_templateObject$k());
+var Holder$8 = styled__default.div(_templateObject$l());
 
 var Sort$1 = function Sort$1(_ref) {
   var children = _ref.children;
-  return React.createElement(Holder$8, null, React.createElement(Uppercase, {
-    color: "grey"
+  return React.createElement(Holder$8, null, React.createElement(UppercaseL, {
+    color: "greyMedium"
   }, children), React.createElement(Sort, null));
 };
 Sort$1.propTypes = {
   children: PropTypes.node.isRequired
 };
 
-function _templateObject$l() {
-  var data = _taggedTemplateLiteral(["\n  border-radius: ", ";\n  color: ", ";\n  background-color: ", ";\n\n  padding: 4px 8px;\n"]);
+function _templateObject$m() {
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  border-radius: ", ";\n  color: ", ";\n  display: inline-block;\n\n  text-transform: uppercase;\n  font-size: 12px;\n  line-height: 16px;\n  letter-spacing: 0.4px;\n\n  padding: 4px 8px;\n"]);
 
-  _templateObject$l = function _templateObject() {
+  _templateObject$m = function _templateObject() {
     return data;
   };
 
@@ -4799,19 +4840,174 @@ var getColor = function getColor(props) {
   return types[props.status] || props.theme.colors.greyscale.dark;
 };
 
-var Tag = styled__default.span(_templateObject$l(), function (_ref) {
+var Tag = styled__default.span(_templateObject$m(), getBgColor, function (_ref) {
   var theme = _ref.theme;
   return theme.radius.xsmall;
-}, getColor, getBgColor);
+}, getColor);
 
 var Tag$1 = function Tag$1(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  return React.createElement(Tag, props, React.createElement("p", null, children));
+  return React.createElement(Tag, props, children);
 };
 Tag$1.propTypes = {
   children: PropTypes.node.isRequired
+};
+
+function _templateObject5$5() {
+  var data = _taggedTemplateLiteral(["\n  padding: 1rem 0rem;\n  vertical-align: middle;\n"]);
+
+  _templateObject5$5 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$6() {
+  var data = _taggedTemplateLiteral(["\n  border-bottom: 1px solid ", ";\n\n  @media only screen and (max-width: 500px) {\n    td:nth-child(n + 3):not(:nth-last-child(1)) {\n      display: none;\n    }\n  }\n"]);
+
+  _templateObject4$6 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$8() {
+  var data = _taggedTemplateLiteral([""]);
+
+  _templateObject3$8 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$e() {
+  var data = _taggedTemplateLiteral(["\n  border-bottom: 1px solid ", ";\n\n  td {\n    padding: 0.5rem 0rem;\n  }\n\n  @media only screen and (max-width: 500px) {\n    td:nth-child(n + 3):not(:nth-last-child(1)) {\n      display: none;\n    }\n  }\n"]);
+
+  _templateObject2$e = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$n() {
+  var data = _taggedTemplateLiteral(["\n  border-collapse: collapse;\n  text-align: left;\n  width: 100%;\n\n  th:last-of-type,\n  td:last-of-type {\n    text-align: right;\n    padding-left: 16px;\n  }\n"]);
+
+  _templateObject$n = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var Table = styled__default.table(_templateObject$n());
+var TableHeader = styled__default.thead(_templateObject2$e(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.colors.greyscale.lighter;
+});
+var TableBody = styled__default.tbody(_templateObject3$8());
+var TableRow = styled__default.tr(_templateObject4$6(), function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.colors.greyscale.lighter;
+});
+var TableCell = styled__default.td(_templateObject5$5());
+
+var Table$1 = function Table$1(props) {
+  return React.createElement(Table, props);
+};
+
+Table$1.Header = TableHeader;
+Table$1.Body = TableBody;
+Table$1.Row = TableRow;
+Table$1.Cell = TableCell;
+
+function _templateObject$o() {
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  border-radius: 50%;\n  border: 1px solid ", ";\n  height: 3.75rem;\n  width: 3.75rem;\n  min-width: 3.75rem;\n\n  background-image: ", ";\n  background-size: cover;\n"]);
+
+  _templateObject$o = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var Thumbnail = styled__default.div(_templateObject$o(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.colors.greyscale.lighter;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.colors.greyscale.light;
+}, function (p) {
+  return "url(".concat(p.src, ")");
+});
+
+var Thumbnail$1 = function Thumbnail$1(_ref) {
+  var src = _ref.src;
+  return React.createElement(Thumbnail, {
+    src: src
+  });
+};
+Thumbnail$1.propTypes = {
+  src: PropTypes.string.isRequired
+};
+
+function _templateObject3$9() {
+  var data = _taggedTemplateLiteral(["\n  margin-bottom: 0.2rem;\n"]);
+
+  _templateObject3$9 = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$f() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  margin-left: 1rem;\n\n  @media only screen and (max-width: 500px) {\n    margin-left: 0rem;\n  }\n"]);
+
+  _templateObject2$f = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$p() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n\n  @media only screen and (max-width: 500px) {\n    div:first-of-type {\n      display: none;\n    }\n  }\n"]);
+
+  _templateObject$p = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var Holder$9 = styled__default.div(_templateObject$p());
+var Wrapper$5 = styled__default.div(_templateObject2$f());
+var Text$1 = styled__default(Text)(_templateObject3$9());
+
+var emptyState = require("../../../../assets/empty-state-product.png");
+
+var SmallProduct = function SmallProduct(_ref) {
+  var id = _ref.id,
+      name = _ref.name,
+      src = _ref.src;
+  return React.createElement(Holder$9, null, React.createElement(Thumbnail$1, {
+    src: src
+  }), React.createElement(Wrapper$5, null, React.createElement(Text$1, null, name), React.createElement(UppercaseL, {
+    color: "greyMedium"
+  }, "SKU: ", id)));
+};
+SmallProduct.defaultProps = {
+  id: "SKU not available",
+  name: "Unnamed product",
+  src: emptyState
+};
+SmallProduct.propTypes = {
+  id: PropTypes.number,
+  name: PropTypes.string,
+  src: PropTypes.string
 };
 
 var Danger = function Danger(_ref) {
@@ -4856,33 +5052,36 @@ Icons.DoubleChevron = Sort;
 Icons.External = External;
 Icons.Search = Search;
 
-function _templateObject2$e() {
+function _templateObject2$g() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
 
-  _templateObject2$e = function _templateObject2() {
+  _templateObject2$g = function _templateObject2() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject$m() {
+function _templateObject$q() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n"]);
 
-  _templateObject$m = function _templateObject() {
+  _templateObject$q = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Flex$1 = styled__default.div(_templateObject$m());
-var Column = styled__default.div(_templateObject2$e());
+var Flex$1 = styled__default.div(_templateObject$q());
+var Column = styled__default.div(_templateObject2$g());
+
+/* Provider */
 
 exports.ArrowLink = ArrowLink$2;
 exports.BackLink = Back;
 exports.Button = Button$1;
 exports.Checkbox = Checkbox$1;
 exports.Column = Column;
+exports.Divider = Divider$1;
 exports.ErrorMessage = ErrorMessage;
 exports.ExternalLink = ExternalLink;
 exports.Flex = Flex$1;
@@ -4899,9 +5098,12 @@ exports.NavLink = NavLink$1;
 exports.Provider = Provider;
 exports.Radio = Radio$1;
 exports.Searchbar = Searchbar;
+exports.SmallProduct = SmallProduct;
 exports.Sort = Sort$1;
+exports.Table = Table$1;
 exports.Tag = Tag$1;
 exports.Text = Text;
+exports.Thumbnail = Thumbnail$1;
 exports.Topbar = Topbar;
 exports.Uppercase = Uppercase;
 exports.UppercaseL = UppercaseL;

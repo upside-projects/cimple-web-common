@@ -5,6 +5,9 @@ export { default as theme } from "./Provider/theme"
 /* Buttons */
 export { default as Button } from "./Button/Button"
 
+/* Buttons */
+export { default as Divider } from "./Divider/Divider"
+
 /* Forms */
 export { default as Checkbox } from "./Forms/Checkbox/Checkbox"
 export { default as ErrorMessage } from "./Forms/ErrorMessage/ErrorMessage"
@@ -43,6 +46,15 @@ export {
   UppercaseL,
   Uppercase
 } from "./Typography/Typography"
+
+/* Table */
+export { default as Table } from "./Table/Table"
+
+/* Thumbnail */
+export { default as Thumbnail } from "./Thumbnail/Thumbnail"
+
+/* Product */
+export { default as SmallProduct } from "./Product/SmallProduct/SmallProduct"
 
 /* Icons */
 export { default as Icons } from "./Icons"

@@ -1,6 +1,14 @@
 import styled from "styled-components"
 
+import Arrow from "../../Icons/Arrow"
+
+export const ArrowIcon = styled(Arrow)``
+
 export const ArrowLink = styled.a`
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+
   color: ${({ theme }) => theme.colors.greyscale.dark};
   transition: ${({ theme }) => theme.transition.cubic()};
 
@@ -9,19 +17,4 @@ export const ArrowLink = styled.a`
   }
 `
 
-export const Wrapper = styled.div`
-  position: relative;
-
-  &:hover {
-    svg {
-      position: absolute;
-      top: 6px;
-      right: -20px;
-    }
-  }
-
-  svg {
-    stroke: currentColor;
-    margin-left: 8px;
-  }
-`
+export const Wrapper = styled.div``
