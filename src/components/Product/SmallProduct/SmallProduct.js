@@ -4,6 +4,8 @@ import PropTypes from "prop-types"
 import Thumbnail from "../../Thumbnail/Thumbnail"
 import { UppercaseL } from "../../Typography/Typography"
 
+import emptyState from "../../../../assets/empty-state-product.png"
+
 import * as S from "./styled"
 
 const SmallProduct = ({ id, name, src }) => {
@@ -23,7 +25,7 @@ export default SmallProduct
 SmallProduct.defaultProps = {
   id: "SKU not available",
   name: "Unnamed product",
-  src: "No image"
+  src: emptyState
 }
 
 SmallProduct.propTypes = {
