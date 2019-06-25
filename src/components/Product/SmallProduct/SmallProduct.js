@@ -6,8 +6,6 @@ import { UppercaseL } from "../../Typography/Typography"
 
 import * as S from "./styled"
 
-const emptyState = require("../../../../assets/empty-state-product.png")
-
 const SmallProduct = ({ id, name, src }) => {
   return (
     <S.Holder>
@@ -25,7 +23,7 @@ export default SmallProduct
 SmallProduct.defaultProps = {
   id: "SKU not available",
   name: "Unnamed product",
-  src: emptyState
+  src: "https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png"
 }
 
 SmallProduct.propTypes = {
