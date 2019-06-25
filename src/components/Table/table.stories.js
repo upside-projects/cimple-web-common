@@ -73,7 +73,7 @@ storiesOf("Table", module).add("List with Thumbnail", () => (
           <Sort>Product</Sort>
         </Table.Cell>
         <Table.Cell>
-          <Sort>Average Price</Sort>
+          <Sort>Avg Price</Sort>
         </Table.Cell>
         <Table.Cell>
           <Sort>Price range</Sort>
@@ -96,7 +96,7 @@ storiesOf("Table", module).add("List with Thumbnail", () => (
           <Table.Cell>£82 — £100</Table.Cell>
           <Table.Cell>Stationery</Table.Cell>
           <Table.Cell>
-            <ArrowLink to="https:google.com">View order</ArrowLink>
+            <ArrowLink to="https:google.com">View</ArrowLink>
           </Table.Cell>
         </Table.Row>
         <Table.Row>
@@ -107,7 +107,7 @@ storiesOf("Table", module).add("List with Thumbnail", () => (
           <Table.Cell>£82 — £100</Table.Cell>
           <Table.Cell>Stationery</Table.Cell>
           <Table.Cell>
-            <ArrowLink to="https:google.com">View order</ArrowLink>
+            <ArrowLink to="https:google.com">View</ArrowLink>
           </Table.Cell>
         </Table.Row>
       </Table.Body>

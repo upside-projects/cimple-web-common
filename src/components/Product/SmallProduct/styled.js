@@ -6,13 +6,22 @@ export const Holder = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+
+  @media only screen and (max-width: 500px) {
+    div:first-of-type {
+      display: none;
+    }
+  }
 `
 
 export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-
   margin-left: 1rem;
+
+  @media only screen and (max-width: 500px) {
+    margin-left: 0rem;
+  }
 `
 
 export const Text = styled(UI.Text)`
