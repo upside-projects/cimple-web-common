@@ -1,6 +1,7 @@
+/* eslint-disable import/no-named-default */
 import React from "react"
 import PropTypes from "prop-types"
-import { Link as NextLink } from "next/link"
+import { default as NextLink } from "next/link"
 
 const Link = ({ internalType, to, children, ...rest }) => {
   const internal = /^\/(?!\/)/.test(to)
