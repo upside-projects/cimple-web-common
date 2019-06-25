@@ -4,9 +4,9 @@ import PropTypes from "prop-types"
 import Thumbnail from "../../Thumbnail/Thumbnail"
 import { UppercaseL } from "../../Typography/Typography"
 
-import emptyState from "../../../../assets/empty-state-product.png"
-
 import * as S from "./styled"
+
+const emptyState = require("../../../../assets/empty-state-product.png")
 
 const SmallProduct = ({ id, name, src }) => {
   return (
