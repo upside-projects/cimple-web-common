@@ -8,11 +8,11 @@ import {
   TableCell
 } from "./styled"
 
-const T = props => <StyledTable {...props} />
+const Table = props => <StyledTable {...props} />
 
-T.Header = TableHeader
-T.Body = TableBody
-T.Row = TableRow
-T.Cell = TableCell
+Table.Header = TableHeader
+Table.Body = TableBody
+Table.Row = TableRow
+Table.Cell = TableCell
 
-export default T
+export default Table

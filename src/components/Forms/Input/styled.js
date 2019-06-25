@@ -9,7 +9,6 @@ export const base = css`
   color: ${({ theme }) => theme.colors.greyscale.black};
 
   padding: 0.5rem 0.75rem;
-  margin-top: 0.5rem;
 
   transition: ${({ theme }) => theme.transition.ease()};
 
@@ -34,6 +33,11 @@ export const base = css`
     outline: none;
     border: 1px solid ${({ theme }) => theme.colors.brand.default};
   }
+${p =>
+  p.label &&
+  css`
+    margin-top: 0.5rem;
+  `}
 
   ${p =>
     p.error &&

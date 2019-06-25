@@ -44,6 +44,9 @@ export {
   Uppercase
 } from "./Typography/Typography"
 
+/* Typography */
+export { default as Table } from "./Table/Table"
+
 /* Icons */
 export { default as Icons } from "./Icons"
 

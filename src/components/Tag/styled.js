@@ -22,10 +22,15 @@ const getColor = props => {
 }
 
 export const Tag = styled.span`
-  display: block;
+  background-color: ${getBgColor};
   border-radius: ${({ theme }) => theme.radius.xsmall};
   color: ${getColor};
-  background-color: ${getBgColor};
+  display: inline-block;
+
+  text-transform: uppercase;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
 
   padding: 4px 8px;
 `

@@ -2,14 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import DoubleChevron from "../Icons/DoubleChevron"
-import { Uppercase } from "../Typography/Typography"
+import { UppercaseL } from "../Typography/Typography"
 
 import * as S from "./styled"
 
 const Sort = ({ children }) => {
   return (
     <S.Holder>
-      <Uppercase color="grey">{children}</Uppercase>
+      <UppercaseL color="greyMedium">{children}</UppercaseL>
       <DoubleChevron />
     </S.Holder>
   )
