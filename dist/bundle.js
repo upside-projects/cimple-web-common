@@ -989,7 +989,7 @@ var store = _global[SHARED] || (_global[SHARED] = {});
   return store[key] || (store[key] = value !== undefined ? value : {});
 })('versions', []).push({
   version: _core.version,
-  mode: 'pure',
+  mode:  'pure' ,
   copyright: '© 2019 Denis Pushkarev (zloirock.ru)'
 });
 });
@@ -1180,7 +1180,7 @@ var _iterDefine = function (Base, NAME, Constructor, next, DEFAULT, IS_SET, FORC
     $default = function values() { return $native.call(this); };
   }
   // Define iterator
-  if ((FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
+  if (( FORCED) && (BUGGY || VALUES_BUG || !proto[ITERATOR])) {
     _hide(proto, ITERATOR, $default);
   }
   if (DEFAULT) {
@@ -1327,7 +1327,7 @@ var _meta_5 = _meta.onFreeze;
 
 var defineProperty$2 = _objectDp.f;
 var _wksDefine = function (name) {
-  var $Symbol = _core.Symbol || (_core.Symbol = {});
+  var $Symbol = _core.Symbol || (_core.Symbol =  {} );
   if (name.charAt(0) != '_' && !(name in $Symbol)) defineProperty$2($Symbol, name, { value: _wksExt.f(name) });
 };
 
@@ -2855,7 +2855,7 @@ var _getPrototypeOf2 = interopRequireDefault(getPrototypeOf$2);
 
 var _inherits2 = interopRequireDefault(inherits);
 
-var __importDefault = function (mod) {
+var __importDefault =  function (mod) {
   return mod && mod.__esModule ? mod : {
     "default": mod
   };
@@ -2919,7 +2919,7 @@ var _construct2 = interopRequireDefault(construct$3);
 
 var _defineProperty = interopRequireDefault(defineProperty$1);
 
-var __importDefault = function (mod) {
+var __importDefault =  function (mod) {
   return mod && mod.__esModule ? mod : {
     "default": mod
   };
@@ -3623,7 +3623,7 @@ var _getPrototypeOf2 = interopRequireDefault(getPrototypeOf$2);
 
 var _inherits2 = interopRequireDefault(inherits);
 
-var __importStar = function (mod) {
+var __importStar =  function (mod) {
   if (mod && mod.__esModule) return mod;
   var result = {};
   if (mod != null) for (var k in mod) {
@@ -3633,7 +3633,7 @@ var __importStar = function (mod) {
   return result;
 };
 
-var __importDefault = function (mod) {
+var __importDefault =  function (mod) {
   return mod && mod.__esModule ? mod : {
     "default": mod
   };
@@ -5073,8 +5073,6 @@ function _templateObject$q() {
 }
 var Flex$1 = styled__default.div(_templateObject$q());
 var Column = styled__default.div(_templateObject2$g());
-
-/* Provider */
 
 exports.ArrowLink = ArrowLink$2;
 exports.BackLink = Back;
