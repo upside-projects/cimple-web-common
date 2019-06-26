@@ -8,7 +8,8 @@ export const Input = styled.input`
 export const Holder = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 480px;
+  width: 100%;
+  max-width: 480px;
 
   position: relative;
 
