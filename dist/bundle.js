@@ -4084,7 +4084,7 @@ Input$1.propTypes = {
 };
 
 function _templateObject2$6() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  min-width: 480px;\n\n  position: relative;\n\n  svg {\n    position: absolute;\n    top: 14px;\n    right: 20px;\n  }\n\n  @media only screen and (max-width: 375px) {\n    min-width: 288px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  max-width: 480px;\n\n  position: relative;\n\n  svg {\n    position: absolute;\n    top: 14px;\n    right: 20px;\n  }\n\n  @media only screen and (max-width: 375px) {\n    min-width: 288px;\n  }\n"]);
 
   _templateObject2$6 = function _templateObject2() {
     return data;
