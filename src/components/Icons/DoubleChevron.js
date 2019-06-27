@@ -1,8 +1,9 @@
 import React from "react"
 
-const Sort = () => {
+const Sort = ({ ...props }) => {
   return (
     <svg
+      {...props}
       xmlns="http://www.w3.org/2000/svg"
       width="8"
       height="9"

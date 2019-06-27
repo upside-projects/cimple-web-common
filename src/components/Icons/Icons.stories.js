@@ -19,6 +19,7 @@ storiesOf("Icons", module).add("All", () => (
     <Icons.DoubleChevron />
     <Icons.External />
     <Icons.Search />
+    <Icons.Hamburger />
   </div>
 ))
 
