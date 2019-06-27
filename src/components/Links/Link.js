@@ -3,22 +3,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { default as NextLink } from "next/link"
 
-const Link = ({ internalType, to, children, ...rest }) => {
+const Link = ({ to, children }) => {
   const internal = /^\/(?!\/)/.test(to)
   const external = /^http/.test(to)
 
   if (internal) {
-    console.error(internalType)
-    switch (internalType) {
-      case "next":
-        return (
-          <NextLink href={to} {...rest}>
-            {children}
-          </NextLink>
-        )
-      default:
-        throw new Error("Internal Link Type not supported")
-    }
+    return <NextLink href={to}>{children}</NextLink>
   }
 
   if (external) {
@@ -38,10 +28,7 @@ const Link = ({ internalType, to, children, ...rest }) => {
 
 export default Link
 
-Link.defaultProps = { internalType: "next" }
-
 Link.propTypes = {
   to: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-  internalType: PropTypes.oneOf(["next"]) // 'next', 'reach', 'gatsby', ...
+  children: PropTypes.node.isRequired
 }
