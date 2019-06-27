@@ -19,6 +19,11 @@ export const Holder = styled.div`
     right: 20px;
   }
 
+  @media only screen and (max-width: 780px) {
+    max-width: none;
+    min-width: 288px;
+  }
+
   @media only screen and (max-width: 375px) {
     min-width: 288px;
   }
