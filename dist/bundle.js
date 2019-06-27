@@ -4084,7 +4084,7 @@ Input$1.propTypes = {
 };
 
 function _templateObject2$6() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  max-width: 480px;\n\n  position: relative;\n\n  svg {\n    position: absolute;\n    top: 14px;\n    right: 20px;\n  }\n\n  @media only screen and (max-width: 375px) {\n    min-width: 288px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  max-width: 480px;\n\n  position: relative;\n\n  svg {\n    position: absolute;\n    top: 14px;\n    right: 20px;\n  }\n\n  @media only screen and (max-width: 780px) {\n    max-width: none;\n    min-width: 288px;\n  }\n\n  @media only screen and (max-width: 375px) {\n    min-width: 288px;\n  }\n"]);
 
   _templateObject2$6 = function _templateObject2() {
     return data;
@@ -4765,13 +4765,15 @@ Back.propTypes = {
   to: PropTypes.string.isRequired
 };
 
-var Sort = function Sort() {
-  return React.createElement("svg", {
+var Sort = function Sort(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "8",
     height: "9",
     viewBox: "0 0 8 9"
-  }, React.createElement("g", {
+  }), React.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
     transform: "translate(-4 -3.324)"
@@ -5042,6 +5044,35 @@ var Danger = function Danger(_ref) {
   })));
 };
 
+var Hamburger = function Hamburger(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "12",
+    height: "12",
+    viewBox: "0 0 12 12"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd",
+    transform: "translate(-6 -7)"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("polyline", {
+    stroke: "#151E29",
+    points: "18 13 12 13 6 13"
+  }), React.createElement("polyline", {
+    stroke: "#151E29",
+    points: "18 8 12 8 6 8"
+  }), React.createElement("polyline", {
+    stroke: "#151E29",
+    points: "18 18 12 18 6 18"
+  })));
+};
+
 var Icons = {};
 Icons.Arrow = Arrow;
 Icons.Cart = Cart;
@@ -5049,6 +5080,7 @@ Icons.Danger = Danger;
 Icons.DoubleChevron = Sort;
 Icons.External = External;
 Icons.Search = Search;
+Icons.Hamburger = Hamburger;
 
 function _templateObject2$g() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
