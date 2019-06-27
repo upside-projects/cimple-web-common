@@ -3854,27 +3854,18 @@ unwrapExports(link);
 
 var link$1 = link;
 
-var Link = function Link(_ref) {
-  var internalType = _ref.internalType,
-      to = _ref.to,
-      children = _ref.children,
-      rest = _objectWithoutProperties(_ref, ["internalType", "to", "children"]);
+/* eslint-disable import/no-named-default */
 
+var Link = function Link(_ref) {
+  var to = _ref.to,
+      children = _ref.children;
   var internal = /^\/(?!\/)/.test(to);
   var external = /^http/.test(to);
 
   if (internal) {
-    console.error(internalType);
-
-    switch (internalType) {
-      case "next":
-        return React.createElement(link$1, _extends({
-          href: to
-        }, rest), children);
-
-      default:
-        throw new Error("Internal Link Type not supported");
-    }
+    return React.createElement(link$1, {
+      href: to
+    }, children);
   }
 
   if (external) {
@@ -3891,14 +3882,9 @@ var Link = function Link(_ref) {
     href: to
   }, children);
 };
-Link.defaultProps = {
-  internalType: "next"
-};
 Link.propTypes = {
   to: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired,
-  internalType: PropTypes.oneOf(["next"]) // 'next', 'reach', 'gatsby', ...
-
+  children: PropTypes.node.isRequired
 };
 
 function _templateObject8$1() {
@@ -4459,12 +4445,10 @@ var Wrapper$1 = styled__default.div(_templateObject2$9(), function (p) {
 var NavLink$1 = function NavLink$1(_ref) {
   var to = _ref.to,
       children = _ref.children,
-      withIcon = _ref.withIcon,
-      rest = _objectWithoutProperties(_ref, ["to", "children", "withIcon"]);
-
-  return React.createElement(Link, _extends({
+      withIcon = _ref.withIcon;
+  return React.createElement(Link, {
     to: to
-  }, rest), React.createElement(Wrapper$1, {
+  }, React.createElement(Wrapper$1, {
     withIcon: withIcon
   }, React.createElement(NavLink, null, children), withIcon && withIcon));
 };
