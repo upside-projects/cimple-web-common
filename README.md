@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://staging.cimple.uk/">
-    <img alt="Cimple" src="https://s3-eu-west-1.amazonaws.com/drops.significa.co/logo.png" width="150" />
+    <img alt="Cimple" src="https://s3-eu-west-1.amazonaws.com/drops.significa.co/logo.png" width="120" />
   </a>
 </p>
 <h1 align="center">
