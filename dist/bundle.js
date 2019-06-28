@@ -651,6 +651,16 @@ var ErrorMessage = styled__default(Uppercase)(_templateObject$9(), function (_re
   });
 });
 
+function _templateObject9$1() {
+  var data = _taggedTemplateLiteral(["\n  color: ", ";\n\n  margin-bottom: 0.5rem;\n"]);
+
+  _templateObject9$1 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject8$1() {
   var data = _taggedTemplateLiteral(["\n  &:hover {\n    color: ", ";\n    transition: ", ";\n\n    cursor: pointer;\n  }\n"]);
 
@@ -702,7 +712,7 @@ function _templateObject4$3() {
 }
 
 function _templateObject3$3() {
-  var data = _taggedTemplateLiteral(["\n      border: 1px solid ", ";\n\n      &:hover {\n        outline: none;\n        border: 1px solid ", ";\n      }\n\n      &:focus {\n        outline: none;\n        border: 1px solid ", ";\n      }\n    "]);
+  var data = _taggedTemplateLiteral(["\n      border: 1px solid ", ";\n      color: ", ";\n\n      &:hover {\n        outline: none;\n        border: 1px solid ", ";\n      }\n\n      &:focus {\n        outline: none;\n        border: 1px solid ", ";\n      }\n    "]);
 
   _templateObject3$3 = function _templateObject3() {
     return data;
@@ -722,7 +732,7 @@ function _templateObject2$5() {
 }
 
 function _templateObject$a() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 1rem;\n  line-height: 1.5rem;\n  border: 1px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n\n  padding: 0.5rem 0.75rem;\n\n  transition: ", ";\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  :-ms-input-placeholder {\n    color: red;\n  }\n\n  ::-ms-input-placeholder {\n    color: red;\n  }\n\n  &:hover {\n    outline: none;\n    border: 1px solid ", ";\n  }\n\n  &:focus {\n    outline: none;\n    border: 1px solid ", ";\n  }\n", "\n\n  ", "\n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 1rem;\n  line-height: 1.5rem;\n  border: 1px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n\n  padding: 0.5rem 0.75rem;\n\n  transition: ", ";\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  :-ms-input-placeholder {\n    color: red;\n  }\n\n  ::-ms-input-placeholder {\n    color: red;\n  }\n\n  &:hover {\n    outline: none;\n    border: 1px solid ", ";\n  }\n\n  &:focus {\n    outline: none;\n    border: 1px solid ", ";\n  }\n\n", "\n\n  ", "\n\n  ", "\n"]);
 
   _templateObject$a = function _templateObject() {
     return data;
@@ -759,9 +769,12 @@ var base$2 = styled.css(_templateObject$a(), function (_ref) {
     return theme.colors.danger["default"];
   }, function (_ref9) {
     var theme = _ref9.theme;
-    return theme.colors.danger.dark;
+    return theme.colors.danger["default"];
   }, function (_ref10) {
     var theme = _ref10.theme;
+    return theme.colors.danger.dark;
+  }, function (_ref11) {
+    var theme = _ref11.theme;
     return theme.colors.danger.dark;
   });
 }, function (p) {
@@ -770,12 +783,16 @@ var base$2 = styled.css(_templateObject$a(), function (_ref) {
 var Input = styled__default.input(_templateObject5$3(), base$2);
 var Holder$1 = styled__default.div(_templateObject6$2());
 var Flex = styled__default.div(_templateObject7$1());
-var Uppercase$1 = styled__default(Uppercase)(_templateObject8$1(), function (_ref11) {
-  var theme = _ref11.theme;
-  return theme.colors.brand["default"];
-}, function (_ref12) {
+var Uppercase$1 = styled__default(Uppercase)(_templateObject8$1(), function (_ref12) {
   var theme = _ref12.theme;
+  return theme.colors.brand["default"];
+}, function (_ref13) {
+  var theme = _ref13.theme;
   return theme.transition.ease();
+});
+var LabelTitle = styled__default(Uppercase)(_templateObject9$1(), function (_ref14) {
+  var theme = _ref14.theme;
+  return theme.colors.greyscale.medium;
 });
 
 var Input$1 = function Input$1(_ref) {
@@ -796,7 +813,7 @@ var Input$1 = function Input$1(_ref) {
 
   return React.createElement(Holder$1, _extends({
     className: className
-  }, containerProps), React.createElement(Label, null, React.createElement(Flex, null, React.createElement(Uppercase, null, label), link && React.createElement(Uppercase$1, null, link)), React.createElement(Input, _extends({
+  }, containerProps), React.createElement(Label, null, React.createElement(Flex, null, React.createElement(LabelTitle, null, label), link && React.createElement(Uppercase$1, null, link)), React.createElement(Input, _extends({
     name: name,
     onBlur: onBlur,
     onChange: onChange,
@@ -804,9 +821,7 @@ var Input$1 = function Input$1(_ref) {
     value: value,
     error: error,
     disabled: disabled
-  }, props))), React.createElement(ErrorMessage, {
-    error: error
-  }, error));
+  }, props))));
 };
 Input$1.defaultProps = {
   containerProps: {}
