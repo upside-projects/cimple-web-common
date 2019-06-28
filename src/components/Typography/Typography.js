@@ -44,6 +44,12 @@ export const Text = styled.p`
   font-size: 1rem;
   line-height: 1.5rem;
   letter-spacing: -0.32px;
+
+  ${p =>
+    p.bold &&
+    css`
+      font-weight: 600;
+    `}
 `
 
 export const UppercaseL = styled.p`
