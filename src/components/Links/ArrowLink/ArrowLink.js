@@ -1,21 +1,20 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Link from "../Link"
 import * as S from "./styled"
 
-const ArrowLink = ({ to, children }) => {
+const ArrowLink = ({ children, withColor }) => {
   return (
-    <Link to={to}>
-      <S.ArrowLink>{children}</S.ArrowLink>
+    <S.Wrapper withColor={withColor}>
+      <S.ArrowLink withColor={withColor}>{children}</S.ArrowLink>
       <S.ArrowIcon />
-    </Link>
+    </S.Wrapper>
   )
 }
 
 export default ArrowLink
 
 ArrowLink.propTypes = {
-  to: PropTypes.string.isRequired,
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  withColor: PropTypes.bool.isRequired
 }

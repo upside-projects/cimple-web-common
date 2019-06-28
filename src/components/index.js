@@ -26,7 +26,6 @@ export { default as ArrowLink } from "./Links/ArrowLink/ArrowLink"
 export { default as BackLink } from "./Links/BackLink/BackLink"
 export { default as NavLink } from "./Links/NavLink/NavLink"
 export { default as ExternalLink } from "./Links/ExternalLink/ExternalLink"
-export { default as Link } from "./Links/Link"
 
 /* Logo */
 export { default as Logo } from "./Logo/Logo"
