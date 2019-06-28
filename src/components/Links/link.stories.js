@@ -21,7 +21,12 @@ storiesOf("Link", module).add("Navigation with Icon", () => (
 ))
 
 storiesOf("Link", module).add("Arrow", () => (
-  <ArrowLink to="https://google.com">View order</ArrowLink>
+  <div>
+    <ArrowLink to="https://google.com">View order</ArrowLink>
+    <ArrowLink withColor to="https://google.com">
+      View order
+    </ArrowLink>
+  </div>
 ))
 
 storiesOf("Link", module).add("External", () => (

@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 
 import Label from "../Label/Label"
 import ErrorMessage from "../ErrorMessage/ErrorMessage"
-import Link from "../../Links/Link"
 import { Uppercase } from "../../Typography/Typography"
 
 import * as S from "./styled"
@@ -29,11 +28,7 @@ const Input = ({
       <Label>
         <S.Flex>
           <Uppercase>{label}</Uppercase>
-          {link && (
-            <Link href={href}>
-              <S.Uppercase>{link}</S.Uppercase>
-            </Link>
-          )}
+          {link && <S.Uppercase>{link}</S.Uppercase>}
         </S.Flex>
         <S.Input
           name={name}

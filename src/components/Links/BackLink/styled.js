@@ -10,18 +10,11 @@ export const ArrowLink = styled.a`
 `
 
 export const Wrapper = styled.div`
-  position: relative;
-
-  &:hover {
-    svg {
-      position: absolute;
-      top: 6px;
-      left: -20px;
-    }
-  }
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
   svg {
-    stroke: currentColor;
     margin-right: 8px;
     transform: scale(-1, 1);
   }

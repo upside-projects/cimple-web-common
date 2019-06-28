@@ -1,25 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import Link from "../Link"
 import Arrow from "../../Icons/Arrow"
 
 import * as S from "./styled"
 
-const Back = ({ children, to }) => {
+const Back = ({ children }) => {
   return (
-    <Link to={to}>
-      <S.Wrapper>
-        <Arrow />
-        <S.ArrowLink>{children}</S.ArrowLink>
-      </S.Wrapper>
-    </Link>
+    <S.Wrapper>
+      <Arrow />
+      <S.ArrowLink>{children}</S.ArrowLink>
+    </S.Wrapper>
   )
 }
 
 export default Back
 
 Back.propTypes = {
-  children: PropTypes.node.isRequired,
-  to: PropTypes.string.isRequired
+  children: PropTypes.node.isRequired
 }
