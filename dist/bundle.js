@@ -523,8 +523,18 @@ function applyColor(props) {
   return map["default"];
 }
 
-function _templateObject8() {
+function _templateObject9() {
   var data = _taggedTemplateLiteral(["\n  ", "\n\n  font-size: 0.625rem;\n  line-height: 1rem;\n  letter-spacing: 0.24px;\n  text-transform: uppercase;\n"]);
+
+  _templateObject9 = function _templateObject9() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject8() {
+  var data = _taggedTemplateLiteral(["\n  ", "\n\n  font-size: 0.75rem;\n  line-height: 1.25rem;\n  letter-spacing: 0.4px;\n  text-transform: uppercase;\n"]);
 
   _templateObject8 = function _templateObject8() {
     return data;
@@ -534,7 +544,7 @@ function _templateObject8() {
 }
 
 function _templateObject7() {
-  var data = _taggedTemplateLiteral(["\n  ", "\n\n  font-size: 0.75rem;\n  line-height: 1.25rem;\n  letter-spacing: 0.4px;\n  text-transform: uppercase;\n"]);
+  var data = _taggedTemplateLiteral(["\n      font-weight: 600;\n    "]);
 
   _templateObject7 = function _templateObject7() {
     return data;
@@ -544,7 +554,7 @@ function _templateObject7() {
 }
 
 function _templateObject6$1() {
-  var data = _taggedTemplateLiteral(["\n  ", "\n\n  font-size: 1rem;\n  line-height: 1.5rem;\n  letter-spacing: -0.32px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", "\n\n  font-size: 1rem;\n  line-height: 1.5rem;\n  letter-spacing: -0.32px;\n\n  ", "\n"]);
 
   _templateObject6$1 = function _templateObject6() {
     return data;
@@ -607,9 +617,11 @@ var title = styled.css(_templateObject2$3());
 var HeadingL = styled__default.h1(_templateObject3$2(), base$1, title);
 var HeadingM = styled__default.h2(_templateObject4$2(), base$1, title);
 var HeadingS = styled__default.h3(_templateObject5$2(), base$1, title);
-var Text = styled__default.p(_templateObject6$1(), base$1);
-var UppercaseL = styled__default.p(_templateObject7(), base$1);
-var Uppercase = styled__default.p(_templateObject8(), base$1);
+var Text = styled__default.p(_templateObject6$1(), base$1, function (p) {
+  return p.bold && styled.css(_templateObject7());
+});
+var UppercaseL = styled__default.p(_templateObject8(), base$1);
+var Uppercase = styled__default.p(_templateObject9(), base$1);
 
 function _templateObject2$4() {
   var data = _taggedTemplateLiteral(["\n      color: ", ";\n    "]);
