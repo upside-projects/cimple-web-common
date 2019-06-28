@@ -33,6 +33,7 @@ export const base = css`
     outline: none;
     border: 1px solid ${({ theme }) => theme.colors.brand.default};
   }
+
 ${p =>
   p.label &&
   css`
@@ -43,6 +44,7 @@ ${p =>
     p.error &&
     css`
       border: 1px solid ${({ theme }) => theme.colors.danger.default};
+      color: ${({ theme }) => theme.colors.danger.default};
 
       &:hover {
         outline: none;
@@ -90,4 +92,10 @@ export const Uppercase = styled(StyledUppercase)`
 
     cursor: pointer;
   }
+`
+
+export const LabelTitle = styled(StyledUppercase)`
+  color: ${({ theme }) => theme.colors.greyscale.medium};
+
+  margin-bottom: 0.5rem;
 `

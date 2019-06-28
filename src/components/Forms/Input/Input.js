@@ -2,8 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 
 import Label from "../Label/Label"
-import ErrorMessage from "../ErrorMessage/ErrorMessage"
-import { Uppercase } from "../../Typography/Typography"
 
 import * as S from "./styled"
 
@@ -27,7 +25,7 @@ const Input = ({
     <S.Holder className={className} {...containerProps}>
       <Label>
         <S.Flex>
-          <Uppercase>{label}</Uppercase>
+          <S.LabelTitle>{label}</S.LabelTitle>
           {link && <S.Uppercase>{link}</S.Uppercase>}
         </S.Flex>
         <S.Input
@@ -41,7 +39,6 @@ const Input = ({
           {...props}
         />
       </Label>
-      <ErrorMessage error={error}>{error}</ErrorMessage>
     </S.Holder>
   )
 }
