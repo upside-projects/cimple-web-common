@@ -25,7 +25,10 @@ export default {
       default: "#46CF68",
       light: "#E3F8E9"
     },
-    blue: "#588CF5"
+    blue: {
+      default: "#588CF5",
+      light: "#E6EEFE"
+    }
   },
   radius: {
     xsmall: "2px",
