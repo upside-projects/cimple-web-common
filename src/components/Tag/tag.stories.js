@@ -15,3 +15,7 @@ storiesOf("Tag", module).add("Canceled", () => (
 storiesOf("Tag", module).add("Refunded", () => (
   <Tag status="refunded">Refunded</Tag>
 ))
+
+storiesOf("Tag", module).add("Ongoing", () => (
+  <Tag status="ongoing">Ongoing</Tag>
+))
