@@ -60,3 +60,7 @@ export { default as Icons } from "./Icons"
 
 /* Layout */
 export { Flex, Column } from "./Layout/Layout"
+
+/* Loader */
+
+export { default as Loader } from "./Loader/Loader"
