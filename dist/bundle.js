@@ -147,7 +147,10 @@ var theme = {
       "default": "#46CF68",
       light: "#E3F8E9"
     },
-    blue: "#588CF5"
+    blue: {
+      "default": "#588CF5",
+      light: "#E6EEFE"
+    }
   },
   radius: {
     xsmall: "2px",
@@ -1594,7 +1597,8 @@ var getBgColor = function getBgColor(props) {
   var types = {
     canceled: props.theme.colors.danger.light,
     completed: props.theme.colors.green.light,
-    refunded: props.theme.colors.yellow.light
+    refunded: props.theme.colors.yellow.light,
+    ongoing: props.theme.colors.blue.light
   };
   return types[props.status] || props.theme.colors.greyscale.light;
 };
@@ -1603,7 +1607,8 @@ var getColor = function getColor(props) {
   var types = {
     canceled: props.theme.colors.danger["default"],
     completed: props.theme.colors.green["default"],
-    refunded: props.theme.colors.yellow["default"]
+    refunded: props.theme.colors.yellow["default"],
+    ongoing: props.theme.colors.blue["default"]
   };
   return types[props.status] || props.theme.colors.greyscale.dark;
 };
@@ -1664,7 +1669,7 @@ function _templateObject2$e() {
 }
 
 function _templateObject$n() {
-  var data = _taggedTemplateLiteral(["\n  border-collapse: collapse;\n  text-align: left;\n  width: 100%;\n\n  th:last-of-type,\n  td:last-of-type {\n    text-align: right;\n    padding-left: 16px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  border-collapse: collapse;\n  text-align: left;\n  width: 100%;\n\n  th:last-of-type,\n  td:last-of-type {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-end;\n    padding-right: 16px;\n  }\n"]);
 
   _templateObject$n = function _templateObject() {
     return data;
@@ -1718,8 +1723,11 @@ var Thumbnail$1 = function Thumbnail$1(_ref) {
     src: src
   });
 };
+Thumbnail$1.defaultProps = {
+  src: "https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png"
+};
 Thumbnail$1.propTypes = {
-  src: PropTypes.string.isRequired
+  src: PropTypes.string
 };
 
 function _templateObject3$9() {
