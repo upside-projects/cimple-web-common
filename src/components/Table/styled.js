@@ -7,8 +7,10 @@ export const Table = styled.table`
 
   th:last-of-type,
   td:last-of-type {
-    text-align: right;
-    padding-left: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 16px;
   }
 `
 
