@@ -1870,6 +1870,79 @@ function _templateObject$q() {
 var Flex$1 = styled__default.div(_templateObject$q());
 var Column = styled__default.div(_templateObject2$g());
 
+function _templateObject6$3() {
+  var data = _taggedTemplateLiteral(["\n  ", "\n"]);
+
+  _templateObject6$3 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$6() {
+  var data = _taggedTemplateLiteral(["\n  ", "\n  -webkit-animation-delay: -0.16s;\n  animation-delay: -0.16s;\n"]);
+
+  _templateObject5$6 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$8() {
+  var data = _taggedTemplateLiteral(["\n  ", "\n  -webkit-animation-delay: -0.32s;\n  animation-delay: -0.32s;\n"]);
+
+  _templateObject4$8 = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$a() {
+  var data = _taggedTemplateLiteral(["\n  ", "\n  margin: 100px auto 0;\n  width: 70px;\n  text-align: center;\n"]);
+
+  _templateObject3$a = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$h() {
+  var data = _taggedTemplateLiteral(["\n  @-webkit-keyframes sk-bouncedelay {\n    0%,\n    80%,\n    100% {\n      -webkit-transform: scale(0);\n    }\n    40% {\n      -webkit-transform: scale(1);\n    }\n  }\n\n  @keyframes sk-bouncedelay {\n    0%,\n    80%,\n    100% {\n      -webkit-transform: scale(0);\n      transform: scale(0);\n    }\n    40% {\n      -webkit-transform: scale(1);\n      transform: scale(1);\n    }\n  }\n"]);
+
+  _templateObject2$h = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$r() {
+  var data = _taggedTemplateLiteral(["\n  width: 1rem;\n  height: 1rem;\n  background-color: ", ";\n\n  border-radius: 100%;\n  display: inline-block;\n\n  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;\n  animation: sk-bouncedelay 1.4s infinite ease-in-out both;\n"]);
+
+  _templateObject$r = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var divStyle = styled.css(_templateObject$r(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.colors.brand["default"];
+});
+var animation = styled.css(_templateObject2$h());
+var Spinner = styled__default.div(_templateObject3$a(), animation);
+var Bounce1 = styled__default.div(_templateObject4$8(), divStyle);
+var Bounce2 = styled__default.div(_templateObject5$6(), divStyle);
+var Bounce3 = styled__default.div(_templateObject6$3(), divStyle);
+
+var Loader = function Loader() {
+  return React.createElement(Spinner, null, React.createElement(Bounce1, null), React.createElement(Bounce2, null), React.createElement(Bounce3, null));
+};
+
 exports.ArrowLink = ArrowLink$2;
 exports.BackLink = Back;
 exports.Button = Button$1;
@@ -1886,6 +1959,7 @@ exports.HeadingS = HeadingS;
 exports.Icons = Icons;
 exports.Input = Input$1;
 exports.Label = Label;
+exports.Loader = Loader;
 exports.Logo = Logo;
 exports.NavLink = NavLink$1;
 exports.Provider = Provider;
