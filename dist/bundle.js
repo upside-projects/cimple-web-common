@@ -1669,7 +1669,7 @@ function _templateObject2$e() {
 }
 
 function _templateObject$n() {
-  var data = _taggedTemplateLiteral(["\n  border-collapse: collapse;\n  text-align: left;\n  width: 100%;\n\n  th:last-of-type,\n  td:last-of-type {\n    display: flex;\n    flex-direction: row;\n    justify-content: flex-end;\n    padding-right: 16px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  border-collapse: collapse;\n  text-align: left;\n  width: 100%;\n\n  th:last-of-type,\n  td:last-of-type {\n    div {\n      justify-content: flex-end;\n      padding-right: 1rem;\n    }\n  }\n"]);
 
   _templateObject$n = function _templateObject() {
     return data;
