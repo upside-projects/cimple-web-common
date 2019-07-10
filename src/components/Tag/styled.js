@@ -9,7 +9,7 @@ const getBgColor = props => {
     ongoing: props.theme.colors.blue.light
   }
 
-  return types[props.status] || props.theme.colors.greyscale.light
+  return types[props.status] || props.theme.colors.greyscale.lighter
 }
 
 const getColor = props => {
