@@ -19,3 +19,5 @@ storiesOf("Tag", module).add("Refunded", () => (
 storiesOf("Tag", module).add("Ongoing", () => (
   <Tag status="ongoing">Ongoing</Tag>
 ))
+
+storiesOf("Tag", module).add("Default", () => <Tag>Stationary</Tag>)
