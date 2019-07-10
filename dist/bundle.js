@@ -1600,7 +1600,7 @@ var getBgColor = function getBgColor(props) {
     refunded: props.theme.colors.yellow.light,
     ongoing: props.theme.colors.blue.light
   };
-  return types[props.status] || props.theme.colors.greyscale.light;
+  return types[props.status] || props.theme.colors.greyscale.lighter;
 };
 
 var getColor = function getColor(props) {
