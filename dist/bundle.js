@@ -1416,10 +1416,10 @@ var Arrow = function Arrow(_ref) {
     fill: "none",
     opacity: "0"
   }), React.createElement("path", {
-    stroke: "#151E29",
+    stroke: "currentColor",
     d: "M8,12 L16,12"
   }), React.createElement("polyline", {
-    stroke: "#151E29",
+    stroke: "currentColor",
     points: "12 16 16 12 12 8"
   })));
 };
