@@ -1,6 +1,6 @@
 import React from "react"
 
-const ArrowSmall = ({ ...props }) => {
+const Next = ({ ...props }) => {
   return (
     <svg
       {...props}
@@ -18,4 +18,4 @@ const ArrowSmall = ({ ...props }) => {
   )
 }
 
-export default ArrowSmall
+export default Next

@@ -11,6 +11,7 @@ export const Holder = styled.div`
 `
 
 export const PageButton = styled.div`
+  cursor: pointer;
   padding: 0.8rem;
 
   ${p =>
@@ -33,6 +34,10 @@ export const PageButton = styled.div`
       cursor: not-allowed;
       opacity: 0.2;
     `}
+
+  &:disabled {
+    color: ${({ theme }) => theme.colors.greyscale.light};
+  }
 
   &:active {
     color: ${({ theme }) => theme.colors.brand.dark};
