@@ -62,5 +62,7 @@ export { default as Icons } from "./Icons"
 export { Flex, Column } from "./Layout/Layout"
 
 /* Loader */
-
 export { default as Loader } from "./Loader/Loader"
+
+/* Loader */
+export { default as Pagination } from "./Pagination/Pagination"
