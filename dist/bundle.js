@@ -1356,10 +1356,10 @@ var External = function External(_ref) {
     fill: "none",
     fillRule: "evenodd"
   }, React__default.createElement("polyline", {
-    stroke: "#currentColor",
+    stroke: "currentColor",
     points: "12 10 12 13 4 13 4 5 7 5"
   }), React__default.createElement("path", {
-    stroke: "#currentColor",
+    stroke: "currentColor",
     d: "M13,4 L8,9"
   }), React__default.createElement("polyline", {
     stroke: "#currentColor",
