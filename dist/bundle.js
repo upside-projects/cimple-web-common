@@ -2049,7 +2049,7 @@ function _templateObject4$9() {
 }
 
 function _templateObject3$b() {
-  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  padding: 0.8rem;\n\n  ", "\n\n  ", "\n\n  &:disabled {\n    color: ", ";\n  }\n\n  &:active {\n    color: ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  padding: 0.8rem;\n  font-variant-numeric: tabular-nums;\n  user-select: none;\n\n  border: 0;\n  border-radius: 0.25rem;\n  background: none;\n  font-family: system-ui, sans-serif;\n  font-size: 1rem;\n  line-height: 1.2;\n  white-space: nowrap;\n  text-decoration: none;\n  padding: 0.25rem 0.5rem;\n  margin: 0.25rem;\n\n  ", "\n\n  ", "\n\n  &:focus {\n    outline: none;\n  }\n\n  &:disabled {\n    color: ", ";\n  }\n\n  &:active {\n    outline: none;\n    color: ", ";\n  }\n"]);
 
   _templateObject3$b = function _templateObject3() {
     return data;
@@ -2079,7 +2079,7 @@ function _templateObject$s() {
 }
 var PageHolder = styled__default.div(_templateObject$s());
 var Holder$a = styled__default.div(_templateObject2$i());
-var PageButton = styled__default.div(_templateObject3$b(), function (p) {
+var PageButton = styled__default.button(_templateObject3$b(), function (p) {
   return p.active && styled.css(_templateObject4$9(), function (_ref) {
     var theme = _ref.theme;
     return theme.colors.brand["default"];
@@ -2114,25 +2114,26 @@ var Pagination = function Pagination(_ref) {
     }
 
     if (current >= total - Math.floor(paginationSize / 2)) {
-      return pages.slice(0, paginationSize);
+      return pages.slice(-paginationSize);
     }
 
     return pages.slice(current - Math.ceil(paginationSize / 2), current + Math.floor(paginationSize / 2));
   };
 
   return React.createElement(PageHolder, null, React.createElement(PageButton, {
-    disabled: current <= 1,
+    disabled: current === 1,
     onClick: function onClick() {
       return onChange(current - 1);
     }
   }, React.createElement(Icons.Prev, null)), getPages().map(function (page) {
-    return React.createElement(Holder$a, null, React.createElement(PageButton, {
+    return React.createElement(Holder$a, {
+      key: page
+    }, React.createElement(PageButton, {
       active: page === current,
       onClick: function onClick() {
         return onChange(page);
-      },
-      key: page
-    }, page));
+      }
+    }, page.toString().padStart(2, "0")));
   }), React.createElement(PageButton, {
     disabled: current >= total,
     onClick: function onClick() {
@@ -2151,6 +2152,7 @@ Pagination.defaultProps = {
   paginationSize: 5,
   onChange: function onChange() {}
 };
+var Pagination$1 = React.memo(Pagination);
 
 exports.ArrowLink = ArrowLink$2;
 exports.BackLink = Back;
@@ -2171,7 +2173,7 @@ exports.Label = Label;
 exports.Loader = Loader;
 exports.Logo = Logo;
 exports.NavLink = NavLink$1;
-exports.Pagination = Pagination;
+exports.Pagination = Pagination$1;
 exports.Provider = Provider;
 exports.Radio = Radio$1;
 exports.Searchbar = Searchbar;
