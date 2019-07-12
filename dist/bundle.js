@@ -314,7 +314,7 @@ var base = styled.css(_templateObject$4(), function (_ref) {
 }, function (p) {
   return p.full && styled.css(_templateObject4());
 }, function (p) {
-  return p.loading && styled.css(_templateObject5(), function (_ref12) {
+  return p.isLoading && styled.css(_templateObject5(), function (_ref12) {
     var theme = _ref12.theme;
     return theme.colors.brand.light;
   }, function (_ref13) {
@@ -334,14 +334,14 @@ var Button$1 = function Button$1(_ref) {
   var className = _ref.className,
       children = _ref.children,
       disabled = _ref.disabled,
-      loading = _ref.loading,
+      isLoading = _ref.isLoading,
       full = _ref.full,
       onClick = _ref.onClick,
-      props = _objectWithoutProperties(_ref, ["className", "children", "disabled", "loading", "full", "onClick"]);
+      props = _objectWithoutProperties(_ref, ["className", "children", "disabled", "isLoading", "full", "onClick"]);
 
   return React.createElement(Button, _extends({
     full: full,
-    loading: loading,
+    isLoading: isLoading,
     className: className,
     disabled: disabled,
     onClick: onClick
@@ -350,15 +350,15 @@ var Button$1 = function Button$1(_ref) {
 Button$1.propTypes = {
   className: PropTypes__default.string.isRequired,
   children: PropTypes__default.node.isRequired,
-  disabled: PropTypes__default.bool.isRequired,
-  loading: PropTypes__default.bool,
+  disabled: PropTypes__default.bool,
+  isLoading: PropTypes__default.bool,
   full: PropTypes__default.bool,
-  onClick: PropTypes__default.func
+  onClick: PropTypes__default.func.isRequired
 };
 Button$1.defaultProps = {
-  loading: false,
+  isLoading: false,
   full: false,
-  onClick: function onClick() {}
+  disabled: false
 };
 
 function _templateObject$5() {
@@ -853,23 +853,25 @@ var Input$1 = function Input$1(_ref) {
   }, props))));
 };
 Input$1.defaultProps = {
-  containerProps: {}
+  className: "",
+  error: "",
+  disabled: false,
+  containerProps: {},
+  link: "",
+  helper: "",
+  href: ""
 };
 Input$1.propTypes = {
-  className: PropTypes__default.string.isRequired,
+  className: PropTypes__default.string,
   containerProps: PropTypes__default.shape({}),
-  children: PropTypes__default.node.isRequired,
-  error: PropTypes__default.string.isRequired,
-  disabled: PropTypes__default.bool.isRequired,
-  loading: PropTypes__default.bool.isRequired,
-  link: PropTypes__default.string.isRequired,
-  full: PropTypes__default.bool.isRequired,
-  helper: PropTypes__default.string.isRequired,
-  href: PropTypes__default.string.isRequired,
+  error: PropTypes__default.string,
+  disabled: PropTypes__default.bool,
+  link: PropTypes__default.string,
+  helper: PropTypes__default.string,
+  href: PropTypes__default.string,
   label: PropTypes__default.string.isRequired,
   name: PropTypes__default.string.isRequired,
   placeholder: PropTypes__default.string.isRequired,
-  onClick: PropTypes__default.func.isRequired,
   onBlur: PropTypes__default.func.isRequired,
   onChange: PropTypes__default.func.isRequired,
   value: PropTypes__default.string.isRequired
@@ -955,7 +957,6 @@ Searchbar.defaultProps = {
   containerProps: {},
   error: "",
   disabled: false,
-  loading: false,
   full: false
 };
 Searchbar.propTypes = {
@@ -963,7 +964,6 @@ Searchbar.propTypes = {
   containerProps: PropTypes__default.shape({}),
   error: PropTypes__default.string,
   disabled: PropTypes__default.bool,
-  loading: PropTypes__default.bool,
   full: PropTypes__default.bool,
   name: PropTypes__default.string.isRequired,
   placeholder: PropTypes__default.string.isRequired,
