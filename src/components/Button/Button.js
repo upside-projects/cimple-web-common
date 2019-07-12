@@ -34,11 +34,12 @@ Button.propTypes = {
   disabled: PropTypes.bool,
   isLoading: PropTypes.bool,
   full: PropTypes.bool,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func
 }
 
 Button.defaultProps = {
   isLoading: false,
   full: false,
-  disabled: false
+  disabled: false,
+  onClick: () => {}
 }
