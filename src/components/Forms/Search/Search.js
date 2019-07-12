@@ -10,10 +10,6 @@ const Searchbar = ({
   containerProps,
   disabled,
   error,
-  helper,
-  href,
-  label,
-  link,
   name,
   onBlur,
   onChange,
@@ -41,24 +37,22 @@ const Searchbar = ({
 export default Searchbar
 
 Searchbar.defaultProps = {
-  containerProps: {}
+  containerProps: {},
+  error: "",
+  disabled: false,
+  loading: false,
+  full: false
 }
 
 Searchbar.propTypes = {
   className: PropTypes.string.isRequired,
   containerProps: PropTypes.shape({}),
-  children: PropTypes.node.isRequired,
-  error: PropTypes.string.isRequired,
-  disabled: PropTypes.bool.isRequired,
-  loading: PropTypes.bool.isRequired,
-  link: PropTypes.string.isRequired,
-  full: PropTypes.bool.isRequired,
-  helper: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
+  error: PropTypes.string,
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+  full: PropTypes.bool,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
   onBlur: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired
