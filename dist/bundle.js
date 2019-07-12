@@ -958,7 +958,8 @@ Searchbar.defaultProps = {
   containerProps: {},
   error: "",
   disabled: false,
-  full: false
+  full: false,
+  value: ""
 };
 Searchbar.propTypes = {
   className: PropTypes__default.string,
@@ -970,7 +971,7 @@ Searchbar.propTypes = {
   placeholder: PropTypes__default.string.isRequired,
   onBlur: PropTypes__default.func.isRequired,
   onChange: PropTypes__default.func.isRequired,
-  value: PropTypes__default.string.isRequired
+  value: PropTypes__default.string
 };
 
 function _templateObject5$4() {
