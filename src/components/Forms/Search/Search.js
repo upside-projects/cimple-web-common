@@ -41,7 +41,8 @@ Searchbar.defaultProps = {
   containerProps: {},
   error: "",
   disabled: false,
-  full: false
+  full: false,
+  value: ""
 }
 
 Searchbar.propTypes = {
@@ -54,5 +55,5 @@ Searchbar.propTypes = {
   placeholder: PropTypes.string.isRequired,
   onBlur: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired
+  value: PropTypes.string
 }
