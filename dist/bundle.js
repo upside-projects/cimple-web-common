@@ -351,9 +351,14 @@ Button$1.propTypes = {
   className: PropTypes__default.string.isRequired,
   children: PropTypes__default.node.isRequired,
   disabled: PropTypes__default.bool.isRequired,
-  loading: PropTypes__default.bool.isRequired,
-  full: PropTypes__default.bool.isRequired,
-  onClick: PropTypes__default.func.isRequired
+  loading: PropTypes__default.bool,
+  full: PropTypes__default.bool,
+  onClick: PropTypes__default.func
+};
+Button$1.defaultProps = {
+  loading: false,
+  full: false,
+  onClick: function onClick() {}
 };
 
 function _templateObject$5() {
@@ -946,6 +951,7 @@ var Searchbar = function Searchbar(_ref) {
   }, props)), React.createElement(Search, null));
 };
 Searchbar.defaultProps = {
+  className: "",
   containerProps: {},
   error: "",
   disabled: false,
@@ -953,7 +959,7 @@ Searchbar.defaultProps = {
   full: false
 };
 Searchbar.propTypes = {
-  className: PropTypes__default.string.isRequired,
+  className: PropTypes__default.string,
   containerProps: PropTypes__default.shape({}),
   error: PropTypes__default.string,
   disabled: PropTypes__default.bool,
