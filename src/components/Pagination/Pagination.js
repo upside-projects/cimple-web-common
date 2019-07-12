@@ -18,7 +18,7 @@ const Pagination = ({ current, onChange, paginationSize, total }) => {
     }
 
     if (current >= total - Math.floor(paginationSize / 2)) {
-      return pages.slice(0, paginationSize)
+      return pages.slice(-paginationSize)
     }
 
     return pages.slice(
@@ -30,19 +30,18 @@ const Pagination = ({ current, onChange, paginationSize, total }) => {
   return (
     <S.PageHolder>
       <S.PageButton
-        disabled={current <= 1}
+        disabled={current === 1}
         onClick={() => onChange(current - 1)}
       >
         <Icons.Prev />
       </S.PageButton>
       {getPages(pages).map(page => (
-        <S.Holder>
+        <S.Holder key={page}>
           <S.PageButton
             active={page === current}
             onClick={() => onChange(page)}
-            key={page}
           >
-            {page}
+            {page.toString().padStart(2, "0")}
           </S.PageButton>
         </S.Holder>
       ))}
@@ -68,4 +67,4 @@ Pagination.defaultProps = {
   onChange: () => {}
 }
 
-export default Pagination
+export default React.memo(Pagination)

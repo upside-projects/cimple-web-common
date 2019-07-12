@@ -10,9 +10,22 @@ export const Holder = styled.div`
   position: relative;
 `
 
-export const PageButton = styled.div`
+export const PageButton = styled.button`
   cursor: pointer;
   padding: 0.8rem;
+  font-variant-numeric: tabular-nums;
+  user-select: none;
+
+  border: 0;
+  border-radius: 0.25rem;
+  background: none;
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  margin: 0.25rem;
 
   ${p =>
     p.active &&
@@ -35,11 +48,16 @@ export const PageButton = styled.div`
       opacity: 0.2;
     `}
 
+  &:focus {
+    outline: none;
+  }
+
   &:disabled {
     color: ${({ theme }) => theme.colors.greyscale.light};
   }
 
   &:active {
+    outline: none;
     color: ${({ theme }) => theme.colors.brand.dark};
   }
 `
