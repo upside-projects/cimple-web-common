@@ -10,8 +10,8 @@ const External = ({ ...props }) => {
       viewBox="0 0 24 24"
     >
       <g fill="none" fillRule="evenodd">
-        <polyline stroke="#currentColor" points="12 10 12 13 4 13 4 5 7 5" />
-        <path stroke="#currentColor" d="M13,4 L8,9" />
+        <polyline stroke="currentColor" points="12 10 12 13 4 13 4 5 7 5" />
+        <path stroke="currentColor" d="M13,4 L8,9" />
         <polyline
           stroke="#currentColor"
           strokeLinecap="square"
