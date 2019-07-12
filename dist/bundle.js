@@ -965,16 +965,12 @@ var Searchbar = function Searchbar(_ref) {
       containerProps = _ref.containerProps,
       disabled = _ref.disabled,
       error = _ref.error,
-      helper = _ref.helper,
-      href = _ref.href,
-      label = _ref.label,
-      link = _ref.link,
       name = _ref.name,
       onBlur = _ref.onBlur,
       onChange = _ref.onChange,
       placeholder = _ref.placeholder,
       value = _ref.value,
-      props = _objectWithoutProperties(_ref, ["className", "containerProps", "disabled", "error", "helper", "href", "label", "link", "name", "onBlur", "onChange", "placeholder", "value"]);
+      props = _objectWithoutProperties(_ref, ["className", "containerProps", "disabled", "error", "name", "onBlur", "onChange", "placeholder", "value"]);
 
   return React__default.createElement(Holder$2, _extends({
     className: className
@@ -989,23 +985,21 @@ var Searchbar = function Searchbar(_ref) {
   }, props)), React__default.createElement(Search, null));
 };
 Searchbar.defaultProps = {
-  containerProps: {}
+  containerProps: {},
+  error: "",
+  disabled: false,
+  loading: false,
+  full: false
 };
 Searchbar.propTypes = {
   className: PropTypes__default.string.isRequired,
   containerProps: PropTypes__default.shape({}),
-  children: PropTypes__default.node.isRequired,
-  error: PropTypes__default.string.isRequired,
-  disabled: PropTypes__default.bool.isRequired,
-  loading: PropTypes__default.bool.isRequired,
-  link: PropTypes__default.string.isRequired,
-  full: PropTypes__default.bool.isRequired,
-  helper: PropTypes__default.string.isRequired,
-  href: PropTypes__default.string.isRequired,
-  label: PropTypes__default.string.isRequired,
+  error: PropTypes__default.string,
+  disabled: PropTypes__default.bool,
+  loading: PropTypes__default.bool,
+  full: PropTypes__default.bool,
   name: PropTypes__default.string.isRequired,
   placeholder: PropTypes__default.string.isRequired,
-  onClick: PropTypes__default.func.isRequired,
   onBlur: PropTypes__default.func.isRequired,
   onChange: PropTypes__default.func.isRequired,
   value: PropTypes__default.string.isRequired
