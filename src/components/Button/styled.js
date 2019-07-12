@@ -59,7 +59,7 @@ export const base = css`
     `}
 
     ${p =>
-      p.loading &&
+      p.isLoading &&
       css`
         background-color: ${({ theme }) => theme.colors.brand.light};
         padding-right: 40px;

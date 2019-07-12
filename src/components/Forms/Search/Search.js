@@ -40,7 +40,6 @@ Searchbar.defaultProps = {
   containerProps: {},
   error: "",
   disabled: false,
-  loading: false,
   full: false
 }
 
@@ -49,7 +48,6 @@ Searchbar.propTypes = {
   containerProps: PropTypes.shape({}),
   error: PropTypes.string,
   disabled: PropTypes.bool,
-  loading: PropTypes.bool,
   full: PropTypes.bool,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,

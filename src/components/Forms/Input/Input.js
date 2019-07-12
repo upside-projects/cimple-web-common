@@ -46,24 +46,26 @@ const Input = ({
 export default Input
 
 Input.defaultProps = {
-  containerProps: {}
+  className: "",
+  error: "",
+  disabled: false,
+  containerProps: {},
+  link: "",
+  helper: "",
+  href: ""
 }
 
 Input.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   containerProps: PropTypes.shape({}),
-  children: PropTypes.node.isRequired,
-  error: PropTypes.string.isRequired,
-  disabled: PropTypes.bool.isRequired,
-  loading: PropTypes.bool.isRequired,
-  link: PropTypes.string.isRequired,
-  full: PropTypes.bool.isRequired,
-  helper: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
+  error: PropTypes.string,
+  disabled: PropTypes.bool,
+  link: PropTypes.string,
+  helper: PropTypes.string,
+  href: PropTypes.string,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   placeholder: PropTypes.string.isRequired,
-  onClick: PropTypes.func.isRequired,
   onBlur: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
   value: PropTypes.string.isRequired
