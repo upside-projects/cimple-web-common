@@ -353,12 +353,13 @@ Button$1.propTypes = {
   disabled: PropTypes__default.bool,
   isLoading: PropTypes__default.bool,
   full: PropTypes__default.bool,
-  onClick: PropTypes__default.func.isRequired
+  onClick: PropTypes__default.func
 };
 Button$1.defaultProps = {
   isLoading: false,
   full: false,
-  disabled: false
+  disabled: false,
+  onClick: function onClick() {}
 };
 
 function _templateObject$5() {
