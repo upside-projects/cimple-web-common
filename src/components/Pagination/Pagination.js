@@ -1,49 +1,45 @@
-import React, { useState } from "react"
+import React from "react"
 import { PropTypes } from "prop-types"
 
 import Icons from "../Icons/index"
 
 import * as S from "./styled"
 
-const Pagination = ({ current, total }) => {
-  const [currentPage, setCurrent] = useState(current)
-  const totalPages = total
-  const paginationSize = 5
-
+const Pagination = ({ current, onChange, paginationSize, total }) => {
   const pages = [...Array(total).keys()].map(x => x + 1)
 
   const getPages = () => {
-    if (totalPages < paginationSize) {
+    if (total < paginationSize) {
       return pages
     }
 
-    if (currentPage < Math.ceil(paginationSize / 2)) {
+    if (current < Math.ceil(paginationSize / 2)) {
       return pages.slice(0, paginationSize)
     }
 
-    if (currentPage >= totalPages - Math.floor(paginationSize / 2)) {
+    if (current >= total - Math.floor(paginationSize / 2)) {
       return pages.slice(0, paginationSize)
     }
 
     return pages.slice(
-      currentPage - Math.ceil(paginationSize / 2),
-      currentPage + Math.floor(paginationSize / 2)
+      current - Math.ceil(paginationSize / 2),
+      current + Math.floor(paginationSize / 2)
     )
   }
 
   return (
     <S.PageHolder>
       <S.PageButton
-        disabled={currentPage <= 1}
-        onClick={() => setCurrent(currentPage - 1)}
+        disabled={current <= 1}
+        onClick={() => onChange(current - 1)}
       >
         <Icons.Prev />
       </S.PageButton>
       {getPages(pages).map(page => (
         <S.Holder>
           <S.PageButton
-            active={page === currentPage}
-            onClick={() => setCurrent(page)}
+            active={page === current}
+            onClick={() => onChange(page)}
             key={page}
           >
             {page}
@@ -51,8 +47,8 @@ const Pagination = ({ current, total }) => {
         </S.Holder>
       ))}
       <S.PageButton
-        disabled={currentPage >= totalPages}
-        onClick={() => setCurrent(currentPage + 1)}
+        disabled={current >= total}
+        onClick={() => onChange(current + 1)}
       >
         <Icons.Next />
       </S.PageButton>
@@ -60,9 +56,16 @@ const Pagination = ({ current, total }) => {
   )
 }
 
-export default Pagination
-
 Pagination.propTypes = {
   current: PropTypes.number.isRequired,
-  total: PropTypes.number.isRequired
+  total: PropTypes.number.isRequired,
+  paginationSize: PropTypes.number,
+  onChange: PropTypes.func
 }
+
+Pagination.defaultProps = {
+  paginationSize: 5,
+  onChange: () => {}
+}
+
+export default Pagination
