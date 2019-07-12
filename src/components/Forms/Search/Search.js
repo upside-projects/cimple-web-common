@@ -37,6 +37,7 @@ const Searchbar = ({
 export default Searchbar
 
 Searchbar.defaultProps = {
+  className: "",
   containerProps: {},
   error: "",
   disabled: false,
@@ -45,7 +46,7 @@ Searchbar.defaultProps = {
 }
 
 Searchbar.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   containerProps: PropTypes.shape({}),
   error: PropTypes.string,
   disabled: PropTypes.bool,
