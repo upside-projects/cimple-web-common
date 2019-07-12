@@ -1362,7 +1362,7 @@ var External = function External(_ref) {
     stroke: "currentColor",
     d: "M13,4 L8,9"
   }), React__default.createElement("polyline", {
-    stroke: "#currentColor",
+    stroke: "currentColor",
     strokeLinecap: "square",
     points: "10 4 13 4 13 7"
   })));
