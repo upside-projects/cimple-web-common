@@ -4,6 +4,8 @@ import * as UI from "../../index"
 
 export const Holder = styled.div`
   cursor: pointer;
+  width: 100%;
+  max-width: 20rem;
 `
 
 export const Flex = styled.div`
@@ -22,7 +24,7 @@ export const ProductThumb = styled.div`
   background-image: url(${p => p.src});
   background-size: cover;
   height: 20rem;
-  width: 20rem;
+  width: 100%;
 
   margin-bottom: 1.5rem;
 `
