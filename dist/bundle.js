@@ -2297,6 +2297,51 @@ Pagination.defaultProps = {
 };
 var Pagination$1 = React.memo(Pagination);
 
+function _templateObject$u() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  height: 100%;\n  margin-top: 10rem;\n"]);
+
+  _templateObject$u = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var EmptyHolder = styled__default.div(_templateObject$u());
+
+var EmptyState = function EmptyState(_ref) {
+  var errorDescription = _ref.errorDescription,
+      errorMessage = _ref.errorMessage,
+      searchTerm = _ref.searchTerm;
+  return React.createElement(EmptyHolder, null, React.createElement(HeadingS, null, errorMessage, " ", React.createElement(HeadingS, {
+    as: "span",
+    color: "greyMedium"
+  }, "\"", searchTerm, "\""), "."), React.createElement(Text, null, errorDescription));
+};
+EmptyState.propTypes = {
+  errorDescription: PropTypes__default.string.isRequired,
+  errorMessage: PropTypes__default.string.isRequired,
+  searchTerm: PropTypes__default.string.isRequired
+};
+
+function _templateObject$v() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  height: 100%;\n  margin-top: 10rem;\n"]);
+
+  _templateObject$v = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var EmptyHolder$1 = styled__default.div(_templateObject$v());
+
+var ErrorState = function ErrorState(_ref) {
+  var errorMessage = _ref.errorMessage;
+  return React.createElement(EmptyHolder$1, null, React.createElement(HeadingS, null, errorMessage));
+};
+ErrorState.propTypes = {
+  errorMessage: PropTypes__default.string.isRequired
+};
+
 exports.ArrowLink = ArrowLink$2;
 exports.BackLink = Back;
 exports.BigProduct = BigProduct;
@@ -2304,7 +2349,9 @@ exports.Button = Button$1;
 exports.Checkbox = Checkbox$1;
 exports.Column = Column$1;
 exports.Divider = Divider$1;
+exports.EmptyState = EmptyState;
 exports.ErrorMessage = ErrorMessage;
+exports.ErrorState = ErrorState;
 exports.ExternalLink = ExternalLink;
 exports.Flex = Flex$2;
 exports.Footer = Footer;
