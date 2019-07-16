@@ -2298,7 +2298,7 @@ Pagination.defaultProps = {
 var Pagination$1 = React.memo(Pagination);
 
 function _templateObject$u() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  height: 100%;\n  margin-top: 10rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  height: 100%;\n"]);
 
   _templateObject$u = function _templateObject() {
     return data;
@@ -2312,19 +2312,24 @@ var EmptyState = function EmptyState(_ref) {
   var errorDescription = _ref.errorDescription,
       errorMessage = _ref.errorMessage,
       searchTerm = _ref.searchTerm;
-  return React.createElement(EmptyHolder, null, React.createElement(HeadingS, null, errorMessage, " ", React.createElement(HeadingS, {
+  return React.createElement(EmptyHolder, null, React.createElement(HeadingS, null, errorMessage, " ", searchTerm && React.createElement(HeadingS, {
     as: "span",
     color: "greyMedium"
   }, "\"", searchTerm, "\""), "."), React.createElement(Text, null, errorDescription));
 };
+EmptyState.defaultProps = {
+  errorMessage: "No search results found",
+  errorDescription: "Try searching for other items.",
+  searchTerm: ""
+};
 EmptyState.propTypes = {
-  errorDescription: PropTypes__default.string.isRequired,
-  errorMessage: PropTypes__default.string.isRequired,
-  searchTerm: PropTypes__default.string.isRequired
+  errorDescription: PropTypes__default.string,
+  errorMessage: PropTypes__default.string,
+  searchTerm: PropTypes__default.string
 };
 
 function _templateObject$v() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  height: 100%;\n  margin-top: 10rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  height: 100%;\n"]);
 
   _templateObject$v = function _templateObject() {
     return data;
@@ -2338,8 +2343,11 @@ var ErrorState = function ErrorState(_ref) {
   var errorMessage = _ref.errorMessage;
   return React.createElement(EmptyHolder$1, null, React.createElement(HeadingS, null, errorMessage));
 };
+ErrorState.defaultProps = {
+  errorMessage: "There was a problem processing your request."
+};
 ErrorState.propTypes = {
-  errorMessage: PropTypes__default.string.isRequired
+  errorMessage: PropTypes__default.string
 };
 
 exports.ArrowLink = ArrowLink$2;
