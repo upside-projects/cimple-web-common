@@ -1784,7 +1784,7 @@ function _templateObject3$9() {
 }
 
 function _templateObject2$f() {
-  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  width: 100%;\n  max-width: 20rem;\n\n  &:hover {\n    ", " {\n      opacity: 0.6;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  width: 100%;\n  max-width: 20rem;\n\n  &:hover {\n    ", " {\n      opacity: 0.6;\n    }\n  }\n\n  @media only screen and (max-width: 768px) {\n    max-width: 10rem;\n  }\n"]);
 
   _templateObject2$f = function _templateObject2() {
     return data;
@@ -1794,7 +1794,7 @@ function _templateObject2$f() {
 }
 
 function _templateObject$p() {
-  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-size: cover;\n  height: 20rem;\n  width: 100%;\n  opacity: 1;\n\n  margin-bottom: 1.5rem;\n\n  transition: ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-size: cover;\n  height: 20rem;\n  width: 100%;\n  opacity: 1;\n\n  margin-bottom: 1.5rem;\n\n  transition: ", ";\n\n  @media only screen and (max-width: 768px) {\n    height: 10rem;\n    width: 100%;\n  }\n"]);
 
   _templateObject$p = function _templateObject() {
     return data;
@@ -1945,6 +1945,60 @@ var Prev = function Prev(_ref) {
   })));
 };
 
+var CaretUp = function CaretUp(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("polyline", {
+    fill: "none",
+    stroke: "currentColor",
+    points: "16 10 12 14 8 10",
+    transform: "rotate(-180 12 12)"
+  }));
+};
+
+var CaretDown = function CaretDown(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("polyline", {
+    fill: "none",
+    stroke: "currentColor",
+    points: "16 10 12 14 8 10"
+  }));
+};
+
+var CaretRight = function CaretRight(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("polyline", {
+    stroke: "currentColor",
+    points: "16 10 12 14 8 10",
+    transform: "rotate(-90 12 12)"
+  })));
+};
+
 var Danger = function Danger(_ref) {
   var props = _extends({}, _ref);
 
@@ -2011,6 +2065,9 @@ var Hamburger = function Hamburger(_ref) {
 var Icons = {};
 Icons.Arrow = Arrow;
 Icons.Cart = Cart;
+Icons.CaretUp = CaretUp;
+Icons.CaretDown = CaretDown;
+Icons.CaretRight = CaretRight;
 Icons.Danger = Danger;
 Icons.DoubleChevron = Sort;
 Icons.External = External;
