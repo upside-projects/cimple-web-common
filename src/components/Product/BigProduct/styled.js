@@ -12,6 +12,11 @@ export const ProductThumb = styled.div`
   margin-bottom: 1.5rem;
 
   transition: ${({ theme }) => theme.transition.cubic()};
+
+  @media only screen and (max-width: 768px) {
+    height: 10rem;
+    width: 100%;
+  }
 `
 
 export const Holder = styled.div`
@@ -23,6 +28,10 @@ export const Holder = styled.div`
     ${ProductThumb} {
       opacity: 0.6;
     }
+  }
+
+  @media only screen and (max-width: 768px) {
+    max-width: 10rem;
   }
 `
 
