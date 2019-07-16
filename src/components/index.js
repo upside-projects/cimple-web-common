@@ -53,6 +53,7 @@ export { default as Table } from "./Table/Table"
 export { default as Thumbnail } from "./Thumbnail/Thumbnail"
 
 /* Product */
+export { default as BigProduct } from "./Product/BigProduct/BigProduct"
 export { default as SmallProduct } from "./Product/SmallProduct/SmallProduct"
 
 /* Icons */
