@@ -1764,7 +1764,7 @@ function _templateObject5$6() {
 }
 
 function _templateObject4$8() {
-  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-size: cover;\n  height: 20rem;\n  width: 20rem;\n\n  margin-bottom: 1.5rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-size: cover;\n  height: 20rem;\n  width: 100%;\n\n  margin-bottom: 1.5rem;\n"]);
 
   _templateObject4$8 = function _templateObject4() {
     return data;
@@ -1794,7 +1794,7 @@ function _templateObject2$f() {
 }
 
 function _templateObject$p() {
-  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n"]);
+  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  width: 100%;\n  max-width: 20rem;\n"]);
 
   _templateObject$p = function _templateObject() {
     return data;
