@@ -14,6 +14,9 @@ storiesOf("Icons", module).add("All", () => (
     }}
   >
     <Icons.Cart />
+    <Icons.CaretUp />
+    <Icons.CaretDown />
+    <Icons.CaretRight />
     <Icons.Arrow />
     <Icons.Danger />
     <Icons.DoubleChevron />
