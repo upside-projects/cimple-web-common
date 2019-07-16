@@ -15,6 +15,7 @@ storiesOf("Pagination", module).add("Pagination", () => (
       <Pagination
         current={state.current}
         total={20}
+        paginationSize={10}
         onChange={page => store.set({ current: page })}
       />
     )}
