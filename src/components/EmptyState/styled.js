@@ -8,5 +8,4 @@ export const EmptyHolder = styled.div`
   align-items: center;
 
   height: 100%;
-  margin-top: 10rem;
 `
