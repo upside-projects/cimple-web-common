@@ -10,9 +10,11 @@ const EmptyState = ({ errorDescription, errorMessage, searchTerm }) => {
     <S.EmptyHolder>
       <HeadingS>
         {errorMessage}{" "}
-        <HeadingS as="span" color="greyMedium">
-          &#34;{searchTerm}&#34;
-        </HeadingS>
+        {searchTerm && (
+          <HeadingS as="span" color="greyMedium">
+            &#34;{searchTerm}&#34;
+          </HeadingS>
+        )}
         .
       </HeadingS>
       <Text>{errorDescription}</Text>
@@ -22,8 +24,14 @@ const EmptyState = ({ errorDescription, errorMessage, searchTerm }) => {
 
 export default EmptyState
 
+EmptyState.defaultProps = {
+  errorMessage: "No search results found",
+  errorDescription: "Try searching for other items.",
+  searchTerm: ""
+}
+
 EmptyState.propTypes = {
-  errorDescription: PropTypes.string.isRequired,
-  errorMessage: PropTypes.string.isRequired,
-  searchTerm: PropTypes.string.isRequired
+  errorDescription: PropTypes.string,
+  errorMessage: PropTypes.string,
+  searchTerm: PropTypes.string
 }

@@ -14,6 +14,10 @@ const ErrorState = ({ errorMessage }) => {
 
 export default ErrorState
 
+ErrorState.defaultProps = {
+  errorMessage: "There was a problem processing your request."
+}
+
 ErrorState.propTypes = {
-  errorMessage: PropTypes.string.isRequired
+  errorMessage: PropTypes.string
 }
