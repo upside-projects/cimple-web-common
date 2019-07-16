@@ -1764,7 +1764,7 @@ function _templateObject5$6() {
 }
 
 function _templateObject4$8() {
-  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-size: cover;\n  height: 20rem;\n  width: 100%;\n\n  margin-bottom: 1.5rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
 
   _templateObject4$8 = function _templateObject4() {
     return data;
@@ -1774,7 +1774,7 @@ function _templateObject4$8() {
 }
 
 function _templateObject3$9() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: top;\n  justify-content: space-between;\n"]);
 
   _templateObject3$9 = function _templateObject3() {
     return data;
@@ -1784,7 +1784,7 @@ function _templateObject3$9() {
 }
 
 function _templateObject2$f() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: top;\n  justify-content: space-between;\n"]);
+  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  width: 100%;\n  max-width: 20rem;\n\n  &:hover {\n    ", " {\n      opacity: 0.6;\n    }\n  }\n"]);
 
   _templateObject2$f = function _templateObject2() {
     return data;
@@ -1794,7 +1794,7 @@ function _templateObject2$f() {
 }
 
 function _templateObject$p() {
-  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  width: 100%;\n  max-width: 20rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-size: cover;\n  height: 20rem;\n  width: 100%;\n  opacity: 1;\n\n  margin-bottom: 1.5rem;\n\n  transition: ", ";\n"]);
 
   _templateObject$p = function _templateObject() {
     return data;
@@ -1802,12 +1802,15 @@ function _templateObject$p() {
 
   return data;
 }
-var Holder$9 = styled__default.div(_templateObject$p());
-var Flex$1 = styled__default.div(_templateObject2$f());
-var Column = styled__default.div(_templateObject3$9());
-var ProductThumb = styled__default.div(_templateObject4$8(), function (p) {
+var ProductThumb = styled__default.div(_templateObject$p(), function (p) {
   return p.src;
+}, function (_ref) {
+  var theme = _ref.theme;
+  return theme.transition.cubic();
 });
+var Holder$9 = styled__default.div(_templateObject2$f(), ProductThumb);
+var Flex$1 = styled__default.div(_templateObject3$9());
+var Column = styled__default.div(_templateObject4$8());
 var Tag$2 = styled__default(Tag$1)(_templateObject5$6());
 
 var BigProduct = function BigProduct(_ref) {
