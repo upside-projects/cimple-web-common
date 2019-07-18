@@ -23,6 +23,16 @@ export const GalleryHighlight = styled.div`
     height: 16rem;
     background-size: cover;
   }
+
+  ${p =>
+    p.isEmpty &&
+    css`
+      background-image: url(${p.image});
+      background-size: 20% 20%;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-color: ${({ theme }) => theme.colors.greyscale.lighter};
+    `}
 `
 
 export const GalleryThumbnails = styled.div`
