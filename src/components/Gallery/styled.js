@@ -5,7 +5,7 @@ export const GalleryHolder = styled.div`
   max-width: 26rem;
 
   @media only screen and (max-width: 768px) {
-    width: calc(100% - 2rem);
+    width: 100%;
   }
 `
 
