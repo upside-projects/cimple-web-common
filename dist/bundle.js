@@ -2563,12 +2563,105 @@ Gallery.propTypes = {
   images: PropTypes__default.arrayOf(PropTypes__default.string)
 };
 
+function _templateObject3$e() {
+  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  border: none;\n  margin: 0;\n  padding: 0;\n  text-decoration: none;\n  cursor: pointer;\n  text-align: center;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n\n  height: 24px;\n\n  &:focus {\n    outline: 0;\n  }\n\n  &:active {\n    outline: 0;\n  }\n\n  &:disabled {\n    color: ", ";\n  }\n"]);
+
+  _templateObject3$e = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$l() {
+  var data = _taggedTemplateLiteral(["\n  padding: 0 1rem;\n  font-size: 16px;\n  line-height: 24px;\n"]);
+
+  _templateObject2$l = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$x() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n\n  border: 1px solid ", ";\n  border-radius: ", ";\n  padding: 0.5rem;\n"]);
+
+  _templateObject$x = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var CounterHolder = styled__default.div(_templateObject$x(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.colors.greyscale.medium;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.radius.small;
+});
+var Value = styled__default.p(_templateObject2$l());
+var CounterAction = styled__default.button(_templateObject3$e(), function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.colors.greyscale.medium;
+});
+
+var Counter = function Counter(_ref) {
+  var value = _ref.value,
+      minValue = _ref.minValue,
+      maxValue = _ref.maxValue,
+      onChange = _ref.onChange;
+  React.useEffect(function () {
+    if (value < minValue) {
+      onChange(minValue);
+    }
+
+    if (value > maxValue) {
+      onChange(maxValue);
+    }
+  }, []);
+
+  var increaseVal = function increaseVal() {
+    if (value < maxValue) {
+      onChange(value + 1);
+    }
+  };
+
+  var decreaseVal = function decreaseVal() {
+    if (value > minValue) {
+      onChange(value - 1);
+    }
+  };
+
+  return React.createElement(CounterHolder, null, React.createElement(CounterAction, {
+    type: "button",
+    onClick: decreaseVal,
+    disabled: value === minValue
+  }, React.createElement(Icons.Minus, null)), React.createElement(Value, null, value), React.createElement(CounterAction, {
+    type: "button",
+    onClick: increaseVal,
+    disabled: value >= maxValue
+  }, React.createElement(Icons.Plus, null)));
+};
+
+Counter.defaultProps = {
+  minValue: 0,
+  maxValue: Number.MAX_SAFE_INTEGER,
+  onChange: function onChange() {}
+};
+Counter.propTypes = {
+  minValue: PropTypes__default.number,
+  maxValue: PropTypes__default.number,
+  onChange: PropTypes__default.func,
+  value: PropTypes__default.number.isRequired
+};
+
 exports.ArrowLink = ArrowLink$2;
 exports.BackLink = Back;
 exports.BigProduct = BigProduct;
 exports.Button = Button$1;
 exports.Checkbox = Checkbox$1;
 exports.Column = Column$1;
+exports.Counter = Counter;
 exports.Divider = Divider$1;
 exports.EmptyState = EmptyState;
 exports.ErrorMessage = ErrorMessage;
