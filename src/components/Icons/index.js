@@ -10,6 +10,8 @@ import DoubleChevron from "./DoubleChevron"
 import External from "./External"
 import Search from "./Search"
 import Hamburger from "./Hamburger"
+import Plus from "./Plus"
+import Minus from "./Minus"
 
 const Icons = {}
 
@@ -25,5 +27,7 @@ Icons.Search = Search
 Icons.Hamburger = Hamburger
 Icons.Next = Next
 Icons.Prev = Prev
+Icons.Plus = Plus
+Icons.Minus = Minus
 
 export default Icons
