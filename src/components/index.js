@@ -74,3 +74,6 @@ export { default as ErrorState } from "./ErrorState/ErrorState"
 
 /* Gallery */
 export { default as Gallery } from "./Gallery/Gallery"
+
+/* Counter */
+export { default as Counter } from "./Counter/Counter"
