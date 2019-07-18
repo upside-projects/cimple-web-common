@@ -2495,7 +2495,7 @@ function _templateObject2$k() {
 }
 
 function _templateObject$w() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 26rem;\n\n  @media only screen and (max-width: 768px) {\n    width: calc(100% - 2rem);\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 26rem;\n\n  @media only screen and (max-width: 768px) {\n    width: 100%;\n  }\n"]);
 
   _templateObject$w = function _templateObject() {
     return data;
