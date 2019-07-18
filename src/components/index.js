@@ -71,3 +71,6 @@ export { default as Pagination } from "./Pagination/Pagination"
 /* State */
 export { default as EmptyState } from "./EmptyState/EmptyState"
 export { default as ErrorState } from "./ErrorState/ErrorState"
+
+/* Gallery */
+export { default as Gallery } from "./Gallery/Gallery"
