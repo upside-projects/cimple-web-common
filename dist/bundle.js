@@ -76,6 +76,10 @@ function _taggedTemplateLiteral(strings, raw) {
   }));
 }
 
+function _slicedToArray(arr, i) {
+  return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _nonIterableRest();
+}
+
 function _toConsumableArray(arr) {
   return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread();
 }
@@ -88,12 +92,46 @@ function _arrayWithoutHoles(arr) {
   }
 }
 
+function _arrayWithHoles(arr) {
+  if (Array.isArray(arr)) return arr;
+}
+
 function _iterableToArray(iter) {
   if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === "[object Arguments]") return Array.from(iter);
 }
 
+function _iterableToArrayLimit(arr, i) {
+  var _arr = [];
+  var _n = true;
+  var _d = false;
+  var _e = undefined;
+
+  try {
+    for (var _i = arr[Symbol.iterator](), _s; !(_n = (_s = _i.next()).done); _n = true) {
+      _arr.push(_s.value);
+
+      if (i && _arr.length === i) break;
+    }
+  } catch (err) {
+    _d = true;
+    _e = err;
+  } finally {
+    try {
+      if (!_n && _i["return"] != null) _i["return"]();
+    } finally {
+      if (_d) throw _e;
+    }
+  }
+
+  return _arr;
+}
+
 function _nonIterableSpread() {
   throw new TypeError("Invalid attempt to spread non-iterable instance");
+}
+
+function _nonIterableRest() {
+  throw new TypeError("Invalid attempt to destructure non-iterable instance");
 }
 
 function _templateObject() {
@@ -2062,6 +2100,50 @@ var Hamburger = function Hamburger(_ref) {
   })));
 };
 
+var Plus = function Plus(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "currentColor",
+    d: "M12 8L12 16M8 12L16 12"
+  })));
+};
+
+var Minus = function Minus(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "currentColor",
+    d: "M8,12 L16,12"
+  })));
+};
+
 var Icons = {};
 Icons.Arrow = Arrow;
 Icons.Cart = Cart;
@@ -2075,6 +2157,8 @@ Icons.Search = Search;
 Icons.Hamburger = Hamburger;
 Icons.Next = Next;
 Icons.Prev = Prev;
+Icons.Plus = Plus;
+Icons.Minus = Minus;
 
 function _templateObject2$h() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
@@ -2350,6 +2434,135 @@ ErrorState.propTypes = {
   errorMessage: PropTypes__default.string
 };
 
+function _templateObject7$2() {
+  var data = _taggedTemplateLiteral(["\n        opacity: 0.6;\n      "]);
+
+  _templateObject7$2 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6$4() {
+  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-position: center center;\n  background-size: cover;\n  opacity: 1;\n\n  transition: ", "\n    ", ";\n"]);
+
+  _templateObject6$4 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$9() {
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n"]);
+
+  _templateObject5$9 = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$b() {
+  var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-gap: 1rem;\n  grid-template-columns: repeat(6, calc(32% - 2rem));\n  grid-template-rows: minmax(6.2rem, 1fr);\n\n  overflow-x: scroll;\n  scroll-snap-type: x proximity;\n  scroll-behavior: smooth;\n\n  margin-top: 1rem;\n\n  @media only screen and (max-width: 768px) {\n    grid-template-columns: repeat(6, calc(34% - 2rem));\n    grid-template-rows: minmax(4.6rem, 1fr);\n  }\n"]);
+
+  _templateObject4$b = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$d() {
+  var data = _taggedTemplateLiteral(["\n      background-image: url(", ");\n      background-size: 20% 20%;\n      background-repeat: no-repeat;\n      background-position: center center;\n      background-color: ", ";\n    "]);
+
+  _templateObject3$d = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$k() {
+  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-size: cover;\n\n  -webkit-transition: background-image 0.2s ease-in-out;\n  transition: background-image 0.2s ease-in-out;\n\n  height: 26rem;\n  width: 100%;\n\n  @media only screen and (max-width: 768px) {\n    height: 16rem;\n    background-size: cover;\n  }\n\n  ", "\n"]);
+
+  _templateObject2$k = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$w() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 26rem;\n\n  @media only screen and (max-width: 768px) {\n    width: calc(100% - 2rem);\n  }\n"]);
+
+  _templateObject$w = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var GalleryHolder = styled__default.div(_templateObject$w());
+var GalleryHighlight = styled__default.div(_templateObject2$k(), function (p) {
+  return p.image;
+}, function (p) {
+  return p.isEmpty && styled.css(_templateObject3$d(), p.image, function (_ref) {
+    var theme = _ref.theme;
+    return theme.colors.greyscale.lighter;
+  });
+});
+var GalleryThumbnails = styled__default.div(_templateObject4$b());
+var Holder$c = styled__default.div(_templateObject5$9());
+var Thumbnail$2 = styled__default.div(_templateObject6$4(), function (p) {
+  return p.image;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.transition.ease();
+}, function (p) {
+  return !p.featured && styled.css(_templateObject7$2());
+});
+
+var Gallery = function Gallery(_ref) {
+  var images = _ref.images;
+
+  var _React$useState = React.useState(0),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      featuredImage = _React$useState2[0],
+      setFeatured = _React$useState2[1];
+
+  if (images.length > 1) {
+    return React.createElement(GalleryHolder, null, React.createElement(GalleryHighlight, {
+      image: images[featuredImage]
+    }), React.createElement(Holder$c, null, React.createElement(GalleryThumbnails, null, images.map(function (image, index) {
+      return React.createElement(Thumbnail$2, {
+        image: image,
+        featured: featuredImage === index,
+        onClick: function onClick() {
+          return setFeatured(index);
+        }
+      });
+    }))));
+  }
+
+  if (images.length === 1) {
+    return React.createElement(GalleryHolder, null, React.createElement(GalleryHighlight, {
+      image: images[featuredImage]
+    }));
+  }
+
+  return React.createElement(GalleryHolder, null, React.createElement(GalleryHighlight, {
+    image: "https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png",
+    isEmpty: true
+  }));
+};
+Gallery.defaultProps = {
+  images: "https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png"
+};
+Gallery.propTypes = {
+  images: PropTypes__default.arrayOf(PropTypes__default.string)
+};
+
 exports.ArrowLink = ArrowLink$2;
 exports.BackLink = Back;
 exports.BigProduct = BigProduct;
@@ -2363,6 +2576,7 @@ exports.ErrorState = ErrorState;
 exports.ExternalLink = ExternalLink;
 exports.Flex = Flex$2;
 exports.Footer = Footer;
+exports.Gallery = Gallery;
 exports.HeadingL = HeadingL;
 exports.HeadingM = HeadingM;
 exports.HeadingS = HeadingS;
