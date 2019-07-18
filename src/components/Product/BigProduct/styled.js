@@ -3,6 +3,7 @@ import styled from "styled-components"
 import * as UI from "../../index"
 
 export const ProductThumb = styled.div`
+  background-color: ${({ theme }) => theme.colors.greyscale.lighter};
   background-image: url(${p => p.src});
   background-size: cover;
   height: 20rem;
