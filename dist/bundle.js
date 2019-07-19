@@ -1832,7 +1832,7 @@ function _templateObject2$f() {
 }
 
 function _templateObject$p() {
-  var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-size: cover;\n  height: 20rem;\n  width: 100%;\n  opacity: 1;\n\n  margin-bottom: 1.5rem;\n\n  transition: ", ";\n\n  @media only screen and (max-width: 768px) {\n    height: 10rem;\n    width: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  background-image: url(", ");\n  background-size: cover;\n  height: 20rem;\n  width: 100%;\n  opacity: 1;\n\n  margin-bottom: 1.5rem;\n\n  transition: ", ";\n\n  @media only screen and (max-width: 768px) {\n    height: 10rem;\n    width: 100%;\n  }\n"]);
 
   _templateObject$p = function _templateObject() {
     return data;
@@ -1840,10 +1840,13 @@ function _templateObject$p() {
 
   return data;
 }
-var ProductThumb = styled__default.div(_templateObject$p(), function (p) {
-  return p.src;
-}, function (_ref) {
+var ProductThumb = styled__default.div(_templateObject$p(), function (_ref) {
   var theme = _ref.theme;
+  return theme.colors.greyscale.lighter;
+}, function (p) {
+  return p.src;
+}, function (_ref2) {
+  var theme = _ref2.theme;
   return theme.transition.cubic();
 });
 var Holder$9 = styled__default.div(_templateObject2$f(), ProductThumb);
@@ -2495,7 +2498,7 @@ function _templateObject2$k() {
 }
 
 function _templateObject$w() {
-  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 26rem;\n\n  @media only screen and (max-width: 768px) {\n    width: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 26rem;\n\n  @media only screen and (max-width: 768px) {\n    width: 100%;\n    max-width: none;\n  }\n"]);
 
   _templateObject$w = function _templateObject() {
     return data;
