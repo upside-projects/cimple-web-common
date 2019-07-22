@@ -9,6 +9,7 @@ var PropTypes = require('prop-types');
 var PropTypes__default = _interopDefault(PropTypes);
 var styled = require('styled-components');
 var styled__default = _interopDefault(styled);
+var ReactDOM = _interopDefault(require('react-dom'));
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -2658,6 +2659,65 @@ Counter.propTypes = {
   value: PropTypes__default.number.isRequired
 };
 
+function _templateObject3$f() {
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n\n  display: flex;\n  margin: auto;\n  z-index: 99;\n\n  display: ", ";\n"]);
+
+  _templateObject3$f = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$m() {
+  var data = _taggedTemplateLiteral(["\n  background: ", ";\n  border-radius: ", ";\n\n  margin: auto;\n  padding: 2rem;\n  z-index: 9999;\n"]);
+
+  _templateObject2$m = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$y() {
+  var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow-y: auto;\n\n  background: rgba(0, 0, 0, 0.3);\n"]);
+
+  _templateObject$y = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var Wrapper$6 = styled__default.div(_templateObject$y());
+var Modal = styled__default.div(_templateObject2$m(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.colors.greyscale.white;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.radius.small;
+});
+var Content = styled__default.div(_templateObject3$f(), function (p) {
+  return p.isOpen ? "flex" : "none";
+});
+
+/* global document */
+
+var Modal$1 = function Modal$1(_ref) {
+  var children = _ref.children,
+      isOpen = _ref.isOpen,
+      onClose = _ref.onClose;
+
+  if (isOpen) {
+    return ReactDOM.createPortal(React.createElement(React.Fragment, null, React.createElement(Content, {
+      isOpen: isOpen
+    }, React.createElement(Modal, null, children), React.createElement(Wrapper$6, {
+      onClick: onClose
+    }))), document.body);
+  }
+
+  return null;
+};
+
 exports.ArrowLink = ArrowLink$2;
 exports.BackLink = Back;
 exports.BigProduct = BigProduct;
@@ -2681,6 +2741,7 @@ exports.Input = Input$1;
 exports.Label = Label;
 exports.Loader = Loader;
 exports.Logo = Logo;
+exports.Modal = Modal$1;
 exports.NavLink = NavLink$1;
 exports.Pagination = Pagination$1;
 exports.Provider = Provider;
