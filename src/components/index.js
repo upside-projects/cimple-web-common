@@ -77,3 +77,6 @@ export { default as Gallery } from "./Gallery/Gallery"
 
 /* Counter */
 export { default as Counter } from "./Counter/Counter"
+
+/* Modal */
+export { default as Modal } from "./Modal/Modal"
