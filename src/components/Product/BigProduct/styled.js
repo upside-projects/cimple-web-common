@@ -6,6 +6,7 @@ export const ProductThumb = styled.div`
   background-color: ${({ theme }) => theme.colors.greyscale.lighter};
   background-image: url(${p => p.src});
   background-size: cover;
+  background-position: center center;
   height: 20rem;
   width: 100%;
   opacity: 1;
@@ -23,7 +24,6 @@ export const ProductThumb = styled.div`
 export const Holder = styled.div`
   cursor: pointer;
   width: 100%;
-  max-width: 20rem;
 
   &:hover {
     ${ProductThumb} {

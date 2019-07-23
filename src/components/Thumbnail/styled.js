@@ -11,4 +11,5 @@ export const Thumbnail = styled.div`
 
   background-image: ${p => `url(${p.src})`};
   background-size: cover;
+  background-position: center center;
 `
