@@ -30,10 +30,6 @@ export const Holder = styled.div`
       opacity: 0.6;
     }
   }
-
-  @media only screen and (max-width: 768px) {
-    max-width: 10rem;
-  }
 `
 
 export const Flex = styled.div`
