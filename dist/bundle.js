@@ -1988,7 +1988,7 @@ function _templateObject3$a() {
 }
 
 function _templateObject2$g() {
-  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  width: 100%;\n\n  &:hover {\n    ", " {\n      opacity: 0.6;\n    }\n  }\n\n  @media only screen and (max-width: 768px) {\n    max-width: 10rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  width: 100%;\n\n  &:hover {\n    ", " {\n      opacity: 0.6;\n    }\n  }\n"]);
 
   _templateObject2$g = function _templateObject2() {
     return data;
