@@ -13,6 +13,7 @@ export const GalleryHolder = styled.div`
 export const GalleryHighlight = styled.div`
   background-image: url(${p => p.image});
   background-size: cover;
+  background-position: center center;
 
   -webkit-transition: background-image 0.2s ease-in-out;
   transition: background-image 0.2s ease-in-out;
@@ -23,6 +24,7 @@ export const GalleryHighlight = styled.div`
   @media only screen and (max-width: 768px) {
     height: 16rem;
     background-size: cover;
+    background-position: center center;
   }
 
   ${p =>
