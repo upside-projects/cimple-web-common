@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components"
 
-import { rotate } from "../../utils/rotate"
+import { rotate } from "../../../utils/rotate"
 
 export const base = css`
   position: relative;
@@ -48,6 +48,16 @@ export const base = css`
       background-color: ${({ theme }) => theme.colors.danger.default};
 
       &:hover {
+        background-color: ${({ theme }) => theme.colors.danger.dark};
+      }
+
+      &:active {
+        outline: none;
+        background-color: ${({ theme }) => theme.colors.danger.dark};
+      }
+
+      &:focus {
+        outline: none;
         background-color: ${({ theme }) => theme.colors.danger.dark};
       }
     `}

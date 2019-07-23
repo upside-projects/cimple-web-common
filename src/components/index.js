@@ -3,7 +3,7 @@ export { default as Provider } from "./Provider/Provider"
 export { default as theme } from "./Provider/theme"
 
 /* Buttons */
-export { default as Button } from "./Button/Button"
+export { default as Button } from "./Button/Primary/Button"
 
 /* Buttons */
 export { default as Divider } from "./Divider/Divider"
