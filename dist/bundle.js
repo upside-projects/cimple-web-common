@@ -2096,7 +2096,7 @@ SmallProduct.defaultProps = {
   src: "https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png"
 };
 SmallProduct.propTypes = {
-  id: PropTypes__default.number,
+  id: PropTypes__default.string,
   name: PropTypes__default.string,
   src: PropTypes__default.string
 };
