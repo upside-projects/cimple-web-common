@@ -393,7 +393,7 @@ var Button$1 = function Button$1(_ref) {
   }, props), children);
 };
 Button$1.propTypes = {
-  className: PropTypes__default.string.isRequired,
+  className: PropTypes__default.string,
   children: PropTypes__default.node.isRequired,
   disabled: PropTypes__default.bool,
   isLoading: PropTypes__default.bool,
@@ -401,6 +401,7 @@ Button$1.propTypes = {
   onClick: PropTypes__default.func
 };
 Button$1.defaultProps = {
+  className: "",
   isLoading: false,
   full: false,
   disabled: false,
@@ -2705,6 +2706,7 @@ var Gallery = function Gallery(_ref) {
       image: images[featuredImage]
     }), React.createElement(Holder$c, null, React.createElement(GalleryThumbnails, null, images.map(function (image, index) {
       return React.createElement(Thumbnail$2, {
+        key: image.index,
         image: image,
         featured: featuredImage === index,
         onClick: function onClick() {
