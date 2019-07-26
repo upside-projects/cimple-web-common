@@ -27,7 +27,7 @@ SmallProduct.defaultProps = {
 }
 
 SmallProduct.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   name: PropTypes.string,
   src: PropTypes.string
 }
