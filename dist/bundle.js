@@ -305,7 +305,7 @@ function _templateObject2() {
 }
 
 function _templateObject$4() {
-  var data = _taggedTemplateLiteral(["\n  position: relative;\n\n  background-color: ", ";\n  border: none;\n  border-radius: ", ";\n  color: ", ";\n  cursor: pointer;\n\n  padding: 0.5rem 0.75rem;\n\n  transition: ", ";\n  \n\n  &:hover {\n    background-color: ", ";\n  }\n\n  &:active {\n    outline: none;\n    background-color: ", ";\n  }\n\n  &:focus {\n    outline: none;\n    background-color: ", ";\n  }\n\n  ", "\n\n\n  ", "\n\n  ", "\n\n    ", ";\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n\n  background-color: rebeccapurple;\n  border: none;\n  border-radius: ", ";\n  color: ", ";\n  cursor: pointer;\n\n  padding: 0.5rem 0.75rem;\n\n  transition: ", ";\n  \n\n  &:hover {\n    background-color: ", ";\n  }\n\n  &:active {\n    outline: none;\n    background-color: ", ";\n  }\n\n  &:focus {\n    outline: none;\n    background-color: ", ";\n  }\n\n  ", "\n\n\n  ", "\n\n  ", "\n\n    ", ";\n"]);
 
   _templateObject$4 = function _templateObject() {
     return data;
@@ -315,61 +315,58 @@ function _templateObject$4() {
 }
 var base = styled.css(_templateObject$4(), function (_ref) {
   var theme = _ref.theme;
-  return theme.colors.brand["default"];
+  return theme.radius.xsmall;
 }, function (_ref2) {
   var theme = _ref2.theme;
-  return theme.radius.xsmall;
+  return theme.colors.greyscale.white;
 }, function (_ref3) {
   var theme = _ref3.theme;
-  return theme.colors.greyscale.white;
+  return theme.transition.ease();
 }, function (_ref4) {
   var theme = _ref4.theme;
-  return theme.transition.ease();
+  return theme.colors.brand.dark;
 }, function (_ref5) {
   var theme = _ref5.theme;
   return theme.colors.brand.dark;
 }, function (_ref6) {
   var theme = _ref6.theme;
   return theme.colors.brand.dark;
-}, function (_ref7) {
-  var theme = _ref7.theme;
-  return theme.colors.brand.dark;
 }, function (p) {
-  return p.disabled && styled.css(_templateObject2(), function (_ref8) {
-    var theme = _ref8.theme;
+  return p.disabled && styled.css(_templateObject2(), function (_ref7) {
+    var theme = _ref7.theme;
     return theme.colors.brand.light;
-  }, function (_ref9) {
-    var theme = _ref9.theme;
+  }, function (_ref8) {
+    var theme = _ref8.theme;
     return theme.colors.brand.light;
   });
 }, function (p) {
-  return p.danger && styled.css(_templateObject3(), function (_ref10) {
-    var theme = _ref10.theme;
+  return p.danger && styled.css(_templateObject3(), function (_ref9) {
+    var theme = _ref9.theme;
     return theme.colors.danger["default"];
+  }, function (_ref10) {
+    var theme = _ref10.theme;
+    return theme.colors.danger.dark;
   }, function (_ref11) {
     var theme = _ref11.theme;
     return theme.colors.danger.dark;
   }, function (_ref12) {
     var theme = _ref12.theme;
     return theme.colors.danger.dark;
-  }, function (_ref13) {
-    var theme = _ref13.theme;
-    return theme.colors.danger.dark;
   });
 }, function (p) {
   return p.full && styled.css(_templateObject4());
 }, function (p) {
-  return p.isLoading && styled.css(_templateObject5(), function (_ref14) {
-    var theme = _ref14.theme;
+  return p.isLoading && styled.css(_templateObject5(), function (_ref13) {
+    var theme = _ref13.theme;
     return theme.colors.brand.light;
+  }, function (_ref14) {
+    var theme = _ref14.theme;
+    return theme.colors.greyscale.white;
   }, function (_ref15) {
     var theme = _ref15.theme;
     return theme.colors.greyscale.white;
   }, function (_ref16) {
     var theme = _ref16.theme;
-    return theme.colors.greyscale.white;
-  }, function (_ref17) {
-    var theme = _ref17.theme;
     return theme.colors.greyscale.white;
   }, rotate);
 });
