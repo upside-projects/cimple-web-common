@@ -5,18 +5,11 @@ import { Text, HeadingS } from "../index"
 
 import * as S from "./styled"
 
-const EmptyState = ({ errorDescription, errorMessage, searchTerm }) => {
+const EmptyState = ({ errorDescription, errorMessage, asset }) => {
   return (
     <S.EmptyHolder>
-      <HeadingS>
-        {errorMessage}{" "}
-        {searchTerm && (
-          <HeadingS as="span" color="greyMedium">
-            &#34;{searchTerm}&#34;
-          </HeadingS>
-        )}
-        .
-      </HeadingS>
+      {asset && <S.Asset src={asset} />}
+      <HeadingS>{errorMessage}</HeadingS>
       <Text>{errorDescription}</Text>
     </S.EmptyHolder>
   )
@@ -25,13 +18,13 @@ const EmptyState = ({ errorDescription, errorMessage, searchTerm }) => {
 export default EmptyState
 
 EmptyState.defaultProps = {
-  errorMessage: "No search results found",
-  errorDescription: "Try searching for other items.",
-  searchTerm: ""
+  asset: "",
+  errorMessage: "There is nothing here.",
+  errorDescription: "Try searching for other items or categories."
 }
 
 EmptyState.propTypes = {
+  asset: PropTypes.string,
   errorDescription: PropTypes.string,
-  errorMessage: PropTypes.string,
-  searchTerm: PropTypes.string
+  errorMessage: PropTypes.string
 }

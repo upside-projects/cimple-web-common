@@ -6,8 +6,8 @@ import EmptyState from "./EmptyState"
 
 storiesOf("Empty State", module).add("Default", () => (
   <EmptyState
-    errorMessage="There are no items with the name"
-    errorDescription="Try searching for other items."
-    searchTerm="cena"
+    asset="https://cimple-static-assets.s3-eu-west-1.amazonaws.com/cimple-no+results%403x.png"
+    errorMessage="There is nothing here."
+    errorDescription="Try searching for other items or categories."
   />
 ))
