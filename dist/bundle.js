@@ -2582,7 +2582,7 @@ var EmptyState = function EmptyState(_ref) {
   }), React.createElement(HeadingS, null, errorMessage), React.createElement(Text, null, errorDescription));
 };
 EmptyState.defaultProps = {
-  asset: "",
+  asset: null,
   errorMessage: "There is nothing here.",
   errorDescription: "Try searching for other items or categories."
 };
