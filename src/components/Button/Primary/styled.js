@@ -5,7 +5,7 @@ import { rotate } from "../../../utils/rotate"
 export const base = css`
   position: relative;
 
-  background-color: rebeccapurple;
+  background-color:${({ theme }) => theme.colors.brand.default};
   border: none;
   border-radius: ${({ theme }) => theme.radius.xsmall};
   color: ${({ theme }) => theme.colors.greyscale.white};

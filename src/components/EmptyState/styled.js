@@ -9,3 +9,8 @@ export const EmptyHolder = styled.div`
 
   height: 100%;
 `
+
+export const Asset = styled.img`
+  height: 12rem;
+  margin-bottom: 1.5rem;
+`
