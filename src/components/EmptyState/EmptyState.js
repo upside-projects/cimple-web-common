@@ -18,7 +18,7 @@ const EmptyState = ({ errorDescription, errorMessage, asset }) => {
 export default EmptyState
 
 EmptyState.defaultProps = {
-  asset: "",
+  asset: null,
   errorMessage: "There is nothing here.",
   errorDescription: "Try searching for other items or categories."
 }
