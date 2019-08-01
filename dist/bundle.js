@@ -1364,31 +1364,30 @@ var Cart = function Cart(_ref) {
 
   return React.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
-    width: "14",
-    height: "16",
-    viewBox: "0 0 14 16"
+    width: "18",
+    height: "18",
+    viewBox: "0 0 18 18"
   }), React.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
-    transform: "translate(-5 -3.985)"
+    transform: "translate(-4 -2.015)"
   }, React.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
   }), React.createElement("path", {
-    stroke: "#151E29",
-    d: "M14,7 C14,5.8954305 13.1045695,5 12,5 C10.8954305,5 10,5.8954305 10,7 L10,8 L14,8 L14,7 Z"
+    stroke: "currentColor",
+    d: "M14,5 C14,3.8954305 13.1045695,3 12,3 C10.8954305,3 10,3.8954305 10,5 L10,6 L14,6 L14,5 Z"
   }), React.createElement("polygon", {
     stroke: "#151E29",
-    points: "6 8 6 19 18 19 18 8"
+    points: "5 6 5 19 19 19 19 6"
   }), React.createElement("circle", {
-    cx: "17",
-    cy: "8",
+    cx: "18",
+    cy: "6",
     r: "3.5",
     fill: "#F87E7E",
-    stroke: "#FFF",
-    opacity: "0"
+    stroke: "#FFF"
   })));
 };
 
@@ -2153,6 +2152,39 @@ var Prev = function Prev(_ref) {
   })));
 };
 
+var CartEmpty = function CartEmpty(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "14",
+    height: "16",
+    viewBox: "0 0 14 16"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd",
+    transform: "translate(-5 -3.985)"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "#151E29",
+    d: "M14,7 C14,5.8954305 13.1045695,5 12,5 C10.8954305,5 10,5.8954305 10,7 L10,8 L14,8 L14,7 Z"
+  }), React.createElement("polygon", {
+    stroke: "#151E29",
+    points: "6 8 6 19 18 19 18 8"
+  }), React.createElement("circle", {
+    cx: "17",
+    cy: "8",
+    r: "3.5",
+    fill: "#F87E7E",
+    stroke: "#FFF",
+    opacity: "0"
+  })));
+};
+
 var CaretUp = function CaretUp(_ref) {
   var props = _extends({}, _ref);
 
@@ -2317,6 +2349,7 @@ var Minus = function Minus(_ref) {
 var Icons = {};
 Icons.Arrow = Arrow;
 Icons.Cart = Cart;
+Icons.CartEmpty = CartEmpty;
 Icons.CaretUp = CaretUp;
 Icons.CaretDown = CaretDown;
 Icons.CaretRight = CaretRight;
