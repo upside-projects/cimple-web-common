@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 export const CounterHolder = styled.div`
-  display: flex;
+  display: inline-flex;
   flex-direction: row;
   align-items: center;
 
