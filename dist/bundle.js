@@ -2765,7 +2765,7 @@ function _templateObject2$n() {
 }
 
 function _templateObject$y() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n\n  border: 1px solid ", ";\n  border-radius: ", ";\n  padding: 0.5rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: inline-flex;\n  flex-direction: row;\n  align-items: center;\n\n  border: 1px solid ", ";\n  border-radius: ", ";\n  padding: 0.5rem;\n"]);
 
   _templateObject$y = function _templateObject() {
     return data;
