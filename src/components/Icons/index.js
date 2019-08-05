@@ -6,6 +6,7 @@ import CartEmpty from "./CartEmpty"
 import CaretUp from "./CaretUp"
 import CaretDown from "./CaretDown"
 import CaretRight from "./CaretRight"
+import Close from "./Close"
 import Danger from "./Danger"
 import DoubleChevron from "./DoubleChevron"
 import External from "./External"
@@ -22,6 +23,7 @@ Icons.CartEmpty = CartEmpty
 Icons.CaretUp = CaretUp
 Icons.CaretDown = CaretDown
 Icons.CaretRight = CaretRight
+Icons.Close = Close
 Icons.Danger = Danger
 Icons.DoubleChevron = DoubleChevron
 Icons.External = External
