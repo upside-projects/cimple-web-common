@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { Text } from "../../index"
+import { Text } from "../../Typography/Typography"
 import * as S from "./styled"
 
 const BigProduct = ({ name, src, price, category }) => {

@@ -56,6 +56,7 @@ export { default as Thumbnail } from "./Thumbnail/Thumbnail"
 /* Product */
 export { default as BigProduct } from "./Product/BigProduct/BigProduct"
 export { default as SmallProduct } from "./Product/SmallProduct/SmallProduct"
+export { default as MiniProduct } from "./Product/MiniProduct/MiniProduct"
 
 /* Icons */
 export { default as Icons } from "./Icons"
