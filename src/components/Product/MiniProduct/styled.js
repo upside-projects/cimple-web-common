@@ -6,6 +6,8 @@ export const Holder = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: 100%;
+  max-width: 20rem;
 
   @media only screen and (max-width: 500px) {
     div:first-of-type {
@@ -18,6 +20,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 1rem;
+  width: 100%;
 
   @media only screen and (max-width: 500px) {
     margin-left: 0rem;
@@ -31,11 +34,8 @@ export const TextQty = styled(UI.Text)`
   margin-right: 0.5rem;
 `
 
-export const TextName = styled(UI.Text)`
-  margin-right: 1rem;
-`
-
 export const Flex = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 `
