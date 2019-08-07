@@ -2917,7 +2917,7 @@ function _templateObject$z() {
 }
 var CounterHolder = styled__default.div(_templateObject$z(), function (_ref) {
   var theme = _ref.theme;
-  return theme.colors.greyscale.medium;
+  return theme.colors.greyscale.light;
 }, function (_ref2) {
   var theme = _ref2.theme;
   return theme.radius.small;
