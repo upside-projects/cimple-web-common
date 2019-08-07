@@ -38,4 +38,10 @@ export const Flex = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-right: 1rem;
+
+  max-width: 11rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `
