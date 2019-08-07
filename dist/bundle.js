@@ -2100,18 +2100,8 @@ SmallProduct.propTypes = {
   src: PropTypes__default.string
 };
 
-function _templateObject6$3() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n"]);
-
-  _templateObject6$3 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject5$8() {
-  var data = _taggedTemplateLiteral(["\n  margin-right: 1rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n"]);
 
   _templateObject5$8 = function _templateObject5() {
     return data;
@@ -2141,7 +2131,7 @@ function _templateObject3$c() {
 }
 
 function _templateObject2$i() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  margin-left: 1rem;\n\n  @media only screen and (max-width: 500px) {\n    margin-left: 0rem;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  margin-left: 1rem;\n  width: 100%;\n\n  @media only screen and (max-width: 500px) {\n    margin-left: 0rem;\n  }\n"]);
 
   _templateObject2$i = function _templateObject2() {
     return data;
@@ -2151,7 +2141,7 @@ function _templateObject2$i() {
 }
 
 function _templateObject$s() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n\n  @media only screen and (max-width: 500px) {\n    div:first-of-type {\n      display: none;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  width: 100%;\n  max-width: 20rem;\n\n  @media only screen and (max-width: 500px) {\n    div:first-of-type {\n      display: none;\n    }\n  }\n"]);
 
   _templateObject$s = function _templateObject() {
     return data;
@@ -2163,8 +2153,7 @@ var Holder$b = styled__default.div(_templateObject$s());
 var Wrapper$6 = styled__default.div(_templateObject2$i());
 var Text$2 = styled__default(Text)(_templateObject3$c());
 var TextQty = styled__default(Text)(_templateObject4$a());
-var TextName = styled__default(Text)(_templateObject5$8());
-var Flex$2 = styled__default.div(_templateObject6$3());
+var Flex$2 = styled__default.div(_templateObject5$8());
 
 var SmallProduct$1 = function SmallProduct(_ref) {
   var currency = _ref.currency,
@@ -2175,7 +2164,7 @@ var SmallProduct$1 = function SmallProduct(_ref) {
       quantity = _ref.quantity;
   return React.createElement(Holder$b, null, React.createElement(Thumbnail$1, {
     src: image
-  }), React.createElement(Wrapper$6, null, React.createElement(Flex$2, null, React.createElement(TextQty, null, quantity, "x"), React.createElement(TextName, null, name), React.createElement(Text$2, null, currency, price)), React.createElement(UppercaseL, {
+  }), React.createElement(Wrapper$6, null, React.createElement(Flex$2, null, React.createElement(Flex$2, null, React.createElement(TextQty, null, quantity, "x"), React.createElement(Text$2, null, name)), React.createElement(Text$2, null, currency, price)), React.createElement(UppercaseL, {
     color: "greyMedium"
   }, "SKU: ", sku)));
 };
@@ -2503,10 +2492,10 @@ function _templateObject$t() {
 var Flex$3 = styled__default.div(_templateObject$t());
 var Column$1 = styled__default.div(_templateObject2$j());
 
-function _templateObject6$4() {
+function _templateObject6$3() {
   var data = _taggedTemplateLiteral(["\n  ", "\n"]);
 
-  _templateObject6$4 = function _templateObject6() {
+  _templateObject6$3 = function _templateObject6() {
     return data;
   };
 
@@ -2570,7 +2559,7 @@ var animation = styled.css(_templateObject2$k());
 var Spinner = styled__default.div(_templateObject3$d(), animation);
 var Bounce1 = styled__default.div(_templateObject4$b(), divStyle);
 var Bounce2 = styled__default.div(_templateObject5$9(), divStyle);
-var Bounce3 = styled__default.div(_templateObject6$4(), divStyle);
+var Bounce3 = styled__default.div(_templateObject6$3(), divStyle);
 
 var Loader = function Loader() {
   return React.createElement(Spinner, null, React.createElement(Bounce1, null), React.createElement(Bounce2, null), React.createElement(Bounce3, null));
@@ -2775,10 +2764,10 @@ function _templateObject7$2() {
   return data;
 }
 
-function _templateObject6$5() {
+function _templateObject6$4() {
   var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-position: center center;\n  background-size: cover;\n  opacity: 1;\n\n  transition: ", "\n    ", ";\n"]);
 
-  _templateObject6$5 = function _templateObject6() {
+  _templateObject6$4 = function _templateObject6() {
     return data;
   };
 
@@ -2845,7 +2834,7 @@ var GalleryHighlight = styled__default.div(_templateObject2$n(), function (p) {
 });
 var GalleryThumbnails = styled__default.div(_templateObject4$d());
 var Holder$d = styled__default.div(_templateObject5$b());
-var Thumbnail$2 = styled__default.div(_templateObject6$5(), function (p) {
+var Thumbnail$2 = styled__default.div(_templateObject6$4(), function (p) {
   return p.image;
 }, function (_ref2) {
   var theme = _ref2.theme;
