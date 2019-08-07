@@ -2101,7 +2101,7 @@ SmallProduct.propTypes = {
 };
 
 function _templateObject5$8() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  justify-content: space-between;\n  margin-right: 1rem;\n\n  max-width: 11rem;\n  white-space: nowrap;\n  overflow: hidden;\n  text-overflow: ellipsis;\n"]);
 
   _templateObject5$8 = function _templateObject5() {
     return data;
@@ -2161,8 +2161,10 @@ var SmallProduct$1 = function SmallProduct(_ref) {
       name = _ref.name,
       sku = _ref.sku,
       price = _ref.price,
-      quantity = _ref.quantity;
-  return React.createElement(Holder$b, null, React.createElement(Thumbnail$1, {
+      quantity = _ref.quantity,
+      props = _objectWithoutProperties(_ref, ["currency", "image", "name", "sku", "price", "quantity"]);
+
+  return React.createElement(Holder$b, props, React.createElement(Thumbnail$1, {
     src: image
   }), React.createElement(Wrapper$6, null, React.createElement(Flex$2, null, React.createElement(Flex$2, null, React.createElement(TextQty, null, quantity, "x"), React.createElement(Text$2, null, name)), React.createElement(Text$2, null, currency, price)), React.createElement(UppercaseL, {
     color: "greyMedium"
