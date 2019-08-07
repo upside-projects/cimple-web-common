@@ -6,9 +6,17 @@ import { UppercaseL } from "../../Typography/Typography"
 
 import * as S from "./styled"
 
-const SmallProduct = ({ currency, image, name, sku, price, quantity }) => {
+const SmallProduct = ({
+  currency,
+  image,
+  name,
+  sku,
+  price,
+  quantity,
+  ...props
+}) => {
   return (
-    <S.Holder>
+    <S.Holder {...props}>
       <Thumbnail src={image} />
       <S.Wrapper>
         <S.Flex>
