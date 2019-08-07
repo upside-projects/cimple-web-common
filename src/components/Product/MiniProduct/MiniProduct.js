@@ -12,8 +12,10 @@ const SmallProduct = ({ currency, image, name, sku, price, quantity }) => {
       <Thumbnail src={image} />
       <S.Wrapper>
         <S.Flex>
-          <S.TextQty>{quantity}x</S.TextQty>
-          <S.TextName>{name}</S.TextName>
+          <S.Flex>
+            <S.TextQty>{quantity}x</S.TextQty>
+            <S.Text>{name}</S.Text>
+          </S.Flex>
           <S.Text>
             {currency}
             {price}
