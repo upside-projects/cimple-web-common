@@ -5,7 +5,7 @@ export const CounterHolder = styled.div`
   flex-direction: row;
   align-items: center;
 
-  border: 1px solid ${({ theme }) => theme.colors.greyscale.medium};
+  border: 1px solid ${({ theme }) => theme.colors.greyscale.light};
   border-radius: ${({ theme }) => theme.radius.small};
   padding: 0.5rem;
 `
