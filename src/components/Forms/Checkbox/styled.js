@@ -60,10 +60,6 @@ export const Label = styled.span`
 `
 
 export const Holder = styled.div`
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
+  display: block;
   position: relative;
 `
