@@ -612,7 +612,7 @@ var Label = styled__default.label(_templateObject$7(), function (p) {
 });
 
 function _templateObject5$2() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n\n  position: relative;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: block;\n  position: relative;\n"]);
 
   _templateObject5$2 = function _templateObject5() {
     return data;
