@@ -1822,20 +1822,20 @@ function _templateObject$n() {
 
 var getBgColor = function getBgColor(props) {
   var types = {
-    canceled: props.theme.colors.danger.light,
-    completed: props.theme.colors.green.light,
-    refunded: props.theme.colors.yellow.light,
-    ongoing: props.theme.colors.blue.light
-  };
-  return types[props.status] || props.theme.colors.greyscale.lighter;
-};
-
-var getColor = function getColor(props) {
-  var types = {
     canceled: props.theme.colors.danger["default"],
     completed: props.theme.colors.green["default"],
     refunded: props.theme.colors.yellow["default"],
     ongoing: props.theme.colors.blue["default"]
+  };
+  return types[props.status] || props.theme.colors.greyscale.light;
+};
+
+var getColor = function getColor(props) {
+  var types = {
+    canceled: props.theme.colors.greyscale.white,
+    completed: props.theme.colors.greyscale.white,
+    refunded: props.theme.colors.greyscale.white,
+    ongoing: props.theme.colors.greyscale.white
   };
   return types[props.status] || props.theme.colors.greyscale.dark;
 };
