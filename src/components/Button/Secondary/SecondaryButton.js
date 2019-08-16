@@ -29,7 +29,7 @@ const SecondaryButton = ({
 export default SecondaryButton
 
 SecondaryButton.propTypes = {
-  className: PropTypes.string.isRequired,
+  className: PropTypes.string,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
   isLoading: PropTypes.bool,
@@ -38,6 +38,7 @@ SecondaryButton.propTypes = {
 }
 
 SecondaryButton.defaultProps = {
+  className: "",
   isLoading: false,
   full: false,
   disabled: false,
