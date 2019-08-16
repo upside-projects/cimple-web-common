@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-import { Text, HeadingS } from "../index"
+import { Text, HeadingS } from "../Typography/Typography"
 
 import * as S from "./styled"
 
