@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-import * as UI from "../../index"
+import StyledTag from "../../Tag/Tag"
 
 export const ProductThumb = styled.div`
   background-color: ${({ theme }) => theme.colors.greyscale.lighter};
@@ -44,6 +44,6 @@ export const Column = styled.div`
   flex-direction: column;
 `
 
-export const Tag = styled(UI.Tag)`
+export const Tag = styled(StyledTag)`
   display: table;
 `
