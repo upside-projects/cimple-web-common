@@ -553,7 +553,7 @@ var SecondaryButton = function SecondaryButton(_ref) {
   }, props), children);
 };
 SecondaryButton.propTypes = {
-  className: PropTypes__default.string.isRequired,
+  className: PropTypes__default.string,
   children: PropTypes__default.node.isRequired,
   disabled: PropTypes__default.bool,
   isLoading: PropTypes__default.bool,
@@ -561,6 +561,7 @@ SecondaryButton.propTypes = {
   onClick: PropTypes__default.func
 };
 SecondaryButton.defaultProps = {
+  className: "",
   isLoading: false,
   full: false,
   disabled: false,
