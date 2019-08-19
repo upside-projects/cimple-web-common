@@ -2859,7 +2859,7 @@ var Gallery = function Gallery(_ref) {
       image: images[featuredImage]
     }), React.createElement(Holder$d, null, React.createElement(GalleryThumbnails, null, images.map(function (image, index) {
       return React.createElement(Thumbnail$2, {
-        key: image.index,
+        key: image,
         image: image,
         featured: featuredImage === index,
         onClick: function onClick() {
