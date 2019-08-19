@@ -42,7 +42,7 @@ export const Flex = styled.div`
   align-items: top;
   justify-content: space-between;
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 780px) {
     flex-direction: column;
 
     ${Tag} {
