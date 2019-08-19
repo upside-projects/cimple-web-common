@@ -1959,7 +1959,7 @@ Thumbnail$1.propTypes = {
 };
 
 function _templateObject5$7() {
-  var data = _taggedTemplateLiteral(["\n  display: table;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
 
   _templateObject5$7 = function _templateObject5() {
     return data;
@@ -1969,7 +1969,7 @@ function _templateObject5$7() {
 }
 
 function _templateObject4$9() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: top;\n  justify-content: space-between;\n\n  @media only screen and (max-width: 375px) {\n    flex-direction: column;\n\n    ", " {\n      order: -1;\n      margin-bottom: 0.5rem;\n      width: fit-content;\n    }\n  }\n"]);
 
   _templateObject4$9 = function _templateObject4() {
     return data;
@@ -1979,7 +1979,7 @@ function _templateObject4$9() {
 }
 
 function _templateObject3$a() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: top;\n  justify-content: space-between;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: table;\n"]);
 
   _templateObject3$a = function _templateObject3() {
     return data;
@@ -2017,9 +2017,9 @@ var ProductThumb = styled__default.div(_templateObject$q(), function (_ref) {
   return theme.transition.cubic();
 });
 var Holder$9 = styled__default.div(_templateObject2$g(), ProductThumb);
-var Flex$1 = styled__default.div(_templateObject3$a());
-var Column = styled__default.div(_templateObject4$9());
-var Tag$2 = styled__default(Tag$1)(_templateObject5$7());
+var Tag$2 = styled__default(Tag$1)(_templateObject3$a());
+var Flex$1 = styled__default.div(_templateObject4$9(), Tag$2);
+var Column = styled__default.div(_templateObject5$7());
 
 var BigProduct = function BigProduct(_ref) {
   var name = _ref.name,
