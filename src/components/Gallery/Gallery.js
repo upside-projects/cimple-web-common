@@ -14,7 +14,7 @@ const Gallery = ({ images }) => {
           <S.GalleryThumbnails>
             {images.map((image, index) => (
               <S.Thumbnail
-                key={image.index}
+                key={image}
                 image={image}
                 featured={featuredImage === index}
                 onClick={() => setFeatured(index)}
