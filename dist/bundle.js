@@ -1969,7 +1969,7 @@ function _templateObject5$7() {
 }
 
 function _templateObject4$9() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: top;\n  justify-content: space-between;\n\n  @media only screen and (max-width: 375px) {\n    flex-direction: column;\n\n    ", " {\n      order: -1;\n      margin-bottom: 0.5rem;\n      width: fit-content;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: top;\n  justify-content: space-between;\n\n  @media only screen and (max-width: 780px) {\n    flex-direction: column;\n\n    ", " {\n      order: -1;\n      margin-bottom: 0.5rem;\n      width: fit-content;\n    }\n  }\n"]);
 
   _templateObject4$9 = function _templateObject4() {
     return data;
