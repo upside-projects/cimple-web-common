@@ -32,18 +32,28 @@ export const Holder = styled.div`
   }
 `
 
+export const Tag = styled(StyledTag)`
+  display: table;
+`
+
 export const Flex = styled.div`
   display: flex;
   flex-direction: row;
   align-items: top;
   justify-content: space-between;
+
+  @media only screen and (max-width: 375px) {
+    flex-direction: column;
+
+    ${Tag} {
+      order: -1;
+      margin-bottom: 0.5rem;
+      width: fit-content;
+    }
+  }
 `
 
 export const Column = styled.div`
   display: flex;
   flex-direction: column;
-`
-
-export const Tag = styled(StyledTag)`
-  display: table;
 `
