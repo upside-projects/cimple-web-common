@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 const getBgColor = props => {
   const types = {
@@ -35,4 +35,11 @@ export const Tag = styled.span`
   letter-spacing: 0.4px;
 
   padding: 4px 8px;
+
+  ${p =>
+    p.brand &&
+    css`
+      background-color: ${({ theme }) => theme.colors.brand.default};
+      color: ${({ theme }) => theme.colors.greyscale.white};
+    `}
 `

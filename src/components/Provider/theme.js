@@ -7,6 +7,7 @@ export default {
     },
     greyscale: {
       dark: "#151E29",
+      darkLight: "#2C343E",
       medium: "#9E9DA3",
       light: "#D9D7E0",
       lighter: "#F3F2F5",
