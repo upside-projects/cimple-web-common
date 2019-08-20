@@ -14,6 +14,7 @@ import Search from "./Search"
 import Hamburger from "./Hamburger"
 import Plus from "./Plus"
 import Minus from "./Minus"
+import Edit from "./Edit"
 
 const Icons = {}
 
@@ -33,5 +34,6 @@ Icons.Next = Next
 Icons.Prev = Prev
 Icons.Plus = Plus
 Icons.Minus = Minus
+Icons.Edit = Edit
 
 export default Icons
