@@ -21,3 +21,5 @@ storiesOf("Tag", module).add("Ongoing", () => (
 ))
 
 storiesOf("Tag", module).add("Default", () => <Tag>Stationary</Tag>)
+
+storiesOf("Tag", module).add("Brand", () => <Tag brand>Stationary</Tag>)
