@@ -1288,15 +1288,16 @@ Radio$1.propTypes = {
 };
 
 var Logo = function Logo(_ref) {
-  var white = _ref.white;
+  var white = _ref.white,
+      props = _objectWithoutProperties(_ref, ["white"]);
 
   if (white) {
-    return React.createElement("svg", {
+    return React.createElement("svg", _extends({}, props, {
       xmlns: "http://www.w3.org/2000/svg",
       width: "84",
       height: "24",
       viewBox: "0 0 84 24"
-    }, React.createElement("g", {
+    }), React.createElement("g", {
       fill: "none",
       fillRule: "evenodd"
     }, React.createElement("rect", {
@@ -1311,12 +1312,12 @@ var Logo = function Logo(_ref) {
     })));
   }
 
-  return React.createElement("svg", {
+  return React.createElement("svg", _extends({}, props, {
     height: "24",
     viewBox: "0 0 84 24",
     width: "84",
     xmlns: "http://www.w3.org/2000/svg"
-  }, React.createElement("g", {
+  }), React.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
   }, React.createElement("path", {
