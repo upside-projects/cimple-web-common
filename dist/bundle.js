@@ -1999,7 +1999,7 @@ function _templateObject2$g() {
 }
 
 function _templateObject$q() {
-  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center center;\n  height: 20rem;\n  width: 100%;\n  opacity: 1;\n\n  margin-bottom: 1.5rem;\n\n  transition: ", ";\n\n  @media only screen and (max-width: 768px) {\n    height: 10rem;\n    width: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center center;\n  height: 20rem;\n  width: 100%;\n  opacity: 1;\n\n  margin-bottom: 1.5rem;\n\n  transition: ", ";\n\n  @media only screen and (max-width: 780px) {\n    height: 10rem;\n    width: 100%;\n  }\n"]);
 
   _templateObject$q = function _templateObject() {
     return data;
