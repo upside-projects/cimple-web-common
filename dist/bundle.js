@@ -3020,17 +3020,16 @@ var Content = styled__default.div(_templateObject3$h(), function (p) {
   return p.isOpen ? "flex" : "none";
 });
 
-/* global document */
-
 var Modal$1 = function Modal$1(_ref) {
   var children = _ref.children,
       isOpen = _ref.isOpen,
-      onClose = _ref.onClose;
+      onClose = _ref.onClose,
+      props = _objectWithoutProperties(_ref, ["children", "isOpen", "onClose"]);
 
   if (isOpen) {
     return ReactDOM.createPortal(React.createElement(React.Fragment, null, React.createElement(Content, {
       isOpen: isOpen
-    }, React.createElement(Modal, null, children), React.createElement(Wrapper$7, {
+    }, React.createElement(Modal, props, children), React.createElement(Wrapper$7, {
       onClick: onClose
     }))), document.body);
   }
