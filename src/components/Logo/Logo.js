@@ -1,10 +1,11 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Logo = ({ white }) => {
+const Logo = ({ white, ...props }) => {
   if (white) {
     return (
       <svg
+        {...props}
         xmlns="http://www.w3.org/2000/svg"
         width="84"
         height="24"
@@ -26,6 +27,7 @@ const Logo = ({ white }) => {
   }
   return (
     <svg
+      {...props}
       height="24"
       viewBox="0 0 84 24"
       width="84"
