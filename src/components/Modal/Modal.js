@@ -4,12 +4,12 @@ import ReactDOM from "react-dom"
 
 import * as S from "./styled"
 
-const Modal = ({ children, isOpen, onClose }) => {
+const Modal = ({ children, isOpen, onClose, ...props }) => {
   if (isOpen) {
     return ReactDOM.createPortal(
       <React.Fragment>
         <S.Content isOpen={isOpen}>
-          <S.Modal>{children}</S.Modal>
+          <S.Modal {...props}>{children}</S.Modal>
           <S.Wrapper onClick={onClose} />
         </S.Content>
       </React.Fragment>,
