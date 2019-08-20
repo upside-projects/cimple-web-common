@@ -15,7 +15,7 @@ export const ProductThumb = styled.div`
 
   transition: ${({ theme }) => theme.transition.cubic()};
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 780px) {
     height: 10rem;
     width: 100%;
   }
