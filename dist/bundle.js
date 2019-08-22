@@ -184,7 +184,7 @@ var theme = {
   colors: {
     brand: {
       light: "#B1A7F0",
-      "default": "#7E6EE6",
+      default: "#7E6EE6",
       dark: "#6d5ae4"
     },
     greyscale: {
@@ -196,20 +196,20 @@ var theme = {
       white: "#FFFFFF"
     },
     danger: {
-      "default": "#F87E7E",
+      default: "#F87E7E",
       dark: "#D25656",
       light: "#FEE9E9"
     },
     yellow: {
-      "default": "#FCB747",
+      default: "#FCB747",
       light: "#FFF4E4"
     },
     green: {
-      "default": "#46CF68",
+      default: "#46CF68",
       light: "#E3F8E9"
     },
     blue: {
-      "default": "#588CF5",
+      default: "#588CF5",
       light: "#E6EEFE"
     }
   },
@@ -316,7 +316,7 @@ function _templateObject$4() {
 }
 var base = styled.css(_templateObject$4(), function (_ref) {
   var theme = _ref.theme;
-  return theme.colors.brand["default"];
+  return theme.colors.brand.default;
 }, function (_ref2) {
   var theme = _ref2.theme;
   return theme.radius.xsmall;
@@ -346,7 +346,7 @@ var base = styled.css(_templateObject$4(), function (_ref) {
 }, function (p) {
   return p.danger && styled.css(_templateObject3(), function (_ref10) {
     var theme = _ref10.theme;
-    return theme.colors.danger["default"];
+    return theme.colors.danger.default;
   }, function (_ref11) {
     var theme = _ref11.theme;
     return theme.colors.danger.dark;
@@ -463,19 +463,19 @@ var base$1 = styled.css(_templateObject$5(), function (_ref) {
   return theme.colors.greyscale.white;
 }, function (_ref2) {
   var theme = _ref2.theme;
-  return theme.colors.brand["default"];
+  return theme.colors.brand.default;
 }, function (_ref3) {
   var theme = _ref3.theme;
   return theme.radius.xsmall;
 }, function (_ref4) {
   var theme = _ref4.theme;
-  return theme.colors.brand["default"];
+  return theme.colors.brand.default;
 }, function (_ref5) {
   var theme = _ref5.theme;
   return theme.transition.ease();
 }, function (_ref6) {
   var theme = _ref6.theme;
-  return theme.colors.brand["default"];
+  return theme.colors.brand.default;
 }, function (_ref7) {
   var theme = _ref7.theme;
   return theme.colors.greyscale.white;
@@ -507,31 +507,31 @@ var base$1 = styled.css(_templateObject$5(), function (_ref) {
 }, function (p) {
   return p.isLoading && styled.css(_templateObject4$1(), function (_ref15) {
     var theme = _ref15.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   }, function (_ref16) {
     var theme = _ref16.theme;
     return theme.colors.greyscale.white;
   }, function (_ref17) {
     var theme = _ref17.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   }, function (_ref18) {
     var theme = _ref18.theme;
     return theme.colors.greyscale.white;
   }, function (_ref19) {
     var theme = _ref19.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   }, function (_ref20) {
     var theme = _ref20.theme;
     return theme.colors.greyscale.white;
   }, function (_ref21) {
     var theme = _ref21.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   }, function (_ref22) {
     var theme = _ref22.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   }, function (_ref23) {
     var theme = _ref23.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   }, rotate);
 });
 var Button$2 = styled__default.button(_templateObject5$1(), base$1);
@@ -683,16 +683,16 @@ var Check = styled__default.span(_templateObject$8(), function (_ref) {
 }, function (p) {
   return p.checked && styled.css(_templateObject2$3(), function (_ref7) {
     var theme = _ref7.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   }, function (_ref8) {
     var theme = _ref8.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   }, function (_ref9) {
     var theme = _ref9.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   }, function (_ref10) {
     var theme = _ref10.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   });
 }, function (_ref11) {
   var theme = _ref11.theme;
@@ -739,24 +739,24 @@ function applyColor(props) {
   var colors = props.theme.colors;
   var map = {
     black: colors.greyscale.dark,
-    purple: colors.brand["default"],
+    purple: colors.brand.default,
     purpleDark: colors.brand.light,
     purpleLight: colors.brand.dark,
-    "default": colors.greyscale.dark,
-    grey: colors.greyscale["default"],
+    default: colors.greyscale.dark,
+    grey: colors.greyscale.default,
     greyDark: colors.greyscale.dark,
     greyLight: colors.greyscale.light,
     greyMedium: colors.greyscale.medium,
-    red: colors.danger["default"],
+    red: colors.danger.default,
     redDark: colors.danger.dark,
     white: colors.greyscale.white
   };
 
   if (props.color !== undefined) {
-    return map[props.color] || map["default"];
+    return map[props.color] || map.default;
   }
 
-  return map["default"];
+  return map.default;
 }
 
 function _templateObject9() {
@@ -884,7 +884,7 @@ var ErrorMessage = styled__default(Uppercase)(_templateObject$a(), function (_re
 }, function (p) {
   return p.error && styled.css(_templateObject2$5(), function (_ref2) {
     var theme = _ref2.theme;
-    return theme.colors.danger["default"];
+    return theme.colors.danger.default;
   });
 });
 
@@ -997,16 +997,16 @@ var base$3 = styled.css(_templateObject$b(), function (_ref) {
   return theme.colors.greyscale.medium;
 }, function (_ref7) {
   var theme = _ref7.theme;
-  return theme.colors.brand["default"];
+  return theme.colors.brand.default;
 }, function (p) {
   return p.label && styled.css(_templateObject2$6());
 }, function (p) {
   return p.error && styled.css(_templateObject3$4(), function (_ref8) {
     var theme = _ref8.theme;
-    return theme.colors.danger["default"];
+    return theme.colors.danger.default;
   }, function (_ref9) {
     var theme = _ref9.theme;
-    return theme.colors.danger["default"];
+    return theme.colors.danger.default;
   }, function (_ref10) {
     var theme = _ref10.theme;
     return theme.colors.danger.dark;
@@ -1022,7 +1022,7 @@ var Holder$1 = styled__default.div(_templateObject6$2());
 var Flex = styled__default.div(_templateObject7$1());
 var Uppercase$1 = styled__default(Uppercase)(_templateObject8$1(), function (_ref12) {
   var theme = _ref12.theme;
-  return theme.colors.brand["default"];
+  return theme.colors.brand.default;
 }, function (_ref13) {
   var theme = _ref13.theme;
   return theme.transition.ease();
@@ -1248,7 +1248,7 @@ var Radio = styled__default.span(_templateObject$d(), function (_ref) {
     return theme.colors.white;
   }, function (_ref6) {
     var theme = _ref6.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   }, function (_ref7) {
     var theme = _ref7.theme;
     return theme.radius.round;
@@ -1473,7 +1473,7 @@ var Wrapper$1 = styled__default.div(_templateObject2$a(), function (p) {
   return p.withIcon && styled.css(_templateObject3$7());
 }, function (_ref3) {
   var theme = _ref3.theme;
-  return theme.colors.brand["default"];
+  return theme.colors.brand.default;
 }, function (_ref4) {
   var theme = _ref4.theme;
   return theme.transition.cubic();
@@ -1539,7 +1539,7 @@ var ArrowLink = styled__default.a(_templateObject$h(), function (_ref) {
   return theme.transition.cubic();
 }, function (_ref3) {
   var theme = _ref3.theme;
-  return theme.colors.brand["default"];
+  return theme.colors.brand.default;
 });
 var Wrapper$2 = styled__default.div(_templateObject2$b());
 
@@ -1732,11 +1732,11 @@ var ArrowLink$1 = styled__default.a(_templateObject2$d(), function (_ref) {
 }, function (p) {
   return p.withColor && styled.css(_templateObject3$8(), function (_ref3) {
     var theme = _ref3.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   });
 }, function (_ref4) {
   var theme = _ref4.theme;
-  return theme.colors.brand["default"];
+  return theme.colors.brand.default;
 });
 var Wrapper$3 = styled__default.div(_templateObject4$7());
 
@@ -1781,7 +1781,7 @@ var ArrowLink$3 = styled__default.a(_templateObject$l(), function (_ref) {
   return theme.transition.cubic();
 }, function (_ref3) {
   var theme = _ref3.theme;
-  return theme.colors.brand["default"];
+  return theme.colors.brand.default;
 });
 var Wrapper$4 = styled__default.div(_templateObject2$e());
 
@@ -1864,10 +1864,10 @@ function _templateObject$n() {
 
 var getBgColor = function getBgColor(props) {
   var types = {
-    canceled: props.theme.colors.danger["default"],
-    completed: props.theme.colors.green["default"],
-    refunded: props.theme.colors.yellow["default"],
-    ongoing: props.theme.colors.blue["default"]
+    canceled: props.theme.colors.danger.default,
+    completed: props.theme.colors.green.default,
+    refunded: props.theme.colors.yellow.default,
+    ongoing: props.theme.colors.blue.default
   };
   return types[props.status] || props.theme.colors.greyscale.light;
 };
@@ -1888,7 +1888,7 @@ var Tag = styled__default.span(_templateObject$n(), getBgColor, function (_ref) 
 }, getColor, function (p) {
   return p.brand && styled.css(_templateObject2$f(), function (_ref2) {
     var theme = _ref2.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   }, function (_ref3) {
     var theme = _ref3.theme;
     return theme.colors.greyscale.white;
@@ -2633,7 +2633,7 @@ function _templateObject$u() {
 }
 var divStyle = styled.css(_templateObject$u(), function (_ref) {
   var theme = _ref.theme;
-  return theme.colors.brand["default"];
+  return theme.colors.brand.default;
 });
 var animation = styled.css(_templateObject2$l());
 var Spinner = styled__default.div(_templateObject3$d(), animation);
@@ -2699,7 +2699,7 @@ var Holder$c = styled__default.div(_templateObject2$m());
 var PageButton = styled__default.button(_templateObject3$e(), function (p) {
   return p.active && styled.css(_templateObject4$c(), function (_ref) {
     var theme = _ref.theme;
-    return theme.colors.brand["default"];
+    return theme.colors.brand.default;
   });
 }, function (p) {
   return p.disabled && styled.css(_templateObject5$a());
@@ -3019,7 +3019,7 @@ var Counter = function Counter(_ref) {
     if (value > maxValue) {
       onChange(maxValue);
     }
-  }, []);
+  }, [maxValue, minValue, onChange, value]);
 
   var increaseVal = function increaseVal() {
     if (value < maxValue) {
