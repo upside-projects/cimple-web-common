@@ -13,7 +13,7 @@ const Counter = ({ value, minValue, maxValue, onChange }) => {
     if (value > maxValue) {
       onChange(maxValue)
     }
-  }, [])
+  }, [maxValue, minValue, onChange, value])
 
   const increaseVal = () => {
     if (value < maxValue) {
