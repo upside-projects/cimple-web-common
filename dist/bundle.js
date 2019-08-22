@@ -2048,7 +2048,7 @@ function _templateObject2$h() {
 }
 
 function _templateObject$q() {
-  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center center;\n  height: 20rem;\n  width: 100%;\n  opacity: 1;\n\n  margin-bottom: 1.5rem;\n\n  transition: ", ";\n\n  @media only screen and (max-width: 780px) {\n    height: 10rem;\n    width: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center center;\n\n  height: 20rem;\n  width: 100%;\n  opacity: 1;\n\n  margin-bottom: 1.5rem;\n  transition: ", ";\n\n  @media only screen and (max-width: 780px) {\n    height: 10rem;\n    width: 100%;\n  }\n"]);
 
   _templateObject$q = function _templateObject() {
     return data;
@@ -2060,7 +2060,7 @@ var ProductThumb = styled__default.div(_templateObject$q(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.lighter;
 }, function (p) {
-  return p.src;
+  return p.goodImage;
 }, function (_ref2) {
   var theme = _ref2.theme;
   return theme.transition.cubic();
@@ -2070,30 +2070,30 @@ var Tag$2 = styled__default(Tag$1)(_templateObject3$a());
 var Flex$1 = styled__default.div(_templateObject4$9(), Tag$2);
 var Column = styled__default.div(_templateObject5$7());
 
-var BigProduct = function BigProduct(_ref) {
-  var name = _ref.name,
-      src = _ref.src,
-      price = _ref.price,
-      category = _ref.category;
+var GoodDisplay = function GoodDisplay(_ref) {
+  var goodName = _ref.goodName,
+      goodImage = _ref.goodImage,
+      unitPrice = _ref.unitPrice,
+      goodCategory = _ref.goodCategory;
   return React.createElement(Holder$9, null, React.createElement(ProductThumb, {
-    src: src
-  }), React.createElement(Flex$1, null, React.createElement(Column, null, React.createElement(Text, null, name), React.createElement(Text, {
+    goodImage: goodImage
+  }), React.createElement(Flex$1, null, React.createElement(Column, null, React.createElement(Text, null, goodName), React.createElement(Text, {
     color: "greyMedium"
-  }, price)), React.createElement(Tag$2, {
-    type: category
-  }, category)));
+  }, unitPrice)), React.createElement(Tag$2, {
+    type: goodCategory
+  }, goodCategory)));
 };
-BigProduct.defaultProps = {
-  category: "N/A",
-  name: "Unamed product",
-  src: "",
-  price: "N/A"
+GoodDisplay.defaultProps = {
+  goodCategory: "N/A",
+  goodName: "Unamed product",
+  goodImage: "",
+  unitPrice: "N/A"
 };
-BigProduct.propTypes = {
-  category: PropTypes__default.string,
-  name: PropTypes__default.string,
-  src: PropTypes__default.string,
-  price: PropTypes__default.string
+GoodDisplay.propTypes = {
+  goodCategory: PropTypes__default.string,
+  goodName: PropTypes__default.string,
+  goodImage: PropTypes__default.string,
+  unitPrice: PropTypes__default.string
 };
 
 function _templateObject3$b() {
@@ -2205,36 +2205,36 @@ var Text$2 = styled__default(Text)(_templateObject3$c());
 var TextQty = styled__default(Text)(_templateObject4$a());
 var Flex$2 = styled__default.div(_templateObject5$8());
 
-var SmallProduct$1 = function SmallProduct(_ref) {
+var GoodListDetailed = function GoodListDetailed(_ref) {
   var currency = _ref.currency,
-      image = _ref.image,
-      name = _ref.name,
-      sku = _ref.sku,
-      price = _ref.price,
-      quantity = _ref.quantity,
-      props = _objectWithoutProperties(_ref, ["currency", "image", "name", "sku", "price", "quantity"]);
+      goodImage = _ref.goodImage,
+      goodName = _ref.goodName,
+      goodSku = _ref.goodSku,
+      unitPrice = _ref.unitPrice,
+      goodQuantity = _ref.goodQuantity,
+      props = _objectWithoutProperties(_ref, ["currency", "goodImage", "goodName", "goodSku", "unitPrice", "goodQuantity"]);
 
   return React.createElement(Holder$b, props, React.createElement(Thumbnail$1, {
-    src: image
-  }), React.createElement(Wrapper$6, null, React.createElement(Flex$2, null, React.createElement(Flex$2, null, React.createElement(TextQty, null, quantity, "x"), React.createElement(Text$2, null, name)), React.createElement(Text$2, null, currency, price)), React.createElement(UppercaseL, {
+    src: goodImage
+  }), React.createElement(Wrapper$6, null, React.createElement(Flex$2, null, React.createElement(Flex$2, null, React.createElement(TextQty, null, goodQuantity, "x"), React.createElement(Text$2, null, goodName)), React.createElement(Text$2, null, currency, unitPrice)), React.createElement(UppercaseL, {
     color: "greyMedium"
-  }, "SKU: ", sku)));
+  }, "SKU: ", goodSku)));
 };
-SmallProduct$1.defaultProps = {
+GoodListDetailed.defaultProps = {
   currency: "£",
-  image: "https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png",
-  name: "Unnamed product",
-  sku: "SKU not available",
-  price: "0",
-  quantity: 0
+  goodImage: "https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png",
+  goodName: "Unnamed product",
+  goodSku: "SKU not available",
+  unitPrice: "0",
+  goodQuantity: 0
 };
-SmallProduct$1.propTypes = {
+GoodListDetailed.propTypes = {
   currency: PropTypes__default.string,
-  image: PropTypes__default.string,
-  sku: PropTypes__default.string,
-  name: PropTypes__default.string,
-  price: PropTypes__default.string,
-  quantity: PropTypes__default.number
+  goodImage: PropTypes__default.string,
+  goodSku: PropTypes__default.string,
+  goodName: PropTypes__default.string,
+  unitPrice: PropTypes__default.string,
+  goodQuantity: PropTypes__default.number
 };
 
 var Next = function Next(_ref) {
@@ -3116,7 +3116,6 @@ var Modal$1 = function Modal$1(_ref) {
 
 exports.ArrowLink = ArrowLink$2;
 exports.BackLink = Back;
-exports.BigProduct = BigProduct;
 exports.Button = Button$1;
 exports.Checkbox = Checkbox$1;
 exports.Column = Column$1;
@@ -3129,6 +3128,8 @@ exports.ExternalLink = ExternalLink;
 exports.Flex = Flex$3;
 exports.Footer = Footer;
 exports.Gallery = Gallery;
+exports.GoodDisplay = GoodDisplay;
+exports.GoodListDetailed = GoodListDetailed;
 exports.HeadingL = HeadingL;
 exports.HeadingM = HeadingM;
 exports.HeadingS = HeadingS;
@@ -3137,7 +3138,6 @@ exports.Input = Input$1;
 exports.Label = Label;
 exports.Loader = Loader;
 exports.Logo = Logo;
-exports.MiniProduct = SmallProduct$1;
 exports.Modal = Modal$1;
 exports.NavLink = NavLink$1;
 exports.Pagination = Pagination$1;
