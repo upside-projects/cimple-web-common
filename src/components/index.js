@@ -54,9 +54,9 @@ export { default as Table } from "./Table/Table"
 export { default as Thumbnail } from "./Thumbnail/Thumbnail"
 
 /* Product */
-export { default as BigProduct } from "./Product/BigProduct/BigProduct"
-export { default as SmallProduct } from "./Product/SmallProduct/SmallProduct"
-export { default as MiniProduct } from "./Product/MiniProduct/MiniProduct"
+export { default as GoodDisplay } from "./Goods/GoodDisplay/GoodDisplay"
+export { default as SmallProduct } from "./Goods/SmallProduct/SmallProduct"
+export { default as MiniProduct } from "./Goods/MiniProduct/MiniProduct"
 
 /* Icons */
 export { default as Icons } from "./Icons"

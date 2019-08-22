@@ -6,7 +6,7 @@ import ArrowLink from "../Links/ArrowLink/ArrowLink"
 import Table from "./Table"
 import Tag from "../Tag/Tag"
 import Sort from "../Sort/Sort"
-import SmallProduct from "../Product/SmallProduct/SmallProduct"
+import SmallProduct from "../Goods/SmallProduct/SmallProduct"
 
 storiesOf("Tables / Orders", module).add("List", () => (
   <div style={{ width: "1024px" }}>

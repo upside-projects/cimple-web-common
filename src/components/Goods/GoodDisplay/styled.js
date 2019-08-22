@@ -4,15 +4,15 @@ import StyledTag from "../../Tag/Tag"
 
 export const ProductThumb = styled.div`
   background-color: ${({ theme }) => theme.colors.greyscale.lighter};
-  background-image: url(${p => p.src});
+  background-image: url(${p => p.goodImage});
   background-size: cover;
   background-position: center center;
+
   height: 20rem;
   width: 100%;
   opacity: 1;
 
   margin-bottom: 1.5rem;
-
   transition: ${({ theme }) => theme.transition.cubic()};
 
   @media only screen and (max-width: 780px) {
