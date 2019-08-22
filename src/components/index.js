@@ -3,8 +3,8 @@ export { default as Provider } from "./Provider/Provider"
 export { default as theme } from "./Provider/theme"
 
 /* Buttons */
-export { default as Button } from "./Button/Primary/Button"
-export { default as SecondaryButton } from "./Button/Secondary/SecondaryButton"
+export { default as Button } from "./Button/Primary/ButtonPrimary"
+export { default as SecondaryButton } from "./Button/Secondary/ButtonSecondary"
 
 /* Buttons */
 export { default as Divider } from "./Divider/Divider"
@@ -54,9 +54,9 @@ export { default as Table } from "./Table/Table"
 export { default as Thumbnail } from "./Thumbnail/Thumbnail"
 
 /* Product */
-export { default as BigProduct } from "./Product/BigProduct/BigProduct"
-export { default as SmallProduct } from "./Product/SmallProduct/SmallProduct"
-export { default as MiniProduct } from "./Product/MiniProduct/MiniProduct"
+export { default as GoodDisplay } from "./Goods/GoodDisplay/GoodDisplay"
+export { default as SmallProduct } from "./Goods/SmallProduct/SmallProduct"
+export { default as GoodListDetailed } from "./Goods/GoodListDetailed/GoodListDetailed"
 
 /* Icons */
 export { default as Icons } from "./Icons"

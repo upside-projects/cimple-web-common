@@ -4,8 +4,7 @@ import { storiesOf } from "@storybook/react"
 
 import Logo from "./Logo"
 
-storiesOf("Logo", module).add("Logo", () => <Logo />)
-storiesOf("Logo", module).add("Logo White", () => (
+storiesOf("Primitives | Logo", module).add("Logo", () => <Logo />).add("Logo White", () => (
   <div
     style={{
       width: "100vw",

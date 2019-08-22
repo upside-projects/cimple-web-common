@@ -4,4 +4,4 @@ import { storiesOf } from "@storybook/react"
 
 import Loader from "./Loader"
 
-storiesOf("Loader", module).add("Completed", () => <Loader />)
+storiesOf("Primitives | States / Loading", module).add("Completed", () => <Loader />)

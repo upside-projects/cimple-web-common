@@ -4,11 +4,10 @@ import { storiesOf } from "@storybook/react"
 
 import Input from "./Input"
 
-storiesOf("Input", module).add("Default", () => (
+storiesOf("Primitives | Forms / Inputs", module).add("Default", () => (
   <Input label="Email adress" name="Email" placeholder="user@email.org.uk" />
 ))
-
-storiesOf("Input", module).add("Error", () => (
+.add("Error", () => (
   <Input
     label="Email adress"
     name="Email"
@@ -16,8 +15,7 @@ storiesOf("Input", module).add("Error", () => (
     error="Invalid credentials"
   />
 ))
-
-storiesOf("Input", module).add("With Link", () => (
+.add("With Link", () => (
   <Input
     label="Your password"
     name="Password"
@@ -26,7 +24,6 @@ storiesOf("Input", module).add("With Link", () => (
     href="https://google.com"
   />
 ))
-
-storiesOf("Input", module).add("Disabled", () => (
+.add("Disabled", () => (
   <Input label="City" name="City" placeholder="Edinburgh" disabled />
 ))

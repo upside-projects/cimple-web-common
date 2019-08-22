@@ -1,8 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-// TRIGGER RELEASE
-
 const Logo = ({ white, ...props }) => {
   if (white) {
     return (

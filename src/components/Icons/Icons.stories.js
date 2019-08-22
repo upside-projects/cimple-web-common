@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react"
 
 import Icons from "./index"
 
-storiesOf("Icons", module).add("All", () => (
+storiesOf("Primitives | Icons", module).add("All", () => (
   <div
     style={{
       display: "grid",
@@ -26,5 +26,4 @@ storiesOf("Icons", module).add("All", () => (
     <Icons.Edit />
   </div>
 ))
-
-storiesOf("Icons", module).add("Cart", () => <Icons.Cart />)
+.add("Cart", () => <Icons.Cart />)

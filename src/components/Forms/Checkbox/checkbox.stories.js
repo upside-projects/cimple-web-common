@@ -9,7 +9,7 @@ const store = new Store({
   checked: false
 })
 
-storiesOf("Checkbox", module).add("Default", () => (
+storiesOf("Primitives | Forms/Checkboxes", module).add("Default", () => (
   <State store={store}>
     {state => (
       <Checkbox
