@@ -9,7 +9,7 @@ const store = new Store({
   current: 1
 })
 
-storiesOf("Pagination", module).add("Pagination", () => (
+storiesOf("Pagination", module).add("Default", () => (
   <State store={store}>
     {state => (
       <Pagination

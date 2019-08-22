@@ -8,7 +8,7 @@ import Tag from "../Tag/Tag"
 import Sort from "../Sort/Sort"
 import SmallProduct from "../Product/SmallProduct/SmallProduct"
 
-storiesOf("Table", module).add("List", () => (
+storiesOf("Tables / Orders", module).add("List", () => (
   <div style={{ width: "1024px" }}>
     <Table>
       <Table.Header>
@@ -65,7 +65,7 @@ storiesOf("Table", module).add("List", () => (
   </div>
 ))
 
-storiesOf("Table", module).add("List with Thumbnail", () => (
+storiesOf("Tables / Goods", module).add("List with Thumbnail", () => (
   <div style={{ width: "1024px" }}>
     <Table>
       <Table.Header>
