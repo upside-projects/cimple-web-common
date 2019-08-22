@@ -23,7 +23,7 @@ addParameters({
     showSearchBox: false,
     addonPanelInRight: true,
     sortStoriesByKind: false,
-    hierarchySeparator: /\./,
+    hierarchySeparator: /\//,
     hierarchyRootSeparator: /\|/,
     enableShortcuts: true
   }

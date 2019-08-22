@@ -9,7 +9,7 @@ const store = new Store({
   checked: false
 })
 
-storiesOf("Radio", module).add("Default", () => (
+storiesOf("Primitives | Forms / Radios", module).add("Default", () => (
   <div style={{ display: "flex", flexDirection: "row" }}>
     <State store={store}>
       {state => (

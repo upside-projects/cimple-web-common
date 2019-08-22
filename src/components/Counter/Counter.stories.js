@@ -9,7 +9,7 @@ const store = new Store({
   quantity: 1
 })
 
-storiesOf("Counter", module).add("Default", () => (
+storiesOf("Primitives | Buttons/Counter", module).add("Default", () => (
   <State store={store}>
     {state => (
       <Counter

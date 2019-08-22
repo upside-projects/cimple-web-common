@@ -4,6 +4,6 @@ import { storiesOf } from "@storybook/react"
 
 import Topbar from "./Topbar"
 
-storiesOf("Topbar", module).add("Simple", () => <Topbar type="simple" />)
-storiesOf("Topbar", module).add("Market", () => <Topbar type="market" />)
-storiesOf("Topbar", module).add("Sign", () => <Topbar type="sign" />)
+storiesOf("Primitives | Layout / Topbar", module).add("Simple", () => <Topbar type="simple" />)
+.add("Market", () => <Topbar type="market" />)
+.add("Sign", () => <Topbar type="sign" />)

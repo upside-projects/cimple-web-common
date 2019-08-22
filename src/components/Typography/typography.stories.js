@@ -11,8 +11,8 @@ import {
   UppercaseL
 } from "./Typography"
 
-storiesOf("Typography", module)
-  .add("Heading", () => (
+storiesOf("Primitives | Typography / Heading", module)
+  .add("Heading L", () => (
     <div style={{ flexDirection: "column" }}>
       <div style={{ marginBottom: "24px" }}>
         <Uppercase>Heading L (40px)</Uppercase>
@@ -21,6 +21,10 @@ storiesOf("Typography", module)
         <HeadingL color="greyMedium">The Complex made simple.</HeadingL>
         <HeadingL color="greyLight">The Complex made simple.</HeadingL>
       </div>
+      </div>
+      ))
+      .add("Heading M", () => (
+        <div style={{ flexDirection: "column" }}>
       <div style={{ marginBottom: "24px" }}>
         <Uppercase>Heading M (32px)</Uppercase>
         <HeadingM color="purple">The Complex made simple.</HeadingM>
@@ -28,16 +32,22 @@ storiesOf("Typography", module)
         <HeadingM color="greyMedium">The Complex made simple.</HeadingM>
         <HeadingM color="greyLight">The Complex made simple.</HeadingM>
       </div>
-      <div style={{ marginBottom: "24px" }}>
-        <Uppercase>Heading S (24px)</Uppercase>
-        <HeadingS color="purple">The Complex made simple.</HeadingS>
-        <HeadingS color="greyDark">The Complex made simple.</HeadingS>
-        <HeadingS color="greyMedium">The Complex made simple.</HeadingS>
-        <HeadingS color="greyLight">The Complex made simple.</HeadingS>
       </div>
-    </div>
+      ))
+      .add("Heading S", () => (
+      <div style={{ flexDirection: "column" }}>
+        <div style={{ marginBottom: "24px" }}>
+          <Uppercase>Heading S (24px)</Uppercase>
+          <HeadingS color="purple">The Complex made simple.</HeadingS>
+          <HeadingS color="greyDark">The Complex made simple.</HeadingS>
+          <HeadingS color="greyMedium">The Complex made simple.</HeadingS>
+          <HeadingS color="greyLight">The Complex made simple.</HeadingS>
+        </div>
+      </div>
   ))
-  .add("Text", () => (
+
+storiesOf("Primitives | Typography / Body", module)
+  .add("Default", () => (
     <div style={{ flexDirection: "column" }}>
       <Uppercase>Text (16px)</Uppercase>
       <Text
