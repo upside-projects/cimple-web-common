@@ -2547,6 +2547,40 @@ var Edit = function Edit(_ref) {
   })));
 };
 
+var Ellipsis = function Ellipsis(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("g", {
+    fill: "none",
+    "fill-rule": "evenodd"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("g", {
+    fill: "currentColor",
+    transform: "translate(11 5)"
+  }, React.createElement("circle", {
+    cx: "1",
+    cy: "7",
+    r: "1"
+  }), React.createElement("circle", {
+    cx: "1",
+    cy: "1",
+    r: "1"
+  }), React.createElement("circle", {
+    cx: "1",
+    cy: "13",
+    r: "1"
+  }))));
+};
+
 var Icons = {};
 Icons.Arrow = Arrow;
 Icons.Cart = Cart;
@@ -2565,6 +2599,7 @@ Icons.Prev = Prev;
 Icons.Plus = Plus;
 Icons.Minus = Minus;
 Icons.Edit = Edit;
+Icons.Ellipsis = Ellipsis;
 
 function _templateObject2$l() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
