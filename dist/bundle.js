@@ -2557,7 +2557,7 @@ var Ellipsis = function Ellipsis(_ref) {
     viewBox: "0 0 24 24"
   }), React.createElement("g", {
     fill: "none",
-    "fill-rule": "evenodd"
+    fillRule: "evenodd"
   }, React.createElement("rect", {
     width: "24",
     height: "24",
