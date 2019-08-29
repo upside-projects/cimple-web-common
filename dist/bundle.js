@@ -2407,7 +2407,7 @@ var Close = function Close() {
     fill: "#D8D8D8",
     opacity: "0"
   }), React.createElement("path", {
-    stroke: "#151E29",
+    stroke: "currentColor",
     d: "M5.83333333 0L5.83333333 11.6666667M9.09494702e-13 5.83333333L11.6666667 5.83333333",
     transform: "rotate(45 2.887 12.946)"
   })));
