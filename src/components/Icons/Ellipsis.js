@@ -9,7 +9,7 @@ const Ellipsis = ({ ...props }) => {
       height="24"
       viewBox="0 0 24 24"
     >
-      <g fill="none" fill-rule="evenodd">
+      <g fill="none" fillRule="evenodd">
         <rect width="24" height="24" fill="#D8D8D8" opacity="0" />
         <g fill="currentColor" transform="translate(11 5)">
           <circle cx="1" cy="7" r="1" />
