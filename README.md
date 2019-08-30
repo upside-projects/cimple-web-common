@@ -14,7 +14,7 @@ Everything you need to know to get up and running with Cimple's components.
 Start up the project on `port 6006`
 
 ```sh
-npm run storybook
+yarn storybook
 ```
 
 ---
