@@ -2498,6 +2498,28 @@ var Plus = function Plus(_ref) {
   })));
 };
 
+var PlusBig = function PlusBig() {
+  return React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "12",
+    height: "12",
+    viewBox: "0 0 12 12"
+  }, React.createElement("g", {
+    fill: "none",
+    "fill-rule": "evenodd",
+    transform: "translate(-4 -4)"
+  }, React.createElement("rect", {
+    width: "20",
+    height: "20",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "#7E6EE6",
+    d: "M5.83333333 0L5.83333333 11.6666667M9.09494702e-13 5.83333333L11.6666667 5.83333333",
+    transform: "translate(4 4.236)"
+  })));
+};
+
 var Minus = function Minus(_ref) {
   var props = _extends({}, _ref);
 
@@ -2597,6 +2619,7 @@ Icons.Hamburger = Hamburger;
 Icons.Next = Next;
 Icons.Prev = Prev;
 Icons.Plus = Plus;
+Icons.PlusBig = PlusBig;
 Icons.Minus = Minus;
 Icons.Edit = Edit;
 Icons.Ellipsis = Ellipsis;
