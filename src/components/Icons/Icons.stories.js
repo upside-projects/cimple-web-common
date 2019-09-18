@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import { storiesOf } from "@storybook/react";
+import { storiesOf } from '@storybook/react';
 
-import Icons from "./index";
+import Icons from './index';
 
-storiesOf("Primitives | Icons", module)
-  .add("All", () => (
+storiesOf('Primitives | Icons', module)
+  .add('All', () => (
     <div
       style={{
-        display: "grid",
-        gridGap: "20px",
-        gridTemplateColumns: "20px 20px 20px",
-        gridTemplateRows: "20px 20px 20px"
+        display: 'grid',
+        gridGap: '20px',
+        gridTemplateColumns: '20px 20px 20px',
+        gridTemplateRows: '20px 20px 20px',
       }}
     >
       <Icons.Cart />
@@ -26,6 +26,8 @@ storiesOf("Primitives | Icons", module)
       <Icons.Hamburger />
       <Icons.Edit />
       <Icons.Ellipsis />
+      <Icons.Plus />
+      <Icons.PlusBig />
     </div>
   ))
-  .add("Cart", () => <Icons.Cart />);
+  .add('Cart', () => <Icons.Cart />);
