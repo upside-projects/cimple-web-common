@@ -4,7 +4,7 @@ import * as S from './styled';
 
 const Select = ({ name, label, options, placeholder, containerProps, className }) => {
   return (
-    <S.Holder>
+    <S.Holder className={className} {...containerProps}>
       <S.Select name={name} label={label}>
         {options ? (
           options.map(optionName => {
