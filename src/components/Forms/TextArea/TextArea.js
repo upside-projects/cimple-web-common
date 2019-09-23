@@ -2,7 +2,7 @@ import React from 'react';
 import Label from '../Label/Label';
 import * as S from './styled';
 
-const Textarea = ({
+const TextArea = ({
   name,
   onBlur,
   onChange,
@@ -32,4 +32,4 @@ const Textarea = ({
   );
 };
 
-export default Textarea;
+export default TextArea;

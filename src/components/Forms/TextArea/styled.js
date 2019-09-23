@@ -66,6 +66,7 @@ ${p =>
 
 export const TextArea = styled.textarea`
   ${base}
+  resize: none;
 `;
 
 export const LabelTitle = styled(Uppercase)`
