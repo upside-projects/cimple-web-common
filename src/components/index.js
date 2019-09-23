@@ -16,6 +16,7 @@ export { default as Input } from './Forms/Input/Input';
 export { default as Label } from './Forms/Label/Label';
 export { default as Searchbar } from './Forms/Search/Search';
 export { default as TextArea } from './Forms/TextArea/TextArea';
+export { default as Select } from './Forms/Select/Select';
 
 export { default as Radio } from './Forms/Radio/Radio';
 
