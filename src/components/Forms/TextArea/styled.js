@@ -66,10 +66,21 @@ ${p =>
 
 export const TextArea = styled.textarea`
   ${base}
+  resize: none;
 `;
 
 export const LabelTitle = styled(Uppercase)`
   color: ${({ theme }) => theme.colors.greyscale.medium};
 
   margin-bottom: 0.5rem;
+`;
+
+export const Holder = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+
+  @media only screen and (max-width: 375px) {
+    min-width: 288px;
+  }
 `;

@@ -68,3 +68,13 @@ export const Option = styled.option``;
 export const Select = styled.select`
   ${base}
 `;
+
+export const Holder = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+
+  @media only screen and (max-width: 375px) {
+    min-width: 288px;
+  }
+`;
