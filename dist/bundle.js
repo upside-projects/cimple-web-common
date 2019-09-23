@@ -1445,7 +1445,9 @@ var Select$1 = function Select$1(_ref) {
       placeholder = _ref.placeholder,
       containerProps = _ref.containerProps,
       className = _ref.className;
-  return React.createElement(Holder$4, null, React.createElement(Select, {
+  return React.createElement(Holder$4, _extends({
+    className: className
+  }, containerProps), React.createElement(Select, {
     name: name,
     label: label
   }, options ? options.map(function (optionName) {
