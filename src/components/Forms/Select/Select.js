@@ -9,6 +9,7 @@ const Select = ({
   forwardedRef,
   label,
   name,
+  className,
   containerProps,
   error,
   placeholder,
@@ -17,9 +18,9 @@ const Select = ({
 }) => {
   const selectProps = name ? { ...props, id: name } : props;
   return (
-    <S.Holder {...containerProps} name={name} label={label} error={error}>
+    <S.Holder className={className} {...containerProps} name={name} label={label} error={error}>
       {label && <S.SelectLabel>{label}</S.SelectLabel>}
-      <S.IconHolder {...containerProps}>
+      <S.IconHolder>
         <S.Select {...selectProps} value={value} onChange={onChange} ref={forwardedRef} error={error} isEmpty={!value}>
           {placeholder && (
             <option disabled value="">
