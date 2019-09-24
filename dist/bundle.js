@@ -1951,20 +1951,23 @@ var Select$1 = function Select$1(_ref) {
       forwardedRef = _ref.forwardedRef,
       label = _ref.label,
       name = _ref.name,
+      className = _ref.className,
       containerProps = _ref.containerProps,
       error = _ref.error,
       placeholder = _ref.placeholder,
       options = _ref.options,
-      props = _objectWithoutProperties(_ref, ["value", "onChange", "forwardedRef", "label", "name", "containerProps", "error", "placeholder", "options"]);
+      props = _objectWithoutProperties(_ref, ["value", "onChange", "forwardedRef", "label", "name", "className", "containerProps", "error", "placeholder", "options"]);
 
   var selectProps = name ? _objectSpread2({}, props, {
     id: name
   }) : props;
-  return React.createElement(Holder$4, _extends({}, containerProps, {
+  return React.createElement(Holder$4, _extends({
+    className: className
+  }, containerProps, {
     name: name,
     label: label,
     error: error
-  }), label && React.createElement(SelectLabel, null, label), React.createElement(IconHolder, containerProps, React.createElement(Select, _extends({}, selectProps, {
+  }), label && React.createElement(SelectLabel, null, label), React.createElement(IconHolder, null, React.createElement(Select, _extends({}, selectProps, {
     value: value,
     onChange: onChange,
     ref: forwardedRef,
