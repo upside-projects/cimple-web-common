@@ -50,11 +50,6 @@ export const IconHolder = styled.div`
 export const Holder = styled.div`
   display: flex;
   flex-direction: column;
-  min-width: 320px;
-
-  @media only screen and (max-width: 375px) {
-    min-width: 288px;
-  }
 `;
 
 export const SelectLabel = styled(Uppercase)`

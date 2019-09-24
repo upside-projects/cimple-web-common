@@ -19,7 +19,7 @@ const Select = ({
   return (
     <S.Holder {...containerProps} name={name} label={label} error={error}>
       {label && <S.SelectLabel>{label}</S.SelectLabel>}
-      <S.IconHolder>
+      <S.IconHolder {...containerProps}>
         <S.Select {...selectProps} value={value} onChange={onChange} ref={forwardedRef} error={error} isEmpty={!value}>
           {placeholder && (
             <option disabled value="">
