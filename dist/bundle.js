@@ -11,6 +11,21 @@ var styled = require('styled-components');
 var styled__default = _interopDefault(styled);
 var ReactDOM = _interopDefault(require('react-dom'));
 
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    });
+  } else {
+    obj[key] = value;
+  }
+
+  return obj;
+}
+
 function _extends() {
   _extends = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -27,6 +42,40 @@ function _extends() {
   };
 
   return _extends.apply(this, arguments);
+}
+
+function ownKeys(object, enumerableOnly) {
+  var keys = Object.keys(object);
+
+  if (Object.getOwnPropertySymbols) {
+    var symbols = Object.getOwnPropertySymbols(object);
+    if (enumerableOnly) symbols = symbols.filter(function (sym) {
+      return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+    });
+    keys.push.apply(keys, symbols);
+  }
+
+  return keys;
+}
+
+function _objectSpread2(target) {
+  for (var i = 1; i < arguments.length; i++) {
+    var source = arguments[i] != null ? arguments[i] : {};
+
+    if (i % 2) {
+      ownKeys(source, true).forEach(function (key) {
+        _defineProperty(target, key, source[key]);
+      });
+    } else if (Object.getOwnPropertyDescriptors) {
+      Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+    } else {
+      ownKeys(source).forEach(function (key) {
+        Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+      });
+    }
+  }
+
+  return target;
 }
 
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -1325,28 +1374,8 @@ var TextArea$1 = function TextArea$1(_ref) {
   })));
 };
 
-function _templateObject7$3() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  min-width: 320px;\n\n  @media only screen and (max-width: 375px) {\n    min-width: 288px;\n  }\n"]);
-
-  _templateObject7$3 = function _templateObject7() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject6$4() {
-  var data = _taggedTemplateLiteral(["\n  ", "\n"]);
-
-  _templateObject6$4 = function _templateObject6() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject5$6() {
-  var data = _taggedTemplateLiteral([""]);
+  var data = _taggedTemplateLiteral(["\n  margin-bottom: 0.25rem;\n"]);
 
   _templateObject5$6 = function _templateObject5() {
     return data;
@@ -1356,7 +1385,7 @@ function _templateObject5$6() {
 }
 
 function _templateObject4$6() {
-  var data = _taggedTemplateLiteral(["\n      cursor: not-allowed;\n    "]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  min-width: 320px;\n\n  @media only screen and (max-width: 375px) {\n    min-width: 288px;\n  }\n"]);
 
   _templateObject4$6 = function _templateObject4() {
     return data;
@@ -1366,7 +1395,7 @@ function _templateObject4$6() {
 }
 
 function _templateObject3$6() {
-  var data = _taggedTemplateLiteral(["\n      border: 1px solid ", ";\n      color: ", ";\n\n      &:hover {\n        outline: none;\n        border: 1px solid ", ";\n      }\n\n      &:focus {\n        outline: none;\n        border: 1px solid ", ";\n      }\n    "]);
+  var data = _taggedTemplateLiteral(["\n  position: relative;\n"]);
 
   _templateObject3$6 = function _templateObject3() {
     return data;
@@ -1376,7 +1405,7 @@ function _templateObject3$6() {
 }
 
 function _templateObject2$9() {
-  var data = _taggedTemplateLiteral(["\n    margin-top: 0.5rem;\n  "]);
+  var data = _taggedTemplateLiteral(["\n  ", "\n  -webkit-appearance: none;\n"]);
 
   _templateObject2$9 = function _templateObject2() {
     return data;
@@ -1386,7 +1415,7 @@ function _templateObject2$9() {
 }
 
 function _templateObject$e() {
-  var data = _taggedTemplateLiteral(["\n  font-size: 1rem;\n  line-height: 1.5rem;\n  border: 1px solid ", ";\n  border-radius: ", ";\n  color: ", ";\n\n  padding: 0.5rem 0.75rem;\n\n  transition: ", ";\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  :-ms-input-placeholder {\n    color: red;\n  }\n\n  ::-ms-input-placeholder {\n    color: red;\n  }\n\n  &:hover {\n    outline: none;\n    border: 1px solid ", ";\n  }\n\n  &:focus {\n    outline: none;\n    border: 1px solid ", ";\n  }\n\n", "\n\n  ", "\n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 1rem;\n  line-height: 1.5rem;\n  border: 1px solid ", ";\n  border-radius: ", ";\n  background-color: ", "\n  color: ", ";\n\n  padding: 0.5rem 0.75rem;\n\n  transition: ", ";\n\n  ::placeholder {\n    color: ", ";\n  }\n\n  :-ms-input-placeholder {\n    color: red;\n  }\n\n  ::-ms-input-placeholder {\n    color: red;\n  }\n\n  &:hover {\n    outline: none;\n    border: 1px solid ", ";\n  }\n\n  &:focus {\n    outline: none;\n    border: 1px solid ", ";\n  }\n"]);
 
   _templateObject$e = function _templateObject() {
     return data;
@@ -1402,61 +1431,96 @@ var base$5 = styled.css(_templateObject$e(), function (_ref) {
   return theme.radius.xsmall;
 }, function (_ref3) {
   var theme = _ref3.theme;
-  return theme.colors.greyscale.black;
+  return theme.colors.greyscale.white;
 }, function (_ref4) {
   var theme = _ref4.theme;
-  return theme.transition.ease();
+  return theme.colors.greyscale.black;
 }, function (_ref5) {
   var theme = _ref5.theme;
-  return theme.colors.greyscale.medium;
+  return theme.transition.ease();
 }, function (_ref6) {
   var theme = _ref6.theme;
   return theme.colors.greyscale.medium;
 }, function (_ref7) {
   var theme = _ref7.theme;
+  return theme.colors.greyscale.medium;
+}, function (_ref8) {
+  var theme = _ref8.theme;
   return theme.colors.brand.default;
-}, function (p) {
-  return p.label && styled.css(_templateObject2$9());
-}, function (p) {
-  return p.error && styled.css(_templateObject3$6(), function (_ref8) {
-    var theme = _ref8.theme;
-    return theme.colors.danger.default;
-  }, function (_ref9) {
-    var theme = _ref9.theme;
-    return theme.colors.danger.default;
-  }, function (_ref10) {
-    var theme = _ref10.theme;
-    return theme.colors.danger.dark;
-  }, function (_ref11) {
-    var theme = _ref11.theme;
-    return theme.colors.danger.dark;
-  });
-}, function (p) {
-  return p.disabled && styled.css(_templateObject4$6());
 });
-var Option = styled__default.option(_templateObject5$6());
-var Select = styled__default.select(_templateObject6$4(), base$5);
-var Holder$4 = styled__default.div(_templateObject7$3());
+var Select = styled__default.select(_templateObject2$9(), base$5);
+var IconHolder = styled__default.div(_templateObject3$6());
+var Holder$4 = styled__default.div(_templateObject4$6());
+var SelectLabel = styled__default(Uppercase)(_templateObject5$6());
+
+var S = /*#__PURE__*/Object.freeze({
+  base: base$5,
+  Select: Select,
+  IconHolder: IconHolder,
+  Holder: Holder$4,
+  SelectLabel: SelectLabel
+});
 
 var Select$1 = function Select$1(_ref) {
-  var name = _ref.name,
+  var value = _ref.value,
+      onChange = _ref.onChange,
+      forwardedRef = _ref.forwardedRef,
       label = _ref.label,
-      options = _ref.options,
-      placeholder = _ref.placeholder,
+      name = _ref.name,
       containerProps = _ref.containerProps,
-      className = _ref.className;
-  return React.createElement(Holder$4, _extends({
-    className: className
-  }, containerProps), React.createElement(Select, {
+      error = _ref.error,
+      placeholder = _ref.placeholder,
+      options = _ref.options,
+      props = _objectWithoutProperties(_ref, ["value", "onChange", "forwardedRef", "label", "name", "containerProps", "error", "placeholder", "options"]);
+
+  var selectProps = name ? _objectSpread2({}, props, {
+    id: name
+  }) : props;
+  return React.createElement(Holder$4, _extends({}, containerProps, {
     name: name,
-    label: label
-  }, options ? options.map(function (optionName) {
-    return React.createElement("option", null, optionName);
-  }) : React.createElement("option", {
+    label: label,
+    error: error
+  }), label && React.createElement(SelectLabel, null, label), React.createElement(IconHolder, null, React.createElement(Select, _extends({}, selectProps, {
+    value: value,
+    onChange: onChange,
+    ref: forwardedRef,
+    error: error,
+    isEmpty: !value
+  }), placeholder && React.createElement("option", {
     disabled: true,
-    selected: true,
-    value: true
-  }, ' ', placeholder, ' ')));
+    value: ""
+  }, placeholder), options.map(function (option) {
+    return React.createElement("option", {
+      key: option.value,
+      value: option.value
+    }, option.label);
+  })), React.createElement(undefined, null)));
+};
+
+Select$1.defaultProps = {
+  value: '',
+  onChange: function onChange() {},
+  forwardedRef: function forwardedRef() {},
+  label: '',
+  name: '',
+  containerProps: {},
+  error: '',
+  placeholder: '',
+  options: []
+};
+Select$1.propTypes = {
+  value: PropTypes__default.string,
+  onChange: PropTypes__default.func,
+  forwardedRef: PropTypes__default.func,
+  label: PropTypes__default.string,
+  name: PropTypes__default.string,
+  containerProps: PropTypes__default.shape({}),
+  error: PropTypes__default.string,
+  placeholder: PropTypes__default.string,
+  options: PropTypes__default.arrayOf(PropTypes__default.shape({
+    value: PropTypes__default.oneOfType([PropTypes__default.string, PropTypes__default.number]),
+    label: PropTypes__default.string
+  }))
 };
 
 function _templateObject5$7() {
@@ -2924,10 +2988,10 @@ function _templateObject$v() {
 var Flex$3 = styled__default.div(_templateObject$v());
 var Column$1 = styled__default.div(_templateObject2$n());
 
-function _templateObject6$5() {
+function _templateObject6$4() {
   var data = _taggedTemplateLiteral(["\n  ", "\n"]);
 
-  _templateObject6$5 = function _templateObject6() {
+  _templateObject6$4 = function _templateObject6() {
     return data;
   };
 
@@ -2991,7 +3055,7 @@ var animation = styled.css(_templateObject2$o());
 var Spinner = styled__default.div(_templateObject3$f(), animation);
 var Bounce1 = styled__default.div(_templateObject4$d(), divStyle);
 var Bounce2 = styled__default.div(_templateObject5$b(), divStyle);
-var Bounce3 = styled__default.div(_templateObject6$5(), divStyle);
+var Bounce3 = styled__default.div(_templateObject6$4(), divStyle);
 
 var Loader = function Loader() {
   return React.createElement(Spinner, null, React.createElement(Bounce1, null), React.createElement(Bounce2, null), React.createElement(Bounce3, null));
@@ -3186,20 +3250,20 @@ ErrorState.propTypes = {
   errorMessage: PropTypes__default.string
 };
 
-function _templateObject7$4() {
+function _templateObject7$3() {
   var data = _taggedTemplateLiteral(["\n        opacity: 0.6;\n      "]);
 
-  _templateObject7$4 = function _templateObject7() {
+  _templateObject7$3 = function _templateObject7() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject6$6() {
+function _templateObject6$5() {
   var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-position: center center;\n  background-size: cover;\n  opacity: 1;\n\n  transition: ", "\n    ", ";\n"]);
 
-  _templateObject6$6 = function _templateObject6() {
+  _templateObject6$5 = function _templateObject6() {
     return data;
   };
 
@@ -3266,13 +3330,13 @@ var GalleryHighlight = styled__default.div(_templateObject2$r(), function (p) {
 });
 var GalleryThumbnails = styled__default.div(_templateObject4$f());
 var Holder$f = styled__default.div(_templateObject5$d());
-var Thumbnail$2 = styled__default.div(_templateObject6$6(), function (p) {
+var Thumbnail$2 = styled__default.div(_templateObject6$5(), function (p) {
   return p.image;
 }, function (_ref2) {
   var theme = _ref2.theme;
   return theme.transition.ease();
 }, function (p) {
-  return !p.featured && styled.css(_templateObject7$4());
+  return !p.featured && styled.css(_templateObject7$3());
 });
 
 var Gallery = function Gallery(_ref) {
