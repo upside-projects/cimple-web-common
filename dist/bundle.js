@@ -1374,6 +1374,497 @@ var TextArea$1 = function TextArea$1(_ref) {
   })));
 };
 
+var Arrow = function Arrow(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "9",
+    height: "8",
+    viewBox: "0 0 9 8"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd",
+    transform: "translate(-8 -8)"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "none",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "currentColor",
+    d: "M8,12 L16,12"
+  }), React.createElement("polyline", {
+    stroke: "currentColor",
+    points: "12 16 16 12 12 8"
+  })));
+};
+
+var Next = function Next(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "9",
+    height: "8",
+    viewBox: "0 0 9 8"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd",
+    transform: "translate(-8 -8)"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "currentColor",
+    d: "M8,12 L16,12"
+  }), React.createElement("polyline", {
+    stroke: "currentColor",
+    points: "12 16 16 12 12 8"
+  })));
+};
+
+var Prev = function Prev(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "9",
+    height: "8",
+    viewBox: "0 0 9 8"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd",
+    transform: "translate(-7 -8)"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "currentColor",
+    d: "M8,12 L16,12"
+  }), React.createElement("polyline", {
+    stroke: "currentColor",
+    points: "12 16 8 12 12 8"
+  })));
+};
+
+var Cart = function Cart(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "18",
+    height: "18",
+    viewBox: "0 0 18 18"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd",
+    transform: "translate(-4 -2.015)"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "currentColor",
+    d: "M14,5 C14,3.8954305 13.1045695,3 12,3 C10.8954305,3 10,3.8954305 10,5 L10,6 L14,6 L14,5 Z"
+  }), React.createElement("polygon", {
+    stroke: "#151E29",
+    points: "5 6 5 19 19 19 19 6"
+  }), React.createElement("circle", {
+    cx: "18",
+    cy: "6",
+    r: "3.5",
+    fill: "#F87E7E",
+    stroke: "#FFF"
+  })));
+};
+
+var CartEmpty = function CartEmpty(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "14",
+    height: "16",
+    viewBox: "0 0 14 16"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd",
+    transform: "translate(-5 -3.985)"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "#151E29",
+    d: "M14,7 C14,5.8954305 13.1045695,5 12,5 C10.8954305,5 10,5.8954305 10,7 L10,8 L14,8 L14,7 Z"
+  }), React.createElement("polygon", {
+    stroke: "#151E29",
+    points: "6 8 6 19 18 19 18 8"
+  }), React.createElement("circle", {
+    cx: "17",
+    cy: "8",
+    r: "3.5",
+    fill: "#F87E7E",
+    stroke: "#FFF",
+    opacity: "0"
+  })));
+};
+
+var CaretUp = function CaretUp(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("polyline", {
+    fill: "none",
+    stroke: "currentColor",
+    points: "16 10 12 14 8 10",
+    transform: "rotate(-180 12 12)"
+  }));
+};
+
+var CaretDown = function CaretDown(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("polyline", {
+    fill: "none",
+    stroke: "currentColor",
+    points: "16 10 12 14 8 10"
+  }));
+};
+
+var CaretRight = function CaretRight(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("polyline", {
+    stroke: "currentColor",
+    points: "16 10 12 14 8 10",
+    transform: "rotate(-90 12 12)"
+  })));
+};
+
+var Close = function Close() {
+  return React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "20",
+    height: "20",
+    viewBox: "0 0 20 20"
+  }, React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, React.createElement("rect", {
+    width: "20",
+    height: "20",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "currentColor",
+    d: "M5.83333333 0L5.83333333 11.6666667M9.09494702e-13 5.83333333L11.6666667 5.83333333",
+    transform: "rotate(45 2.887 12.946)"
+  })));
+};
+
+var Danger = function Danger(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "22",
+    height: "20",
+    viewBox: "0 0 22 20"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd",
+    transform: "translate(-1)"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("polygon", {
+    stroke: "#151E29",
+    strokeWidth: "1.5",
+    points: "11.944 2 21.389 19 2.5 19"
+  }), React.createElement("polygon", {
+    fill: "#151E29",
+    fillRule: "nonzero",
+    points: "11.192 7.5 11.394 12.782 12.587 12.782 12.812 7.5"
+  }), React.createElement("rect", {
+    width: "2",
+    height: "2",
+    x: "11",
+    y: "14",
+    fill: "#151E29"
+  })));
+};
+
+var Sort = function Sort(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "8",
+    height: "9",
+    viewBox: "0 0 8 9"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd",
+    transform: "translate(-4 -3.324)"
+  }, React.createElement("rect", {
+    width: "16",
+    height: "16",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("polyline", {
+    stroke: "#979797",
+    points: "6 9 6 5 6 5 10 5",
+    transform: "rotate(45 8 7)"
+  }), React.createElement("polyline", {
+    stroke: "#979797",
+    points: "10 7 10 11 6 11",
+    transform: "rotate(45 8 9)"
+  })));
+};
+
+var External = function External(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, React.createElement("polyline", {
+    stroke: "currentColor",
+    points: "12 10 12 13 4 13 4 5 7 5"
+  }), React.createElement("path", {
+    stroke: "currentColor",
+    d: "M13,4 L8,9"
+  }), React.createElement("polyline", {
+    stroke: "currentColor",
+    strokeLinecap: "square",
+    points: "10 4 13 4 13 7"
+  })));
+};
+
+var Hamburger = function Hamburger(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "12",
+    height: "12",
+    viewBox: "0 0 12 12"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd",
+    transform: "translate(-6 -7)"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("polyline", {
+    stroke: "#151E29",
+    points: "18 13 12 13 6 13"
+  }), React.createElement("polyline", {
+    stroke: "#151E29",
+    points: "18 8 12 8 6 8"
+  }), React.createElement("polyline", {
+    stroke: "#151E29",
+    points: "18 18 12 18 6 18"
+  })));
+};
+
+var Plus = function Plus(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "currentColor",
+    d: "M12 8L12 16M8 12L16 12"
+  })));
+};
+
+var PlusBig = function PlusBig() {
+  return React.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "12",
+    height: "12",
+    viewBox: "0 0 12 12"
+  }, React.createElement("g", {
+    fill: "none",
+    "fill-rule": "evenodd",
+    transform: "translate(-4 -4)"
+  }, React.createElement("rect", {
+    width: "20",
+    height: "20",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "#7E6EE6",
+    d: "M5.83333333 0L5.83333333 11.6666667M9.09494702e-13 5.83333333L11.6666667 5.83333333",
+    transform: "translate(4 4.236)"
+  })));
+};
+
+var Minus = function Minus(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "currentColor",
+    d: "M8,12 L16,12"
+  })));
+};
+
+var Edit = function Edit(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "13",
+    height: "14",
+    viewBox: "0 0 13 14"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd",
+    transform: "translate(-5 -6)"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("path", {
+    stroke: "currentColor",
+    d: "M17.6,19 L5,19"
+  }), React.createElement("polygon", {
+    stroke: "currentColor",
+    points: "7.2 0 10 2.8 3 9.8 .2 9.8 .2 7",
+    transform: "translate(6 6)"
+  })));
+};
+
+var Ellipsis = function Ellipsis(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "24",
+    height: "24",
+    viewBox: "0 0 24 24"
+  }), React.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, React.createElement("rect", {
+    width: "24",
+    height: "24",
+    fill: "#D8D8D8",
+    opacity: "0"
+  }), React.createElement("g", {
+    fill: "currentColor",
+    transform: "translate(11 5)"
+  }, React.createElement("circle", {
+    cx: "1",
+    cy: "7",
+    r: "1"
+  }), React.createElement("circle", {
+    cx: "1",
+    cy: "1",
+    r: "1"
+  }), React.createElement("circle", {
+    cx: "1",
+    cy: "13",
+    r: "1"
+  }))));
+};
+
+var Icons = {};
+Icons.Arrow = Arrow;
+Icons.Cart = Cart;
+Icons.CartEmpty = CartEmpty;
+Icons.CaretUp = CaretUp;
+Icons.CaretDown = CaretDown;
+Icons.CaretRight = CaretRight;
+Icons.Close = Close;
+Icons.Danger = Danger;
+Icons.DoubleChevron = Sort;
+Icons.External = External;
+Icons.Search = Search;
+Icons.Hamburger = Hamburger;
+Icons.Next = Next;
+Icons.Prev = Prev;
+Icons.Plus = Plus;
+Icons.PlusBig = PlusBig;
+Icons.Minus = Minus;
+Icons.Edit = Edit;
+Icons.Ellipsis = Ellipsis;
+
+function _templateObject6$4() {
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: 0.6rem;\n  right: 1rem;\n"]);
+
+  _templateObject6$4 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject5$6() {
   var data = _taggedTemplateLiteral(["\n  margin-bottom: 0.25rem;\n"]);
 
@@ -1405,7 +1896,7 @@ function _templateObject3$6() {
 }
 
 function _templateObject2$9() {
-  var data = _taggedTemplateLiteral(["\n  ", "\n  -webkit-appearance: none;\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", "\n  -webkit-appearance: none;\n  width: 100%;\n"]);
 
   _templateObject2$9 = function _templateObject2() {
     return data;
@@ -1452,14 +1943,7 @@ var Select = styled__default.select(_templateObject2$9(), base$5);
 var IconHolder = styled__default.div(_templateObject3$6());
 var Holder$4 = styled__default.div(_templateObject4$6());
 var SelectLabel = styled__default(Uppercase)(_templateObject5$6());
-
-var S = /*#__PURE__*/Object.freeze({
-  base: base$5,
-  Select: Select,
-  IconHolder: IconHolder,
-  Holder: Holder$4,
-  SelectLabel: SelectLabel
-});
+var Icon = styled__default(Icons.CaretDown)(_templateObject6$4());
 
 var Select$1 = function Select$1(_ref) {
   var value = _ref.value,
@@ -1494,7 +1978,7 @@ var Select$1 = function Select$1(_ref) {
       key: option.value,
       value: option.value
     }, option.label);
-  })), React.createElement(undefined, null)));
+  })), React.createElement(Icon, null)));
 };
 
 Select$1.defaultProps = {
@@ -1733,38 +2217,6 @@ var Holder$7 = styled__default.div(_templateObject2$b(), function (_ref) {
 });
 var Links = styled__default.div(_templateObject3$8());
 
-var Cart = function Cart(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "18",
-    height: "18",
-    viewBox: "0 0 18 18"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd",
-    transform: "translate(-4 -2.015)"
-  }, React.createElement("rect", {
-    width: "24",
-    height: "24",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("path", {
-    stroke: "currentColor",
-    d: "M14,5 C14,3.8954305 13.1045695,3 12,3 C10.8954305,3 10,3.8954305 10,5 L10,6 L14,6 L14,5 Z"
-  }), React.createElement("polygon", {
-    stroke: "#151E29",
-    points: "5 6 5 19 19 19 19 6"
-  }), React.createElement("circle", {
-    cx: "18",
-    cy: "6",
-    r: "3.5",
-    fill: "#F87E7E",
-    stroke: "#FFF"
-  })));
-};
-
 function _templateObject4$8() {
   var data = _taggedTemplateLiteral(["\n        bottom: -6px;\n      "]);
 
@@ -1885,30 +2337,6 @@ var ArrowLink = styled__default.a(_templateObject$j(), function (_ref) {
 });
 var Wrapper$2 = styled__default.div(_templateObject2$d());
 
-var External = function External(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "24",
-    height: "24",
-    viewBox: "0 0 24 24"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd"
-  }, React.createElement("polyline", {
-    stroke: "currentColor",
-    points: "12 10 12 13 4 13 4 5 7 5"
-  }), React.createElement("path", {
-    stroke: "currentColor",
-    d: "M13,4 L8,9"
-  }), React.createElement("polyline", {
-    stroke: "currentColor",
-    strokeLinecap: "square",
-    points: "10 4 13 4 13 7"
-  })));
-};
-
 var ExternalLink = function ExternalLink(_ref) {
   var children = _ref.children;
   return React.createElement(Wrapper$2, null, React.createElement(ArrowLink, null, children), React.createElement(External, null));
@@ -1997,32 +2425,6 @@ var Holder$9 = styled__default.div(_templateObject$l(), function (_ref) {
 
 var Footer = function Footer() {
   return React.createElement(Holder$9, null, "\xAE 2019 Cimple. All rights reserved");
-};
-
-var Arrow = function Arrow(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "9",
-    height: "8",
-    viewBox: "0 0 9 8"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd",
-    transform: "translate(-8 -8)"
-  }, React.createElement("rect", {
-    width: "24",
-    height: "24",
-    fill: "none",
-    opacity: "0"
-  }), React.createElement("path", {
-    stroke: "currentColor",
-    d: "M8,12 L16,12"
-  }), React.createElement("polyline", {
-    stroke: "currentColor",
-    points: "12 16 16 12 12 8"
-  })));
 };
 
 function _templateObject4$9() {
@@ -2133,34 +2535,6 @@ var Back = function Back(_ref) {
 };
 Back.propTypes = {
   children: PropTypes__default.node.isRequired
-};
-
-var Sort = function Sort(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "8",
-    height: "9",
-    viewBox: "0 0 8 9"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd",
-    transform: "translate(-4 -3.324)"
-  }, React.createElement("rect", {
-    width: "16",
-    height: "16",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("polyline", {
-    stroke: "#979797",
-    points: "6 9 6 5 6 5 10 5",
-    transform: "rotate(45 8 7)"
-  }), React.createElement("polyline", {
-    stroke: "#979797",
-    points: "10 7 10 11 6 11",
-    transform: "rotate(45 8 9)"
-  })));
 };
 
 function _templateObject$o() {
@@ -2595,377 +2969,6 @@ GoodListDetailed.propTypes = {
   goodQuantity: PropTypes__default.number
 };
 
-var Next = function Next(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "9",
-    height: "8",
-    viewBox: "0 0 9 8"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd",
-    transform: "translate(-8 -8)"
-  }, React.createElement("rect", {
-    width: "24",
-    height: "24",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("path", {
-    stroke: "currentColor",
-    d: "M8,12 L16,12"
-  }), React.createElement("polyline", {
-    stroke: "currentColor",
-    points: "12 16 16 12 12 8"
-  })));
-};
-
-var Prev = function Prev(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "9",
-    height: "8",
-    viewBox: "0 0 9 8"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd",
-    transform: "translate(-7 -8)"
-  }, React.createElement("rect", {
-    width: "24",
-    height: "24",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("path", {
-    stroke: "currentColor",
-    d: "M8,12 L16,12"
-  }), React.createElement("polyline", {
-    stroke: "currentColor",
-    points: "12 16 8 12 12 8"
-  })));
-};
-
-var CartEmpty = function CartEmpty(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "14",
-    height: "16",
-    viewBox: "0 0 14 16"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd",
-    transform: "translate(-5 -3.985)"
-  }, React.createElement("rect", {
-    width: "24",
-    height: "24",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("path", {
-    stroke: "#151E29",
-    d: "M14,7 C14,5.8954305 13.1045695,5 12,5 C10.8954305,5 10,5.8954305 10,7 L10,8 L14,8 L14,7 Z"
-  }), React.createElement("polygon", {
-    stroke: "#151E29",
-    points: "6 8 6 19 18 19 18 8"
-  }), React.createElement("circle", {
-    cx: "17",
-    cy: "8",
-    r: "3.5",
-    fill: "#F87E7E",
-    stroke: "#FFF",
-    opacity: "0"
-  })));
-};
-
-var CaretUp = function CaretUp(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "24",
-    height: "24",
-    viewBox: "0 0 24 24"
-  }), React.createElement("polyline", {
-    fill: "none",
-    stroke: "currentColor",
-    points: "16 10 12 14 8 10",
-    transform: "rotate(-180 12 12)"
-  }));
-};
-
-var CaretDown = function CaretDown(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "24",
-    height: "24",
-    viewBox: "0 0 24 24"
-  }), React.createElement("polyline", {
-    fill: "none",
-    stroke: "currentColor",
-    points: "16 10 12 14 8 10"
-  }));
-};
-
-var CaretRight = function CaretRight(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "24",
-    height: "24",
-    viewBox: "0 0 24 24"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd"
-  }, React.createElement("rect", {
-    width: "24",
-    height: "24",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("polyline", {
-    stroke: "currentColor",
-    points: "16 10 12 14 8 10",
-    transform: "rotate(-90 12 12)"
-  })));
-};
-
-var Close = function Close() {
-  return React.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "20",
-    height: "20",
-    viewBox: "0 0 20 20"
-  }, React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd"
-  }, React.createElement("rect", {
-    width: "20",
-    height: "20",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("path", {
-    stroke: "currentColor",
-    d: "M5.83333333 0L5.83333333 11.6666667M9.09494702e-13 5.83333333L11.6666667 5.83333333",
-    transform: "rotate(45 2.887 12.946)"
-  })));
-};
-
-var Danger = function Danger(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "22",
-    height: "20",
-    viewBox: "0 0 22 20"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd",
-    transform: "translate(-1)"
-  }, React.createElement("rect", {
-    width: "24",
-    height: "24",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("polygon", {
-    stroke: "#151E29",
-    strokeWidth: "1.5",
-    points: "11.944 2 21.389 19 2.5 19"
-  }), React.createElement("polygon", {
-    fill: "#151E29",
-    fillRule: "nonzero",
-    points: "11.192 7.5 11.394 12.782 12.587 12.782 12.812 7.5"
-  }), React.createElement("rect", {
-    width: "2",
-    height: "2",
-    x: "11",
-    y: "14",
-    fill: "#151E29"
-  })));
-};
-
-var Hamburger = function Hamburger(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "12",
-    height: "12",
-    viewBox: "0 0 12 12"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd",
-    transform: "translate(-6 -7)"
-  }, React.createElement("rect", {
-    width: "24",
-    height: "24",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("polyline", {
-    stroke: "#151E29",
-    points: "18 13 12 13 6 13"
-  }), React.createElement("polyline", {
-    stroke: "#151E29",
-    points: "18 8 12 8 6 8"
-  }), React.createElement("polyline", {
-    stroke: "#151E29",
-    points: "18 18 12 18 6 18"
-  })));
-};
-
-var Plus = function Plus(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "24",
-    height: "24",
-    viewBox: "0 0 24 24"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd"
-  }, React.createElement("rect", {
-    width: "24",
-    height: "24",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("path", {
-    stroke: "currentColor",
-    d: "M12 8L12 16M8 12L16 12"
-  })));
-};
-
-var PlusBig = function PlusBig() {
-  return React.createElement("svg", {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "12",
-    height: "12",
-    viewBox: "0 0 12 12"
-  }, React.createElement("g", {
-    fill: "none",
-    "fill-rule": "evenodd",
-    transform: "translate(-4 -4)"
-  }, React.createElement("rect", {
-    width: "20",
-    height: "20",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("path", {
-    stroke: "#7E6EE6",
-    d: "M5.83333333 0L5.83333333 11.6666667M9.09494702e-13 5.83333333L11.6666667 5.83333333",
-    transform: "translate(4 4.236)"
-  })));
-};
-
-var Minus = function Minus(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "24",
-    height: "24",
-    viewBox: "0 0 24 24"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd"
-  }, React.createElement("rect", {
-    width: "24",
-    height: "24",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("path", {
-    stroke: "currentColor",
-    d: "M8,12 L16,12"
-  })));
-};
-
-var Edit = function Edit(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "13",
-    height: "14",
-    viewBox: "0 0 13 14"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd",
-    transform: "translate(-5 -6)"
-  }, React.createElement("rect", {
-    width: "24",
-    height: "24",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("path", {
-    stroke: "currentColor",
-    d: "M17.6,19 L5,19"
-  }), React.createElement("polygon", {
-    stroke: "currentColor",
-    points: "7.2 0 10 2.8 3 9.8 .2 9.8 .2 7",
-    transform: "translate(6 6)"
-  })));
-};
-
-var Ellipsis = function Ellipsis(_ref) {
-  var props = _extends({}, _ref);
-
-  return React.createElement("svg", _extends({}, props, {
-    xmlns: "http://www.w3.org/2000/svg",
-    width: "24",
-    height: "24",
-    viewBox: "0 0 24 24"
-  }), React.createElement("g", {
-    fill: "none",
-    fillRule: "evenodd"
-  }, React.createElement("rect", {
-    width: "24",
-    height: "24",
-    fill: "#D8D8D8",
-    opacity: "0"
-  }), React.createElement("g", {
-    fill: "currentColor",
-    transform: "translate(11 5)"
-  }, React.createElement("circle", {
-    cx: "1",
-    cy: "7",
-    r: "1"
-  }), React.createElement("circle", {
-    cx: "1",
-    cy: "1",
-    r: "1"
-  }), React.createElement("circle", {
-    cx: "1",
-    cy: "13",
-    r: "1"
-  }))));
-};
-
-var Icons = {};
-Icons.Arrow = Arrow;
-Icons.Cart = Cart;
-Icons.CartEmpty = CartEmpty;
-Icons.CaretUp = CaretUp;
-Icons.CaretDown = CaretDown;
-Icons.CaretRight = CaretRight;
-Icons.Close = Close;
-Icons.Danger = Danger;
-Icons.DoubleChevron = Sort;
-Icons.External = External;
-Icons.Search = Search;
-Icons.Hamburger = Hamburger;
-Icons.Next = Next;
-Icons.Prev = Prev;
-Icons.Plus = Plus;
-Icons.PlusBig = PlusBig;
-Icons.Minus = Minus;
-Icons.Edit = Edit;
-Icons.Ellipsis = Ellipsis;
-
 function _templateObject2$n() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
 
@@ -2988,10 +2991,10 @@ function _templateObject$v() {
 var Flex$3 = styled__default.div(_templateObject$v());
 var Column$1 = styled__default.div(_templateObject2$n());
 
-function _templateObject6$4() {
+function _templateObject6$5() {
   var data = _taggedTemplateLiteral(["\n  ", "\n"]);
 
-  _templateObject6$4 = function _templateObject6() {
+  _templateObject6$5 = function _templateObject6() {
     return data;
   };
 
@@ -3055,7 +3058,7 @@ var animation = styled.css(_templateObject2$o());
 var Spinner = styled__default.div(_templateObject3$f(), animation);
 var Bounce1 = styled__default.div(_templateObject4$d(), divStyle);
 var Bounce2 = styled__default.div(_templateObject5$b(), divStyle);
-var Bounce3 = styled__default.div(_templateObject6$4(), divStyle);
+var Bounce3 = styled__default.div(_templateObject6$5(), divStyle);
 
 var Loader = function Loader() {
   return React.createElement(Spinner, null, React.createElement(Bounce1, null), React.createElement(Bounce2, null), React.createElement(Bounce3, null));
@@ -3260,10 +3263,10 @@ function _templateObject7$3() {
   return data;
 }
 
-function _templateObject6$5() {
+function _templateObject6$6() {
   var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-position: center center;\n  background-size: cover;\n  opacity: 1;\n\n  transition: ", "\n    ", ";\n"]);
 
-  _templateObject6$5 = function _templateObject6() {
+  _templateObject6$6 = function _templateObject6() {
     return data;
   };
 
@@ -3330,7 +3333,7 @@ var GalleryHighlight = styled__default.div(_templateObject2$r(), function (p) {
 });
 var GalleryThumbnails = styled__default.div(_templateObject4$f());
 var Holder$f = styled__default.div(_templateObject5$d());
-var Thumbnail$2 = styled__default.div(_templateObject6$5(), function (p) {
+var Thumbnail$2 = styled__default.div(_templateObject6$6(), function (p) {
   return p.image;
 }, function (_ref2) {
   var theme = _ref2.theme;
