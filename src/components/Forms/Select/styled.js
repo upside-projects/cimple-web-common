@@ -1,10 +1,12 @@
 import styled, { css } from 'styled-components';
+import { Uppercase } from '../../Typography/Typography';
 
 export const base = css`
   font-size: 1rem;
   line-height: 1.5rem;
   border: 1px solid ${({ theme }) => theme.colors.greyscale.light};
   border-radius: ${({ theme }) => theme.radius.xsmall};
+  background-color: ${({ theme }) => theme.colors.greyscale.white}
   color: ${({ theme }) => theme.colors.greyscale.black};
 
   padding: 0.5rem 0.75rem;
@@ -32,41 +34,15 @@ export const base = css`
     outline: none;
     border: 1px solid ${({ theme }) => theme.colors.brand.default};
   }
-
-${p =>
-  p.label &&
-  css`
-    margin-top: 0.5rem;
-  `}
-
-  ${p =>
-    p.error &&
-    css`
-      border: 1px solid ${({ theme }) => theme.colors.danger.default};
-      color: ${({ theme }) => theme.colors.danger.default};
-
-      &:hover {
-        outline: none;
-        border: 1px solid ${({ theme }) => theme.colors.danger.dark};
-      }
-
-      &:focus {
-        outline: none;
-        border: 1px solid ${({ theme }) => theme.colors.danger.dark};
-      }
-    `}
-
-  ${p =>
-    p.disabled &&
-    css`
-      cursor: not-allowed;
-    `}
 `;
-
-export const Option = styled.option``;
 
 export const Select = styled.select`
   ${base}
+  -webkit-appearance: none;
+`;
+
+export const IconHolder = styled.div`
+  position: relative;
 `;
 
 export const Holder = styled.div`
@@ -77,4 +53,8 @@ export const Holder = styled.div`
   @media only screen and (max-width: 375px) {
     min-width: 288px;
   }
+`;
+
+export const SelectLabel = styled(Uppercase)`
+  margin-bottom: 0.25rem;
 `;
