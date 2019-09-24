@@ -1,5 +1,6 @@
 import styled, { css } from 'styled-components';
 import { Uppercase } from '../../Typography/Typography';
+import Icons from '../../Icons/index';
 
 export const base = css`
   font-size: 1rem;
@@ -39,6 +40,7 @@ export const base = css`
 export const Select = styled.select`
   ${base}
   -webkit-appearance: none;
+  width: 100%;
 `;
 
 export const IconHolder = styled.div`
@@ -57,4 +59,10 @@ export const Holder = styled.div`
 
 export const SelectLabel = styled(Uppercase)`
   margin-bottom: 0.25rem;
+`;
+
+export const Icon = styled(Icons.CaretDown)`
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
 `;
