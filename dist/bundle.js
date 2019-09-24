@@ -1876,7 +1876,7 @@ function _templateObject5$6() {
 }
 
 function _templateObject4$6() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  min-width: 320px;\n\n  @media only screen and (max-width: 375px) {\n    min-width: 288px;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
 
   _templateObject4$6 = function _templateObject4() {
     return data;
@@ -1964,7 +1964,7 @@ var Select$1 = function Select$1(_ref) {
     name: name,
     label: label,
     error: error
-  }), label && React.createElement(SelectLabel, null, label), React.createElement(IconHolder, null, React.createElement(Select, _extends({}, selectProps, {
+  }), label && React.createElement(SelectLabel, null, label), React.createElement(IconHolder, containerProps, React.createElement(Select, _extends({}, selectProps, {
     value: value,
     onChange: onChange,
     ref: forwardedRef,
