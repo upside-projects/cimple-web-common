@@ -53,7 +53,7 @@ export const Holder = styled.div`
 `;
 
 export const SelectLabel = styled(Uppercase)`
-  margin-bottom: 0.25rem;
+  margin-bottom: 0.5rem;
 `;
 
 export const Icon = styled(Icons.CaretDown)`
