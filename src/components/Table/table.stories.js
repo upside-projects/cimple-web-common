@@ -1,15 +1,15 @@
-import React from "react"
+import React from 'react';
 
-import { storiesOf } from "@storybook/react"
+import { storiesOf } from '@storybook/react';
 
-import ArrowLink from "../Links/ArrowLink/ArrowLink"
-import Table from "./Table"
-import Tag from "../Tag/Tag"
-import Sort from "../Sort/Sort"
-import SmallProduct from "../Goods/SmallProduct/SmallProduct"
+import ArrowLink from '../Links/ArrowLink/ArrowLink';
+import Table from './Table';
+import Tag from '../Tag/Tag';
+import Sort from '../Sort/Sort';
+import GoodList from '../Goods/GoodList/GoodList';
 
-storiesOf("Tables / Orders", module).add("List", () => (
-  <div style={{ width: "1024px" }}>
+storiesOf('Tables / Orders', module).add('List', () => (
+  <div style={{ width: '1024px' }}>
     <Table>
       <Table.Header>
         <Table.Cell>
@@ -63,10 +63,10 @@ storiesOf("Tables / Orders", module).add("List", () => (
       </Table.Body>
     </Table>
   </div>
-))
+));
 
-storiesOf("Tables / Goods", module).add("List with Thumbnail", () => (
-  <div style={{ width: "1024px" }}>
+storiesOf('Tables / Goods', module).add('List with Thumbnail', () => (
+  <div style={{ width: '1024px' }}>
     <Table>
       <Table.Header>
         <Table.Cell>
@@ -86,7 +86,7 @@ storiesOf("Tables / Goods", module).add("List with Thumbnail", () => (
       <Table.Body>
         <Table.Row>
           <Table.Cell>
-            <SmallProduct
+            <GoodList
               name="Stainless Steel Stapler"
               id="81209382018"
               src="https://images.unsplash.com/photo-1541690161184-75cbc0386cd6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2000&q=80"
@@ -101,7 +101,7 @@ storiesOf("Tables / Goods", module).add("List with Thumbnail", () => (
         </Table.Row>
         <Table.Row>
           <Table.Cell>
-            <SmallProduct />
+            <GoodList />
           </Table.Cell>
           <Table.Cell>£82</Table.Cell>
           <Table.Cell>£82 — £100</Table.Cell>
@@ -113,4 +113,4 @@ storiesOf("Tables / Goods", module).add("List with Thumbnail", () => (
       </Table.Body>
     </Table>
   </div>
-))
+));
