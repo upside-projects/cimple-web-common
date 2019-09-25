@@ -2864,22 +2864,23 @@ var Holder$c = styled__default.div(_templateObject$t());
 var Wrapper$5 = styled__default.div(_templateObject2$l());
 var Text$1 = styled__default(Text)(_templateObject3$d());
 
-var SmallProduct = function SmallProduct(_ref) {
-  var id = _ref.id,
-      name = _ref.name,
-      src = _ref.src;
+var GoodList = function GoodList(_ref) {
+  var goodName = _ref.goodName,
+      goodImage = _ref.goodImage,
+      goodSku = _ref.goodSku,
+      noSku = _ref.noSku;
   return React.createElement(Holder$c, null, React.createElement(Thumbnail$1, {
-    src: src
-  }), React.createElement(Wrapper$5, null, React.createElement(Text$1, null, name), React.createElement(UppercaseL, {
+    src: goodImage
+  }), React.createElement(Wrapper$5, null, React.createElement(Text$1, null, goodName), !noSku && React.createElement(UppercaseL, {
     color: "greyMedium"
-  }, "SKU: ", id)));
+  }, "SKU: ", goodSku)));
 };
-SmallProduct.defaultProps = {
-  id: "SKU not available",
-  name: "Unnamed product",
-  src: "https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png"
+GoodList.defaultProps = {
+  id: 'SKU not available',
+  name: 'Unnamed product',
+  src: 'https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png'
 };
-SmallProduct.propTypes = {
+GoodList.propTypes = {
   id: PropTypes__default.string,
   name: PropTypes__default.string,
   src: PropTypes__default.string
@@ -3551,6 +3552,7 @@ exports.Flex = Flex$3;
 exports.Footer = Footer;
 exports.Gallery = Gallery;
 exports.GoodDisplay = GoodDisplay;
+exports.GoodList = GoodList;
 exports.GoodListDetailed = GoodListDetailed;
 exports.HeadingL = HeadingL;
 exports.HeadingM = HeadingM;
@@ -3568,7 +3570,6 @@ exports.Radio = Radio$1;
 exports.Searchbar = Searchbar;
 exports.SecondaryButton = SecondaryButton;
 exports.Select = Select$1;
-exports.SmallProduct = SmallProduct;
 exports.Sort = Sort$1;
 exports.Table = Table$1;
 exports.Tag = Tag$1;
