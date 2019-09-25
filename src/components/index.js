@@ -50,7 +50,7 @@ export { default as Thumbnail } from './Thumbnail/Thumbnail';
 
 /* Product */
 export { default as GoodDisplay } from './Goods/GoodDisplay/GoodDisplay';
-export { default as SmallProduct } from './Goods/SmallProduct/SmallProduct';
+export { default as GoodList } from './Goods/GoodList/GoodList';
 export { default as GoodListDetailed } from './Goods/GoodListDetailed/GoodListDetailed';
 
 /* Icons */
