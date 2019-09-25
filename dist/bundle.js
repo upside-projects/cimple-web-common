@@ -1866,7 +1866,7 @@ function _templateObject6$4() {
 }
 
 function _templateObject5$6() {
-  var data = _taggedTemplateLiteral(["\n  margin-bottom: 0.25rem;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-bottom: 0.5rem;\n"]);
 
   _templateObject5$6 = function _templateObject5() {
     return data;
