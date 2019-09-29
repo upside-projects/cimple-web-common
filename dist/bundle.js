@@ -2868,8 +2868,10 @@ var GoodList = function GoodList(_ref) {
   var goodName = _ref.goodName,
       goodImage = _ref.goodImage,
       goodSku = _ref.goodSku,
-      noSku = _ref.noSku;
+      noSku = _ref.noSku,
+      small = _ref.small;
   return React.createElement(Holder$c, null, React.createElement(Thumbnail$1, {
+    small: small,
     src: goodImage
   }), React.createElement(Wrapper$5, null, React.createElement(Text$1, null, goodName), !noSku && React.createElement(UppercaseL, {
     color: "greyMedium"
