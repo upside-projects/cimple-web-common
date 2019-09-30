@@ -15,7 +15,7 @@ const ButtonVote = ({ isActive, handleClick, children }) => {
   );
 };
 
-const MatchingPairs = ({ goods, similarityPercentage, isMatched }): React.Element<*> => {
+const MatchingPairs = ({ goods, similarityPercentage, isMatched }) => {
   const evaluateSimilarity = similarityPercentage => {
     if (similarityPercentage >= 70) {
       return 'high';
