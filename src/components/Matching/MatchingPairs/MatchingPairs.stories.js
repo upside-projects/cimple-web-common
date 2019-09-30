@@ -20,8 +20,10 @@ const goods = [
     },
     price: '$10.00',
     image: {
-      small: null,
-      large: null,
+      small:
+        'https://cimple-marketplace-assets.s3.amazonaws.com/images/marketplace/goods/Mono%20Clock-093f3e2c-df19-11e9-98cc-063adcffc714_large.jpg?v=63736582623',
+      large:
+        'https://cimple-marketplace-assets.s3.amazonaws.com/images/marketplace/goods/Mono%20Clock-093f3e2c-df19-11e9-98cc-063adcffc714_large.jpg?v=63736582623',
     },
   },
   {
@@ -36,13 +38,15 @@ const goods = [
     },
     price: '$10.00',
     image: {
-      small: null,
-      large: null,
+      small:
+        'https://cimple-marketplace-assets.s3.amazonaws.com/images/marketplace/goods/Mono%20Clock-093f3e2c-df19-11e9-98cc-063adcffc714_large.jpg?v=63736582623',
+      large:
+        'https://cimple-marketplace-assets.s3.amazonaws.com/images/marketplace/goods/Mono%20Clock-093f3e2c-df19-11e9-98cc-063adcffc714_large.jpg?v=63736582623',
     },
   },
 ];
 
-const similarityPercentage = 39.99;
+const similarityPercentage = 54;
 
 storiesOf('Matching', module).add('Default', () => (
   <State store={store}>

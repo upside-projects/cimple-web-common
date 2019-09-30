@@ -3,8 +3,13 @@ import React from 'react';
 import GoodList from '../../Goods/GoodList/GoodList';
 import { Text } from '../../Typography/Typography';
 import TagSecondary from '../../TagSecondary/TagSecondary';
+import Icons from '../../Icons/index';
 
 import * as S from './styled';
+
+const ButtonVote = ({ handleClick, children }) => {
+  return <S.ButtonVote handleClick={handleClick}>{children}</S.ButtonVote>;
+};
 
 const SuggestedPairsCard = ({ goods, similarityPercentage }): React.Element<*> => {
   const evaluateSimilarity = similarityPercentage => {
@@ -25,8 +30,8 @@ const SuggestedPairsCard = ({ goods, similarityPercentage }): React.Element<*> =
         {goods.map(good => {
           return (
             <S.GoodsRow key={good.id}>
-              <GoodList goodImage={good.source.image} goodName={good.name} noSku small />
-              <GoodList goodImage={good.source.image} goodName={good.source.name} noSku small />
+              <GoodList goodImage={good.image.small} goodName={good.name} noSku small />
+              <GoodList goodImage={good.source.image.small} goodName={good.source.name} noSku small />
               <Text>{good.price}</Text>
             </S.GoodsRow>
           );
@@ -34,8 +39,12 @@ const SuggestedPairsCard = ({ goods, similarityPercentage }): React.Element<*> =
       </S.MatchingGoods>
       <TagSecondary value={evaluateSimilarity(similarityPercentage)}>{similarityPercentage}%</TagSecondary>
       <S.MatchingActions>
-        <p>up</p>
-        <p>down</p>
+        <ButtonVote>
+          <Icons.ThumbsUp />
+        </ButtonVote>
+        <ButtonVote>
+          <Icons.ThumbsDown />
+        </ButtonVote>
       </S.MatchingActions>
     </S.MatchingSuggested>
   );

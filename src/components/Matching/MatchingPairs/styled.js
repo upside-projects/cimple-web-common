@@ -5,16 +5,12 @@ export const MatchingSuggestions = styled.div`
   padding: 6rem 2rem;
 `;
 
-export const MatchingGoods = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
 export const MatchingSuggested = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  flex-flow: row;
 
   border-radius: ${({ theme }) => theme.radius.small};
   border: 1px solid ${({ theme }) => theme.colors.greyscale.light};
@@ -29,6 +25,7 @@ export const GoodsRow = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
   width: 100%;
 
   &:first-of-type {
@@ -36,7 +33,40 @@ export const GoodsRow = styled.div`
   }
 `;
 
-export const MatchingActions = styled.div`
+export const MatchingGoods = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  padding-right: 8rem;
+`;
+
+export const ButtonVote = styled.button`
+  cursor: pointer;
+
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: ${({ theme }) => theme.radius.round};
+  border: 1px solid ${({ theme }) => theme.colors.greyscale.light}
+  height: 3rem;
+  width: 3rem;
+
+  color: ${({ theme }) => theme.colors.brand.default};
+  transition: ${({ theme }) => theme.transition.ease()};
+
+  &:hover{
+    border: 1px solid ${({ theme }) => theme.colors.greyscale.medium}
+  }
+`;
+
+export const MatchingActions = styled.div`
+  display: flex;
+
+  ${ButtonVote}:first-of-type {
+    margin-left: 2rem;
+    margin-right: 1rem;
+  }
 `;
