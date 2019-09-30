@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 const getColor = props => {
   const types = {
@@ -16,6 +16,8 @@ export const Tag = styled.span`
   border: 1px solid ${getColor};
   color: ${getColor};
   display: inline-table;
+
+  font-size: 1.2rem;
 
   padding: 1rem;
 `;

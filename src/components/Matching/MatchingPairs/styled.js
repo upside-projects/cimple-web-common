@@ -11,11 +11,17 @@ export const MatchingGoods = styled.div`
 `;
 
 export const MatchingSuggested = styled.div`
-  display: grid;
-  grid-template-columns: 10fr 1fr 1fr;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
   border-radius: ${({ theme }) => theme.radius.small};
   border: 1px solid ${({ theme }) => theme.colors.greyscale.light};
   padding: 1rem;
+
+  -webkit-box-shadow: ${({ theme }) => theme.shadow.subtle};
+  box-shadow: ${({ theme }) => theme.shadow.subtle};
 `;
 
 export const GoodsRow = styled.div`
@@ -23,7 +29,7 @@ export const GoodsRow = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 60%;
+  width: 100%;
 
   &:first-of-type {
     margin-bottom: 1rem;

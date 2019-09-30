@@ -6,22 +6,33 @@ import TagSecondary from '../../TagSecondary/TagSecondary';
 
 import * as S from './styled';
 
-const SuggestedPairsCard = ({ compatibility }): React.Element<*> => {
+const SuggestedPairsCard = ({ goods, similarityPercentage }): React.Element<*> => {
+  const evaluateSimilarity = similarityPercentage => {
+    if (similarityPercentage >= 70) {
+      return 'high';
+    }
+    if (similarityPercentage < 70 && similarityPercentage >= 40) {
+      return 'medium';
+    }
+    if (similarityPercentage < 40) {
+      return 'low';
+    }
+  };
+
   return (
     <S.MatchingSuggested>
       <S.MatchingGoods>
-        <S.GoodsRow>
-          <GoodList goodName="Good name" noSku small />
-          <GoodList goodName="Source name" noSku small />
-          <Text>Unit price</Text>
-        </S.GoodsRow>
-        <S.GoodsRow>
-          <GoodList goodName="Good name" noSku small />
-          <GoodList goodName="Source name" noSku small />
-          <Text>Unit price</Text>
-        </S.GoodsRow>
+        {goods.map(good => {
+          return (
+            <S.GoodsRow key={good.id}>
+              <GoodList goodImage={good.source.image} goodName={good.name} noSku small />
+              <GoodList goodImage={good.source.image} goodName={good.source.name} noSku small />
+              <Text>{good.price}</Text>
+            </S.GoodsRow>
+          );
+        })}
       </S.MatchingGoods>
-      <TagSecondary value="high">value</TagSecondary>
+      <TagSecondary value={evaluateSimilarity(similarityPercentage)}>{similarityPercentage}%</TagSecondary>
       <S.MatchingActions>
         <p>up</p>
         <p>down</p>
