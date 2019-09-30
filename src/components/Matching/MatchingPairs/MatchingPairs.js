@@ -7,11 +7,15 @@ import Icons from '../../Icons/index';
 
 import * as S from './styled';
 
-const ButtonVote = ({ handleClick, children }) => {
-  return <S.ButtonVote handleClick={handleClick}>{children}</S.ButtonVote>;
+const ButtonVote = ({ isActive, handleClick, children }) => {
+  return (
+    <S.ButtonVote isActive={isActive} handleClick={handleClick}>
+      {children}
+    </S.ButtonVote>
+  );
 };
 
-const SuggestedPairsCard = ({ goods, similarityPercentage }): React.Element<*> => {
+const MatchingPairs = ({ goods, similarityPercentage, isMatched }): React.Element<*> => {
   const evaluateSimilarity = similarityPercentage => {
     if (similarityPercentage >= 70) {
       return 'high';
@@ -39,10 +43,10 @@ const SuggestedPairsCard = ({ goods, similarityPercentage }): React.Element<*> =
       </S.MatchingGoods>
       <TagSecondary value={evaluateSimilarity(similarityPercentage)}>{similarityPercentage}%</TagSecondary>
       <S.MatchingActions>
-        <ButtonVote>
+        <ButtonVote isActive={isMatched === 'positive'}>
           <Icons.ThumbsUp />
         </ButtonVote>
-        <ButtonVote>
+        <ButtonVote isActive={isMatched === 'negative'}>
           <Icons.ThumbsDown />
         </ButtonVote>
       </S.MatchingActions>
@@ -50,4 +54,4 @@ const SuggestedPairsCard = ({ goods, similarityPercentage }): React.Element<*> =
   );
 };
 
-export default SuggestedPairsCard;
+export default MatchingPairs;

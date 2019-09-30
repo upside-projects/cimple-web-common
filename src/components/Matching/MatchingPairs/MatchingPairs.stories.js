@@ -47,12 +47,13 @@ const goods = [
 ];
 
 const similarityPercentage = 54;
+const isMatched = 'positive';
 
 storiesOf('Matching', module).add('Default', () => (
   <State store={store}>
     {state => (
       <div style={{ width: '80vw' }}>
-        <MatchingPairs goods={goods} similarityPercentage={similarityPercentage} />
+        <MatchingPairs goods={goods} similarityPercentage={similarityPercentage} isMatched={isMatched} />
       </div>
     )}
   </State>

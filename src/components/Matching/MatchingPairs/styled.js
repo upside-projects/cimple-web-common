@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const MatchingSuggestions = styled.div`
   width: 100%;
@@ -57,9 +57,33 @@ export const ButtonVote = styled.button`
   color: ${({ theme }) => theme.colors.brand.default};
   transition: ${({ theme }) => theme.transition.ease()};
 
+  ${p =>
+    p.isActive &&
+    css`
+      color: ${({ theme }) => theme.colors.greyscale.white};
+      background-color: ${({ theme }) => theme.colors.brand.default};
+      border: 1px solid ${({ theme }) => theme.colors.brand.default};
+    `}
+
   &:hover{
     border: 1px solid ${({ theme }) => theme.colors.greyscale.medium}
+   
+    ${p =>
+      p.isActive &&
+      css`
+        background-color: ${({ theme }) => theme.colors.brand.dark};
+        border: 1px solid ${({ theme }) => theme.colors.brand.dark};
+      `}
   }
+
+  &:focus{
+    outline: none;
+  }
+
+  &:active{
+    background-color: ${({ theme }) => theme.colors.brand.dark}
+  }
+ 
 `;
 
 export const MatchingActions = styled.div`
