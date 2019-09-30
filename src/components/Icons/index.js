@@ -17,6 +17,8 @@ import PlusBig from './PlusBig';
 import Minus from './Minus';
 import Edit from './Edit';
 import Ellipsis from './Ellipsis';
+import ThumbsUp from './ThumbsUp';
+import ThumbsDown from './ThumbsDown';
 
 const Icons = {};
 
@@ -39,5 +41,7 @@ Icons.PlusBig = PlusBig;
 Icons.Minus = Minus;
 Icons.Edit = Edit;
 Icons.Ellipsis = Ellipsis;
+Icons.ThumbsUp = ThumbsUp;
+Icons.ThumbsDown = ThumbsDown;
 
 export default Icons;
