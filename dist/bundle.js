@@ -236,44 +236,44 @@ var GlobalStyle = styled.createGlobalStyle(_templateObject$2(), reset, typograph
 var theme = {
   colors: {
     brand: {
-      light: "#B1A7F0",
-      default: "#7E6EE6",
-      dark: "#6d5ae4"
+      light: '#B1A7F0',
+      default: '#7E6EE6',
+      dark: '#6d5ae4'
     },
     greyscale: {
-      dark: "#151E29",
-      darkLight: "#2C343E",
-      medium: "#9E9DA3",
-      light: "#D9D7E0",
-      lighter: "#F3F2F5",
-      white: "#FFFFFF"
+      dark: '#151E29',
+      darkLight: '#2C343E',
+      medium: '#9E9DA3',
+      light: '#D9D7E0',
+      lighter: '#F3F2F5',
+      white: '#FFFFFF'
     },
     danger: {
-      default: "#F87E7E",
-      dark: "#D25656",
-      light: "#FEE9E9"
+      default: '#F87E7E',
+      dark: '#D25656',
+      light: '#FEE9E9'
     },
     yellow: {
-      default: "#FCB747",
-      light: "#FFF4E4"
+      default: '#FCB747',
+      light: '#FFF4E4'
     },
     green: {
-      default: "#46CF68",
-      light: "#E3F8E9"
+      default: '#46CF68',
+      light: '#E3F8E9'
     },
     blue: {
-      default: "#588CF5",
-      light: "#E6EEFE"
+      default: '#588CF5',
+      light: '#E6EEFE'
     }
   },
   radius: {
-    xsmall: "2px",
-    small: "4px",
-    big: "8px",
-    round: "50%"
+    xsmall: '2px',
+    small: '4px',
+    big: '8px',
+    round: '50%'
   },
   shadow: {
-    subtle: "0 2px 4px 0 rgba(75,84,94,0.06)"
+    subtle: '0 2px 4px 0 rgba(75,84,94,0.06)'
   },
   transition: {
     cubic: function cubic() {
@@ -1737,7 +1737,7 @@ var PlusBig = function PlusBig() {
     viewBox: "0 0 12 12"
   }, React.createElement("g", {
     fill: "none",
-    "fill-rule": "evenodd",
+    fillRule: "evenodd",
     transform: "translate(-4 -4)"
   }, React.createElement("rect", {
     width: "20",
@@ -1834,6 +1834,47 @@ var Ellipsis = function Ellipsis(_ref) {
   }))));
 };
 
+var ThumbsUp = function ThumbsUp(_ref) {
+  var props = _extends({}, _ref);
+
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "18",
+    height: "18",
+    viewBox: "0 0 18 18"
+  }), React.createElement("g", {
+    fill: "transparent",
+    fillRule: "evenodd",
+    stroke: "currentColor",
+    strokeWidth: "1.6",
+    transform: "translate(1 1)"
+  }, React.createElement("path", {
+    d: "M9.6,5.6 L9.6,2.4 C9.6,1.0745166 8.5254834,0 7.2,0 L4,7.2 L4,16.0001037 L13.024,16.0001037 C13.8218294,16.0090195 14.5043689,15.4288609 14.624,14.64 L15.728,7.44 C15.7984448,6.97588426 15.6615177,6.50424704 15.3534868,6.15001147 C15.0454559,5.7957759 14.5974014,5.59468428 14.128,5.6 L9.6,5.6 Z"
+  }), React.createElement("polygon", {
+    points: "4 16 1.6 16 0 16 0 14.4 0 8.8 0 7.2 1.6 7.2 4 7.2"
+  })));
+};
+
+var ThumbsDown = function ThumbsDown(_ref) {
+  var props = _ref.props;
+  return React.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "18",
+    height: "18",
+    viewBox: "0 0 18 18"
+  }), React.createElement("g", {
+    fill: "transparent",
+    fillRule: "evenodd",
+    stroke: "currentColor",
+    strokeWidth: "1.6",
+    transform: "rotate(180 8.5 8.5)"
+  }, React.createElement("path", {
+    d: "M9.6,5.6 L9.6,2.4 C9.6,1.0745166 8.5254834,0 7.2,0 L4,7.2 L4,16.0001037 L13.024,16.0001037 C13.8218294,16.0090195 14.5043689,15.4288609 14.624,14.64 L15.728,7.44 C15.7984448,6.97588426 15.6615177,6.50424704 15.3534868,6.15001147 C15.0454559,5.7957759 14.5974014,5.59468428 14.128,5.6 L9.6,5.6 Z"
+  }), React.createElement("polygon", {
+    points: "4 16 1.6 16 0 16 0 14.4 0 8.8 0 7.2 1.6 7.2 4 7.2"
+  })));
+};
+
 var Icons = {};
 Icons.Arrow = Arrow;
 Icons.Cart = Cart;
@@ -1854,6 +1895,8 @@ Icons.PlusBig = PlusBig;
 Icons.Minus = Minus;
 Icons.Edit = Edit;
 Icons.Ellipsis = Ellipsis;
+Icons.ThumbsUp = ThumbsUp;
+Icons.ThumbsDown = ThumbsDown;
 
 function _templateObject6$4() {
   var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: 0.6rem;\n  right: 1rem;\n"]);
@@ -3539,6 +3582,227 @@ var Modal$1 = function Modal$1(_ref) {
   return null;
 };
 
+function _templateObject$D() {
+  var data = _taggedTemplateLiteral(["\n  border-radius: ", ";\n  border: 1px solid ", ";\n  color: ", ";\n  display: inline-table;\n\n  font-size: 1.2rem;\n\n  padding: 1rem;\n"]);
+
+  _templateObject$D = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+var getColor$1 = function getColor(props) {
+  var types = {
+    high: props.theme.colors.green.default,
+    medium: props.theme.colors.yellow.default,
+    low: props.theme.colors.danger.default
+  };
+  return types[props.value] || props.theme.colors.greyscale.light;
+};
+
+var Tag$3 = styled__default.span(_templateObject$D(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.radius.small;
+}, getColor$1, getColor$1);
+
+var TagSecondary = function TagSecondary(_ref) {
+  var value = _ref.value,
+      children = _ref.children;
+  return React.createElement(Tag$3, {
+    value: value
+  }, children);
+};
+
+function _templateObject8$2() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n\n  ", ":first-of-type {\n    margin-left: 2rem;\n    margin-right: 1rem;\n  }\n"]);
+
+  _templateObject8$2 = function _templateObject8() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject7$4() {
+  var data = _taggedTemplateLiteral(["\n        background-color: ", ";\n        border: 1px solid ", ";\n      "]);
+
+  _templateObject7$4 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6$7() {
+  var data = _taggedTemplateLiteral(["\n      color: ", ";\n      background-color: ", ";\n      border: 1px solid ", ";\n    "]);
+
+  _templateObject6$7 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject5$e() {
+  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: center;\n\n  border-radius: ", ";\n  border: 1px solid ", "\n  height: 3rem;\n  width: 3rem;\n\n  color: ", ";\n  transition: ", ";\n\n  ", "\n\n  &:hover{\n    border: 1px solid ", "\n   \n    ", "\n  }\n\n  &:focus{\n    outline: none;\n  }\n\n  &:active{\n    background-color: ", "\n  }\n \n"]);
+
+  _templateObject5$e = function _templateObject5() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject4$g() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n\n  padding-right: 8rem;\n"]);
+
+  _templateObject4$g = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$k() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n\n  width: 100%;\n\n  &:first-of-type {\n    margin-bottom: 1rem;\n  }\n"]);
+
+  _templateObject3$k = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$u() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  flex-flow: row;\n\n  border-radius: ", ";\n  border: 1px solid ", ";\n  padding: 1rem;\n\n  -webkit-box-shadow: ", ";\n  box-shadow: ", ";\n"]);
+
+  _templateObject2$u = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$E() {
+  var data = _taggedTemplateLiteral(["\n  width: 100%;\n  padding: 6rem 2rem;\n"]);
+
+  _templateObject$E = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var MatchingSuggestions = styled__default.div(_templateObject$E());
+var MatchingSuggested = styled__default.div(_templateObject2$u(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.radius.small;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.colors.greyscale.light;
+}, function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.shadow.subtle;
+}, function (_ref4) {
+  var theme = _ref4.theme;
+  return theme.shadow.subtle;
+});
+var GoodsRow = styled__default.div(_templateObject3$k());
+var MatchingGoods = styled__default.div(_templateObject4$g());
+var ButtonVote = styled__default.button(_templateObject5$e(), function (_ref5) {
+  var theme = _ref5.theme;
+  return theme.radius.round;
+}, function (_ref6) {
+  var theme = _ref6.theme;
+  return theme.colors.greyscale.light;
+}, function (_ref7) {
+  var theme = _ref7.theme;
+  return theme.colors.brand.default;
+}, function (_ref8) {
+  var theme = _ref8.theme;
+  return theme.transition.ease();
+}, function (p) {
+  return p.isActive && styled.css(_templateObject6$7(), function (_ref9) {
+    var theme = _ref9.theme;
+    return theme.colors.greyscale.white;
+  }, function (_ref10) {
+    var theme = _ref10.theme;
+    return theme.colors.brand.default;
+  }, function (_ref11) {
+    var theme = _ref11.theme;
+    return theme.colors.brand.default;
+  });
+}, function (_ref12) {
+  var theme = _ref12.theme;
+  return theme.colors.greyscale.medium;
+}, function (p) {
+  return p.isActive && styled.css(_templateObject7$4(), function (_ref13) {
+    var theme = _ref13.theme;
+    return theme.colors.brand.dark;
+  }, function (_ref14) {
+    var theme = _ref14.theme;
+    return theme.colors.brand.dark;
+  });
+}, function (_ref15) {
+  var theme = _ref15.theme;
+  return theme.colors.brand.dark;
+});
+var MatchingActions = styled__default.div(_templateObject8$2(), ButtonVote);
+
+// @flow
+
+var ButtonVote$1 = function ButtonVote$1(_ref) {
+  var isActive = _ref.isActive,
+      handleClick = _ref.handleClick,
+      children = _ref.children;
+  return React.createElement(ButtonVote, {
+    isActive: isActive,
+    handleClick: handleClick
+  }, children);
+};
+
+var MatchingPairs = function MatchingPairs(_ref2) {
+  var goods = _ref2.goods,
+      similarityPercentage = _ref2.similarityPercentage,
+      isMatched = _ref2.isMatched;
+
+  var evaluateSimilarity = function evaluateSimilarity(similarityPercentage) {
+    if (similarityPercentage >= 70) {
+      return 'high';
+    }
+
+    if (similarityPercentage < 70 && similarityPercentage >= 40) {
+      return 'medium';
+    }
+
+    if (similarityPercentage < 40) {
+      return 'low';
+    }
+  };
+
+  return React.createElement(MatchingSuggested, null, React.createElement(MatchingGoods, null, goods.map(function (good) {
+    return React.createElement(GoodsRow, {
+      key: good.id
+    }, React.createElement(GoodList, {
+      goodImage: good.image.small,
+      goodName: good.name,
+      noSku: true,
+      small: true
+    }), React.createElement(GoodList, {
+      goodImage: good.source.image.small,
+      goodName: good.source.name,
+      noSku: true,
+      small: true
+    }), React.createElement(Text, null, good.price));
+  })), React.createElement(TagSecondary, {
+    value: evaluateSimilarity(similarityPercentage)
+  }, similarityPercentage, "%"), React.createElement(MatchingActions, null, React.createElement(ButtonVote$1, {
+    isActive: isMatched === 'positive'
+  }, React.createElement(Icons.ThumbsUp, null)), React.createElement(ButtonVote$1, {
+    isActive: isMatched === 'negative'
+  }, React.createElement(Icons.ThumbsDown, null))));
+};
+
 exports.ArrowLink = ArrowLink$2;
 exports.BackLink = Back;
 exports.Button = Button$1;
@@ -3564,6 +3828,7 @@ exports.Input = Input$1;
 exports.Label = Label;
 exports.Loader = Loader;
 exports.Logo = Logo;
+exports.MatchingPairs = MatchingPairs;
 exports.Modal = Modal$1;
 exports.NavLink = NavLink$1;
 exports.Pagination = Pagination$1;
