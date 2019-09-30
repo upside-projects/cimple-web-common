@@ -28,6 +28,8 @@ storiesOf('Primitives | Icons', module)
       <Icons.Ellipsis />
       <Icons.Plus />
       <Icons.PlusBig />
+      <Icons.ThumbsUp />
+      <Icons.ThumbsDown />
     </div>
   ))
   .add('Cart', () => <Icons.Cart />);

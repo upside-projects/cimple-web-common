@@ -3,7 +3,7 @@ import React from 'react';
 const PlusBig = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
-      <g fill="none" fill-rule="evenodd" transform="translate(-4 -4)">
+      <g fill="none" fillRule="evenodd" transform="translate(-4 -4)">
         <rect width="20" height="20" fill="#D8D8D8" opacity="0" />
         <path
           stroke="#7E6EE6"
