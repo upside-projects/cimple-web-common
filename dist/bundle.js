@@ -3749,8 +3749,6 @@ var ButtonVote = styled__default.button(_templateObject5$e(), function (_ref5) {
 });
 var MatchingActions = styled__default.div(_templateObject8$2(), ButtonVote);
 
-// @flow
-
 var ButtonVote$1 = function ButtonVote$1(_ref) {
   var isActive = _ref.isActive,
       handleClick = _ref.handleClick,
@@ -3762,9 +3760,11 @@ var ButtonVote$1 = function ButtonVote$1(_ref) {
 };
 
 var MatchingPairs = function MatchingPairs(_ref2) {
-  var goods = _ref2.goods,
+  var className = _ref2.className,
+      goods = _ref2.goods,
       similarityPercentage = _ref2.similarityPercentage,
-      isMatched = _ref2.isMatched;
+      isMatched = _ref2.isMatched,
+      props = _objectWithoutProperties(_ref2, ["className", "goods", "similarityPercentage", "isMatched"]);
 
   var evaluateSimilarity = function evaluateSimilarity(similarityPercentage) {
     if (similarityPercentage >= 70) {
@@ -3780,7 +3780,9 @@ var MatchingPairs = function MatchingPairs(_ref2) {
     }
   };
 
-  return React.createElement(MatchingSuggested, null, React.createElement(MatchingGoods, null, goods.map(function (good) {
+  return React.createElement(MatchingSuggested, _extends({
+    className: className
+  }, props), React.createElement(MatchingGoods, null, goods.map(function (good) {
     return React.createElement(GoodsRow, {
       key: good.id
     }, React.createElement(GoodList, {
