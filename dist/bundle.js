@@ -2661,7 +2661,7 @@ var Tag$1 = function Tag$1(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  return React.createElement(Tag, props, children, "%");
+  return React.createElement(Tag, props, children);
 };
 Tag$1.propTypes = {
   children: PropTypes__default.node.isRequired
@@ -2711,7 +2711,7 @@ var TagSecondary = function TagSecondary(_ref) {
 
   return React.createElement(Tag$2, {
     value: evaluateSimilarity(value)
-  }, children);
+  }, children, "%");
 };
 
 function _templateObject5$8() {
