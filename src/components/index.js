@@ -38,6 +38,7 @@ export { default as Sort } from './Sort/Sort';
 
 /* Tag */
 export { default as Tag } from './Tag/Tag';
+export { default as TagSecondary } from './TagSecondary/TagSecondary';
 
 /* Typography */
 export { HeadingL, HeadingM, HeadingS, Text, UppercaseL, Uppercase } from './Typography/Typography';
