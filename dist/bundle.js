@@ -2694,8 +2694,23 @@ var Tag$2 = styled__default.span(_templateObject$q(), function (_ref) {
 var TagSecondary = function TagSecondary(_ref) {
   var value = _ref.value,
       children = _ref.children;
+
+  var evaluateSimilarity = function evaluateSimilarity(similarityPercentage) {
+    if (similarityPercentage >= 70) {
+      return 'high';
+    }
+
+    if (similarityPercentage < 70 && similarityPercentage >= 40) {
+      return 'medium';
+    }
+
+    if (similarityPercentage < 40) {
+      return 'low';
+    }
+  };
+
   return React.createElement(Tag$2, {
-    value: value
+    value: evaluateSimilarity(value)
   }, children);
 };
 
@@ -3794,20 +3809,6 @@ var MatchingPairs = function MatchingPairs(_ref2) {
       isMatched = _ref2.isMatched,
       props = _objectWithoutProperties(_ref2, ["className", "goods", "similarityPercentage", "isMatched"]);
 
-  var evaluateSimilarity = function evaluateSimilarity(similarityPercentage) {
-    if (similarityPercentage >= 70) {
-      return 'high';
-    }
-
-    if (similarityPercentage < 70 && similarityPercentage >= 40) {
-      return 'medium';
-    }
-
-    if (similarityPercentage < 40) {
-      return 'low';
-    }
-  };
-
   return React.createElement(MatchingSuggested, _extends({
     className: className
   }, props), React.createElement(MatchingGoods, null, goods.map(function (good) {
@@ -3825,7 +3826,7 @@ var MatchingPairs = function MatchingPairs(_ref2) {
       small: true
     }), React.createElement(Text, null, good.price));
   })), React.createElement(TagSecondary, {
-    value: evaluateSimilarity(similarityPercentage)
+    value: similarityPercentage
   }, similarityPercentage, "%"), React.createElement(MatchingActions, null, React.createElement(ButtonVote$1, {
     isActive: isMatched === 'positive'
   }, React.createElement(Icons.ThumbsUp, null)), React.createElement(ButtonVote$1, {
