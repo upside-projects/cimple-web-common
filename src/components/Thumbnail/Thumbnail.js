@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import * as S from './styled';
 
-const Thumbnail = ({ size, src }) => {
-  return <S.Thumbnail size={size} src={src} />;
+const Thumbnail = ({ className, size, src, ...props }) => {
+  return <S.Thumbnail className={className} size={size} src={src} {...props} />;
 };
 
 export default Thumbnail;
