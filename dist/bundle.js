@@ -2737,8 +2737,28 @@ Table$1.Body = TableBody;
 Table$1.Row = TableRow;
 Table$1.Cell = TableCell;
 
-function _templateObject2$j() {
+function _templateObject4$b() {
+  var data = _taggedTemplateLiteral(["\n      height: 4rem;\n      width: 4rem;\n      min-width: 4rem;\n    "]);
+
+  _templateObject4$b = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject3$c() {
   var data = _taggedTemplateLiteral(["\n      height: 2.2rem;\n      width: 2.2rem;\n      min-width: 2.2rem;\n    "]);
+
+  _templateObject3$c = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$j() {
+  var data = _taggedTemplateLiteral(["\n      height: 1.5rem;\n      width: 1.5rem;\n      min-width: 1.5rem;\n    "]);
 
   _templateObject2$j = function _templateObject2() {
     return data;
@@ -2748,7 +2768,7 @@ function _templateObject2$j() {
 }
 
 function _templateObject$r() {
-  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  border-radius: 50%;\n  border: 1px solid ", ";\n  height: 3rem;\n  width: 3rem;\n  min-width: 3rem;\n\n  background-image: ", ";\n  background-size: cover;\n  background-position: center center;\n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  border-radius: 50%;\n  border: 1px solid ", ";\n  height: 3rem;\n  width: 3rem;\n  min-width: 3rem;\n\n  background-image: ", ";\n  background-size: cover;\n  background-position: center center;\n\n  ", "\n\n  ", "\n\n  ", "\n\n\n\n"]);
 
   _templateObject$r = function _templateObject() {
     return data;
@@ -2765,20 +2785,24 @@ var Thumbnail = styled__default.div(_templateObject$r(), function (_ref) {
 }, function (p) {
   return "url(".concat(p.src, ")");
 }, function (p) {
-  return p.small && styled.css(_templateObject2$j());
+  return p.size === 'mini' && styled.css(_templateObject2$j());
+}, function (p) {
+  return p.size === 'small' && styled.css(_templateObject3$c());
+}, function (p) {
+  return p.size === 'large' && styled.css(_templateObject4$b());
 });
 
 var Thumbnail$1 = function Thumbnail$1(_ref) {
-  var small = _ref.small,
+  var size = _ref.size,
       src = _ref.src;
   return React.createElement(Thumbnail, {
-    small: small,
+    size: size,
     src: src
   });
 };
 Thumbnail$1.defaultProps = {
   small: false,
-  src: "https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png"
+  src: 'https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png'
 };
 Thumbnail$1.propTypes = {
   small: PropTypes__default.bool,
@@ -2795,20 +2819,20 @@ function _templateObject5$9() {
   return data;
 }
 
-function _templateObject4$b() {
+function _templateObject4$c() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: top;\n  justify-content: space-between;\n\n  @media only screen and (max-width: 780px) {\n    flex-direction: column;\n\n    ", " {\n      order: -1;\n      margin-bottom: 0.5rem;\n      width: fit-content;\n    }\n  }\n"]);
 
-  _templateObject4$b = function _templateObject4() {
+  _templateObject4$c = function _templateObject4() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject3$c() {
+function _templateObject3$d() {
   var data = _taggedTemplateLiteral(["\n  display: table;\n"]);
 
-  _templateObject3$c = function _templateObject3() {
+  _templateObject3$d = function _templateObject3() {
     return data;
   };
 
@@ -2844,8 +2868,8 @@ var ProductThumb = styled__default.div(_templateObject$s(), function (_ref) {
   return theme.transition.cubic();
 });
 var Holder$b = styled__default.div(_templateObject2$k(), ProductThumb);
-var Tag$2 = styled__default(Tag$1)(_templateObject3$c());
-var Flex$1 = styled__default.div(_templateObject4$b(), Tag$2);
+var Tag$2 = styled__default(Tag$1)(_templateObject3$d());
+var Flex$1 = styled__default.div(_templateObject4$c(), Tag$2);
 var Column = styled__default.div(_templateObject5$9());
 
 var GoodDisplay = function GoodDisplay(_ref) {
@@ -2874,10 +2898,10 @@ GoodDisplay.propTypes = {
   unitPrice: PropTypes__default.string
 };
 
-function _templateObject3$d() {
+function _templateObject3$e() {
   var data = _taggedTemplateLiteral(["\n  margin-bottom: 0.2rem;\n"]);
 
-  _templateObject3$d = function _templateObject3() {
+  _templateObject3$e = function _templateObject3() {
     return data;
   };
 
@@ -2905,7 +2929,7 @@ function _templateObject$t() {
 }
 var Holder$c = styled__default.div(_templateObject$t());
 var Wrapper$5 = styled__default.div(_templateObject2$l());
-var Text$1 = styled__default(Text)(_templateObject3$d());
+var Text$1 = styled__default(Text)(_templateObject3$e());
 
 var GoodList = function GoodList(_ref) {
   var goodName = _ref.goodName,
@@ -2941,20 +2965,20 @@ function _templateObject5$a() {
   return data;
 }
 
-function _templateObject4$c() {
+function _templateObject4$d() {
   var data = _taggedTemplateLiteral(["\n  margin-right: 0.5rem;\n"]);
 
-  _templateObject4$c = function _templateObject4() {
+  _templateObject4$d = function _templateObject4() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject3$e() {
+function _templateObject3$f() {
   var data = _taggedTemplateLiteral(["\n  margin-bottom: 0.2rem;\n"]);
 
-  _templateObject3$e = function _templateObject3() {
+  _templateObject3$f = function _templateObject3() {
     return data;
   };
 
@@ -2982,8 +3006,8 @@ function _templateObject$u() {
 }
 var Holder$d = styled__default.div(_templateObject$u());
 var Wrapper$6 = styled__default.div(_templateObject2$m());
-var Text$2 = styled__default(Text)(_templateObject3$e());
-var TextQty = styled__default(Text)(_templateObject4$c());
+var Text$2 = styled__default(Text)(_templateObject3$f());
+var TextQty = styled__default(Text)(_templateObject4$d());
 var Flex$2 = styled__default.div(_templateObject5$a());
 
 var GoodListDetailed = function GoodListDetailed(_ref) {
@@ -3060,20 +3084,20 @@ function _templateObject5$b() {
   return data;
 }
 
-function _templateObject4$d() {
+function _templateObject4$e() {
   var data = _taggedTemplateLiteral(["\n  ", "\n  -webkit-animation-delay: -0.32s;\n  animation-delay: -0.32s;\n"]);
 
-  _templateObject4$d = function _templateObject4() {
+  _templateObject4$e = function _templateObject4() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject3$f() {
+function _templateObject3$g() {
   var data = _taggedTemplateLiteral(["\n  ", "\n  margin: 100px auto 0;\n  width: 70px;\n  text-align: center;\n"]);
 
-  _templateObject3$f = function _templateObject3() {
+  _templateObject3$g = function _templateObject3() {
     return data;
   };
 
@@ -3104,8 +3128,8 @@ var divStyle = styled.css(_templateObject$w(), function (_ref) {
   return theme.colors.brand.default;
 });
 var animation = styled.css(_templateObject2$o());
-var Spinner = styled__default.div(_templateObject3$f(), animation);
-var Bounce1 = styled__default.div(_templateObject4$d(), divStyle);
+var Spinner = styled__default.div(_templateObject3$g(), animation);
+var Bounce1 = styled__default.div(_templateObject4$e(), divStyle);
 var Bounce2 = styled__default.div(_templateObject5$b(), divStyle);
 var Bounce3 = styled__default.div(_templateObject6$5(), divStyle);
 
@@ -3123,20 +3147,20 @@ function _templateObject5$c() {
   return data;
 }
 
-function _templateObject4$e() {
+function _templateObject4$f() {
   var data = _taggedTemplateLiteral(["\n      &:before {\n        content: \"\";\n        position: absolute;\n        bottom: 0;\n        left: 10%;\n        height: 1px;\n        width: 80%;\n        background-color: ", ";\n      }\n    "]);
 
-  _templateObject4$e = function _templateObject4() {
+  _templateObject4$f = function _templateObject4() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject3$g() {
+function _templateObject3$h() {
   var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  padding: 0.8rem;\n  font-variant-numeric: tabular-nums;\n  user-select: none;\n\n  border: 0;\n  border-radius: 0.25rem;\n  background: none;\n  font-family: system-ui, sans-serif;\n  font-size: 1rem;\n  line-height: 1.2;\n  white-space: nowrap;\n  text-decoration: none;\n  padding: 0.25rem 0.5rem;\n  margin: 0.25rem;\n\n  ", "\n\n  ", "\n\n  &:focus {\n    outline: none;\n  }\n\n  &:disabled {\n    color: ", ";\n  }\n\n  &:active {\n    outline: none;\n    color: ", ";\n  }\n"]);
 
-  _templateObject3$g = function _templateObject3() {
+  _templateObject3$h = function _templateObject3() {
     return data;
   };
 
@@ -3164,8 +3188,8 @@ function _templateObject$x() {
 }
 var PageHolder = styled__default.div(_templateObject$x());
 var Holder$e = styled__default.div(_templateObject2$p());
-var PageButton = styled__default.button(_templateObject3$g(), function (p) {
-  return p.active && styled.css(_templateObject4$e(), function (_ref) {
+var PageButton = styled__default.button(_templateObject3$h(), function (p) {
+  return p.active && styled.css(_templateObject4$f(), function (_ref) {
     var theme = _ref.theme;
     return theme.colors.brand.default;
   });
@@ -3332,20 +3356,20 @@ function _templateObject5$d() {
   return data;
 }
 
-function _templateObject4$f() {
+function _templateObject4$g() {
   var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-gap: 1rem;\n  grid-template-columns: repeat(6, calc(32% - 2rem));\n  grid-template-rows: minmax(6.2rem, 1fr);\n\n  overflow-x: scroll;\n  scroll-snap-type: x proximity;\n  scroll-behavior: smooth;\n\n  margin-top: 1rem;\n\n  @media only screen and (max-width: 768px) {\n    grid-template-columns: repeat(6, calc(34% - 2rem));\n    grid-template-rows: minmax(4.6rem, 1fr);\n  }\n"]);
 
-  _templateObject4$f = function _templateObject4() {
+  _templateObject4$g = function _templateObject4() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject3$h() {
+function _templateObject3$i() {
   var data = _taggedTemplateLiteral(["\n      background-image: url(", ");\n      background-size: 20% 20%;\n      background-repeat: no-repeat;\n      background-position: center center;\n      background-color: ", ";\n    "]);
 
-  _templateObject3$h = function _templateObject3() {
+  _templateObject3$i = function _templateObject3() {
     return data;
   };
 
@@ -3375,12 +3399,12 @@ var GalleryHolder = styled__default.div(_templateObject$A());
 var GalleryHighlight = styled__default.div(_templateObject2$r(), function (p) {
   return p.image;
 }, function (p) {
-  return p.isEmpty && styled.css(_templateObject3$h(), p.image, function (_ref) {
+  return p.isEmpty && styled.css(_templateObject3$i(), p.image, function (_ref) {
     var theme = _ref.theme;
     return theme.colors.greyscale.lighter;
   });
 });
-var GalleryThumbnails = styled__default.div(_templateObject4$f());
+var GalleryThumbnails = styled__default.div(_templateObject4$g());
 var Holder$f = styled__default.div(_templateObject5$d());
 var Thumbnail$2 = styled__default.div(_templateObject6$6(), function (p) {
   return p.image;
@@ -3432,10 +3456,10 @@ Gallery.propTypes = {
   images: PropTypes__default.arrayOf(PropTypes__default.string)
 };
 
-function _templateObject3$i() {
+function _templateObject3$j() {
   var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  border: none;\n  margin: 0;\n  padding: 0;\n  text-decoration: none;\n  cursor: pointer;\n  text-align: center;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n\n  height: 24px;\n\n  &:focus {\n    outline: 0;\n  }\n\n  &:active {\n    outline: 0;\n  }\n\n  &:disabled {\n    color: ", ";\n  }\n"]);
 
-  _templateObject3$i = function _templateObject3() {
+  _templateObject3$j = function _templateObject3() {
     return data;
   };
 
@@ -3469,7 +3493,7 @@ var CounterHolder = styled__default.div(_templateObject$B(), function (_ref) {
   return theme.radius.small;
 });
 var Value = styled__default.p(_templateObject2$s());
-var CounterAction = styled__default.button(_templateObject3$i(), function (_ref3) {
+var CounterAction = styled__default.button(_templateObject3$j(), function (_ref3) {
   var theme = _ref3.theme;
   return theme.colors.greyscale.medium;
 });
@@ -3524,10 +3548,10 @@ Counter.propTypes = {
   value: PropTypes__default.number.isRequired
 };
 
-function _templateObject3$j() {
+function _templateObject3$k() {
   var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n\n  display: flex;\n  margin: auto;\n  z-index: 99;\n\n  display: ", ";\n"]);
 
-  _templateObject3$j = function _templateObject3() {
+  _templateObject3$k = function _templateObject3() {
     return data;
   };
 
@@ -3561,7 +3585,7 @@ var Modal = styled__default.div(_templateObject2$t(), function (_ref) {
   var theme = _ref2.theme;
   return theme.radius.small;
 });
-var Content = styled__default.div(_templateObject3$j(), function (p) {
+var Content = styled__default.div(_templateObject3$k(), function (p) {
   return p.isOpen ? "flex" : "none";
 });
 
@@ -3654,20 +3678,20 @@ function _templateObject5$e() {
   return data;
 }
 
-function _templateObject4$g() {
+function _templateObject4$h() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n\n  padding-right: 8rem;\n"]);
 
-  _templateObject4$g = function _templateObject4() {
+  _templateObject4$h = function _templateObject4() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject3$k() {
+function _templateObject3$l() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n\n  width: 100%;\n\n  &:first-of-type {\n    margin-bottom: 1rem;\n  }\n"]);
 
-  _templateObject3$k = function _templateObject3() {
+  _templateObject3$l = function _templateObject3() {
     return data;
   };
 
@@ -3707,8 +3731,8 @@ var MatchingSuggested = styled__default.div(_templateObject2$u(), function (_ref
   var theme = _ref4.theme;
   return theme.shadow.subtle;
 });
-var GoodsRow = styled__default.div(_templateObject3$k());
-var MatchingGoods = styled__default.div(_templateObject4$g());
+var GoodsRow = styled__default.div(_templateObject3$l());
+var MatchingGoods = styled__default.div(_templateObject4$h());
 var ButtonVote = styled__default.button(_templateObject5$e(), function (_ref5) {
   var theme = _ref5.theme;
   return theme.radius.round;
