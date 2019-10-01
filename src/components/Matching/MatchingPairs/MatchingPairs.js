@@ -29,7 +29,7 @@ const MatchingPairs = ({ className, goods, similarityPercentage, isMatched, ...p
           );
         })}
       </S.MatchingGoods>
-      <TagSecondary value={similarityPercentage}>{similarityPercentage}%</TagSecondary>
+      <TagSecondary value={similarityPercentage}>{similarityPercentage}</TagSecondary>
       <S.MatchingActions>
         <ButtonVote isActive={isMatched === 'positive'}>
           <Icons.ThumbsUp />
