@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const Thumbnail = styled.div`
   background-color: ${({ theme }) => theme.colors.greyscale.lighter};
@@ -14,10 +14,29 @@ export const Thumbnail = styled.div`
   background-position: center center;
 
   ${p =>
-    p.small &&
+    p.size === 'mini' &&
+    css`
+      height: 1.5rem;
+      width: 1.5rem;
+      min-width: 1.5rem;
+    `}
+
+  ${p =>
+    p.size === 'small' &&
     css`
       height: 2.2rem;
       width: 2.2rem;
       min-width: 2.2rem;
     `}
+
+  ${p =>
+    p.size === 'large' &&
+    css`
+      height: 4rem;
+      width: 4rem;
+      min-width: 4rem;
+    `}
+
+
+
 `;
