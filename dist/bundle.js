@@ -2661,7 +2661,7 @@ var Tag$1 = function Tag$1(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  return React.createElement(Tag, props, children);
+  return React.createElement(Tag, props, children, "%");
 };
 Tag$1.propTypes = {
   children: PropTypes__default.node.isRequired
@@ -3827,7 +3827,7 @@ var MatchingPairs = function MatchingPairs(_ref2) {
     }), React.createElement(Text, null, good.price));
   })), React.createElement(TagSecondary, {
     value: similarityPercentage
-  }, similarityPercentage, "%"), React.createElement(MatchingActions, null, React.createElement(ButtonVote$1, {
+  }, similarityPercentage), React.createElement(MatchingActions, null, React.createElement(ButtonVote$1, {
     isActive: isMatched === 'positive'
   }, React.createElement(Icons.ThumbsUp, null)), React.createElement(ButtonVote$1, {
     isActive: isMatched === 'negative'
