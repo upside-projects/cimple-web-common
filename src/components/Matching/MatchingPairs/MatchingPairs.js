@@ -16,18 +16,6 @@ const ButtonVote = ({ isActive, handleClick, children }) => {
 };
 
 const MatchingPairs = ({ className, goods, similarityPercentage, isMatched, ...props }) => {
-  const evaluateSimilarity = similarityPercentage => {
-    if (similarityPercentage >= 70) {
-      return 'high';
-    }
-    if (similarityPercentage < 70 && similarityPercentage >= 40) {
-      return 'medium';
-    }
-    if (similarityPercentage < 40) {
-      return 'low';
-    }
-  };
-
   return (
     <S.MatchingSuggested className={className} {...props}>
       <S.MatchingGoods>
@@ -41,7 +29,7 @@ const MatchingPairs = ({ className, goods, similarityPercentage, isMatched, ...p
           );
         })}
       </S.MatchingGoods>
-      <TagSecondary value={evaluateSimilarity(similarityPercentage)}>{similarityPercentage}%</TagSecondary>
+      <TagSecondary value={similarityPercentage}>{similarityPercentage}%</TagSecondary>
       <S.MatchingActions>
         <ButtonVote isActive={isMatched === 'positive'}>
           <Icons.ThumbsUp />
