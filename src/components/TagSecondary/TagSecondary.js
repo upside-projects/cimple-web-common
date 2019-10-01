@@ -15,7 +15,7 @@ const TagSecondary = ({ value, children }) => {
     }
   };
 
-  return <S.Tag value={evaluateSimilarity(value)}>{children}</S.Tag>;
+  return <S.Tag value={evaluateSimilarity(value)}>{children}%</S.Tag>;
 };
 
 export default TagSecondary;

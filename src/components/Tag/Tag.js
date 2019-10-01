@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import * as S from './styled';
 
 const Tag = ({ children, ...props }) => {
-  return <S.Tag {...props}>{children}%</S.Tag>;
+  return <S.Tag {...props}>{children}</S.Tag>;
 };
 
 export default Tag;
