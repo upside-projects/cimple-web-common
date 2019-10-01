@@ -2793,12 +2793,16 @@ var Thumbnail = styled__default.div(_templateObject$r(), function (_ref) {
 });
 
 var Thumbnail$1 = function Thumbnail$1(_ref) {
-  var size = _ref.size,
-      src = _ref.src;
-  return React.createElement(Thumbnail, {
+  var className = _ref.className,
+      size = _ref.size,
+      src = _ref.src,
+      props = _objectWithoutProperties(_ref, ["className", "size", "src"]);
+
+  return React.createElement(Thumbnail, _extends({
+    className: className,
     size: size,
     src: src
-  });
+  }, props));
 };
 Thumbnail$1.defaultProps = {
   small: false,
