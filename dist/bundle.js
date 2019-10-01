@@ -2667,6 +2667,38 @@ Tag$1.propTypes = {
   children: PropTypes__default.node.isRequired
 };
 
+function _templateObject$q() {
+  var data = _taggedTemplateLiteral(["\n  border-radius: ", ";\n  border: 1px solid ", ";\n  color: ", ";\n  display: inline-table;\n\n  font-size: 1.2rem;\n\n  padding: 1rem;\n"]);
+
+  _templateObject$q = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+var getColor$1 = function getColor(props) {
+  var types = {
+    high: props.theme.colors.green.default,
+    medium: props.theme.colors.yellow.default,
+    low: props.theme.colors.danger.default
+  };
+  return types[props.value] || props.theme.colors.greyscale.light;
+};
+
+var Tag$2 = styled__default.span(_templateObject$q(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.radius.small;
+}, getColor$1, getColor$1);
+
+var TagSecondary = function TagSecondary(_ref) {
+  var value = _ref.value,
+      children = _ref.children;
+  return React.createElement(Tag$2, {
+    value: value
+  }, children);
+};
+
 function _templateObject5$8() {
   var data = _taggedTemplateLiteral(["\n  padding: 1rem 0rem;\n  vertical-align: middle;\n"]);
 
@@ -2707,16 +2739,16 @@ function _templateObject2$i() {
   return data;
 }
 
-function _templateObject$q() {
+function _templateObject$r() {
   var data = _taggedTemplateLiteral(["\n  border-collapse: collapse;\n  text-align: left;\n  width: 100%;\n\n  th:last-of-type,\n  td:last-of-type {\n    div {\n      justify-content: flex-end;\n      padding-right: 1rem;\n    }\n  }\n"]);
 
-  _templateObject$q = function _templateObject() {
+  _templateObject$r = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Table = styled__default.table(_templateObject$q());
+var Table = styled__default.table(_templateObject$r());
 var TableHeader = styled__default.thead(_templateObject2$i(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.lighter;
@@ -2767,16 +2799,16 @@ function _templateObject2$j() {
   return data;
 }
 
-function _templateObject$r() {
+function _templateObject$s() {
   var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  border-radius: 50%;\n  border: 1px solid ", ";\n  height: 3rem;\n  width: 3rem;\n  min-width: 3rem;\n\n  background-image: ", ";\n  background-size: cover;\n  background-position: center center;\n\n  ", "\n\n  ", "\n\n  ", "\n\n\n\n"]);
 
-  _templateObject$r = function _templateObject() {
+  _templateObject$s = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Thumbnail = styled__default.div(_templateObject$r(), function (_ref) {
+var Thumbnail = styled__default.div(_templateObject$s(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.lighter;
 }, function (_ref2) {
@@ -2853,16 +2885,16 @@ function _templateObject2$k() {
   return data;
 }
 
-function _templateObject$s() {
+function _templateObject$t() {
   var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center center;\n\n  height: 20rem;\n  width: 100%;\n  opacity: 1;\n\n  margin-bottom: 1.5rem;\n  transition: ", ";\n\n  @media only screen and (max-width: 780px) {\n    height: 10rem;\n    width: 100%;\n  }\n"]);
 
-  _templateObject$s = function _templateObject() {
+  _templateObject$t = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var ProductThumb = styled__default.div(_templateObject$s(), function (_ref) {
+var ProductThumb = styled__default.div(_templateObject$t(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.lighter;
 }, function (p) {
@@ -2872,8 +2904,8 @@ var ProductThumb = styled__default.div(_templateObject$s(), function (_ref) {
   return theme.transition.cubic();
 });
 var Holder$b = styled__default.div(_templateObject2$k(), ProductThumb);
-var Tag$2 = styled__default(Tag$1)(_templateObject3$d());
-var Flex$1 = styled__default.div(_templateObject4$c(), Tag$2);
+var Tag$3 = styled__default(Tag$1)(_templateObject3$d());
+var Flex$1 = styled__default.div(_templateObject4$c(), Tag$3);
 var Column = styled__default.div(_templateObject5$9());
 
 var GoodDisplay = function GoodDisplay(_ref) {
@@ -2885,7 +2917,7 @@ var GoodDisplay = function GoodDisplay(_ref) {
     goodImage: goodImage
   }), React.createElement(Flex$1, null, React.createElement(Column, null, React.createElement(Text, null, goodName), React.createElement(Text, {
     color: "greyMedium"
-  }, unitPrice)), React.createElement(Tag$2, {
+  }, unitPrice)), React.createElement(Tag$3, {
     type: goodCategory
   }, goodCategory)));
 };
@@ -2922,16 +2954,16 @@ function _templateObject2$l() {
   return data;
 }
 
-function _templateObject$t() {
+function _templateObject$u() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n\n  @media only screen and (max-width: 500px) {\n    div:first-of-type {\n      display: none;\n    }\n  }\n"]);
 
-  _templateObject$t = function _templateObject() {
+  _templateObject$u = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Holder$c = styled__default.div(_templateObject$t());
+var Holder$c = styled__default.div(_templateObject$u());
 var Wrapper$5 = styled__default.div(_templateObject2$l());
 var Text$1 = styled__default(Text)(_templateObject3$e());
 
@@ -2999,16 +3031,16 @@ function _templateObject2$m() {
   return data;
 }
 
-function _templateObject$u() {
+function _templateObject$v() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  width: 100%;\n  max-width: 20rem;\n\n  @media only screen and (max-width: 500px) {\n    div:first-of-type {\n      display: none;\n    }\n  }\n"]);
 
-  _templateObject$u = function _templateObject() {
+  _templateObject$v = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Holder$d = styled__default.div(_templateObject$u());
+var Holder$d = styled__default.div(_templateObject$v());
 var Wrapper$6 = styled__default.div(_templateObject2$m());
 var Text$2 = styled__default(Text)(_templateObject3$f());
 var TextQty = styled__default(Text)(_templateObject4$d());
@@ -3056,16 +3088,16 @@ function _templateObject2$n() {
   return data;
 }
 
-function _templateObject$v() {
+function _templateObject$w() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n"]);
 
-  _templateObject$v = function _templateObject() {
+  _templateObject$w = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Flex$3 = styled__default.div(_templateObject$v());
+var Flex$3 = styled__default.div(_templateObject$w());
 var Column$1 = styled__default.div(_templateObject2$n());
 
 function _templateObject6$5() {
@@ -3118,16 +3150,16 @@ function _templateObject2$o() {
   return data;
 }
 
-function _templateObject$w() {
+function _templateObject$x() {
   var data = _taggedTemplateLiteral(["\n  width: 1rem;\n  height: 1rem;\n  background-color: ", ";\n\n  border-radius: 100%;\n  display: inline-block;\n\n  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;\n  animation: sk-bouncedelay 1.4s infinite ease-in-out both;\n"]);
 
-  _templateObject$w = function _templateObject() {
+  _templateObject$x = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var divStyle = styled.css(_templateObject$w(), function (_ref) {
+var divStyle = styled.css(_templateObject$x(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.brand.default;
 });
@@ -3181,16 +3213,16 @@ function _templateObject2$p() {
   return data;
 }
 
-function _templateObject$x() {
+function _templateObject$y() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n"]);
 
-  _templateObject$x = function _templateObject() {
+  _templateObject$y = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var PageHolder = styled__default.div(_templateObject$x());
+var PageHolder = styled__default.div(_templateObject$y());
 var Holder$e = styled__default.div(_templateObject2$p());
 var PageButton = styled__default.button(_templateObject3$h(), function (p) {
   return p.active && styled.css(_templateObject4$f(), function (_ref) {
@@ -3277,16 +3309,16 @@ function _templateObject2$q() {
   return data;
 }
 
-function _templateObject$y() {
+function _templateObject$z() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  height: 100%;\n"]);
 
-  _templateObject$y = function _templateObject() {
+  _templateObject$z = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var EmptyHolder = styled__default.div(_templateObject$y());
+var EmptyHolder = styled__default.div(_templateObject$z());
 var Asset = styled__default.img(_templateObject2$q());
 
 var EmptyState = function EmptyState(_ref) {
@@ -3308,16 +3340,16 @@ EmptyState.propTypes = {
   errorMessage: PropTypes__default.string
 };
 
-function _templateObject$z() {
+function _templateObject$A() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n\n  height: 100%;\n"]);
 
-  _templateObject$z = function _templateObject() {
+  _templateObject$A = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var EmptyHolder$1 = styled__default.div(_templateObject$z());
+var EmptyHolder$1 = styled__default.div(_templateObject$A());
 
 var ErrorState = function ErrorState(_ref) {
   var errorMessage = _ref.errorMessage;
@@ -3390,16 +3422,16 @@ function _templateObject2$r() {
   return data;
 }
 
-function _templateObject$A() {
+function _templateObject$B() {
   var data = _taggedTemplateLiteral(["\n  width: 100%;\n  max-width: 26rem;\n\n  @media only screen and (max-width: 768px) {\n    width: 100%;\n    max-width: none;\n  }\n"]);
 
-  _templateObject$A = function _templateObject() {
+  _templateObject$B = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var GalleryHolder = styled__default.div(_templateObject$A());
+var GalleryHolder = styled__default.div(_templateObject$B());
 var GalleryHighlight = styled__default.div(_templateObject2$r(), function (p) {
   return p.image;
 }, function (p) {
@@ -3480,16 +3512,16 @@ function _templateObject2$s() {
   return data;
 }
 
-function _templateObject$B() {
+function _templateObject$C() {
   var data = _taggedTemplateLiteral(["\n  display: inline-flex;\n  flex-direction: row;\n  align-items: center;\n\n  border: 1px solid ", ";\n  border-radius: ", ";\n  padding: 0.5rem;\n"]);
 
-  _templateObject$B = function _templateObject() {
+  _templateObject$C = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var CounterHolder = styled__default.div(_templateObject$B(), function (_ref) {
+var CounterHolder = styled__default.div(_templateObject$C(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.light;
 }, function (_ref2) {
@@ -3572,16 +3604,16 @@ function _templateObject2$t() {
   return data;
 }
 
-function _templateObject$C() {
+function _templateObject$D() {
   var data = _taggedTemplateLiteral(["\n  position: fixed;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow-y: auto;\n\n  background: rgba(0, 0, 0, 0.3);\n"]);
 
-  _templateObject$C = function _templateObject() {
+  _templateObject$D = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var Wrapper$7 = styled__default.div(_templateObject$C());
+var Wrapper$7 = styled__default.div(_templateObject$D());
 var Modal = styled__default.div(_templateObject2$t(), function (_ref) {
   var theme = _ref.theme;
   return theme.colors.greyscale.white;
@@ -3608,38 +3640,6 @@ var Modal$1 = function Modal$1(_ref) {
   }
 
   return null;
-};
-
-function _templateObject$D() {
-  var data = _taggedTemplateLiteral(["\n  border-radius: ", ";\n  border: 1px solid ", ";\n  color: ", ";\n  display: inline-table;\n\n  font-size: 1.2rem;\n\n  padding: 1rem;\n"]);
-
-  _templateObject$D = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-var getColor$1 = function getColor(props) {
-  var types = {
-    high: props.theme.colors.green.default,
-    medium: props.theme.colors.yellow.default,
-    low: props.theme.colors.danger.default
-  };
-  return types[props.value] || props.theme.colors.greyscale.light;
-};
-
-var Tag$3 = styled__default.span(_templateObject$D(), function (_ref) {
-  var theme = _ref.theme;
-  return theme.radius.small;
-}, getColor$1, getColor$1);
-
-var TagSecondary = function TagSecondary(_ref) {
-  var value = _ref.value,
-      children = _ref.children;
-  return React.createElement(Tag$3, {
-    value: value
-  }, children);
 };
 
 function _templateObject8$2() {
@@ -3870,6 +3870,7 @@ exports.Select = Select$1;
 exports.Sort = Sort$1;
 exports.Table = Table$1;
 exports.Tag = Tag$1;
+exports.TagSecondary = TagSecondary;
 exports.Text = Text;
 exports.TextArea = TextArea$1;
 exports.Thumbnail = Thumbnail$1;
