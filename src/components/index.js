@@ -79,5 +79,8 @@ export { default as Counter } from './Counter/Counter';
 /* Modal */
 export { default as Modal } from './Modal/Modal';
 
+/* Alert */
+export { default as Alert } from './Alert/Alert';
+
 /* Matching */
 export { default as MatchingPairs } from './Matching/MatchingPairs/MatchingPairs';
