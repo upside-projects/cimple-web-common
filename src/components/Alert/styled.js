@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import StyledSpinner from '../Spinner/Spinner';
 
 export const AlertHolder = styled.div`
   display: flex;
@@ -23,4 +24,8 @@ export const Close = styled.button`
   -moz-appearance: none;
   background-color: transparent;
   border: none;
+`;
+
+export const Spinner = styled(StyledSpinner)`
+  margin-right: 0.5rem;
 `;

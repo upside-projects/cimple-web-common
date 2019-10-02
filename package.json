@@ -16,7 +16,7 @@
     "styled-components": "^4.2.0"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006 -s ./public",
+    "dev": "start-storybook -p 6006 -s ./public",
     "build": "rm -rf dist && rollup -c",
     "build-storybook": "build-storybook -s public",
     "release": "semantic-release",

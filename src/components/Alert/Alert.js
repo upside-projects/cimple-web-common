@@ -7,6 +7,7 @@ import * as S from './styled';
 const Alert = ({ message, close }) => {
   return (
     <S.AlertHolder>
+      <S.Spinner />
       <Text color="white">{message}</Text>
       <S.Close onClick={close}>
         <Icons.Close />
