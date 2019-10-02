@@ -4,7 +4,8 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'default' in ex) ? ex['default'] : ex; }
 
-var React = _interopDefault(require('react'));
+var React = require('react');
+var React__default = _interopDefault(React);
 var PropTypes = require('prop-types');
 var PropTypes__default = _interopDefault(PropTypes);
 var styled = require('styled-components');
@@ -289,7 +290,7 @@ var theme = {
 
 var Provider = function Provider(_ref) {
   var children = _ref.children;
-  return React.createElement(React.Fragment, null, React.createElement(GlobalStyle, null), React.createElement(styled.ThemeProvider, {
+  return React__default.createElement(React__default.Fragment, null, React__default.createElement(GlobalStyle, null), React__default.createElement(styled.ThemeProvider, {
     theme: theme
   }, children));
 };
@@ -438,7 +439,7 @@ var Button$1 = function Button$1(_ref) {
       onClick = _ref.onClick,
       props = _objectWithoutProperties(_ref, ["className", "children", "disabled", "isLoading", "full", "onClick"]);
 
-  return React.createElement(Button, _extends({
+  return React__default.createElement(Button, _extends({
     full: full,
     isLoading: isLoading,
     className: className,
@@ -598,7 +599,7 @@ var SecondaryButton = function SecondaryButton(_ref) {
       onClick = _ref.onClick,
       props = _objectWithoutProperties(_ref, ["className", "children", "disabled", "isLoading", "full", "onClick"]);
 
-  return React.createElement(Button$2, _extends({
+  return React__default.createElement(Button$2, _extends({
     full: full,
     isLoading: isLoading,
     className: className,
@@ -637,7 +638,7 @@ var Divider = styled__default.hr(_templateObject$6(), function (_ref) {
 });
 
 var Divider$1 = function Divider$1() {
-  return React.createElement(Divider, null);
+  return React__default.createElement(Divider, null);
 };
 
 function _templateObject2$2() {
@@ -769,17 +770,17 @@ var Checkbox$1 = function Checkbox$1(_ref) {
       name = _ref.name,
       checked = _ref.checked,
       onChange = _ref.onChange;
-  return React.createElement(Holder, null, React.createElement(Label, {
+  return React__default.createElement(Holder, null, React__default.createElement(Label, {
     inline: true
-  }, React.createElement(Check, {
+  }, React__default.createElement(Check, {
     checked: checked
-  }), React.createElement(Checkbox, {
+  }), React__default.createElement(Checkbox, {
     id: name,
     name: name,
     type: "checkbox",
     checked: checked,
     onChange: onChange
-  }), React.createElement(Label$1, null, label)));
+  }), React__default.createElement(Label$1, null, label)));
 };
 Checkbox$1.propTypes = {
   label: PropTypes__default.string.isRequired,
@@ -1101,9 +1102,9 @@ var Input$1 = function Input$1(_ref) {
       value = _ref.value,
       props = _objectWithoutProperties(_ref, ["className", "containerProps", "disabled", "error", "helper", "href", "label", "link", "name", "onBlur", "onChange", "placeholder", "value"]);
 
-  return React.createElement(Holder$1, _extends({
+  return React__default.createElement(Holder$1, _extends({
     className: className
-  }, containerProps), React.createElement(Label, null, React.createElement(Flex, null, React.createElement(LabelTitle, null, label), link && React.createElement(Uppercase$1, null, link)), React.createElement(Input, _extends({
+  }, containerProps), React__default.createElement(Label, null, React__default.createElement(Flex, null, React__default.createElement(LabelTitle, null, label), link && React__default.createElement(Uppercase$1, null, link)), React__default.createElement(Input, _extends({
     name: name,
     onBlur: onBlur,
     onChange: onChange,
@@ -1163,28 +1164,28 @@ var Holder$2 = styled__default.div(_templateObject2$7());
 var Search = function Search(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "14",
     height: "13",
     viewBox: "0 0 14 13"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
     transform: "translate(-5 -5)"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     stroke: "#9E9DA3",
     transform: "translate(6 6)"
-  }, React.createElement("circle", {
+  }, React__default.createElement("circle", {
     cx: "4",
     cy: "4",
     r: "4"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     d: "M7,7 L12,12"
   }))));
 };
@@ -1201,9 +1202,9 @@ var Searchbar = function Searchbar(_ref) {
       value = _ref.value,
       props = _objectWithoutProperties(_ref, ["className", "containerProps", "disabled", "error", "name", "onBlur", "onChange", "placeholder", "value"]);
 
-  return React.createElement(Holder$2, _extends({
+  return React__default.createElement(Holder$2, _extends({
     className: className
-  }, containerProps), React.createElement(Input$2, _extends({
+  }, containerProps), React__default.createElement(Input$2, _extends({
     name: name,
     onBlur: onBlur,
     onChange: onChange,
@@ -1211,7 +1212,7 @@ var Searchbar = function Searchbar(_ref) {
     value: value,
     error: error,
     disabled: disabled
-  }, props)), React.createElement(Search, null));
+  }, props)), React__default.createElement(Search, null));
 };
 Searchbar.defaultProps = {
   className: "",
@@ -1361,9 +1362,9 @@ var TextArea$1 = function TextArea$1(_ref) {
       label = _ref.label,
       className = _ref.className,
       containerProps = _ref.containerProps;
-  return React.createElement(Holder$3, _extends({
+  return React__default.createElement(Holder$3, _extends({
     className: className
-  }, containerProps), React.createElement(Label, null, React.createElement(LabelTitle$1, null, label), React.createElement(TextArea, {
+  }, containerProps), React__default.createElement(Label, null, React__default.createElement(LabelTitle$1, null, label), React__default.createElement(TextArea, {
     name: name,
     onBlur: onBlur,
     onChange: onChange,
@@ -1377,24 +1378,24 @@ var TextArea$1 = function TextArea$1(_ref) {
 var Arrow = function Arrow(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "9",
     height: "8",
     viewBox: "0 0 9 8"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
     transform: "translate(-8 -8)"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "none",
     opacity: "0"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     stroke: "currentColor",
     d: "M8,12 L16,12"
-  }), React.createElement("polyline", {
+  }), React__default.createElement("polyline", {
     stroke: "currentColor",
     points: "12 16 16 12 12 8"
   })));
@@ -1403,24 +1404,24 @@ var Arrow = function Arrow(_ref) {
 var Next = function Next(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "9",
     height: "8",
     viewBox: "0 0 9 8"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
     transform: "translate(-8 -8)"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     stroke: "currentColor",
     d: "M8,12 L16,12"
-  }), React.createElement("polyline", {
+  }), React__default.createElement("polyline", {
     stroke: "currentColor",
     points: "12 16 16 12 12 8"
   })));
@@ -1429,24 +1430,24 @@ var Next = function Next(_ref) {
 var Prev = function Prev(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "9",
     height: "8",
     viewBox: "0 0 9 8"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
     transform: "translate(-7 -8)"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     stroke: "currentColor",
     d: "M8,12 L16,12"
-  }), React.createElement("polyline", {
+  }), React__default.createElement("polyline", {
     stroke: "currentColor",
     points: "12 16 8 12 12 8"
   })));
@@ -1455,27 +1456,27 @@ var Prev = function Prev(_ref) {
 var Cart = function Cart(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "18",
     height: "18",
     viewBox: "0 0 18 18"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
     transform: "translate(-4 -2.015)"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     stroke: "currentColor",
     d: "M14,5 C14,3.8954305 13.1045695,3 12,3 C10.8954305,3 10,3.8954305 10,5 L10,6 L14,6 L14,5 Z"
-  }), React.createElement("polygon", {
+  }), React__default.createElement("polygon", {
     stroke: "#151E29",
     points: "5 6 5 19 19 19 19 6"
-  }), React.createElement("circle", {
+  }), React__default.createElement("circle", {
     cx: "18",
     cy: "6",
     r: "3.5",
@@ -1487,27 +1488,27 @@ var Cart = function Cart(_ref) {
 var CartEmpty = function CartEmpty(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "14",
     height: "16",
     viewBox: "0 0 14 16"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
     transform: "translate(-5 -3.985)"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     stroke: "#151E29",
     d: "M14,7 C14,5.8954305 13.1045695,5 12,5 C10.8954305,5 10,5.8954305 10,7 L10,8 L14,8 L14,7 Z"
-  }), React.createElement("polygon", {
+  }), React__default.createElement("polygon", {
     stroke: "#151E29",
     points: "6 8 6 19 18 19 18 8"
-  }), React.createElement("circle", {
+  }), React__default.createElement("circle", {
     cx: "17",
     cy: "8",
     r: "3.5",
@@ -1520,12 +1521,12 @@ var CartEmpty = function CartEmpty(_ref) {
 var CaretUp = function CaretUp(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "24",
     height: "24",
     viewBox: "0 0 24 24"
-  }), React.createElement("polyline", {
+  }), React__default.createElement("polyline", {
     fill: "none",
     stroke: "currentColor",
     points: "16 10 12 14 8 10",
@@ -1536,12 +1537,12 @@ var CaretUp = function CaretUp(_ref) {
 var CaretDown = function CaretDown(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "24",
     height: "24",
     viewBox: "0 0 24 24"
-  }), React.createElement("polyline", {
+  }), React__default.createElement("polyline", {
     fill: "none",
     stroke: "currentColor",
     points: "16 10 12 14 8 10"
@@ -1551,20 +1552,20 @@ var CaretDown = function CaretDown(_ref) {
 var CaretRight = function CaretRight(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "24",
     height: "24",
     viewBox: "0 0 24 24"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("polyline", {
+  }), React__default.createElement("polyline", {
     stroke: "currentColor",
     points: "16 10 12 14 8 10",
     transform: "rotate(-90 12 12)"
@@ -1572,20 +1573,20 @@ var CaretRight = function CaretRight(_ref) {
 };
 
 var Close = function Close() {
-  return React.createElement("svg", {
+  return React__default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     width: "20",
     height: "20",
     viewBox: "0 0 20 20"
-  }, React.createElement("g", {
+  }, React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "20",
     height: "20",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     stroke: "currentColor",
     d: "M5.83333333 0L5.83333333 11.6666667M9.09494702e-13 5.83333333L11.6666667 5.83333333",
     transform: "rotate(45 2.887 12.946)"
@@ -1595,29 +1596,29 @@ var Close = function Close() {
 var Danger = function Danger(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "22",
     height: "20",
     viewBox: "0 0 22 20"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
     transform: "translate(-1)"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("polygon", {
+  }), React__default.createElement("polygon", {
     stroke: "#151E29",
     strokeWidth: "1.5",
     points: "11.944 2 21.389 19 2.5 19"
-  }), React.createElement("polygon", {
+  }), React__default.createElement("polygon", {
     fill: "#151E29",
     fillRule: "nonzero",
     points: "11.192 7.5 11.394 12.782 12.587 12.782 12.812 7.5"
-  }), React.createElement("rect", {
+  }), React__default.createElement("rect", {
     width: "2",
     height: "2",
     x: "11",
@@ -1629,25 +1630,25 @@ var Danger = function Danger(_ref) {
 var Sort = function Sort(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "8",
     height: "9",
     viewBox: "0 0 8 9"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
     transform: "translate(-4 -3.324)"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "16",
     height: "16",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("polyline", {
+  }), React__default.createElement("polyline", {
     stroke: "#979797",
     points: "6 9 6 5 6 5 10 5",
     transform: "rotate(45 8 7)"
-  }), React.createElement("polyline", {
+  }), React__default.createElement("polyline", {
     stroke: "#979797",
     points: "10 7 10 11 6 11",
     transform: "rotate(45 8 9)"
@@ -1657,21 +1658,21 @@ var Sort = function Sort(_ref) {
 var External = function External(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "24",
     height: "24",
     viewBox: "0 0 24 24"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
-  }, React.createElement("polyline", {
+  }, React__default.createElement("polyline", {
     stroke: "currentColor",
     points: "12 10 12 13 4 13 4 5 7 5"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     stroke: "currentColor",
     d: "M13,4 L8,9"
-  }), React.createElement("polyline", {
+  }), React__default.createElement("polyline", {
     stroke: "currentColor",
     strokeLinecap: "square",
     points: "10 4 13 4 13 7"
@@ -1681,27 +1682,27 @@ var External = function External(_ref) {
 var Hamburger = function Hamburger(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "12",
     height: "12",
     viewBox: "0 0 12 12"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
     transform: "translate(-6 -7)"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("polyline", {
+  }), React__default.createElement("polyline", {
     stroke: "#151E29",
     points: "18 13 12 13 6 13"
-  }), React.createElement("polyline", {
+  }), React__default.createElement("polyline", {
     stroke: "#151E29",
     points: "18 8 12 8 6 8"
-  }), React.createElement("polyline", {
+  }), React__default.createElement("polyline", {
     stroke: "#151E29",
     points: "18 18 12 18 6 18"
   })));
@@ -1710,41 +1711,41 @@ var Hamburger = function Hamburger(_ref) {
 var Plus = function Plus(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "24",
     height: "24",
     viewBox: "0 0 24 24"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     stroke: "currentColor",
     d: "M12 8L12 16M8 12L16 12"
   })));
 };
 
 var PlusBig = function PlusBig() {
-  return React.createElement("svg", {
+  return React__default.createElement("svg", {
     xmlns: "http://www.w3.org/2000/svg",
     width: "12",
     height: "12",
     viewBox: "0 0 12 12"
-  }, React.createElement("g", {
+  }, React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
     transform: "translate(-4 -4)"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "20",
     height: "20",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     stroke: "#7E6EE6",
     d: "M5.83333333 0L5.83333333 11.6666667M9.09494702e-13 5.83333333L11.6666667 5.83333333",
     transform: "translate(4 4.236)"
@@ -1754,20 +1755,20 @@ var PlusBig = function PlusBig() {
 var Minus = function Minus(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "24",
     height: "24",
     viewBox: "0 0 24 24"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     stroke: "currentColor",
     d: "M8,12 L16,12"
   })));
@@ -1776,24 +1777,24 @@ var Minus = function Minus(_ref) {
 var Edit = function Edit(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "13",
     height: "14",
     viewBox: "0 0 13 14"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd",
     transform: "translate(-5 -6)"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     stroke: "currentColor",
     d: "M17.6,19 L5,19"
-  }), React.createElement("polygon", {
+  }), React__default.createElement("polygon", {
     stroke: "currentColor",
     points: "7.2 0 10 2.8 3 9.8 .2 9.8 .2 7",
     transform: "translate(6 6)"
@@ -1803,31 +1804,31 @@ var Edit = function Edit(_ref) {
 var Ellipsis = function Ellipsis(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "24",
     height: "24",
     viewBox: "0 0 24 24"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
-  }, React.createElement("rect", {
+  }, React__default.createElement("rect", {
     width: "24",
     height: "24",
     fill: "#D8D8D8",
     opacity: "0"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "currentColor",
     transform: "translate(11 5)"
-  }, React.createElement("circle", {
+  }, React__default.createElement("circle", {
     cx: "1",
     cy: "7",
     r: "1"
-  }), React.createElement("circle", {
+  }), React__default.createElement("circle", {
     cx: "1",
     cy: "1",
     r: "1"
-  }), React.createElement("circle", {
+  }), React__default.createElement("circle", {
     cx: "1",
     cy: "13",
     r: "1"
@@ -1837,40 +1838,40 @@ var Ellipsis = function Ellipsis(_ref) {
 var ThumbsUp = function ThumbsUp(_ref) {
   var props = _extends({}, _ref);
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "18",
     height: "18",
     viewBox: "0 0 18 18"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "transparent",
     fillRule: "evenodd",
     stroke: "currentColor",
     strokeWidth: "1.6",
     transform: "translate(1 1)"
-  }, React.createElement("path", {
+  }, React__default.createElement("path", {
     d: "M9.6,5.6 L9.6,2.4 C9.6,1.0745166 8.5254834,0 7.2,0 L4,7.2 L4,16.0001037 L13.024,16.0001037 C13.8218294,16.0090195 14.5043689,15.4288609 14.624,14.64 L15.728,7.44 C15.7984448,6.97588426 15.6615177,6.50424704 15.3534868,6.15001147 C15.0454559,5.7957759 14.5974014,5.59468428 14.128,5.6 L9.6,5.6 Z"
-  }), React.createElement("polygon", {
+  }), React__default.createElement("polygon", {
     points: "4 16 1.6 16 0 16 0 14.4 0 8.8 0 7.2 1.6 7.2 4 7.2"
   })));
 };
 
 var ThumbsDown = function ThumbsDown(_ref) {
   var props = _ref.props;
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     xmlns: "http://www.w3.org/2000/svg",
     width: "18",
     height: "18",
     viewBox: "0 0 18 18"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "transparent",
     fillRule: "evenodd",
     stroke: "currentColor",
     strokeWidth: "1.6",
     transform: "rotate(180 8.5 8.5)"
-  }, React.createElement("path", {
+  }, React__default.createElement("path", {
     d: "M9.6,5.6 L9.6,2.4 C9.6,1.0745166 8.5254834,0 7.2,0 L4,7.2 L4,16.0001037 L13.024,16.0001037 C13.8218294,16.0090195 14.5043689,15.4288609 14.624,14.64 L15.728,7.44 C15.7984448,6.97588426 15.6615177,6.50424704 15.3534868,6.15001147 C15.0454559,5.7957759 14.5974014,5.59468428 14.128,5.6 L9.6,5.6 Z"
-  }), React.createElement("polygon", {
+  }), React__default.createElement("polygon", {
     points: "4 16 1.6 16 0 16 0 14.4 0 8.8 0 7.2 1.6 7.2 4 7.2"
   })));
 };
@@ -2004,27 +2005,27 @@ var Select$1 = function Select$1(_ref) {
   var selectProps = name ? _objectSpread2({}, props, {
     id: name
   }) : props;
-  return React.createElement(Holder$4, _extends({
+  return React__default.createElement(Holder$4, _extends({
     className: className
   }, containerProps, {
     name: name,
     label: label,
     error: error
-  }), label && React.createElement(SelectLabel, null, label), React.createElement(IconHolder, null, React.createElement(Select, _extends({}, selectProps, {
+  }), label && React__default.createElement(SelectLabel, null, label), React__default.createElement(IconHolder, null, React__default.createElement(Select, _extends({}, selectProps, {
     value: value,
     onChange: onChange,
     ref: forwardedRef,
     error: error,
     isEmpty: !value
-  }), placeholder && React.createElement("option", {
+  }), placeholder && React__default.createElement("option", {
     disabled: true,
     value: ""
   }, placeholder), options.map(function (option) {
-    return React.createElement("option", {
+    return React__default.createElement("option", {
       key: option.value,
       value: option.value
     }, option.label);
-  })), React.createElement(Icon, null)));
+  })), React__default.createElement(Icon, null)));
 };
 
 Select$1.defaultProps = {
@@ -2137,18 +2138,18 @@ var Radio$1 = function Radio$1(_ref) {
       name = _ref.name,
       onChange = _ref.onChange,
       value = _ref.value;
-  return React.createElement(Holder$5, null, React.createElement(Label, {
+  return React__default.createElement(Holder$5, null, React__default.createElement(Label, {
     inline: true
-  }, React.createElement(Radio, {
+  }, React__default.createElement(Radio, {
     checked: checked
-  }), React.createElement(RadioInput, {
+  }), React__default.createElement(RadioInput, {
     type: "radio",
     checked: checked,
     disabled: disabled,
     name: name,
     onChange: onChange,
     value: value
-  }), React.createElement(Label$2, null, label)));
+  }), React__default.createElement(Label$2, null, label)));
 };
 Radio$1.propTypes = {
   disabled: PropTypes__default.bool.isRequired,
@@ -2164,40 +2165,40 @@ var Logo = function Logo(_ref) {
       props = _objectWithoutProperties(_ref, ["white"]);
 
   if (white) {
-    return React.createElement("svg", _extends({}, props, {
+    return React__default.createElement("svg", _extends({}, props, {
       xmlns: "http://www.w3.org/2000/svg",
       width: "84",
       height: "24",
       viewBox: "0 0 84 24"
-    }), React.createElement("g", {
+    }), React__default.createElement("g", {
       fill: "none",
       fillRule: "evenodd"
-    }, React.createElement("rect", {
+    }, React__default.createElement("rect", {
       width: "84",
       height: "24"
-    }), React.createElement("path", {
+    }), React__default.createElement("path", {
       fill: "#FFF",
       d: "M3.83383088,11.119598 C3.83383088,14.2070352 5.19963313,16.1125628 7.59577742,16.1125628 C9.00950256,16.1125628 10.0158832,15.6301508 10.7826493,14.520603 C10.8944694,14.3581497 11.026358,14.3179487 11.1783152,14.4 C11.3302724,14.4820513 11.374101,14.6348151 11.3098011,14.8582915 C10.5190735,17.801005 8.57819659,19.1276382 5.89451497,19.1276382 C2.5638744,19.1276382 0,16.7396985 0,12.7839196 C0,8.70753769 2.58783584,5.64422111 6.56543538,5.64422111 C8.98554112,5.64422111 10.9503794,6.58492462 10.9503794,8.70753769 C10.9503794,10.1410902 9.52395502,11.5604692 7.98625101,11.119598 C6.23851077,10.6185079 9.15382016,6.72964824 6.18205229,6.72964824 C4.69644282,6.72964824 3.83383088,8.63517588 3.83383088,11.119598 Z M17.6561604,5.66153846 L17.6561604,17.0050251 C17.6561604,17.7768844 18.0395435,17.8733668 18.9980012,17.9457286 L18.9980012,18.8864322 L11.9054141,18.8864322 L11.9054141,17.9457286 C12.8638718,17.8733668 13.2472549,17.7768844 13.2472549,17.0050251 C13.2472549,13.8452261 13.2472549,11.0231156 13.2472549,8.53869347 C13.2472549,7.8523378 12.8079618,7.57897096 11.9293755,7.71859296 L11.9293755,7.04321608 C14.0067264,6.41979906 15.654722,5.95923985 16.8733624,5.66153846 L17.6561604,5.66153846 Z M36.9490895,17.0050251 L36.9490895,9.88944724 C36.9490895,8.85226131 36.6136293,8.24924623 35.511403,8.24924623 C34.7925597,8.24924623 34.217485,8.51457286 33.618449,8.8040201 L33.618449,17.0050251 C33.618449,17.7768844 33.8580634,17.8733668 34.8165211,17.9457286 L34.8165211,18.8864322 L27.9875099,18.8864322 L27.9875099,17.9457286 C28.9459676,17.8733668 29.185582,17.7768844 29.185582,17.0050251 L29.185582,9.88944724 C29.185582,8.85226131 28.8501218,8.24924623 27.7718569,8.24924623 C27.0290521,8.24924623 26.4539775,8.49045226 25.8549414,8.8040201 L25.8549414,17.0050251 C25.8549414,17.7768844 26.1185173,17.8733668 27.076975,17.9457286 L27.076975,18.8864322 L20.1041951,18.8864322 L20.1041951,17.9457286 C21.0626528,17.8733668 21.4460359,17.7768844 21.4460359,17.0050251 C21.4460359,12.0455335 21.4460359,9.22342293 21.4460359,8.53869347 C21.4460359,7.85396401 21.0067428,7.58059717 20.1281566,7.71859296 L20.1281566,7.04321608 L25.1877729,5.66153846 L25.8549414,5.66153846 L25.8549414,8.10452261 C26.7654763,6.77788945 28.0593942,5.64422111 30.1919626,5.64422111 C32.0369937,5.64422111 33.187143,6.3919598 33.5226032,8.15276382 C34.3852151,6.85025126 35.8468632,5.64422111 37.9075473,5.64422111 C40.1359615,5.64422111 41.3819565,6.94673367 41.3819565,9.47939698 L41.3819565,17.0050251 C41.3819565,17.7768844 41.7653396,17.8733668 42.6998359,17.9457286 L42.6998359,18.8864322 L35.7510174,18.8864322 L35.7510174,17.9457286 C36.7094751,17.8733668 36.9490895,17.7768844 36.9490895,17.0050251 Z M50.5557661,17.9939698 C52.28099,17.9939698 53.2154863,15.7748744 53.2154863,12.9286432 C53.2154863,9.74472362 52.0892984,8.27336683 50.2682288,8.27336683 C49.7650385,8.27336683 49.2858096,8.39396985 48.8545036,8.68341709 L48.8545036,15.4613065 C48.8545036,17.0291457 49.2858096,17.9939698 50.5557661,17.9939698 Z M44.4216367,22.118593 C44.4216367,13.7526607 44.4216367,9.22602757 44.4216367,8.53869347 C44.4216367,7.85135936 43.9823436,7.57799253 43.1037573,7.71859296 L43.1037573,7.04321608 L48.0524017,5.64422111 L48.8545036,5.64422111 L48.8545036,7.9839196 C49.525424,6.89849246 50.8433034,5.64422111 52.8800261,5.64422111 C55.7074763,5.64422111 57.7202375,7.62211055 57.7202375,11.5778894 C57.7202375,16.5226131 54.7250572,19.1276382 50.9391492,19.1276382 C50.0286143,19.1276382 49.2618482,18.958794 48.8545036,18.6211055 L48.8545036,22.0221106 C48.8545036,22.8904523 49.2858096,22.9386935 50.6995347,23.0592965 L50.6995347,24 L43.0797959,24 L43.0797959,23.0592965 C44.0382536,22.9869347 44.4216367,22.8904523 44.4216367,22.118593 Z M64.234327,0 L64.234327,17.0050251 C64.234327,17.7768844 64.6177101,17.8733668 65.5761678,17.9457286 L65.5761678,18.8864322 L58.4596192,18.8864322 L58.4596192,17.9457286 C59.4180769,17.8733668 59.80146,17.7768844 59.80146,17.0050251 C59.80146,7.94639866 59.80146,3.11423786 59.80146,2.50854271 C59.80146,1.90284757 59.3621669,1.67772194 58.4835807,1.83316583 L58.4835807,1.10954774 L63.3362445,0 L64.234327,0 Z M72.6653318,5.64422111 C76.1397411,5.64422111 77.9128879,7.86331658 77.9128879,10.9266332 L77.9128879,11.5296482 L70.2691875,11.5296482 C70.2212647,14.4 71.8027199,16.1849246 73.9832112,16.1849246 C75.5167436,16.1849246 76.6429314,15.6301508 77.5534662,14.4241206 C77.6102647,14.3488894 77.6810019,14.2769231 77.8697594,14.4 C77.9955977,14.4820513 78.0419224,14.5865739 78.0087336,14.7135678 C77.3617747,17.3668342 75.5167436,19.1276382 72.4976017,19.1276382 C68.9513082,19.1276382 66.2676266,16.7396985 66.2676266,12.6874372 C66.2676266,8.39396985 69.2148841,5.64422111 72.6653318,5.64422111 Z M72.3777945,6.65728643 C71.0599152,6.65728643 70.4129562,8.17688442 70.293149,10.4201005 L74.1269799,10.4201005 C74.1269799,8.08040201 73.6717124,6.65728643 72.3777945,6.65728643 Z"
-    }), React.createElement("path", {
+    }), React__default.createElement("path", {
       fill: "#7E6EE6",
       d: "M79.1091703,16.7384615 C79.1091703,15.202081 80.2012973,14.1538462 81.5545852,14.1538462 C82.9316149,14.1538462 84,15.202081 84,16.7384615 C84,18.1761427 82.9316149,19.2 81.5545852,19.2 C80.2012973,19.2 79.1091703,18.1761427 79.1091703,16.7384615 Z"
     })));
   }
 
-  return React.createElement("svg", _extends({}, props, {
+  return React__default.createElement("svg", _extends({}, props, {
     height: "24",
     viewBox: "0 0 84 24",
     width: "84",
     xmlns: "http://www.w3.org/2000/svg"
-  }), React.createElement("g", {
+  }), React__default.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
-  }, React.createElement("path", {
+  }, React__default.createElement("path", {
     d: "m0 0h84v24h-84z"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     d: "m3.83383088 11.119598c0 3.0874372 1.36580225 4.9929648 3.76194654 4.9929648 1.41372514 0 2.42010578-.482412 3.18687188-1.5919598.1118201-.1624533.2437087-.2026543.3956659-.120603s.1957858.2348151.1314859.4582915c-.7907276 2.9427135-2.73160451 4.2693467-5.41528613 4.2693467-3.33064057 0-5.89451497-2.3879397-5.89451497-6.3437186 0-4.07638191 2.58783584-7.13969849 6.56543538-7.13969849 2.42010574 0 4.38494402.94070351 4.38494402 3.06331658 0 1.43355251-1.42642438 2.85293151-2.96412839 2.41206031-1.74774024-.5010901 1.16756915-4.38994976-1.80419872-4.38994976-1.48560947 0-2.34822141 1.90552764-2.34822141 4.38994976zm13.82232952-5.45805954v11.34348664c0 .7718593.3833831.8683417 1.3418408.9407035v.9407036h-7.0925871v-.9407036c.9584577-.0723618 1.3418408-.1688442 1.3418408-.9407035 0-3.159799 0-5.9819095 0-8.46633163 0-.68635567-.4392931-.95972251-1.3178794-.82010051v-.67537688c2.0773509-.62341702 3.7253465-1.08397623 4.9439869-1.38167762zm19.2929291 11.34348664v-7.11557786c0-1.03718593-.3354602-1.64020101-1.4376865-1.64020101-.7188433 0-1.293918.26532663-1.892954.55477387v8.201005c0 .7718593.2396144.8683417 1.1980721.9407035v.9407036h-6.8290112v-.9407036c.9584577-.0723618 1.1980721-.1688442 1.1980721-.9407035v-7.11557786c0-1.03718593-.3354602-1.64020101-1.4137251-1.64020101-.7428048 0-1.3178794.24120603-1.9169155.55477387v8.201005c0 .7718593.2635759.8683417 1.2220336.9407035v.9407036h-6.9727799v-.9407036c.9584577-.0723618 1.3418408-.1688442 1.3418408-.9407035 0-4.9594916 0-7.78160217 0-8.46633163s-.4392931-.9580963-1.3178793-.82010051v-.67537688l5.0596163-1.38167762h.6671685v2.44298415c.9105349-1.32663316 2.2044528-2.4603015 4.3370212-2.4603015 1.8450311 0 2.9951804.74773869 3.3306406 2.50854271.8626119-1.30251256 2.32426-2.50854271 4.3849441-2.50854271 2.2284142 0 3.4744092 1.30251256 3.4744092 3.83517587v7.52562812c0 .7718593.3833831.8683417 1.3178794.9407035v.9407036h-6.9488185v-.9407036c.9584577-.0723618 1.1980721-.1688442 1.1980721-.9407035zm13.6066766.9889447c1.7252239 0 2.6597202-2.2190954 2.6597202-5.0653266 0-3.18391958-1.1261879-4.65527637-2.9472575-4.65527637-.5031903 0-.9824192.12060302-1.4137252.41005026v6.77788941c0 1.5678392.431306 2.5326633 1.7012625 2.5326633zm-6.1341294 4.1246232c0-8.3659323 0-12.89256543 0-13.57989953 0-.68733411-.4392931-.96070094-1.3178794-.82010051v-.67537688l4.9486444-1.39899497h.8021019v2.33969849c.6709204-1.08542714 1.9887998-2.33969849 4.0255225-2.33969849 2.8274502 0 4.8402114 1.97788944 4.8402114 5.93366829 0 4.9447237-2.9951803 7.5497488-6.7810883 7.5497488-.9105349 0-1.677301-.1688442-2.0846456-.5065327v3.4010051c0 .8683417.431306.9165829 1.8450311 1.0371859v.9407035h-7.6197388v-.9407035c.9584577-.0723618 1.3418408-.1688442 1.3418408-.9407035zm19.8126903-22.118593v17.0050251c0 .7718593.3833831.8683417 1.3418408.9407035v.9407036h-7.1165486v-.9407036c.9584577-.0723618 1.3418408-.1688442 1.3418408-.9407035 0-9.05862644 0-13.89078724 0-14.49648239 0-.60569514-.4392931-.83082077-1.3178793-.67537688v-.72361809l4.8526638-1.10954774zm8.4310048 5.64422111c3.4744093 0 5.2475561 2.21909547 5.2475561 5.28241209v.603015h-7.6437004c-.0479228 2.8703518 1.5335324 4.6552764 3.7140237 4.6552764 1.5335324 0 2.6597202-.5547738 3.570255-1.760804.0567985-.0752312.1275357-.1471975.3162932-.0241206.1258383.0820513.172163.1865739.1389742.3135678-.6469589 2.6532664-2.49199 4.4140704-5.5111319 4.4140704-3.5462935 0-6.2299751-2.3879397-6.2299751-6.440201 0-4.29346735 2.9472575-7.04321609 6.3977052-7.04321609zm-.2875373 1.01306532c-1.3178793 0-1.9648383 1.51959799-2.0846455 3.76281407h3.8338309c0-2.33969849-.4552675-3.76281407-1.7491854-3.76281407z",
     fill: "#151e29"
-  }), React.createElement("path", {
+  }), React__default.createElement("path", {
     d: "m79.1091703 16.7384615c0-1.5363805 1.092127-2.5846153 2.4454149-2.5846153 1.3770297 0 2.4454148 1.0482348 2.4454148 2.5846153 0 1.4376812-1.0683851 2.4615385-2.4454148 2.4615385-1.3532879 0-2.4454149-1.0238573-2.4454149-2.4615385z",
     fill: "#7e6ee6"
   })));
@@ -2224,7 +2225,7 @@ var Holder$6 = styled__default.div(_templateObject$g(), function (_ref) {
 });
 
 var TopbarSimple = function TopbarSimple() {
-  return React.createElement(Holder$6, null, React.createElement(Logo, null));
+  return React__default.createElement(Holder$6, null, React__default.createElement(Logo, null));
 };
 
 function _templateObject3$8() {
@@ -2324,9 +2325,9 @@ var Wrapper$1 = styled__default.div(_templateObject2$c(), function (p) {
 var NavLink$1 = function NavLink$1(_ref) {
   var children = _ref.children,
       withIcon = _ref.withIcon;
-  return React.createElement(Wrapper$1, {
+  return React__default.createElement(Wrapper$1, {
     withIcon: withIcon
-  }, React.createElement(NavLink, null, children), withIcon && withIcon);
+  }, React__default.createElement(NavLink, null, children), withIcon && withIcon);
 };
 NavLink$1.propTypes = {
   children: PropTypes__default.node.isRequired,
@@ -2336,14 +2337,14 @@ NavLink$1.propTypes = {
 var TopbarMarket = function TopbarMarket(_ref) {
   var placeholder = _ref.placeholder,
       userName = _ref.userName;
-  return React.createElement(Holder$7, null, React.createElement(Wrapper, null, React.createElement(Logo, null), React.createElement(Searchbar, {
+  return React__default.createElement(Holder$7, null, React__default.createElement(Wrapper, null, React__default.createElement(Logo, null), React__default.createElement(Searchbar, {
     placeholder: placeholder
-  })), React.createElement(Links, null, React.createElement(NavLink$1, {
+  })), React__default.createElement(Links, null, React__default.createElement(NavLink$1, {
     to: "http://cena.com"
-  }, "Orders"), React.createElement(NavLink$1, {
+  }, "Orders"), React__default.createElement(NavLink$1, {
     to: "http://cena.com",
-    withIcon: React.createElement(Cart, null)
-  }, "Cart"), React.createElement(NavLink$1, {
+    withIcon: React__default.createElement(Cart, null)
+  }, "Cart"), React__default.createElement(NavLink$1, {
     to: "http://cena.com"
   }, userName)));
 };
@@ -2385,7 +2386,7 @@ var Wrapper$2 = styled__default.div(_templateObject2$d());
 
 var ExternalLink = function ExternalLink(_ref) {
   var children = _ref.children;
-  return React.createElement(Wrapper$2, null, React.createElement(ArrowLink, null, children), React.createElement(External, null));
+  return React__default.createElement(Wrapper$2, null, React__default.createElement(ArrowLink, null, children), React__default.createElement(External, null));
 };
 ExternalLink.propTypes = {
   children: PropTypes__default.node.isRequired
@@ -2421,9 +2422,9 @@ var TopbarSign = function TopbarSign(_ref) {
       placeholder = _ref.placeholder,
       linkTo = _ref.linkTo,
       linkName = _ref.linkName;
-  return React.createElement(Holder$8, null, React.createElement(Logo, null), !noSearch && React.createElement(Searchbar, {
+  return React__default.createElement(Holder$8, null, React__default.createElement(Logo, null), !noSearch && React__default.createElement(Searchbar, {
     placeholder: placeholder
-  }), React.createElement(ExternalLink, {
+  }), React__default.createElement(ExternalLink, {
     to: linkTo
   }, linkName));
 };
@@ -2437,16 +2438,16 @@ TopbarSign.propTypes = {
 var renderTopbar = function renderTopbar(type) {
   switch (type) {
     case "simple":
-      return React.createElement(TopbarSimple, null);
+      return React__default.createElement(TopbarSimple, null);
 
     case "market":
-      return React.createElement(TopbarMarket, null);
+      return React__default.createElement(TopbarMarket, null);
 
     case "sign":
-      return React.createElement(TopbarSign, null);
+      return React__default.createElement(TopbarSign, null);
 
     default:
-      return React.createElement(TopbarSimple, null);
+      return React__default.createElement(TopbarSimple, null);
   }
 };
 
@@ -2470,7 +2471,7 @@ var Holder$9 = styled__default.div(_templateObject$l(), function (_ref) {
 });
 
 var Footer = function Footer() {
-  return React.createElement(Holder$9, null, "\xAE 2019 Cimple. All rights reserved");
+  return React__default.createElement(Holder$9, null, "\xAE 2019 Cimple. All rights reserved");
 };
 
 function _templateObject4$9() {
@@ -2533,11 +2534,11 @@ var Wrapper$3 = styled__default.div(_templateObject4$9());
 var ArrowLink$2 = function ArrowLink(_ref) {
   var children = _ref.children,
       withColor = _ref.withColor;
-  return React.createElement(Wrapper$3, {
+  return React__default.createElement(Wrapper$3, {
     withColor: withColor
-  }, React.createElement(ArrowLink$1, {
+  }, React__default.createElement(ArrowLink$1, {
     withColor: withColor
-  }, children), React.createElement(ArrowIcon, null));
+  }, children), React__default.createElement(ArrowIcon, null));
 };
 ArrowLink$2.propTypes = {
   children: PropTypes__default.node.isRequired,
@@ -2577,7 +2578,7 @@ var Wrapper$4 = styled__default.div(_templateObject2$g());
 
 var Back = function Back(_ref) {
   var children = _ref.children;
-  return React.createElement(Wrapper$4, null, React.createElement(Arrow, null), React.createElement(ArrowLink$3, null, children));
+  return React__default.createElement(Wrapper$4, null, React__default.createElement(Arrow, null), React__default.createElement(ArrowLink$3, null, children));
 };
 Back.propTypes = {
   children: PropTypes__default.node.isRequired
@@ -2596,9 +2597,9 @@ var Holder$a = styled__default.div(_templateObject$o());
 
 var Sort$1 = function Sort$1(_ref) {
   var children = _ref.children;
-  return React.createElement(Holder$a, null, React.createElement(UppercaseL, {
+  return React__default.createElement(Holder$a, null, React__default.createElement(UppercaseL, {
     color: "greyMedium"
-  }, children), React.createElement(Sort, null));
+  }, children), React__default.createElement(Sort, null));
 };
 Sort$1.propTypes = {
   children: PropTypes__default.node.isRequired
@@ -2661,7 +2662,7 @@ var Tag$1 = function Tag$1(_ref) {
   var children = _ref.children,
       props = _objectWithoutProperties(_ref, ["children"]);
 
-  return React.createElement(Tag, props, children);
+  return React__default.createElement(Tag, props, children);
 };
 Tag$1.propTypes = {
   children: PropTypes__default.node.isRequired
@@ -2709,7 +2710,7 @@ var TagSecondary = function TagSecondary(_ref) {
     }
   };
 
-  return React.createElement(Tag$2, {
+  return React__default.createElement(Tag$2, {
     value: evaluateSimilarity(value)
   }, children, "%");
 };
@@ -2776,7 +2777,7 @@ var TableRow = styled__default.tr(_templateObject4$a(), function (_ref2) {
 var TableCell = styled__default.td(_templateObject5$8());
 
 var Table$1 = function Table$1(props) {
-  return React.createElement(Table, props);
+  return React__default.createElement(Table, props);
 };
 
 Table$1.Header = TableHeader;
@@ -2845,7 +2846,7 @@ var Thumbnail$1 = function Thumbnail$1(_ref) {
       src = _ref.src,
       props = _objectWithoutProperties(_ref, ["className", "size", "src"]);
 
-  return React.createElement(Thumbnail, _extends({
+  return React__default.createElement(Thumbnail, _extends({
     className: className,
     size: size,
     src: src
@@ -2928,11 +2929,11 @@ var GoodDisplay = function GoodDisplay(_ref) {
       goodImage = _ref.goodImage,
       unitPrice = _ref.unitPrice,
       goodCategory = _ref.goodCategory;
-  return React.createElement(Holder$b, null, React.createElement(ProductThumb, {
+  return React__default.createElement(Holder$b, null, React__default.createElement(ProductThumb, {
     goodImage: goodImage
-  }), React.createElement(Flex$1, null, React.createElement(Column, null, React.createElement(Text, null, goodName), React.createElement(Text, {
+  }), React__default.createElement(Flex$1, null, React__default.createElement(Column, null, React__default.createElement(Text, null, goodName), React__default.createElement(Text, {
     color: "greyMedium"
-  }, unitPrice)), React.createElement(Tag$3, {
+  }, unitPrice)), React__default.createElement(Tag$3, {
     type: goodCategory
   }, goodCategory)));
 };
@@ -2988,10 +2989,10 @@ var GoodList = function GoodList(_ref) {
       goodSku = _ref.goodSku,
       noSku = _ref.noSku,
       small = _ref.small;
-  return React.createElement(Holder$c, null, React.createElement(Thumbnail$1, {
+  return React__default.createElement(Holder$c, null, React__default.createElement(Thumbnail$1, {
     small: small,
     src: goodImage
-  }), React.createElement(Wrapper$5, null, React.createElement(Text$1, null, goodName), !noSku && React.createElement(UppercaseL, {
+  }), React__default.createElement(Wrapper$5, null, React__default.createElement(Text$1, null, goodName), !noSku && React__default.createElement(UppercaseL, {
     color: "greyMedium"
   }, "SKU: ", goodSku)));
 };
@@ -3070,9 +3071,9 @@ var GoodListDetailed = function GoodListDetailed(_ref) {
       goodQuantity = _ref.goodQuantity,
       props = _objectWithoutProperties(_ref, ["currency", "goodImage", "goodName", "goodSku", "unitPrice", "goodQuantity"]);
 
-  return React.createElement(Holder$d, props, React.createElement(Thumbnail$1, {
+  return React__default.createElement(Holder$d, props, React__default.createElement(Thumbnail$1, {
     src: goodImage
-  }), React.createElement(Wrapper$6, null, React.createElement(Flex$2, null, React.createElement(Flex$2, null, React.createElement(TextQty, null, goodQuantity, "x"), React.createElement(Text$2, null, goodName)), React.createElement(Text$2, null, currency, unitPrice)), React.createElement(UppercaseL, {
+  }), React__default.createElement(Wrapper$6, null, React__default.createElement(Flex$2, null, React__default.createElement(Flex$2, null, React__default.createElement(TextQty, null, goodQuantity, "x"), React__default.createElement(Text$2, null, goodName)), React__default.createElement(Text$2, null, currency, unitPrice)), React__default.createElement(UppercaseL, {
     color: "greyMedium"
   }, "SKU: ", goodSku)));
 };
@@ -3185,7 +3186,7 @@ var Bounce2 = styled__default.div(_templateObject5$b(), divStyle);
 var Bounce3 = styled__default.div(_templateObject6$5(), divStyle);
 
 var Loader = function Loader() {
-  return React.createElement(Spinner, null, React.createElement(Bounce1, null), React.createElement(Bounce2, null), React.createElement(Bounce3, null));
+  return React__default.createElement(Spinner, null, React__default.createElement(Bounce1, null), React__default.createElement(Bounce2, null), React__default.createElement(Bounce3, null));
 };
 
 function _templateObject5$c() {
@@ -3280,26 +3281,26 @@ var Pagination = function Pagination(_ref) {
     return pages.slice(current - Math.ceil(paginationSize / 2), current + Math.floor(paginationSize / 2));
   };
 
-  return React.createElement(PageHolder, null, React.createElement(PageButton, {
+  return React__default.createElement(PageHolder, null, React__default.createElement(PageButton, {
     disabled: current === 1,
     onClick: function onClick() {
       return onChange(current - 1);
     }
-  }, React.createElement(Icons.Prev, null)), getPages().map(function (page) {
-    return React.createElement(Holder$e, {
+  }, React__default.createElement(Icons.Prev, null)), getPages().map(function (page) {
+    return React__default.createElement(Holder$e, {
       key: page
-    }, React.createElement(PageButton, {
+    }, React__default.createElement(PageButton, {
       active: page === current,
       onClick: function onClick() {
         return onChange(page);
       }
     }, page.toString().padStart(2, "0")));
-  }), React.createElement(PageButton, {
+  }), React__default.createElement(PageButton, {
     disabled: current >= total,
     onClick: function onClick() {
       return onChange(current + 1);
     }
-  }, React.createElement(Icons.Next, null)));
+  }, React__default.createElement(Icons.Next, null)));
 };
 
 Pagination.propTypes = {
@@ -3312,7 +3313,7 @@ Pagination.defaultProps = {
   paginationSize: 5,
   onChange: function onChange() {}
 };
-var Pagination$1 = React.memo(Pagination);
+var Pagination$1 = React__default.memo(Pagination);
 
 function _templateObject2$q() {
   var data = _taggedTemplateLiteral(["\n  height: 12rem;\n  margin-bottom: 1.5rem;\n"]);
@@ -3340,9 +3341,9 @@ var EmptyState = function EmptyState(_ref) {
   var errorDescription = _ref.errorDescription,
       errorMessage = _ref.errorMessage,
       asset = _ref.asset;
-  return React.createElement(EmptyHolder, null, asset && React.createElement(Asset, {
+  return React__default.createElement(EmptyHolder, null, asset && React__default.createElement(Asset, {
     src: asset
-  }), React.createElement(HeadingS, null, errorMessage), React.createElement(Text, null, errorDescription));
+  }), React__default.createElement(HeadingS, null, errorMessage), React__default.createElement(Text, null, errorDescription));
 };
 EmptyState.defaultProps = {
   asset: null,
@@ -3368,7 +3369,7 @@ var EmptyHolder$1 = styled__default.div(_templateObject$A());
 
 var ErrorState = function ErrorState(_ref) {
   var errorMessage = _ref.errorMessage;
-  return React.createElement(EmptyHolder$1, null, React.createElement(HeadingS, null, errorMessage));
+  return React__default.createElement(EmptyHolder$1, null, React__default.createElement(HeadingS, null, errorMessage));
 };
 ErrorState.defaultProps = {
   errorMessage: "There was a problem processing your request."
@@ -3469,16 +3470,16 @@ var Thumbnail$2 = styled__default.div(_templateObject6$6(), function (p) {
 var Gallery = function Gallery(_ref) {
   var images = _ref.images;
 
-  var _React$useState = React.useState(0),
+  var _React$useState = React__default.useState(0),
       _React$useState2 = _slicedToArray(_React$useState, 2),
       featuredImage = _React$useState2[0],
       setFeatured = _React$useState2[1];
 
   if (images.length > 1) {
-    return React.createElement(GalleryHolder, null, React.createElement(GalleryHighlight, {
+    return React__default.createElement(GalleryHolder, null, React__default.createElement(GalleryHighlight, {
       image: images[featuredImage]
-    }), React.createElement(Holder$f, null, React.createElement(GalleryThumbnails, null, images.map(function (image, index) {
-      return React.createElement(Thumbnail$2, {
+    }), React__default.createElement(Holder$f, null, React__default.createElement(GalleryThumbnails, null, images.map(function (image, index) {
+      return React__default.createElement(Thumbnail$2, {
         key: image,
         image: image,
         featured: featuredImage === index,
@@ -3490,12 +3491,12 @@ var Gallery = function Gallery(_ref) {
   }
 
   if (images.length === 1) {
-    return React.createElement(GalleryHolder, null, React.createElement(GalleryHighlight, {
+    return React__default.createElement(GalleryHolder, null, React__default.createElement(GalleryHighlight, {
       image: images[featuredImage]
     }));
   }
 
-  return React.createElement(GalleryHolder, null, React.createElement(GalleryHighlight, {
+  return React__default.createElement(GalleryHolder, null, React__default.createElement(GalleryHighlight, {
     image: "https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png",
     isEmpty: true
   }));
@@ -3554,7 +3555,7 @@ var Counter = function Counter(_ref) {
       minValue = _ref.minValue,
       maxValue = _ref.maxValue,
       onChange = _ref.onChange;
-  React.useEffect(function () {
+  React__default.useEffect(function () {
     if (value < minValue) {
       onChange(minValue);
     }
@@ -3576,15 +3577,15 @@ var Counter = function Counter(_ref) {
     }
   };
 
-  return React.createElement(CounterHolder, null, React.createElement(CounterAction, {
+  return React__default.createElement(CounterHolder, null, React__default.createElement(CounterAction, {
     type: "button",
     onClick: decreaseVal,
     disabled: value === minValue
-  }, React.createElement(Icons.Minus, null)), React.createElement(Value, null, value), React.createElement(CounterAction, {
+  }, React__default.createElement(Icons.Minus, null)), React__default.createElement(Value, null, value), React__default.createElement(CounterAction, {
     type: "button",
     onClick: increaseVal,
     disabled: value >= maxValue
-  }, React.createElement(Icons.Plus, null)));
+  }, React__default.createElement(Icons.Plus, null)));
 };
 
 Counter.defaultProps = {
@@ -3647,14 +3648,88 @@ var Modal$1 = function Modal$1(_ref) {
       props = _objectWithoutProperties(_ref, ["children", "isOpen", "onClose"]);
 
   if (isOpen) {
-    return ReactDOM.createPortal(React.createElement(React.Fragment, null, React.createElement(Content, {
+    return ReactDOM.createPortal(React__default.createElement(React__default.Fragment, null, React__default.createElement(Content, {
       isOpen: isOpen
-    }, React.createElement(Modal, props, children), React.createElement(Wrapper$7, {
+    }, React__default.createElement(Modal, props, children), React__default.createElement(Wrapper$7, {
       onClick: onClose
     }))), document.body);
   }
 
   return null;
+};
+
+function _templateObject2$u() {
+  var data = _taggedTemplateLiteral(["\n  width: 16px;\n  height: 16px;\n\n  border-radius: 10px;\n  border-top: 2px solid white \n  border-right: 2px solid white;\n  border-bottom: 2px solid white;\n  border-left: 2px solid transparent;\n\n  animation: ", " 2s linear infinite;\n"]);
+
+  _templateObject2$u = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$E() {
+  var data = _taggedTemplateLiteral(["\n  from { transform: rotate(0deg) }\n\n  to { transform: rotate(360deg) }\n"]);
+
+  _templateObject$E = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var rotate360 = styled.keyframes(_templateObject$E());
+var Spinner$1 = styled__default.div(_templateObject2$u(), rotate360);
+
+function _templateObject3$l() {
+  var data = _taggedTemplateLiteral(["\n  margin-right: 0.5rem;\n"]);
+
+  _templateObject3$l = function _templateObject3() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject2$v() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n\n  color: white;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n  background-color: transparent;\n  border: none;\n"]);
+
+  _templateObject2$v = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject$F() {
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n\n  border-radius: ", ";\n  background-color: ", "\n  color: ", ";\n\n  margin-top: 1rem;\n  padding: 0.5rem 0.5rem 0.5rem 1rem;\n"]);
+
+  _templateObject$F = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+var AlertHolder = styled__default.div(_templateObject$F(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.radius.xsmall;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.colors.brand.default;
+}, function (_ref3) {
+  var theme = _ref3.theme;
+  return theme.colors.greyscale.white;
+});
+var Close$1 = styled__default.button(_templateObject2$v());
+var Spinner$2 = styled__default(Spinner$1)(_templateObject3$l());
+
+var Alert = function Alert(_ref) {
+  var message = _ref.message,
+      close = _ref.close;
+  return React.createElement(AlertHolder, null, React.createElement(Spinner$2, null), React.createElement(Text, {
+    color: "white"
+  }, message), React.createElement(Close$1, {
+    onClick: close
+  }, React.createElement(Icons.Close, null)));
 };
 
 function _templateObject8$2() {
@@ -3707,37 +3782,37 @@ function _templateObject4$h() {
   return data;
 }
 
-function _templateObject3$l() {
+function _templateObject3$m() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n\n  width: 100%;\n\n  &:first-of-type {\n    margin-bottom: 1rem;\n  }\n"]);
 
-  _templateObject3$l = function _templateObject3() {
+  _templateObject3$m = function _templateObject3() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject2$u() {
+function _templateObject2$w() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  justify-content: space-between;\n  flex-flow: row;\n\n  border-radius: ", ";\n  border: 1px solid ", ";\n  padding: 1rem;\n\n  -webkit-box-shadow: ", ";\n  box-shadow: ", ";\n"]);
 
-  _templateObject2$u = function _templateObject2() {
+  _templateObject2$w = function _templateObject2() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject$E() {
+function _templateObject$G() {
   var data = _taggedTemplateLiteral(["\n  width: 100%;\n  padding: 6rem 2rem;\n"]);
 
-  _templateObject$E = function _templateObject() {
+  _templateObject$G = function _templateObject() {
     return data;
   };
 
   return data;
 }
-var MatchingSuggestions = styled__default.div(_templateObject$E());
-var MatchingSuggested = styled__default.div(_templateObject2$u(), function (_ref) {
+var MatchingSuggestions = styled__default.div(_templateObject$G());
+var MatchingSuggested = styled__default.div(_templateObject2$w(), function (_ref) {
   var theme = _ref.theme;
   return theme.radius.small;
 }, function (_ref2) {
@@ -3750,7 +3825,7 @@ var MatchingSuggested = styled__default.div(_templateObject2$u(), function (_ref
   var theme = _ref4.theme;
   return theme.shadow.subtle;
 });
-var GoodsRow = styled__default.div(_templateObject3$l());
+var GoodsRow = styled__default.div(_templateObject3$m());
 var MatchingGoods = styled__default.div(_templateObject4$h());
 var ButtonVote = styled__default.button(_templateObject5$e(), function (_ref5) {
   var theme = _ref5.theme;
@@ -3796,7 +3871,7 @@ var ButtonVote$1 = function ButtonVote$1(_ref) {
   var isActive = _ref.isActive,
       handleClick = _ref.handleClick,
       children = _ref.children;
-  return React.createElement(ButtonVote, {
+  return React__default.createElement(ButtonVote, {
     isActive: isActive,
     handleClick: handleClick
   }, children);
@@ -3809,31 +3884,32 @@ var MatchingPairs = function MatchingPairs(_ref2) {
       isMatched = _ref2.isMatched,
       props = _objectWithoutProperties(_ref2, ["className", "goods", "similarityPercentage", "isMatched"]);
 
-  return React.createElement(MatchingSuggested, _extends({
+  return React__default.createElement(MatchingSuggested, _extends({
     className: className
-  }, props), React.createElement(MatchingGoods, null, goods.map(function (good) {
-    return React.createElement(GoodsRow, {
+  }, props), React__default.createElement(MatchingGoods, null, goods.map(function (good) {
+    return React__default.createElement(GoodsRow, {
       key: good.id
-    }, React.createElement(GoodList, {
+    }, React__default.createElement(GoodList, {
       goodImage: good.image.small,
       goodName: good.name,
       noSku: true,
       small: true
-    }), React.createElement(GoodList, {
+    }), React__default.createElement(GoodList, {
       goodImage: good.source.image.small,
       goodName: good.source.name,
       noSku: true,
       small: true
-    }), React.createElement(Text, null, good.price));
-  })), React.createElement(TagSecondary, {
+    }), React__default.createElement(Text, null, good.price));
+  })), React__default.createElement(TagSecondary, {
     value: similarityPercentage
-  }, similarityPercentage), React.createElement(MatchingActions, null, React.createElement(ButtonVote$1, {
+  }, similarityPercentage), React__default.createElement(MatchingActions, null, React__default.createElement(ButtonVote$1, {
     isActive: isMatched === 'positive'
-  }, React.createElement(Icons.ThumbsUp, null)), React.createElement(ButtonVote$1, {
+  }, React__default.createElement(Icons.ThumbsUp, null)), React__default.createElement(ButtonVote$1, {
     isActive: isMatched === 'negative'
-  }, React.createElement(Icons.ThumbsDown, null))));
+  }, React__default.createElement(Icons.ThumbsDown, null))));
 };
 
+exports.Alert = Alert;
 exports.ArrowLink = ArrowLink$2;
 exports.BackLink = Back;
 exports.Button = Button$1;
