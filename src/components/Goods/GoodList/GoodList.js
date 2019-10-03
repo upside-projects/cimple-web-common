@@ -6,9 +6,9 @@ import { UppercaseL } from '../../Typography/Typography';
 
 import * as S from './styled';
 
-const GoodList = ({ goodName, goodImage, goodSku, noSku, size }) => {
+const GoodList = ({ className, goodName, goodImage, goodSku, noSku, size, ...props }) => {
   return (
-    <S.Holder>
+    <S.Holder className={className} {...props}>
       <Thumbnail size={size} src={goodImage} />
       <S.Wrapper>
         <S.Text>{goodName}</S.Text>
