@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled, { css } from 'styled-components';
 
 export const Check = styled.span`
   position: absolute;
@@ -6,6 +6,7 @@ export const Check = styled.span`
   left: 0;
   height: 16px;
   width: 16px;
+  cursor: pointer;
 
   background-color: ${({ theme }) => theme.colors.greyscale.white};
   border: 1px solid ${({ theme }) => theme.colors.greyscale.medium};
@@ -31,7 +32,7 @@ export const Check = styled.span`
     `}
 
   &:after {
-    content: "";
+    content: '';
     width: 10px;
     height: 5px;
     display: block;
@@ -39,10 +40,9 @@ export const Check = styled.span`
     border-left: 2px solid ${({ theme }) => theme.colors.greyscale.white};
 
     transition: transform ${({ theme }) => theme.transition.cubic()};
-    transform: rotate(-45deg) translate(-1px, 4px)
-      scale(${({ checked }) => (checked ? 1 : 0.8)});
+    transform: rotate(-45deg) translate(-1px, 4px) scale(${({ checked }) => (checked ? 1 : 0.8)});
   }
-`
+`;
 
 export const Checkbox = styled.input`
   position: absolute;
@@ -50,16 +50,17 @@ export const Checkbox = styled.input`
   cursor: pointer;
   height: 0;
   width: 0;
-`
+`;
 
 export const Label = styled.span`
   margin-left: 1.5rem;
   display: inline-block;
   vertical-align: bottom;
   line-height: 1;
-`
+  color: black;
+`;
 
 export const Holder = styled.div`
   display: block;
   position: relative;
-`
+`;

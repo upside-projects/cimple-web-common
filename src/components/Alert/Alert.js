@@ -4,10 +4,10 @@ import { Text } from '../Typography/Typography';
 
 import * as S from './styled';
 
-const Alert = ({ message, close }) => {
+const Alert = ({ message, close, noSpinner }) => {
   return (
     <S.AlertHolder>
-      <S.Spinner />
+      {!noSpinner && <S.Spinner />}
       <Text color="white">{message}</Text>
       <S.Close onClick={close}>
         <Icons.Close />
