@@ -678,7 +678,7 @@ function _templateObject5$2() {
 }
 
 function _templateObject4$2() {
-  var data = _taggedTemplateLiteral(["\n  margin-left: 1.5rem;\n  display: inline-block;\n  vertical-align: bottom;\n  line-height: 1;\n"]);
+  var data = _taggedTemplateLiteral(["\n  margin-left: 1.5rem;\n  display: inline-block;\n  vertical-align: bottom;\n  line-height: 1;\n  color: black;\n"]);
 
   _templateObject4$2 = function _templateObject4() {
     return data;
@@ -708,7 +708,7 @@ function _templateObject2$3() {
 }
 
 function _templateObject$8() {
-  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 16px;\n  width: 16px;\n\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: ", ";\n\n  transition: all ", ";\n\n  &:hover {\n    background-color: ", ";\n    border: 1px solid ", ";\n  }\n\n  ", "\n\n  &:after {\n    content: \"\";\n    width: 10px;\n    height: 5px;\n    display: block;\n    border-bottom: 2px solid ", ";\n    border-left: 2px solid ", ";\n\n    transition: transform ", ";\n    transform: rotate(-45deg) translate(-1px, 4px)\n      scale(", ");\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 16px;\n  width: 16px;\n  cursor: pointer;\n\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: ", ";\n\n  transition: all ", ";\n\n  &:hover {\n    background-color: ", ";\n    border: 1px solid ", ";\n  }\n\n  ", "\n\n  &:after {\n    content: '';\n    width: 10px;\n    height: 5px;\n    display: block;\n    border-bottom: 2px solid ", ";\n    border-left: 2px solid ", ";\n\n    transition: transform ", ";\n    transform: rotate(-45deg) translate(-1px, 4px) scale(", ");\n  }\n"]);
 
   _templateObject$8 = function _templateObject() {
     return data;
@@ -766,11 +766,16 @@ var Label$1 = styled__default.span(_templateObject4$2());
 var Holder = styled__default.div(_templateObject5$2());
 
 var Checkbox$1 = function Checkbox$1(_ref) {
-  var label = _ref.label,
+  var className = _ref.className,
+      label = _ref.label,
       name = _ref.name,
       checked = _ref.checked,
-      onChange = _ref.onChange;
-  return React__default.createElement(Holder, null, React__default.createElement(Label, {
+      onChange = _ref.onChange,
+      props = _objectWithoutProperties(_ref, ["className", "label", "name", "checked", "onChange"]);
+
+  return React__default.createElement(Holder, {
+    className: className
+  }, React__default.createElement(Label, {
     inline: true
   }, React__default.createElement(Check, {
     checked: checked
@@ -3729,8 +3734,9 @@ var Spinner$2 = styled__default(Spinner$1)(_templateObject3$l());
 
 var Alert = function Alert(_ref) {
   var message = _ref.message,
-      close = _ref.close;
-  return React.createElement(AlertHolder, null, React.createElement(Spinner$2, null), React.createElement(Text, {
+      close = _ref.close,
+      noSpinner = _ref.noSpinner;
+  return React.createElement(AlertHolder, null, !noSpinner && React.createElement(Spinner$2, null), React.createElement(Text, {
     color: "white"
   }, message), React.createElement(Close$1, {
     onClick: close
