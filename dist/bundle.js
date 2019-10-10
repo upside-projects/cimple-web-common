@@ -2984,12 +2984,17 @@ var Wrapper$5 = styled__default.div(_templateObject2$l());
 var Text$1 = styled__default(Text)(_templateObject3$e());
 
 var GoodList = function GoodList(_ref) {
-  var goodName = _ref.goodName,
+  var className = _ref.className,
+      goodName = _ref.goodName,
       goodImage = _ref.goodImage,
       goodSku = _ref.goodSku,
       noSku = _ref.noSku,
-      size = _ref.size;
-  return React__default.createElement(Holder$c, null, React__default.createElement(Thumbnail$1, {
+      size = _ref.size,
+      props = _objectWithoutProperties(_ref, ["className", "goodName", "goodImage", "goodSku", "noSku", "size"]);
+
+  return React__default.createElement(Holder$c, _extends({
+    className: className
+  }, props), React__default.createElement(Thumbnail$1, {
     size: size,
     src: goodImage
   }), React__default.createElement(Wrapper$5, null, React__default.createElement(Text$1, null, goodName), !noSku && React__default.createElement(UppercaseL, {
