@@ -1,9 +1,9 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from 'react';
+import PropTypes from 'prop-types';
 
-import Label from "../Label/Label"
+import Label from '../Label/Label';
 
-import * as S from "./styled"
+import * as S from './styled';
 
 const Input = ({
   className,
@@ -40,20 +40,20 @@ const Input = ({
         />
       </Label>
     </S.Holder>
-  )
-}
+  );
+};
 
-export default Input
+export default Input;
 
 Input.defaultProps = {
-  className: "",
-  error: "",
+  className: '',
+  error: '',
   disabled: false,
   containerProps: {},
-  link: "",
-  helper: "",
-  href: ""
-}
+  link: '',
+  helper: '',
+  href: '',
+};
 
 Input.propTypes = {
   className: PropTypes.string,
@@ -68,5 +68,5 @@ Input.propTypes = {
   placeholder: PropTypes.string.isRequired,
   onBlur: PropTypes.func.isRequired,
   onChange: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired
-}
+  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+};
