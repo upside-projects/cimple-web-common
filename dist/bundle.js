@@ -1120,13 +1120,13 @@ var Input$1 = function Input$1(_ref) {
   }, props))));
 };
 Input$1.defaultProps = {
-  className: "",
-  error: "",
+  className: '',
+  error: '',
   disabled: false,
   containerProps: {},
-  link: "",
-  helper: "",
-  href: ""
+  link: '',
+  helper: '',
+  href: ''
 };
 Input$1.propTypes = {
   className: PropTypes__default.string,
@@ -1141,7 +1141,7 @@ Input$1.propTypes = {
   placeholder: PropTypes__default.string.isRequired,
   onBlur: PropTypes__default.func.isRequired,
   onChange: PropTypes__default.func.isRequired,
-  value: PropTypes__default.string.isRequired
+  value: PropTypes__default.oneOfType([PropTypes__default.string, PropTypes__default.number]).isRequired
 };
 
 function _templateObject2$7() {
