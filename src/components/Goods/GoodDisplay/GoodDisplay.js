@@ -4,10 +4,10 @@ import { Text } from '../../Typography/Typography';
 
 import * as S from './styled';
 
-const GoodDisplay = ({ goodName, goodImage, unitPrice, goodCategory }) => {
+const GoodDisplay = ({ goodName, goodImage, unitPrice, goodCategory, ...props }) => {
   return (
-    <S.Holder>
-      <S.ProductThumb goodImage={goodImage} />
+    <S.Holder {...props}>
+      <S.ProductThumb goodImage={goodImage} {...props} />
       <S.Flex>
         <S.Tag type={goodCategory}>{goodCategory}</S.Tag>
         <S.Column>
