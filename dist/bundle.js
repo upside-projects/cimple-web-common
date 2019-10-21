@@ -2866,6 +2866,26 @@ Thumbnail$1.propTypes = {
   src: PropTypes__default.string
 };
 
+function _templateObject7$3() {
+  var data = _taggedTemplateLiteral(["\n  padding: 2rem 2rem 4rem 2rem;\n  max-width: 1440px;\n  margin: auto;\n\n  @media only screen and (max-width: 768px) {\n    padding: 2rem 1rem 4rem 1rem;\n  }\n"]);
+
+  _templateObject7$3 = function _templateObject7() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject6$5() {
+  var data = _taggedTemplateLiteral(["\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));\n  grid-gap: 2rem;\n  grid-row-gap: 2.2rem;\n  justify-self: end\n  \n  margin-bottom: 3rem;\n\n  @media only screen and (max-width: 768px) {\n    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));\n    grid-gap: 1rem;\n    grid-row-gap: 1rem;\n  }\n"]);
+
+  _templateObject6$5 = function _templateObject6() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject5$9() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n"]);
 
@@ -2877,7 +2897,7 @@ function _templateObject5$9() {
 }
 
 function _templateObject4$c() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: top;\n  justify-content: space-between;\n\n  @media only screen and (max-width: 780px) {\n    flex-direction: column;\n\n    ", " {\n      order: -1;\n      margin-bottom: 0.5rem;\n      width: fit-content;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  align-items: flex-start;\n\n  @media only screen and (max-width: 780px) {\n    flex-direction: column;\n  }\n"]);
 
   _templateObject4$c = function _templateObject4() {
     return data;
@@ -2887,7 +2907,7 @@ function _templateObject4$c() {
 }
 
 function _templateObject3$d() {
-  var data = _taggedTemplateLiteral(["\n  display: table;\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  margin-bottom: 0.5rem;\n"]);
 
   _templateObject3$d = function _templateObject3() {
     return data;
@@ -2907,7 +2927,7 @@ function _templateObject2$k() {
 }
 
 function _templateObject$t() {
-  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center center;\n\n  height: 20rem;\n  width: 100%;\n  opacity: 1;\n\n  margin-bottom: 1.5rem;\n  transition: ", ";\n\n  @media only screen and (max-width: 780px) {\n    height: 10rem;\n    width: 100%;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  background-color: ", ";\n  background-image: url(", ");\n  background-size: cover;\n  background-position: center center;\n\n  height: 14rem;\n  width: 100%;\n  opacity: 1;\n\n  margin-bottom: 1.5rem;\n  transition: ", ";\n\n  @media only screen and (max-width: 780px) {\n    height: 10rem;\n    width: 100%;\n  }\n"]);
 
   _templateObject$t = function _templateObject() {
     return data;
@@ -2926,8 +2946,10 @@ var ProductThumb = styled__default.div(_templateObject$t(), function (_ref) {
 });
 var Holder$b = styled__default.div(_templateObject2$k(), ProductThumb);
 var Tag$3 = styled__default(Tag$1)(_templateObject3$d());
-var Flex$1 = styled__default.div(_templateObject4$c(), Tag$3);
+var Flex$1 = styled__default.div(_templateObject4$c());
 var Column = styled__default.div(_templateObject5$9());
+var Grid = styled__default.div(_templateObject6$5());
+var Layout = styled__default.div(_templateObject7$3());
 
 var GoodDisplay = function GoodDisplay(_ref) {
   var goodName = _ref.goodName,
@@ -2936,17 +2958,17 @@ var GoodDisplay = function GoodDisplay(_ref) {
       goodCategory = _ref.goodCategory;
   return React__default.createElement(Holder$b, null, React__default.createElement(ProductThumb, {
     goodImage: goodImage
-  }), React__default.createElement(Flex$1, null, React__default.createElement(Column, null, React__default.createElement(Text, null, goodName), React__default.createElement(Text, {
-    color: "greyMedium"
-  }, unitPrice)), React__default.createElement(Tag$3, {
+  }), React__default.createElement(Flex$1, null, React__default.createElement(Tag$3, {
     type: goodCategory
-  }, goodCategory)));
+  }, goodCategory), React__default.createElement(Column, null, React__default.createElement(Text, null, goodName), React__default.createElement(Text, {
+    color: "greyMedium"
+  }, unitPrice))));
 };
 GoodDisplay.defaultProps = {
-  goodCategory: "N/A",
-  goodName: "Unamed product",
-  goodImage: "",
-  unitPrice: "N/A"
+  goodCategory: 'N/A',
+  goodName: 'Unamed product',
+  goodImage: '',
+  unitPrice: 'N/A'
 };
 GoodDisplay.propTypes = {
   goodCategory: PropTypes__default.string,
@@ -3126,10 +3148,10 @@ function _templateObject$w() {
 var Flex$3 = styled__default.div(_templateObject$w());
 var Column$1 = styled__default.div(_templateObject2$n());
 
-function _templateObject6$5() {
+function _templateObject6$6() {
   var data = _taggedTemplateLiteral(["\n  ", "\n"]);
 
-  _templateObject6$5 = function _templateObject6() {
+  _templateObject6$6 = function _templateObject6() {
     return data;
   };
 
@@ -3193,7 +3215,7 @@ var animation = styled.css(_templateObject2$o());
 var Spinner = styled__default.div(_templateObject3$g(), animation);
 var Bounce1 = styled__default.div(_templateObject4$e(), divStyle);
 var Bounce2 = styled__default.div(_templateObject5$b(), divStyle);
-var Bounce3 = styled__default.div(_templateObject6$5(), divStyle);
+var Bounce3 = styled__default.div(_templateObject6$6(), divStyle);
 
 var Loader = function Loader() {
   return React__default.createElement(Spinner, null, React__default.createElement(Bounce1, null), React__default.createElement(Bounce2, null), React__default.createElement(Bounce3, null));
@@ -3388,20 +3410,20 @@ ErrorState.propTypes = {
   errorMessage: PropTypes__default.string
 };
 
-function _templateObject7$3() {
+function _templateObject7$4() {
   var data = _taggedTemplateLiteral(["\n        opacity: 0.6;\n      "]);
 
-  _templateObject7$3 = function _templateObject7() {
+  _templateObject7$4 = function _templateObject7() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject6$6() {
+function _templateObject6$7() {
   var data = _taggedTemplateLiteral(["\n  background-image: url(", ");\n  background-position: center center;\n  background-size: cover;\n  opacity: 1;\n\n  transition: ", "\n    ", ";\n"]);
 
-  _templateObject6$6 = function _templateObject6() {
+  _templateObject6$7 = function _templateObject6() {
     return data;
   };
 
@@ -3468,13 +3490,13 @@ var GalleryHighlight = styled__default.div(_templateObject2$r(), function (p) {
 });
 var GalleryThumbnails = styled__default.div(_templateObject4$g());
 var Holder$f = styled__default.div(_templateObject5$d());
-var Thumbnail$2 = styled__default.div(_templateObject6$6(), function (p) {
+var Thumbnail$2 = styled__default.div(_templateObject6$7(), function (p) {
   return p.image;
 }, function (_ref2) {
   var theme = _ref2.theme;
   return theme.transition.ease();
 }, function (p) {
-  return !p.featured && styled.css(_templateObject7$3());
+  return !p.featured && styled.css(_templateObject7$4());
 });
 
 var Gallery = function Gallery(_ref) {
@@ -3753,20 +3775,20 @@ function _templateObject8$2() {
   return data;
 }
 
-function _templateObject7$4() {
+function _templateObject7$5() {
   var data = _taggedTemplateLiteral(["\n        background-color: ", ";\n        border: 1px solid ", ";\n      "]);
 
-  _templateObject7$4 = function _templateObject7() {
+  _templateObject7$5 = function _templateObject7() {
     return data;
   };
 
   return data;
 }
 
-function _templateObject6$7() {
+function _templateObject6$8() {
   var data = _taggedTemplateLiteral(["\n      color: ", ";\n      background-color: ", ";\n      border: 1px solid ", ";\n    "]);
 
-  _templateObject6$7 = function _templateObject6() {
+  _templateObject6$8 = function _templateObject6() {
     return data;
   };
 
@@ -3851,7 +3873,7 @@ var ButtonVote = styled__default.button(_templateObject5$e(), function (_ref5) {
   var theme = _ref8.theme;
   return theme.transition.ease();
 }, function (p) {
-  return p.isActive && styled.css(_templateObject6$7(), function (_ref9) {
+  return p.isActive && styled.css(_templateObject6$8(), function (_ref9) {
     var theme = _ref9.theme;
     return theme.colors.greyscale.white;
   }, function (_ref10) {
@@ -3865,7 +3887,7 @@ var ButtonVote = styled__default.button(_templateObject5$e(), function (_ref5) {
   var theme = _ref12.theme;
   return theme.colors.greyscale.medium;
 }, function (p) {
-  return p.isActive && styled.css(_templateObject7$4(), function (_ref13) {
+  return p.isActive && styled.css(_templateObject7$5(), function (_ref13) {
     var theme = _ref13.theme;
     return theme.colors.brand.dark;
   }, function (_ref14) {
