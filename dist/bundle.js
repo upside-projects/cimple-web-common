@@ -2955,10 +2955,12 @@ var GoodDisplay = function GoodDisplay(_ref) {
   var goodName = _ref.goodName,
       goodImage = _ref.goodImage,
       unitPrice = _ref.unitPrice,
-      goodCategory = _ref.goodCategory;
-  return React__default.createElement(Holder$b, null, React__default.createElement(ProductThumb, {
+      goodCategory = _ref.goodCategory,
+      props = _objectWithoutProperties(_ref, ["goodName", "goodImage", "unitPrice", "goodCategory"]);
+
+  return React__default.createElement(Holder$b, props, React__default.createElement(ProductThumb, _extends({
     goodImage: goodImage
-  }), React__default.createElement(Flex$1, null, React__default.createElement(Tag$3, {
+  }, props)), React__default.createElement(Flex$1, null, React__default.createElement(Tag$3, {
     type: goodCategory
   }, goodCategory), React__default.createElement(Column, null, React__default.createElement(Text, null, goodName), React__default.createElement(Text, {
     color: "greyMedium"
