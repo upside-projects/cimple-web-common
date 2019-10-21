@@ -6,8 +6,8 @@ import * as S from './styled';
 
 const GoodDisplay = ({ goodName, goodImage, unitPrice, goodCategory, ...props }) => {
   return (
-    <S.Holder {...props}>
-      <S.ProductThumb goodImage={goodImage} {...props} />
+    <S.Holder>
+      <S.ProductThumb goodImage={goodImage} />
       <S.Flex>
         <S.Tag type={goodCategory}>{goodCategory}</S.Tag>
         <S.Column>
