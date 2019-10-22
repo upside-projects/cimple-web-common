@@ -2080,7 +2080,7 @@ function _templateObject4$7() {
 }
 
 function _templateObject3$7() {
-  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  opacity: 0;\n  cursor: pointer;\n  height: 0;\n  width: 0;\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  opacity: 0;\n  height: 0;\n  width: 0;\n"]);
 
   _templateObject3$7 = function _templateObject3() {
     return data;
@@ -2090,7 +2090,7 @@ function _templateObject3$7() {
 }
 
 function _templateObject2$a() {
-  var data = _taggedTemplateLiteral(["\n      background-color: ", ";\n\n      &:after {\n        content: \"\";\n        position: absolute;\n        height: 8px;\n        width: 8px;\n        background-color: ", ";\n        border-radius: ", ";\n\n        z-index: 2;\n        top: 3px;\n        left: 3px;\n      }\n    "]);
+  var data = _taggedTemplateLiteral(["\n      background-color: ", ";\n\n      &:after {\n        content: '';\n        position: absolute;\n        height: 8px;\n        width: 8px;\n        background-color: ", ";\n        border-radius: ", ";\n\n        z-index: 2;\n        top: 3px;\n        left: 3px;\n      }\n    "]);
 
   _templateObject2$a = function _templateObject2() {
     return data;
@@ -2100,7 +2100,7 @@ function _templateObject2$a() {
 }
 
 function _templateObject$f() {
-  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 16px;\n  width: 16px;\n\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: ", ";\n\n  transition: all ", ";\n\n  ", "\n"]);
+  var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: 0;\n  left: 0;\n  height: 16px;\n  width: 16px;\n  cursor: pointer;\n\n  background-color: ", ";\n  border: 1px solid ", ";\n  border-radius: ", ";\n\n  transition: all ", ";\n\n  ", "\n"]);
 
   _templateObject$f = function _templateObject() {
     return data;
