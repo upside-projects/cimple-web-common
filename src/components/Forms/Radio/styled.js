@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled, { css } from 'styled-components';
 
 export const Radio = styled.span`
   position: absolute;
@@ -6,6 +6,7 @@ export const Radio = styled.span`
   left: 0;
   height: 16px;
   width: 16px;
+  cursor: pointer;
 
   background-color: ${({ theme }) => theme.colors.greyscale.white};
   border: 1px solid ${({ theme }) => theme.colors.greyscale.medium};
@@ -19,7 +20,7 @@ export const Radio = styled.span`
       background-color: ${({ theme }) => theme.colors.white};
 
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         height: 8px;
         width: 8px;
@@ -31,22 +32,21 @@ export const Radio = styled.span`
         left: 3px;
       }
     `}
-`
+`;
 
 export const RadioInput = styled.input`
   position: absolute;
   opacity: 0;
-  cursor: pointer;
   height: 0;
   width: 0;
-`
+`;
 
 export const Label = styled.span`
   margin-left: 1.5rem;
   display: inline-block;
   vertical-align: bottom;
   line-height: 1;
-`
+`;
 
 export const Holder = styled.div`
   display: flex;
@@ -55,4 +55,4 @@ export const Holder = styled.div`
   justify-content: center;
 
   position: relative;
-`
+`;
