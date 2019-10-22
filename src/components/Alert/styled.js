@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import StyledSpinner from '../Spinner/Spinner';
 
+import Icons from '../Icons/index';
+
 export const AlertHolder = styled.div`
   display: flex;
   flex-direction: row;
@@ -27,5 +29,9 @@ export const Close = styled.button`
 `;
 
 export const Spinner = styled(StyledSpinner)`
+  margin-right: 0.5rem;
+`;
+
+export const Verified = styled(Icons.Verified)`
   margin-right: 0.5rem;
 `;

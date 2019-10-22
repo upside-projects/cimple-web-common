@@ -4,10 +4,24 @@ import { Text } from '../Typography/Typography';
 
 import * as S from './styled';
 
-const Alert = ({ message, close, noSpinner }) => {
+const Alert = ({ message, close, noSpinner, options }) => {
+  const map = {
+    success: <S.Verified />,
+    importing: <S.Spinner />,
+    default: '',
+  };
+
+  const determineFeedbackType = options => {
+    if (options && options.type) {
+      return map[options.type] || map.default;
+    }
+
+    return map.default;
+  };
+
   return (
     <S.AlertHolder>
-      {!noSpinner && <S.Spinner />}
+      {determineFeedbackType(options)}
       <Text color="white">{message}</Text>
       <S.Close onClick={close}>
         <Icons.Close />

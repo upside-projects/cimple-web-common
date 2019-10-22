@@ -19,6 +19,7 @@ import Edit from './Edit';
 import Ellipsis from './Ellipsis';
 import ThumbsUp from './ThumbsUp';
 import ThumbsDown from './ThumbsDown';
+import Verified from './Verified';
 
 const Icons = {};
 
@@ -43,5 +44,6 @@ Icons.Edit = Edit;
 Icons.Ellipsis = Ellipsis;
 Icons.ThumbsUp = ThumbsUp;
 Icons.ThumbsDown = ThumbsDown;
+Icons.Verified = Verified;
 
 export default Icons;
