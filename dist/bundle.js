@@ -1881,6 +1881,29 @@ var ThumbsDown = function ThumbsDown(_ref) {
   })));
 };
 
+var Verified = function Verified(_ref) {
+  var props = _extends({}, _ref);
+
+  return React__default.createElement("svg", _extends({}, props, {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "20",
+    height: "20",
+    viewBox: "0 0 20 20"
+  }), React__default.createElement("g", {
+    fill: "none",
+    fillRule: "evenodd"
+  }, React__default.createElement("rect", {
+    width: "20",
+    height: "20",
+    fill: "#FFF",
+    rx: "10"
+  }), React__default.createElement("polyline", {
+    stroke: "#7E6EE6",
+    points: "5.907 7.26 5.907 10.846 15.2 10.139",
+    transform: "rotate(-45 10.553 9.053)"
+  })));
+};
+
 var Icons = {};
 Icons.Arrow = Arrow;
 Icons.Cart = Cart;
@@ -1903,6 +1926,7 @@ Icons.Edit = Edit;
 Icons.Ellipsis = Ellipsis;
 Icons.ThumbsUp = ThumbsUp;
 Icons.ThumbsDown = ThumbsDown;
+Icons.Verified = Verified;
 
 function _templateObject6$4() {
   var data = _taggedTemplateLiteral(["\n  position: absolute;\n  top: 0.6rem;\n  right: 1rem;\n"]);
@@ -3714,6 +3738,16 @@ function _templateObject$E() {
 var rotate360 = styled.keyframes(_templateObject$E());
 var Spinner$1 = styled__default.div(_templateObject2$u(), rotate360);
 
+function _templateObject4$h() {
+  var data = _taggedTemplateLiteral(["\n  margin-right: 0.5rem;\n"]);
+
+  _templateObject4$h = function _templateObject4() {
+    return data;
+  };
+
+  return data;
+}
+
 function _templateObject3$l() {
   var data = _taggedTemplateLiteral(["\n  margin-right: 0.5rem;\n"]);
 
@@ -3755,12 +3789,28 @@ var AlertHolder = styled__default.div(_templateObject$F(), function (_ref) {
 });
 var Close$1 = styled__default.button(_templateObject2$v());
 var Spinner$2 = styled__default(Spinner$1)(_templateObject3$l());
+var Verified$1 = styled__default(Icons.Verified)(_templateObject4$h());
 
 var Alert = function Alert(_ref) {
   var message = _ref.message,
       close = _ref.close,
-      noSpinner = _ref.noSpinner;
-  return React.createElement(AlertHolder, null, !noSpinner && React.createElement(Spinner$2, null), React.createElement(Text, {
+      noSpinner = _ref.noSpinner,
+      options = _ref.options;
+  var map = {
+    success: React.createElement(Verified$1, null),
+    importing: React.createElement(Spinner$2, null),
+    default: ''
+  };
+
+  var determineFeedbackType = function determineFeedbackType(options) {
+    if (options && options.type) {
+      return map[options.type] || map.default;
+    }
+
+    return map.default;
+  };
+
+  return React.createElement(AlertHolder, null, determineFeedbackType(options), React.createElement(Text, {
     color: "white"
   }, message), React.createElement(Close$1, {
     onClick: close
@@ -3807,10 +3857,10 @@ function _templateObject5$e() {
   return data;
 }
 
-function _templateObject4$h() {
+function _templateObject4$i() {
   var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n\n  padding-right: 8rem;\n"]);
 
-  _templateObject4$h = function _templateObject4() {
+  _templateObject4$i = function _templateObject4() {
     return data;
   };
 
@@ -3861,7 +3911,7 @@ var MatchingSuggested = styled__default.div(_templateObject2$w(), function (_ref
   return theme.shadow.subtle;
 });
 var GoodsRow = styled__default.div(_templateObject3$m());
-var MatchingGoods = styled__default.div(_templateObject4$h());
+var MatchingGoods = styled__default.div(_templateObject4$i());
 var ButtonVote = styled__default.button(_templateObject5$e(), function (_ref5) {
   var theme = _ref5.theme;
   return theme.radius.round;
