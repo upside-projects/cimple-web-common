@@ -12,6 +12,20 @@ var styled = require('styled-components');
 var styled__default = _interopDefault(styled);
 var ReactDOM = _interopDefault(require('react-dom'));
 
+function _typeof(obj) {
+  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
+    _typeof = function (obj) {
+      return typeof obj;
+    };
+  } else {
+    _typeof = function (obj) {
+      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
+    };
+  }
+
+  return _typeof(obj);
+}
+
 function _defineProperty(obj, key, value) {
   if (key in obj) {
     Object.defineProperty(obj, key, {
@@ -3567,11 +3581,13 @@ Gallery.propTypes = {
 };
 
 var measureTextWidth = function measureTextWidth(text, font) {
-  var canvas = measureTextWidth.canvas || (measureTextWidth.canvas = document.createElement('canvas'));
-  var context = canvas.getContext('2d');
-  context.font = font;
-  var metrics = context.measureText(text);
-  return metrics.width;
+  if ((typeof window === "undefined" ? "undefined" : _typeof(window)) !== undefined) {
+    var canvas = measureTextWidth.canvas || (measureTextWidth.canvas = document.createElement('canvas'));
+    var context = canvas.getContext('2d');
+    context.font = font;
+    var metrics = context.measureText(text);
+    return metrics.width;
+  }
 };
 
 function _templateObject3$j() {
