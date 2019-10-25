@@ -3566,8 +3566,16 @@ Gallery.propTypes = {
   images: PropTypes__default.arrayOf(PropTypes__default.string)
 };
 
+var measureTextWidth = function measureTextWidth(text, font) {
+  var canvas = measureTextWidth.canvas || (measureTextWidth.canvas = document.createElement('canvas'));
+  var context = canvas.getContext('2d');
+  context.font = font;
+  var metrics = context.measureText(text);
+  return metrics.width;
+};
+
 function _templateObject3$j() {
-  var data = _taggedTemplateLiteral(["\n  display: inline-block;\n  border: none;\n  margin: 0;\n  padding: 0;\n  text-decoration: none;\n  cursor: pointer;\n  text-align: center;\n  -webkit-appearance: none;\n  -moz-appearance: none;\n\n  height: 24px;\n\n  &:focus {\n    outline: 0;\n  }\n\n  &:active {\n    outline: 0;\n  }\n\n  &:disabled {\n    color: ", ";\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  cursor: pointer;\n  background: none;\n  background-color: none;\n  border: 0;\n  display: inline-block;\n  text-decoration: none;\n  text-align: center;\n\n  margin: 0;\n  padding: 0;\n\n  -webkit-tap-highlight-color: transparent;\n\n  -webkit-appearance: none;\n  -moz-appearance: none;\n\n  height: 24px;\n\n  &:focus {\n    outline: 0;\n  }\n\n  &:active {\n    color: inherit;\n  }\n\n  &:disabled {\n    color: ", ";\n  }\n"]);
 
   _templateObject3$j = function _templateObject3() {
     return data;
@@ -3577,7 +3585,7 @@ function _templateObject3$j() {
 }
 
 function _templateObject2$s() {
-  var data = _taggedTemplateLiteral(["\n  padding: 0 1rem;\n  font-size: 16px;\n  line-height: 24px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  font-size: 16px;\n  line-height: 24px;\n  font-variant-numeric: tabular-nums;\n\n  background-color: none;\n  border: none;\n  border-radius: none;\n  text-align: center;\n\n  width: ", ";\n\n  &:focus {\n    outline: none;\n  }\n"]);
 
   _templateObject2$s = function _templateObject2() {
     return data;
@@ -3602,7 +3610,9 @@ var CounterHolder = styled__default.div(_templateObject$C(), function (_ref) {
   var theme = _ref2.theme;
   return theme.radius.small;
 });
-var Value = styled__default.p(_templateObject2$s());
+var Value = styled__default.input(_templateObject2$s(), function (p) {
+  return "calc(".concat(p.width, "px + 50px)");
+});
 var CounterAction = styled__default.button(_templateObject3$j(), function (_ref3) {
   var theme = _ref3.theme;
   return theme.colors.greyscale.medium;
@@ -3612,34 +3622,71 @@ var Counter = function Counter(_ref) {
   var value = _ref.value,
       minValue = _ref.minValue,
       maxValue = _ref.maxValue,
-      onChange = _ref.onChange;
+      onChange = _ref.onChange,
+      onBlur = _ref.onBlur,
+      onFocus = _ref.onFocus;
+
+  var _React$useState = React__default.useState(false),
+      _React$useState2 = _slicedToArray(_React$useState, 2),
+      isActive = _React$useState2[0],
+      setIsActive = _React$useState2[1];
+
   React__default.useEffect(function () {
-    if (value < minValue) {
-      onChange(minValue);
+    if (!isActive && Number(value) < minValue) {
+      onChange(minValue.toString());
     }
 
-    if (value > maxValue) {
-      onChange(maxValue);
+    if (!isActive && Number(value) > maxValue) {
+      onChange(maxValue.toString());
     }
-  }, [maxValue, minValue, onChange, value]);
+  }, [maxValue, minValue, onChange, value, isActive]);
 
   var increaseVal = function increaseVal() {
     if (value < maxValue) {
-      onChange(value + 1);
+      onChange((Number(value) + 1).toString());
     }
   };
 
   var decreaseVal = function decreaseVal() {
     if (value > minValue) {
-      onChange(value - 1);
+      onChange((Number(value) - 1).toString());
     }
+  };
+
+  var handleOnChange = function handleOnChange(_ref2) {
+    var value = _ref2.currentTarget.value;
+
+    if (value === '' || !isNaN(value)) {
+      return onChange(value.toString());
+    }
+  };
+
+  var handleOnFocus = function handleOnFocus(e) {
+    setIsActive(true);
+    onFocus(e);
+  };
+
+  var handleOnBlur = function handleOnBlur(e) {
+    setIsActive(false);
+
+    if (value === '') {
+      onChange(minValue.toString());
+    }
+
+    onBlur(e);
   };
 
   return React__default.createElement(CounterHolder, null, React__default.createElement(CounterAction, {
     type: "button",
     onClick: decreaseVal,
     disabled: value === minValue
-  }, React__default.createElement(Icons.Minus, null)), React__default.createElement(Value, null, value), React__default.createElement(CounterAction, {
+  }, React__default.createElement(Icons.Minus, null)), React__default.createElement(Value, {
+    onChange: handleOnChange,
+    onBlur: handleOnBlur,
+    onFocus: handleOnFocus,
+    value: value,
+    width: measureTextWidth(value)
+  }), React__default.createElement(CounterAction, {
     type: "button",
     onClick: increaseVal,
     disabled: value >= maxValue
@@ -3649,13 +3696,15 @@ var Counter = function Counter(_ref) {
 Counter.defaultProps = {
   minValue: 0,
   maxValue: Number.MAX_SAFE_INTEGER,
-  onChange: function onChange() {}
+  onChange: function onChange() {},
+  onFocus: function onFocus() {},
+  onBlur: function onBlur() {}
 };
 Counter.propTypes = {
   minValue: PropTypes__default.number,
   maxValue: PropTypes__default.number,
   onChange: PropTypes__default.func,
-  value: PropTypes__default.number.isRequired
+  value: PropTypes__default.string.isRequired
 };
 
 function _templateObject3$k() {
