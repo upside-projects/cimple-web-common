@@ -3575,7 +3575,7 @@ var measureTextWidth = function measureTextWidth(text, font) {
     return metrics.width;
   }
 
-  return '24px';
+  return '100%';
 };
 
 function _templateObject3$j() {
@@ -3615,7 +3615,7 @@ var CounterHolder = styled__default.div(_templateObject$C(), function (_ref) {
   return theme.radius.small;
 });
 var Value = styled__default.input(_templateObject2$s(), function (p) {
-  return "calc(".concat(p.width, "px + 50px)");
+  return p.width;
 });
 var CounterAction = styled__default.button(_templateObject3$j(), function (_ref3) {
   var theme = _ref3.theme;
@@ -3628,7 +3628,8 @@ var Counter = function Counter(_ref) {
       maxValue = _ref.maxValue,
       onChange = _ref.onChange,
       onBlur = _ref.onBlur,
-      onFocus = _ref.onFocus;
+      onFocus = _ref.onFocus,
+      autoWidth = _ref.autoWidth;
 
   var _React$useState = React__default.useState(false),
       _React$useState2 = _slicedToArray(_React$useState, 2),
@@ -3636,24 +3637,24 @@ var Counter = function Counter(_ref) {
       setIsActive = _React$useState2[1];
 
   React__default.useEffect(function () {
-    if (!isActive && Number(value) < minValue) {
-      onChange(minValue.toString());
+    if (!isActive && value < minValue) {
+      onChange(minValue);
     }
 
-    if (!isActive && Number(value) > maxValue) {
-      onChange(maxValue.toString());
+    if (!isActive && value > maxValue) {
+      onChange(maxValue);
     }
   }, [maxValue, minValue, onChange, value, isActive]);
 
   var increaseVal = function increaseVal() {
     if (value < maxValue) {
-      onChange((Number(value) + 1).toString());
+      onChange(value + 1);
     }
   };
 
   var decreaseVal = function decreaseVal() {
     if (value > minValue) {
-      onChange((Number(value) - 1).toString());
+      onChange(value - 1);
     }
   };
 
@@ -3661,7 +3662,7 @@ var Counter = function Counter(_ref) {
     var value = _ref2.currentTarget.value;
 
     if (value === '' || !isNaN(value)) {
-      return onChange(value.toString());
+      return onChange(value ? parseInt(value, 10) : null);
     }
   };
 
@@ -3674,7 +3675,7 @@ var Counter = function Counter(_ref) {
     setIsActive(false);
 
     if (value === '') {
-      onChange(minValue.toString());
+      onChange(minValue);
     }
 
     onBlur(e);
@@ -3688,8 +3689,8 @@ var Counter = function Counter(_ref) {
     onChange: handleOnChange,
     onBlur: handleOnBlur,
     onFocus: handleOnFocus,
-    value: value,
-    width: measureTextWidth(value)
+    value: value || '',
+    width: autoWidth ? "calc(".concat(measureTextWidth(value), "px + 50px)") : '100%'
   }), React__default.createElement(CounterAction, {
     type: "button",
     onClick: increaseVal,
@@ -3708,7 +3709,8 @@ Counter.propTypes = {
   minValue: PropTypes__default.number,
   maxValue: PropTypes__default.number,
   onChange: PropTypes__default.func,
-  value: PropTypes__default.string.isRequired
+  value: PropTypes__default.number,
+  autoWidth: PropTypes__default.bool
 };
 
 function _templateObject3$k() {
