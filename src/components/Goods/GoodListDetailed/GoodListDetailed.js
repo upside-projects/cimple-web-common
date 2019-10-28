@@ -6,20 +6,20 @@ import { UppercaseL } from '../../Typography/Typography';
 
 import * as S from './styled';
 
-const GoodListDetailed = ({ goodImage, goodName, goodSku, unitPrice, goodQuantity, ...props }) => {
+const GoodListDetailed = ({ goodImage, goodName, goodSku, unitPrice, goodQuantity, size, ...props }) => {
   return (
     <S.Holder {...props}>
-      <Thumbnail src={goodImage} />
-      <S.Wrapper>
-        <S.Flex>
-          <S.Flex>
+      <S.Flex>
+        <Thumbnail src={goodImage} size={size} />
+        <S.Wrapper>
+          <S.GoodInfo>
             <S.TextQty>{goodQuantity}x</S.TextQty>
             <S.Text>{goodName}</S.Text>
-          </S.Flex>
-          <S.Text>{unitPrice}</S.Text>
-        </S.Flex>
-        <UppercaseL color="greyMedium">SKU: {goodSku}</UppercaseL>
-      </S.Wrapper>
+          </S.GoodInfo>
+          <UppercaseL color="greyMedium">SKU: {goodSku}</UppercaseL>
+        </S.Wrapper>
+      </S.Flex>
+      <S.Text>{unitPrice}</S.Text>
     </S.Holder>
   );
 };
