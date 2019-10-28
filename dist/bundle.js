@@ -869,7 +869,7 @@ function _templateObject5$3() {
 }
 
 function _templateObject4$3() {
-  var data = _taggedTemplateLiteral(["\n  ", "\n  ", "\n\n  font-size: 2rem;\n  line-height: 2.5rem;\n  letter-spacing: -0.6px;\n"]);
+  var data = _taggedTemplateLiteral(["\n  ", "\n  ", "\n\n  font-size: 2rem;\n  line-height: 2.5rem;\n  letter-spacing: -0.6px;\n\n  @media only screen and (max-width: 500px) {\n    font-size: 1.5rem;\n    line-height: 1.5rem;\n    letter-spacing: -0.48px;\n  }\n"]);
 
   _templateObject4$3 = function _templateObject4() {
     return data;
@@ -3116,7 +3116,7 @@ function _templateObject2$m() {
 }
 
 function _templateObject$v() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start;\n  width: 100%;\n  max-width: 20rem;\n\n  @media only screen and (max-width: 500px) {\n    div:first-of-type {\n      display: none;\n    }\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start;\n  width: 100%;\n  max-width: 16rem;\n\n  @media only screen and (max-width: 500px) {\n    display: none;\n  }\n"]);
 
   _templateObject$v = function _templateObject() {
     return data;
