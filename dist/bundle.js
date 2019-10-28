@@ -3121,30 +3121,27 @@ var TextQty = styled__default(Text)(_templateObject4$d());
 var Flex$2 = styled__default.div(_templateObject5$a());
 
 var GoodListDetailed = function GoodListDetailed(_ref) {
-  var currency = _ref.currency,
-      goodImage = _ref.goodImage,
+  var goodImage = _ref.goodImage,
       goodName = _ref.goodName,
       goodSku = _ref.goodSku,
       unitPrice = _ref.unitPrice,
       goodQuantity = _ref.goodQuantity,
-      props = _objectWithoutProperties(_ref, ["currency", "goodImage", "goodName", "goodSku", "unitPrice", "goodQuantity"]);
+      props = _objectWithoutProperties(_ref, ["goodImage", "goodName", "goodSku", "unitPrice", "goodQuantity"]);
 
   return React__default.createElement(Holder$d, props, React__default.createElement(Thumbnail$1, {
     src: goodImage
-  }), React__default.createElement(Wrapper$6, null, React__default.createElement(Flex$2, null, React__default.createElement(Flex$2, null, React__default.createElement(TextQty, null, goodQuantity, "x"), React__default.createElement(Text$2, null, goodName)), React__default.createElement(Text$2, null, currency, unitPrice)), React__default.createElement(UppercaseL, {
+  }), React__default.createElement(Wrapper$6, null, React__default.createElement(Flex$2, null, React__default.createElement(Flex$2, null, React__default.createElement(TextQty, null, goodQuantity, "x"), React__default.createElement(Text$2, null, goodName)), React__default.createElement(Text$2, null, unitPrice)), React__default.createElement(UppercaseL, {
     color: "greyMedium"
   }, "SKU: ", goodSku)));
 };
 GoodListDetailed.defaultProps = {
-  currency: "£",
-  goodImage: "https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png",
-  goodName: "Unnamed product",
-  goodSku: "SKU not available",
-  unitPrice: "0",
+  goodImage: 'https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png',
+  goodName: 'Unnamed product',
+  goodSku: 'SKU not available',
+  unitPrice: '0',
   goodQuantity: 0
 };
 GoodListDetailed.propTypes = {
-  currency: PropTypes__default.string,
   goodImage: PropTypes__default.string,
   goodSku: PropTypes__default.string,
   goodName: PropTypes__default.string,
