@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 
 export const CounterHolder = styled.div`
   display: inline-flex;
@@ -20,7 +20,7 @@ export const Value = styled.input`
   border-radius: none;
   text-align: center;
 
-  width: ${p => `calc(${p.width}px + 50px)`};
+  width: ${p => p.width};
 
   &:focus {
     outline: none;

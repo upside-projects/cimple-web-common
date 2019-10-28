@@ -6,34 +6,34 @@ import { measureTextWidth } from '../../utils/measureText';
 
 import * as S from './styled';
 
-const Counter = ({ value, minValue, maxValue, onChange, onBlur, onFocus }) => {
+const Counter = ({ value, minValue, maxValue, onChange, onBlur, onFocus, autoWidth }) => {
   const [isActive, setIsActive] = React.useState(false);
 
   React.useEffect(() => {
-    if (!isActive && Number(value) < minValue) {
-      onChange(minValue.toString());
+    if (!isActive && value < minValue) {
+      onChange(minValue);
     }
 
-    if (!isActive && Number(value) > maxValue) {
-      onChange(maxValue.toString());
+    if (!isActive && value > maxValue) {
+      onChange(maxValue);
     }
   }, [maxValue, minValue, onChange, value, isActive]);
 
   const increaseVal = () => {
     if (value < maxValue) {
-      onChange((Number(value) + 1).toString());
+      onChange(value + 1);
     }
   };
 
   const decreaseVal = () => {
     if (value > minValue) {
-      onChange((Number(value) - 1).toString());
+      onChange(value - 1);
     }
   };
 
   const handleOnChange = ({ currentTarget: { value } }) => {
     if (value === '' || !isNaN(value)) {
-      return onChange(value.toString());
+      return onChange(value ? parseInt(value, 10) : null);
     }
   };
 
@@ -45,7 +45,7 @@ const Counter = ({ value, minValue, maxValue, onChange, onBlur, onFocus }) => {
   const handleOnBlur = e => {
     setIsActive(false);
     if (value === '') {
-      onChange(minValue.toString());
+      onChange(minValue);
     }
     onBlur(e);
   };
@@ -59,8 +59,8 @@ const Counter = ({ value, minValue, maxValue, onChange, onBlur, onFocus }) => {
         onChange={handleOnChange}
         onBlur={handleOnBlur}
         onFocus={handleOnFocus}
-        value={value}
-        width={measureTextWidth(value)}
+        value={value || ''}
+        width={autoWidth ? `calc(${measureTextWidth(value)}px + 50px)` : '100%'}
       />
       <S.CounterAction type="button" onClick={increaseVal} disabled={value >= maxValue}>
         <Icons.Plus />
@@ -81,7 +81,8 @@ Counter.propTypes = {
   minValue: PropTypes.number,
   maxValue: PropTypes.number,
   onChange: PropTypes.func,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.number,
+  autoWidth: PropTypes.bool,
 };
 
 export default Counter;

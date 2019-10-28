@@ -6,7 +6,7 @@ import { State, Store } from '@sambego/storybook-state';
 import Counter from './Counter';
 
 const store = new Store({
-  quantity: '1',
+  quantity: 1,
 });
 
 storiesOf('Primitives | Buttons/Counter', module).add('Default', () => (
@@ -17,6 +17,7 @@ storiesOf('Primitives | Buttons/Counter', module).add('Default', () => (
         minValue={1}
         maxValue={10000}
         onChange={value => store.set({ quantity: value })}
+        autoWidth
       />
     )}
   </State>

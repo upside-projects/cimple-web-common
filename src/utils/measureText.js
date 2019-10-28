@@ -8,5 +8,5 @@ export const measureTextWidth = (text, font) => {
     return metrics.width;
   }
 
-  return '24px';
+  return '100%';
 };
