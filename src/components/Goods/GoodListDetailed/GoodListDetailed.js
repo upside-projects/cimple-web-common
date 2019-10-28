@@ -27,7 +27,6 @@ const GoodListDetailed = ({ goodImage, goodName, goodSku, unitPrice, goodQuantit
 export default GoodListDetailed;
 
 GoodListDetailed.defaultProps = {
-  currency: '£',
   goodImage: 'https://cimple-static-assets.s3-eu-west-1.amazonaws.com/emptyState.png',
   goodName: 'Unnamed product',
   goodSku: 'SKU not available',
@@ -36,7 +35,6 @@ GoodListDetailed.defaultProps = {
 };
 
 GoodListDetailed.propTypes = {
-  currency: PropTypes.string,
   goodImage: PropTypes.string,
   goodSku: PropTypes.string,
   goodName: PropTypes.string,
