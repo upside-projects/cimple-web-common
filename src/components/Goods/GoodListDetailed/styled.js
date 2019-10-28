@@ -7,12 +7,10 @@ export const Holder = styled.div`
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
-  max-width: 20rem;
+  max-width: 16rem;
 
   @media only screen and (max-width: 500px) {
-    div:first-of-type {
-      display: none;
-    }
+    display: none;
   }
 `;
 
