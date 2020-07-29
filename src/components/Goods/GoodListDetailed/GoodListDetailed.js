@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Thumbnail from '../../Thumbnail/Thumbnail';
 import { UppercaseL } from '../../Typography/Typography';
 
 import * as S from './styled';
@@ -9,16 +8,11 @@ import * as S from './styled';
 const GoodListDetailed = ({ goodImage, goodName, goodSku, unitPrice, goodQuantity, size, ...props }) => {
   return (
     <S.Holder {...props}>
-      <S.Flex>
-        <Thumbnail src={goodImage} size={size} />
-        <S.Wrapper>
-          <S.GoodInfo>
-            <S.TextQty>{goodQuantity}x</S.TextQty>
-            <S.Text>{goodName}</S.Text>
-          </S.GoodInfo>
-          <UppercaseL color="greyMedium">SKU: {goodSku}</UppercaseL>
-        </S.Wrapper>
-      </S.Flex>
+      <S.GoodThumbnail src={goodImage} size={size} />
+      <S.GoodInfo >
+        <S.Text>{goodQuantity}x {goodName}</S.Text>
+        <UppercaseL color="greyMedium">SKU: {goodSku}</UppercaseL>
+      </S.GoodInfo>
       <S.Text>{unitPrice}</S.Text>
     </S.Holder>
   );
