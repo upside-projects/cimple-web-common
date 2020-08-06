@@ -8,7 +8,6 @@ export const Holder = styled.div`
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
-  max-width: 16rem;
 
   @media only screen and (max-width: 500px) {
     display: none;
