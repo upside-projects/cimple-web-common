@@ -3106,7 +3106,7 @@ function _templateObject2$m() {
 }
 
 function _templateObject$v() {
-  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start;\n  width: 100%;\n  max-width: 16rem;\n\n  @media only screen and (max-width: 500px) {\n    display: none;\n  }\n"]);
+  var data = _taggedTemplateLiteral(["\n  display: flex;\n  flex-direction: row;\n  align-items: flex-start;\n  width: 100%;\n\n  @media only screen and (max-width: 500px) {\n    display: none;\n  }\n"]);
 
   _templateObject$v = function _templateObject() {
     return data;
